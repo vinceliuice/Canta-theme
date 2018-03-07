@@ -1,0 +1,372 @@
+// based css:
+// https://github.com/mate-desktop/mate-themes/blob/master/desktop-themes/Menta/gtk-3.0/mate-applications.css
+
+/**************
+ * Mate-Panel *
+ **************/
+// first make all transparent
+.mate-panel-menu-bar menubar,
+#PanelApplet-window-menu-applet-button {
+  background-color: transparent;
+}
+
+// let's start it
+.mate-panel-menu-bar {
+  background-color: $solid_panel_bg_color;
+  font-weight: 500;
+
+  // Avoid changing the menu text color
+  &:not(.popup) { color: $inverse_secondary_fg_color; }
+
+  button {
+    @extend %flat_button;
+    @extend %button_selected.flat;
+
+    min-height: 16px;
+    min-width: 16px;
+    padding: 0; // NOTE: Most buttons padding are hard-coded to 0 (except hide buttons)
+    border-radius: 0;
+
+    &:checked { background-color: $inverse_divider_color; }
+  }
+}
+
+// hide buttons
+PanelToplevel.horizontal > grid > button {
+  min-width: 24px;
+}
+
+PanelToplevel.vertical > grid > button {
+  min-height: 24px;
+}
+
+#PanelApplet {
+  // border-width: 0;
+}
+
+PanelSeparator {
+  color: $inverse_divider_color;
+}
+
+// the grid left from na-tray and wncktasklist
+MatePanelAppletFrameDBus {
+  border-style: solid;
+  border-color: $inverse_divider_color;
+
+  .mate-panel-menu-bar.horizontal & { border-width: 0 1px; }
+  .mate-panel-menu-bar.vertical & { border-width: 1px 0; }
+}
+
+// main menu
+.mate-panel-menu-bar {
+  // set normal menubar button
+  menubar > menuitem {
+    color: $inverse_secondary_fg_color;
+
+    &:hover {
+      background-color: $inverse_divider_color;
+      color: $inverse_fg_color;
+    }
+
+    &:disabled { color: $inverse_disabled_secondary_fg_color; }
+  }
+
+  &.horizontal menubar > menuitem { padding: 0 8px; }
+  &.vertical menubar > menuitem { padding: 8px 0; }
+
+  // set normal menubar menuitem
+  menubar menu > menuitem {
+    // adjust sizing since the menuitem has large icons
+    min-height: $menuitem_size;
+    padding: 0 6px;
+    // font-weight: initial;
+  }
+}
+
+// all applets
+.mate-panel-menu-bar #PanelApplet button {
+  -GtkWidget-window-dragging: true;
+  // padding: 4px;
+}
+
+.mate-panel-menu-bar #tasklist-button {
+  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
+                                currentColor 0%,
+                                transparent 0%)
+                                0 0 0 / 0 0 0px;
+
+  &:checked {
+    border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
+                                  currentColor 100%,
+                                  transparent 0%)
+                                  0 0 2 / 0 0 2px;
+  }
+
+  // instead of #tasklist-button { padding: 0 4px; }
+  image:dir(ltr), label:dir(rtl) { padding-left: 4px; }
+  label:dir(ltr), image:dir(rtl) { padding-right: 4px; }
+}
+
+// #tasklist-button is always horizontal even if the panel is vertical
+.mate-panel-menu-bar.vertical #tasklist-button { min-height: 32px; }
+
+#showdesktop-button {
+  .mate-panel-menu-bar.horizontal & image {
+    min-width: 24px;
+    padding: 0 4px;
+  }
+
+  .mate-panel-menu-bar.vertical & image {
+    min-height: 24px;
+    padding: 4px 0;
+  }
+}
+
+// WnckPager
+PanelApplet.wnck-applet .wnck-pager {
+  background-color: transparent;
+  color: $alt_primary_color;
+
+  &:hover { background-color: $inverse_divider_color; }
+
+  &:active { background-color: $inverse_track_color; }
+
+  &:selected { background-color: $primary_color; }
+}
+
+#clock-applet-button {
+  .mate-panel-menu-bar.horizontal & label { padding: 0 8px; }
+  .mate-panel-menu-bar.vertical & label { padding: 8px 0; }
+}
+
+#MatePanelPopupWindow {
+  border: 1px solid $border_color;
+  border-radius: $material_radius + 1px;
+  box-shadow: inset 0 1px $highlight_color;
+
+  frame > border { border-style: none; }
+
+  button { padding: 4px 16px; }
+
+  // FIXME, does not work
+  ClockMap { border: 1px solid $border_color; }
+
+  // Instead, this works
+  widget { color: $border_color; }
+}
+
+na-tray-applet {
+  -NaTrayApplet-icon-padding: 3px;
+  -NaTrayApplet-icon-size: 16;
+}
+
+// remove right space a bit
+na-tray-applet > widget > box {
+  // margin-right: 2px;
+}
+
+// no background for icon-padding area
+na-tray-applet widget box widget {
+  // background-color: transparent;
+}
+
+// Classic icon style
+.mate-panel-menu-bar {
+  -PanelMenuBar-icon-visible: true;
+}
+
+// volume applet, brightness applet
+.mate-panel-applet-slider {
+  border: 1px solid $border_color;
+  border-radius: $material_radius + 1px;
+  box-shadow: inset 0 1px $highlight_color;
+  background-color: $bg_color;
+
+  frame > border { border-style: none; }
+}
+
+// mate-menu
+
+// mimic menubar menuitem style
+#PanelApplet {
+  &:not(:selected) > box { transition: $shorter_transition; }
+
+  &:selected > box {
+    background-color: $inverse_divider_color;
+    color: $inverse_fg_color;
+  }
+}
+
+#mate-menu {
+  // FIXME, does not work
+  border: 1px solid $border_color;
+
+  button {
+    @extend %simple_flat_button;
+
+    min-height: 24px;
+    min-width: 24px;
+    padding: 4px 0;
+    color: $fg_color;
+    font-weight: normal;
+
+    label:not(:first-child) { color: $secondary_fg_color; }
+  }
+
+  entry {
+    margin: 0 0 8px;
+
+    image { margin: 0; }
+
+    + button {
+      margin: 0 4px 8px;
+      padding: ($medium_size - 24px) / 2;
+    }
+  }
+}
+
+
+/*********************
+ * CAJA File manager *
+ *********************/
+// pathpar toggle button
+.caja-navigation-window button.toggle.image-button {
+  border-radius: $material_radius;
+}
+
+// pathbar
+// pathbar buttons
+.caja-pathbar button {
+  margin: 0 -1px 0 -2px;
+  // padding: 4px;
+
+  @extend %pathbar_button;
+
+  // arrow button
+  > widget {
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+    -GtkArrow-arrow-scaling: 1;
+  }
+}
+
+// places, treeview, history, information, emblems and notes
+// .caja-side-pane notebook treeview.view,
+// .caja-side-pane notebook textview.view text,
+.caja-side-pane notebook viewport.frame,
+.caja-side-pane notebook widget .vertical {
+  background-color: $base_color;
+}
+
+// treeview rows
+.caja-side-pane treeview.view {
+  // padding: 2px 0;
+}
+
+.caja-side-pane notebook,
+.caja-notebook {
+  border-top: 1px solid $border_color;
+
+  .frame { border-style: none; }
+}
+
+// window and desktop mode
+.caja-canvas-item {
+  // border-radius: $material_radius;
+}
+
+// desktop mode
+.caja-desktop.caja-canvas-item {
+  @extend .nautilus-desktop.nautilus-canvas-item;
+}
+
+.caja-desktop EelEditableLabel.entry {
+}
+
+// statusbar
+.caja-navigation-window statusbar {
+  margin: 0 -10px;
+  padding: 0 4px;
+  border-top: 1px solid $border_color;
+}
+
+// infobar
+.caja-notebook frame > border {
+  border-style: none;
+}
+
+#caja-extra-view-widget {
+  border-bottom: 1px solid $border_color;
+  background-color: $bg_color; // needs overriding
+
+  > box > box > label { font-weight: bold; }
+}
+
+
+/*********
+ * Pluma *
+ *********/
+// Pluma status bar
+.pluma-window statusbar {
+  margin: 0 -10px;
+  padding: 0 4px;
+  border-top: 1px solid $border_color;
+
+  frame {
+    > border { border-style: none; }
+
+    button.flat {
+      padding: 0 4px;
+      border-radius: 0;
+
+      widget {
+        -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+        -GtkArrow-arrow-scaling: 1;
+      }
+    }
+  }
+}
+
+// Printpreview
+.pluma-print-preview {
+  toolbar { border-bottom: 1px solid $border_color; }
+
+  // scrolledwindow { background-color: $base_color; }
+}
+
+// sidebar file-browser
+.pluma-window paned.horizontal box.vertical {
+  box.horizontal button.flat {
+    margin: 1px;
+
+    @extend %small_button;
+  }
+
+  .frame { border-style: none; }
+
+  notebook.frame {
+    margin-top: -1px;
+    border-top: 1px solid $border_color;
+
+    box.vertical toolbar.horizontal { border-bottom: 1px solid $border_color; }
+  }
+}
+
+
+/*********
+ * Atril *
+ *********/
+.atril-window paned.horizontal box.vertical {
+  .frame { border-style: none; }
+
+  notebook .frame { border-top: 1px solid $border_color; }
+}
+
+
+/* mate-screensaver lock dialog */
+.lock-dialog {
+  border-radius: $material_radius;
+  // not sure if box-shadow works here
+  box-shadow: $shadow_4, inset 0 1px $highlight_color;
+
+  frame > border { border-style: none; }
+}
