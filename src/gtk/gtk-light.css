@@ -2537,8 +2537,7 @@ scrollbar.horizontal button.up {
  **********/
 switch {
   transition: all 270ms cubic-bezier(0, 0, 0.2, 1);
-  margin: 6px 0;
-  padding: 0 2px;
+  padding: 0;
   min-width: 36px;
   min-height: 20px;
   border: 0 solid transparent;
@@ -2564,7 +2563,7 @@ switch slider {
   transition: all 270ms cubic-bezier(0, 0, 0.2, 1), box-shadow 180ms cubic-bezier(0, 0, 0.2, 1);
   min-width: 20px;
   min-height: 20px;
-  margin: 3px 2px;
+  margin: 3px;
   border-radius: 9999px;
   -gtk-outline-radius: 9999px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
@@ -5587,7 +5586,7 @@ UnityPanelWidget:backdrop,
 }
 
 .mate-panel-menu-bar {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(255, 255, 255, 0.75);
   font-weight: 500;
 }
 
@@ -6196,13 +6195,13 @@ popover.background.places-menu row {
 
 .budgie-panel {
   transition: background-color 270ms cubic-bezier(0, 0, 0.2, 1);
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(255, 255, 255, 0.75);
   color: rgba(255, 255, 255, 0.7);
   font-weight: 500;
 }
 
 .budgie-panel.transparent {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
 .budgie-panel button {
@@ -6534,7 +6533,7 @@ headerbar .budgie-run-dialog list .subtitle, .budgie-run-dialog list .budgie-not
  * LightDM GTK+ Greeter *
  ************************/
 #panel_window {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(224, 224, 224, 0.75);
   color: #FFFFFF;
 }
 

@@ -2130,8 +2130,8 @@ $switch_height: if($compact == 'false', 20px, 16px);
 
 switch {
   transition: $longer_transition;
-  margin: $container_padding 0;
-  padding: 0 2px;
+//  margin: $container_padding 0;
+  padding: 0;
   min-width: $switch_width;
   min-height: $switch_height;
   border: 0 solid transparent;
@@ -2152,7 +2152,7 @@ switch {
     transition: $longer_transition, $shadow_transition;
     min-width: $switch_height;
     min-height: $switch_height;
-    margin: 3px 2px;
+    margin: 3px;
     border-radius: $circular_radius;
     -gtk-outline-radius: $circular_radius;
     box-shadow: $shadow_1;
@@ -2172,8 +2172,7 @@ switch {
 
   &:checked:disabled slider { animation: none; }
 
-  row:selected & {
-  }
+  row:selected & { }
 }
 
 

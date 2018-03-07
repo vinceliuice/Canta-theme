@@ -1970,7 +1970,7 @@ menu,
   margin: 4px 0;
   padding: 4px 0;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-  background-color: rgba(52, 57, 56, 0.95);
+  background-color: rgba(63, 69, 68, 0.95);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -2117,7 +2117,7 @@ popover.background {
   transition: box-shadow 180ms cubic-bezier(0, 0, 0.2, 1);
   padding: 2px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15);
-  background-color: rgba(52, 57, 56, 0.95);
+  background-color: rgba(63, 69, 68, 0.95);
 }
 
 popover.background:backdrop {
@@ -2537,8 +2537,7 @@ scrollbar.horizontal button.up {
  **********/
 switch {
   transition: all 270ms cubic-bezier(0, 0, 0.2, 1);
-  margin: 6px 0;
-  padding: 0 2px;
+  padding: 0;
   min-width: 30px;
   min-height: 16px;
   border: 0 solid transparent;
@@ -2564,7 +2563,7 @@ switch slider {
   transition: all 270ms cubic-bezier(0, 0, 0.2, 1), box-shadow 180ms cubic-bezier(0, 0, 0.2, 1);
   min-width: 16px;
   min-height: 16px;
-  margin: 3px 2px;
+  margin: 3px;
   border-radius: 9999px;
   -gtk-outline-radius: 9999px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
@@ -6202,7 +6201,7 @@ popover.background.places-menu row {
 }
 
 .budgie-panel.transparent {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(59, 67, 66, 0.75);
 }
 
 .budgie-panel button {
@@ -6534,7 +6533,7 @@ headerbar .budgie-run-dialog list .subtitle, .budgie-run-dialog list .budgie-not
  * LightDM GTK+ Greeter *
  ************************/
 #panel_window {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(59, 67, 66, 0.75);
   color: #FFFFFF;
 }
 
