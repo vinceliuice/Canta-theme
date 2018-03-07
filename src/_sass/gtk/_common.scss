@@ -2125,11 +2125,16 @@ scrollbar {
 /**********
  * Switch *
  **********/
+$switch_width: if($compact == 'false', 36px, 30px);
+$switch_height: if($compact == 'false', 20px, 16px);
+
 switch {
   transition: $longer_transition;
   margin: $container_padding 0;
   padding: 0 2px;
-  border: 5px solid transparent;
+  min-width: $switch_width;
+  min-height: $switch_height;
+  border: 0 solid transparent;
   border-radius: $circular_radius;
   background-color: $track_color;
   background-clip: padding-box;
@@ -2138,16 +2143,16 @@ switch {
   &:disabled { background-color: $divider_color; }
 
   &:checked {
-    background-color: rgba($accent_color, 0.5);
+    background-color: $accent_color;
 
-    &:disabled { background-color: rgba($accent_color, 0.3); }
+    &:disabled { background-color: rgba($accent_color, 0.5); }
   }
 
   slider {
     transition: $longer_transition, $shadow_transition;
-    min-width: 20px;
-    min-height: 20px;
-    margin: -3px -2px;
+    min-width: $switch_height;
+    min-height: $switch_height;
+    margin: 3px 2px;
     border-radius: $circular_radius;
     -gtk-outline-radius: $circular_radius;
     box-shadow: $shadow_1;
@@ -2157,9 +2162,9 @@ switch {
   &:hover slider { box-shadow: $shadow_2; }
 
   &:checked slider {
-    transition: $longer_transition, $shadow_transition, background-image 0, background-color 0.00001s $longer_duration;
-    animation: needs_attention $longer_duration $deceleration_curve;
-    background-color: $accent_color;
+    transition: $longer_transition, $shadow_transition;
+//    animation: needs_attention $longer_duration $deceleration_curve;
+    background-color: $base_color;
     color: $inverse_fg_color;
   }
 
@@ -3279,11 +3284,13 @@ infobar {
  ************/
 tooltip {
   &.background {
+    &, &.csd {
     // background-color needs to be set this way otherwise it gets drawn twice
     // see https://bugzilla.gnome.org/show_bug.cgi?id=736155 for details.
     border-radius: $windows_radius;
     box-shadow: inset 0 1px $highlight_color;
     background-color: rgba($base_color, $higher_opacity);
+    }
   }
 
   // @extend %osd;
@@ -3525,13 +3532,74 @@ decoration {
  * Title buttons *
  *****************/
 
-headerbar,
-.titlebar {
-  padding: 0 14px;
+%title_buttons_solid {
 
-  &, .csd &,
-  &.default-decoration,
-  .csd &.default-decoration {  // needed under wayland, since all gtk3 windows are csd windows
+  button.titlebutton {
+      @extend %circular_button;
+//    &:hover {
+//      @include button(flat-hover);
+//    }
+//
+//    &:active, &:checked {
+//      @include button(flat-active);
+//    }
+
+    &.close, &.maximize, &.minimize, &.restore {
+      margin: 0 2px;
+      padding: 0;
+      min-width: 16px;
+      min-height: 16px;
+      border-radius: 100px;
+      animation: none;
+      box-shadow: none;
+
+      &, &:hover, &:active, &:checked {
+        color: transparent;
+        background-color: transparent;
+        background-image: none;
+      }
+
+      &:backdrop { opacity: 1; }
+    }
+
+    // Load png assets for each button, Fix the Chrome window restore button bug
+    @each $k in ('close', 'maximize', 'minimize', 'restore') {
+      @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-active') {
+
+        &.#{$k}#{$l} {
+          > image {
+            color: transparent;
+            background-color: transparent;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: -gtk-scaled(url('assets/titlebutton-#{$k}#{$m}.png'),
+                                          url('assets/titlebutton-#{$k}#{$m}@2.png'));
+          }
+        }
+      }
+    }
+  }
+
+  .fullscreen &,
+  .maximized & {
+    button.titlebutton {
+      @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-active') {
+      &.maximize#{$l} {
+        > image {
+          color: transparent;
+          background-color: transparent;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-image: -gtk-scaled(url('assets/titlebutton-restore#{$m}.png'),
+                                        url('assets/titlebutton-restore#{$m}@2.png'));
+          }
+        }
+      }
+    }
+  }
+}
+
+%title_buttons_normal {
 
     button.titlebutton {
       // @extend %simple_flat_button;
@@ -3575,6 +3643,16 @@ headerbar,
 
       .selection-mode & { }
     }
+}
+
+headerbar,
+.titlebar {
+  padding: 0 14px;
+
+  &, .csd &,
+  &.default-decoration,
+  .csd &.default-decoration {  // needed under wayland, since all gtk3 windows are csd windows
+    @extend %title_buttons_solid;
   }
 }
 
