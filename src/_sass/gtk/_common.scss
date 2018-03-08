@@ -1222,6 +1222,10 @@ headerbar {
         &:hover {
           color: $titlebar_fg_color;
         }
+
+        &:disabled {
+          color: $titlebar_disabled_fg_color;
+        }
       }
 
       &:first-child { // Fixed stack-switchers first checked buttons

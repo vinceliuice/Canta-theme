@@ -51,6 +51,7 @@ install() {
 
   mkdir -p                                                                           ${THEME_DIR}
   cp -ur ${SRC_DIR}/COPYING                                                          ${THEME_DIR}
+  cp -ur ${SRC_DIR}/AUTHORS                                                          ${THEME_DIR}
 
   echo "[Desktop Entry]" >> ${THEME_DIR}/index.theme
   echo "Type=X-GNOME-Metatheme" >> ${THEME_DIR}/index.theme

@@ -1494,6 +1494,18 @@ headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-but
   color: rgba(0, 0, 0, 0.75);
 }
 
+.titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:checked:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button:checked:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.image-button:checked:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button:checked:disabled, .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked:disabled, .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:checked:disabled, .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:checked:disabled, .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:checked:disabled,
+headerbar .linked:not(.vertical).path-bar > button:checked:disabled,
+headerbar .linked:not(.vertical).path-bar > button.text-button:checked:disabled,
+headerbar .linked:not(.vertical).path-bar > button.image-button:checked:disabled,
+headerbar .linked:not(.vertical).path-bar > button.text-button.image-button:checked:disabled,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked:disabled,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:checked:disabled,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:checked:disabled,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:checked:disabled {
+  color: rgba(0, 0, 0, 0.38);
+}
+
 .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:first-child:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button:first-child:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.image-button:first-child:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button:first-child:checked, .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-child:checked, .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:first-child:checked, .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:first-child:checked, .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:first-child:checked,
 headerbar .linked:not(.vertical).path-bar > button:first-child:checked,
 headerbar .linked:not(.vertical).path-bar > button.text-button:first-child:checked,

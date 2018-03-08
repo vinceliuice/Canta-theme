@@ -934,6 +934,30 @@ StScrollBar {
   }
 }
 
+// Activities button
+#panel #panelActivities.panel-button {
+
+  > * {
+    background-image: url("assets/activities.svg");
+    background-position: center top;
+    width: 24px;
+    height: 24px;
+    background-color: transparent !important;
+    background-gradient-direction: none !important;
+    border: none;
+    color: transparent;
+  }
+
+  &:active, &:overview, &:focus, &:checked {
+    background-color: rgba($panel_bg_color, 0.01);
+    box-shadow: inset 0 -2px 0px $primary_color;
+    color: $titlebar_fg_color;
+    border: none;
+
+    > * { background-image: url("assets/activities-active.svg"); }
+  }
+}
+
   // calendar popover
   #calendarArea {
     padding: 8px 16px;
@@ -1593,7 +1617,7 @@ StScrollBar {
 
   %icon_tile {
     color: $inverse_fg_color;
-    border-radius: $material_radius;
+    border-radius: 100px;
     padding: 6px;
     border: none;
     transition-duration: $longer_duration;
@@ -1605,17 +1629,26 @@ StScrollBar {
   }
 
   .show-apps .show-apps-icon {
-    color: $inverse_secondary_fg_color;
+    color: $titlebar_secondary_fg_color;
   }
 
   .show-apps:hover .show-apps-icon,
   .show-apps:active .show-apps-icon,
   .show-apps:checked .show-apps-icon,
   .show-apps:focus .show-apps-icon {
-    color: $inverse_fg_color;
+    color: $titlebar_fg_color;
     transition-duration: $longer_duration;
   }
 
+  .show-apps:hover .overview-icon {
+    background-color: $alt_titlebar_bg_color;
+  }
+
+  .show-apps:active .overview-icon,
+  .show-apps:checked .overview-icon,
+  .show-apps:focus .overview-icon {
+    background-color: $titlebar_bg_color;
+  }
 
   // Collections
   .app-folder-popup { //expanded collection
