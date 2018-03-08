@@ -204,7 +204,7 @@ filechooser,
 
   &.csd.background, placessidebar list { background-color: transparent; }
   &.csd.background, placessidebar {
-    background-color: transparentize($lighter_bg_color, 0.05);
+    background-color: transparentize($lighter_bg_color, 0.03);
     border-radius: 0 0 $windows_radius $windows_radius;
   }
 

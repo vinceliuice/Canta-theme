@@ -1584,7 +1584,7 @@ menu,
   margin: 4px 0; // See https://bugzilla.gnome.org/show_bug.cgi?id=591258
   padding: 4px 0;
   box-shadow: inset 0 1px $highlight_color;
-  background-color: rgba($menu_bg_color, 0.95);
+  background-color: rgba($menu_bg_color, 0.96);
   border: 1px solid $border_color; // adds borders in a non composited env
 
   .csd & {
@@ -1697,7 +1697,7 @@ popover.background {
   transition: $shadow_transition;
   padding: 2px;
   box-shadow: $shadow_2; // TODO: this should really have a highlight
-  background-color: rgba($menu_bg_color, 0.95);
+  background-color: rgba($menu_bg_color, 0.96);
 
   &:backdrop { box-shadow: $shadow_1; }
 
@@ -3544,19 +3544,19 @@ decoration {
 //    }
 
     &.close, &.maximize, &.minimize, &.restore {
-      margin: 0 2px;
+      margin: 0 3px;
       padding: 0;
-      min-width: 16px;
-      min-height: 16px;
+      min-width: 14px;
+      min-height: 14px;
       border-radius: 100px;
       animation: none;
       box-shadow: none;
 
-      &, &:hover, &:active, &:checked {
-        color: transparent;
-        background-color: transparent;
-        background-image: none;
-      }
+//      &, &:hover, &:active, &:checked {
+//        color: transparent;
+//        background-color: transparent;
+//        background-image: none;
+//      }
 
       &:backdrop { opacity: 1; }
     }
@@ -3598,15 +3598,23 @@ decoration {
   }
 }
 
-%title_buttons_normal {
+%title_buttons_normal { }
+
+headerbar,
+.titlebar {
+  padding: 0 14px;
+
+  &, .csd &,
+  &.default-decoration,
+  .csd &.default-decoration {  // needed under wayland, since all gtk3 windows are csd windows
 
     button.titlebutton {
       // @extend %simple_flat_button;
       @extend %circular_button;
 
-      &.close, &.maximize, &.minimize, &.restore {
-        min-width: 16px;
-        min-height: 16px;
+      &.close, &.maximize, &.minimize, &.restore { // -gtk-icon-source:
+        min-width: 12px;
+        min-height: 12px;
         padding: 0;
         margin: 0 2px;
         color: transparent;
@@ -3642,16 +3650,6 @@ decoration {
 
       .selection-mode & { }
     }
-}
-
-headerbar,
-.titlebar {
-  padding: 0 14px;
-
-  &, .csd &,
-  &.default-decoration,
-  .csd &.default-decoration {  // needed under wayland, since all gtk3 windows are csd windows
-    @extend %title_buttons_solid;
   }
 }
 
