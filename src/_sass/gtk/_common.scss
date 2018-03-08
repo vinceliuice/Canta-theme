@@ -2130,7 +2130,7 @@ $switch_height: if($compact == 'false', 20px, 16px);
 
 switch {
   transition: $longer_transition;
-//  margin: $container_padding 0;
+  margin: $container_padding 0;
   padding: 0;
   min-width: $switch_width;
   min-height: $switch_height;
