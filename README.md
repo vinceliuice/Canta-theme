@@ -43,11 +43,11 @@ Or double-click to open that script files and select "run at the terminal" at na
 ## Screenshots
 
 #### GNOME Shell
-![1](https://github.com/vinceliuice/Canta-theme/tree/master/src/screenshots/screenshot1.png?raw=true)
-![2](https://github.com/vinceliuice/Canta-theme/tree/master/src/screenshots/screenshot2.jpeg?raw=true)
-![3](https://github.com/vinceliuice/Canta-theme/tree/master/src/screenshots/screenshot3.jpeg?raw=true)
-![4](https://github.com/vinceliuice/Canta-theme/tree/master/src/screenshots/screenshot4.jpeg?raw=true)
-![5](https://github.com/vinceliuice/Canta-theme/tree/master/src/screenshots/screenshot5.jpeg?raw=true)
+![1](https://github.com/vinceliuice/Canta-theme/blob/master/src/screenshots/screenshot1.png?raw=true)
+![2](https://github.com/vinceliuice/Canta-theme/blob/master/src/screenshots/screenshot2.jpeg?raw=true)
+![3](https://github.com/vinceliuice/Canta-theme/blob/master/src/screenshots/screenshot3.jpeg?raw=true)
+![4](https://github.com/vinceliuice/Canta-theme/blob/master/src/screenshots/screenshot4.jpeg?raw=true)
+![5](https://github.com/vinceliuice/Canta-theme/blob/master/src/screenshots/screenshot5.jpeg?raw=true)
 
 ## Icon 
 #### Canta icon theme
