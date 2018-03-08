@@ -40,3 +40,19 @@ Run
 
 Or double-click to open that script files and select "run at the terminal" at nautilus.
 
+## Screenshots
+
+#### GNOME Shell
+![1](https://github.com/vinceliuice/Canta-theme/tree/master/src/screenshots/screenshot1.png?raw=true)
+![2](https://github.com/vinceliuice/Canta-theme/tree/master/src/screenshots/screenshot2.jpeg?raw=true)
+![3](https://github.com/vinceliuice/Canta-theme/tree/master/src/screenshots/screenshot3.jpeg?raw=true)
+![4](https://github.com/vinceliuice/Canta-theme/tree/master/src/screenshots/screenshot4.jpeg?raw=true)
+![5](https://github.com/vinceliuice/Canta-theme/tree/master/src/screenshots/screenshot5.jpeg?raw=true)
+
+## Icon 
+#### Canta icon theme
+Canta icon theme use numix-icon-theme-circle icon theme for Inherits, so if you want a better experience you should install numix-circle first
+
+numix-icon-theme-circle : https://github.com/numixproject/numix-icon-theme-circle
+
+
