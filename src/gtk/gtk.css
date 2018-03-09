@@ -2555,8 +2555,8 @@ switch {
   transition: all 270ms cubic-bezier(0, 0, 0.2, 1);
   margin: 6px 0;
   padding: 0;
-  min-width: 36px;
-  min-height: 20px;
+  min-width: 32px;
+  min-height: 17px;
   border: 0 solid transparent;
   border-radius: 9999px;
   background-color: rgba(0, 0, 0, 0.26);
@@ -2578,8 +2578,8 @@ switch:checked:disabled {
 
 switch slider {
   transition: all 270ms cubic-bezier(0, 0, 0.2, 1), box-shadow 180ms cubic-bezier(0, 0, 0.2, 1);
-  min-width: 20px;
-  min-height: 20px;
+  min-width: 17px;
+  min-height: 17px;
   margin: 3px;
   border-radius: 9999px;
   -gtk-outline-radius: 9999px;

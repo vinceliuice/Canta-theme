@@ -2129,8 +2129,8 @@ scrollbar {
 /**********
  * Switch *
  **********/
-$switch_width: if($compact == 'false', 36px, 30px);
-$switch_height: if($compact == 'false', 20px, 16px);
+$switch_width: if($compact == 'false', 32px, 30px);
+$switch_height: if($compact == 'false', 17px, 16px);
 
 switch {
   transition: $longer_transition;
