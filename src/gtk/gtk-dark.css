@@ -4396,7 +4396,7 @@ button.emoji-section:last-child {
 .nautilus-window notebook,
 .nautilus-window notebook > stack {
   background-color: #3f4544;
-  border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 10px;
   background-image: -gtk-scaled(url("assets/background-img-bottom-dark.png"), url("assets/background-img-bottom-dark@2.png"));
   background-repeat: no-repeat;
   background-position: top right;
@@ -4439,7 +4439,7 @@ button.emoji-section:last-child {
   border-style: solid solid none;
   border-width: 1px;
   border-color: rgba(255, 255, 255, 0.08);
-  border-radius: 7px 7px 0 0;
+  border-radius: 8px 8px 0 0;
   background-color: #3f4544;
   background-clip: border-box;
   transition: all 270ms cubic-bezier(0, 0, 0.2, 1), border-width 0;
@@ -4566,7 +4566,7 @@ filechooser.csd.background, filechooser placessidebar,
 .nautilus-window.csd.background,
 .nautilus-window placessidebar {
   background-color: rgba(76, 83, 81, 0.97);
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 8px 10px;
 }
 
 filechooser.maximized placessidebar,
