@@ -90,9 +90,11 @@ install() {
 
 
   mkdir -p                                                                           ${THEME_DIR}/metacity-1
-  cp -ur ${SRC_DIR}/src/metacity-1/assets                                            ${THEME_DIR}/metacity-1
-  cp -ur ${SRC_DIR}/src/metacity-1/metacity-theme-2${ELSE_LIGHT}.xml                 ${THEME_DIR}/metacity-1/metacity-theme-2.xml
-  cp -ur ${SRC_DIR}/src/metacity-1/metacity-theme-3${ELSE_LIGHT}.xml                 ${THEME_DIR}/metacity-1/metacity-theme-3.xml
+  cp -ur ${SRC_DIR}/src/metacity-1/assets/*.png                                      ${THEME_DIR}/metacity-1
+  cp -ur ${SRC_DIR}/src/metacity-1/metacity-theme-1${ELSE_LIGHT}.xml                 ${THEME_DIR}/metacity-1/metacity-theme-1.xml
+  cd ${THEME_DIR}/metacity-1
+	ln -s metacity-theme-1.xml metacity-theme-2.xml
+	ln -s metacity-theme-1.xml metacity-theme-3.xml
 
   mkdir -p                                                                           ${THEME_DIR}/unity
   cp -ur ${SRC_DIR}/src/unity/{*.svg,*.png,dash-widgets.json}                        ${THEME_DIR}/unity
