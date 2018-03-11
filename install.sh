@@ -88,10 +88,9 @@ install() {
   [[ ${color} != '-dark' ]] && \
   cp -ur ${SRC_DIR}/src/gtk/gtk-dark${size}.css                                      ${THEME_DIR}/gtk-3.0/gtk-dark.css
 
-
   mkdir -p                                                                           ${THEME_DIR}/metacity-1
   cp -ur ${SRC_DIR}/src/metacity-1/assets/*.png                                      ${THEME_DIR}/metacity-1
-  cp -ur ${SRC_DIR}/src/metacity-1/metacity-theme-1${ELSE_LIGHT}.xml                 ${THEME_DIR}/metacity-1/metacity-theme-1.xml
+  cp -ur ${SRC_DIR}/src/metacity-1/metacity-theme-1${color}.xml                 ${THEME_DIR}/metacity-1/metacity-theme-1.xml
   cd ${THEME_DIR}/metacity-1
 	ln -s metacity-theme-1.xml metacity-theme-2.xml
 	ln -s metacity-theme-1.xml metacity-theme-3.xml

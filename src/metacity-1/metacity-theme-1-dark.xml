@@ -10,16 +10,16 @@
 
 
 <!-- CONSTANTS -->
-<constant name="C_titlebar" value="#ffffff" />
-<constant name="C_titlebar_unfocused" value="#ffffff" />
-<constant name="C_border_focused" value="#fefefe" />
-<constant name="C_border_unfocused" value="#fefefe" />
-<constant name="C_title_focused" value="#333333" />
-<constant name="C_title_unfocused" value="#555555" />
+<constant name="C_titlebar" value="#3B4342" />
+<constant name="C_titlebar_unfocused" value="#3B4342" />
+<constant name="C_border_focused" value="#464A4A" />
+<constant name="C_border_unfocused" value="#464A4A" />
+<constant name="C_title_focused" value="#f5f5f5" />
+<constant name="C_title_unfocused" value="#dedede" />
 
-<constant name="C_wm_button_background" value="#ffffff" />
-<constant name="C_wm_button_foreground" value="#ffffff" />
-<constant name="C_wm_button_unfocused" value="#ffffff" />
+<constant name="C_wm_button_background" value="#3B4342" />
+<constant name="C_wm_button_foreground" value="#3B4342" />
+<constant name="C_wm_button_unfocused" value="#3B4342" />
 
 <constant name="C_close_button" value="#787878" />
 <constant name="C_maximize_button" value="#787878" />

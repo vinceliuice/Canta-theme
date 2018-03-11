@@ -16,24 +16,25 @@
   font-weight: 500;
 
   // Avoid changing the menu text color
-  &:not(.popup) { color: $inverse_secondary_fg_color; }
+  &:not(.popup) { color: $titlebar_secondary_fg_color; }
 
   button {
     @extend %flat_button;
-    @extend %button_selected.flat;
 
     min-height: 16px;
     min-width: 16px;
     padding: 0; // NOTE: Most buttons padding are hard-coded to 0 (except hide buttons)
     border-radius: 0;
 
-    &:checked { background-color: $inverse_divider_color; }
+//    &:hover { color: $titlebar_fg_color; }
+//    &:checked { background-color: $divider_color; color: $titlebar_fg_color; }
   }
 }
 
 // hide buttons
 PanelToplevel.horizontal > grid > button {
   min-width: 24px;
+  @extend %flat_button;
 }
 
 PanelToplevel.vertical > grid > button {
@@ -45,13 +46,13 @@ PanelToplevel.vertical > grid > button {
 }
 
 PanelSeparator {
-  color: $inverse_divider_color;
+  color: $divider_color;
 }
 
 // the grid left from na-tray and wncktasklist
 MatePanelAppletFrameDBus {
   border-style: solid;
-  border-color: $inverse_divider_color;
+  border-color: transparent;
 
   .mate-panel-menu-bar.horizontal & { border-width: 0 1px; }
   .mate-panel-menu-bar.vertical & { border-width: 1px 0; }
@@ -61,14 +62,14 @@ MatePanelAppletFrameDBus {
 .mate-panel-menu-bar {
   // set normal menubar button
   menubar > menuitem {
-    color: $inverse_secondary_fg_color;
+    color: $titlebar_secondary_fg_color;
 
     &:hover {
-      background-color: $inverse_divider_color;
-      color: $inverse_fg_color;
+      background-color: $divider_color;
+      color: $titlebar_fg_color;
     }
 
-    &:disabled { color: $inverse_disabled_secondary_fg_color; }
+    &:disabled { color: $titlebar_disabled_fg_color; }
   }
 
   &.horizontal menubar > menuitem { padding: 0 8px; }
@@ -91,13 +92,15 @@ MatePanelAppletFrameDBus {
 
 .mate-panel-menu-bar #tasklist-button {
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
-                                currentColor 0%,
+                                $primary_color 0%,
                                 transparent 0%)
                                 0 0 0 / 0 0 0px;
 
   &:checked {
+    color: titlebar_fg_color;
+    background-color: $divider_color;
     border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
-                                  currentColor 100%,
+                                  $primary_color 100%,
                                   transparent 0%)
                                   0 0 2 / 0 0 2px;
   }
@@ -127,9 +130,9 @@ PanelApplet.wnck-applet .wnck-pager {
   background-color: transparent;
   color: $alt_primary_color;
 
-  &:hover { background-color: $inverse_divider_color; }
+  &:hover { background-color: $divider_color; }
 
-  &:active { background-color: $inverse_track_color; }
+  &:active { background-color: $track_color; }
 
   &:selected { background-color: $primary_color; }
 }
@@ -192,8 +195,8 @@ na-tray-applet widget box widget {
   &:not(:selected) > box { transition: $shorter_transition; }
 
   &:selected > box {
-    background-color: $inverse_divider_color;
-    color: $inverse_fg_color;
+    background-color: $divider_color;
+    color: $fg_color;
   }
 }
 

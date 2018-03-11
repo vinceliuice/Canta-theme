@@ -10,16 +10,16 @@
 
 
 <!-- CONSTANTS -->
-<constant name="C_titlebar" value="#3B4342" />
-<constant name="C_titlebar_unfocused" value="#3B4342" />
-<constant name="C_border_focused" value="#464A4A" />
-<constant name="C_border_unfocused" value="#464A4A" />
+<constant name="C_titlebar" value="#47504E" />
+<constant name="C_titlebar_unfocused" value="#47504E" />
+<constant name="C_border_focused" value="#586260" />
+<constant name="C_border_unfocused" value="#586260" />
 <constant name="C_title_focused" value="#f5f5f5" />
 <constant name="C_title_unfocused" value="#dedede" />
 
-<constant name="C_wm_button_background" value="#3B4342" />
-<constant name="C_wm_button_foreground" value="#3B4342" />
-<constant name="C_wm_button_unfocused" value="#3B4342" />
+<constant name="C_wm_button_background" value="#47504E" />
+<constant name="C_wm_button_foreground" value="#47504E" />
+<constant name="C_wm_button_unfocused" value="#47504E" />
 
 <constant name="C_close_button" value="#787878" />
 <constant name="C_maximize_button" value="#787878" />
@@ -30,11 +30,11 @@
 
 <!-- Focused window -->
 <frame_geometry name="normal" title_scale="medium" rounded_top_left="2" rounded_top_right="2">
-	<distance name="left_width" value="1" />
-	<distance name="right_width" value="1" />
-	<distance name="bottom_height" value="1" />
-	<distance name="left_titlebar_edge" value="5" />
-	<distance name="right_titlebar_edge" value="5" />
+	<distance name="left_width" value="0" />
+	<distance name="right_width" value="0" />
+	<distance name="bottom_height" value="0" />
+	<distance name="left_titlebar_edge" value="10" />
+	<distance name="right_titlebar_edge" value="0" />
 	<distance name="title_vertical_pad" value="4" />
 	<aspect_ratio name="button" value="1.0" />
 	<border name="title_border" left="4" right="4" top="4" bottom="4" />
@@ -43,11 +43,11 @@
 
 <!-- Unfocused window -->
 <frame_geometry name="normal_unfocused" title_scale="medium" rounded_top_left="2" rounded_top_right="2" parent="normal" >
-	<distance name="left_width" value="1" />
-	<distance name="right_width" value="1" />
-	<distance name="bottom_height" value="1" />
-	<distance name="left_titlebar_edge" value="5"/>
-	<distance name="right_titlebar_edge" value="5"/>
+	<distance name="left_width" value="0" />
+	<distance name="right_width" value="0" />
+	<distance name="bottom_height" value="0" />
+	<distance name="left_titlebar_edge" value="10"/>
+	<distance name="right_titlebar_edge" value="0"/>
 	<distance name="title_vertical_pad" value="4" />
 	<border name="title_border" left="4" right="4" top="4" bottom="4" />
 	<border name="button_border" left="0" right="0" top="4" bottom="4" />
@@ -82,8 +82,8 @@
 
 <!-- Small unfocused window -->
 <frame_geometry name="small_unfocused" parent="small">
-	<distance name="left_titlebar_edge" value="5"/>
-	<distance name="right_titlebar_edge" value="5"/>
+	<distance name="left_titlebar_edge" value="4"/>
+	<distance name="right_titlebar_edge" value="4"/>
 </frame_geometry>
 
 <!-- No buttons -->
@@ -92,9 +92,9 @@
 
 <!-- Border -->
 <frame_geometry name="border" has_title="false" rounded_top_left="false" rounded_top_right="false" parent="normal" >
-	<distance name="left_width" value="1" />
-	<distance name="right_width" value="1" />
-	<distance name="bottom_height" value="1" />
+	<distance name="left_width" value="0" />
+	<distance name="right_width" value="0" />
+	<distance name="bottom_height" value="0" />
 	<distance name="title_vertical_pad" value="1" />
 	<border name="title_border" left="10" right="10" top="0" bottom="0" />
 	<border name="button_border" left="0" right="0" top="0" bottom="0"/>
@@ -148,7 +148,7 @@
 </draw_ops>
 
 <draw_ops name="titlebar_fill_focused">
-	<rectangle color="C_titlebar" x="4" y="0" width="width" height="height" filled="true" />
+	<rectangle color="C_titlebar" x="0" y="0" width="width" height="height" filled="true" />
 </draw_ops>
 
 <draw_ops name="titlebar_fill_attached_focused">
