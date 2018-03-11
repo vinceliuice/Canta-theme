@@ -2013,7 +2013,7 @@ scrollbar {
   }
 
   transition: $longer_transition;
-  background-color: $base_color;
+  background-color: rgba($base_color, 0.65);
   background-clip: $extra_background_clip;
 
   // scrollbar border
