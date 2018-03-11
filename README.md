@@ -43,9 +43,9 @@ Or double-click to open that script files and select "run at the terminal" at na
 #### Canta icon theme
 Canta icon theme use numix-icon-theme-circle icon theme for Inherits,
 so if you want a better experience you should install numix-circle first
-##### numix-icon-theme-circle : https://github.com/numixproject/numix-icon-theme-circle
+#### numix-icon-theme-circle : https://github.com/numixproject/numix-icon-theme-circle
 (Just install numix-circle nomal, Canta icon theme will use it's icons resources for missing part!)
-##### Install Canta icon theme
+#### Install Canta icon theme
 Open ../Canta-theme/src/icons then
 
 Run

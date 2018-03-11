@@ -4,6 +4,10 @@ show_question() {
   echo -e "\033[1;34m$@\033[0m"
 }
 
+show_tips() {
+  echo -e "\033[1;32m$@\033[0m"
+}
+
 show_dir() {
   echo -e "\033[1;32m$@\033[0m"
 }
@@ -91,6 +95,8 @@ install() {
   update-icon-caches $DEST_DIR/Canta
 
   echo -e "\nInstallation complete!"
+  show_tips "\nIf you want a better experience you should install numix-circle first!"
+  show_tips "Because Canta icon theme use numix-icon-theme-circle icon theme for Inherits!"
 
   setup
 
