@@ -3611,10 +3611,6 @@ row image.sidebar-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-row:hover image.sidebar-icon {
-  color: #00CE99;
-}
-
 row:selected image.sidebar-icon {
   color: rgba(255, 255, 255, 0.7);
 }
@@ -3657,6 +3653,10 @@ placessidebar row image.sidebar-icon:dir(ltr) {
 
 placessidebar row image.sidebar-icon:dir(rtl) {
   padding-left: 8px;
+}
+
+placessidebar row:hover image.sidebar-icon {
+  color: #00CE99;
 }
 
 placessidebar row label.sidebar-label:dir(ltr) {
@@ -5213,6 +5213,114 @@ box.vertical > revealer > toolbar.search-bar button > widget {
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
 
+/**************
+  * Gnome-Logs *
+  **************/
+headerbar > button.flat.popup.title-menu-button.toggle > grid .title {
+  margin: -3px 0;
+  padding: 2px 4px 0;
+  font-size: 90%;
+}
+
+headerbar > button.flat.popup.title-menu-button.toggle > grid .subtitle {
+  margin: -3px 0;
+  padding: 0 4px 2px;
+  font-size: 80%;
+}
+
+window.background > box.vertical box.horizontal list.categories {
+  border-radius: 0 0 0 8px;
+}
+
+window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list > separator {
+  background-color: transparent;
+}
+
+window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list > separator.compressed-rows-group-separator {
+  background-image: image(#3f4544);
+}
+
+window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list row.event.activatable label.compressed-entries-label, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list .event.view label.compressed-entries-label, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list treeview.view header button.event label.compressed-entries-label, treeview.view header window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list button.event label.compressed-entries-label, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list .budgie-menu button.event label.compressed-entries-label, .budgie-menu window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list button.event label.compressed-entries-label {
+  background-image: image(#FFAC00);
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list row.event.activatable.compressed-row, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list .event.compressed-row.view, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list treeview.view header button.event.compressed-row, treeview.view header window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list button.event.compressed-row, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list .budgie-menu button.event.compressed-row, .budgie-menu window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list button.event.compressed-row {
+  background-image: image(#2d3130);
+  color: #cccccc;
+}
+
+window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list row.event.activatable.compressed-row:hover, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list .event.compressed-row.view:hover, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list treeview.view header button.event.compressed-row:hover, treeview.view header window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list button.event.compressed-row:hover, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list .budgie-menu button.event.compressed-row:hover, .budgie-menu window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list button.event.compressed-row:hover {
+  background-image: image(#3e4342);
+  color: #FFFFFF;
+}
+
+window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list row.event.activatable.compressed-row:active, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list .event.compressed-row.view:active, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list treeview.view header button.event.compressed-row:active, treeview.view header window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list button.event.compressed-row:active, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list .budgie-menu button.event.compressed-row:active, .budgie-menu window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list button.event.compressed-row:active, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list row.event.activatable.compressed-row:active:focus, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list .event.compressed-row.view:active:focus, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list treeview.view header button.event.compressed-row:active:focus, treeview.view header window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list button.event.compressed-row:active:focus, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list .budgie-menu button.event.compressed-row:active:focus, .budgie-menu window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list button.event.compressed-row:active:focus {
+  background-image: image(#484d4c);
+  color: #FFFFFF;
+  animation: none;
+}
+
+window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list row.event.activatable.compressed-row.popover-activated-row, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list .event.compressed-row.popover-activated-row.view, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list treeview.view header button.event.compressed-row.popover-activated-row, treeview.view header window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list button.event.compressed-row.popover-activated-row, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list .budgie-menu button.event.compressed-row.popover-activated-row, .budgie-menu window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list button.event.compressed-row.popover-activated-row {
+  background-color: #00CE99;
+  color: #FFFFFF;
+}
+
+window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list row.event.activatable.compressed-row-header, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list .event.compressed-row-header.view, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list treeview.view header button.event.compressed-row-header, treeview.view header window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list button.event.compressed-row-header, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list .budgie-menu button.event.compressed-row-header, .budgie-menu window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list button.event.compressed-row-header {
+  background-image: image(#3f4544);
+  background-color: #3f4544;
+  color: #00CE99;
+  transition: none;
+  animation: none;
+}
+
+window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list row.event.activatable.compressed-row-header:hover, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list .event.compressed-row-header.view:hover, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list treeview.view header button.event.compressed-row-header:hover, treeview.view header window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list button.event.compressed-row-header:hover, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list .budgie-menu button.event.compressed-row-header:hover, .budgie-menu window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list button.event.compressed-row-header:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #00CE99;
+}
+
+window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list row.event.activatable.compressed-row-header:active, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list .event.compressed-row-header.view:active, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list treeview.view header button.event.compressed-row-header:active, treeview.view header window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list button.event.compressed-row-header:active, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list .budgie-menu button.event.compressed-row-header:active, .budgie-menu window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list button.event.compressed-row-header:active, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list row.event.activatable.compressed-row-header:active:focus, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list .event.compressed-row-header.view:active:focus, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list treeview.view header button.event.compressed-row-header:active:focus, treeview.view header window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list button.event.compressed-row-header:active:focus, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list .budgie-menu button.event.compressed-row-header:active:focus, .budgie-menu window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list button.event.compressed-row-header:active:focus, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list row.event.activatable.compressed-row-header:checked, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list .event.compressed-row-header.view:checked, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list treeview.view header button.event.compressed-row-header:checked, treeview.view header window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list button.event.compressed-row-header:checked, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list .budgie-menu button.event.compressed-row-header:checked, .budgie-menu window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list button.event.compressed-row-header:checked, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list row.event.activatable.compressed-row-header:checked:focus, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list .event.compressed-row-header.view:checked:focus, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list treeview.view header button.event.compressed-row-header:checked:focus, treeview.view header window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list button.event.compressed-row-header:checked:focus, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list .budgie-menu button.event.compressed-row-header:checked:focus, .budgie-menu window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list button.event.compressed-row-header:checked:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  background-image: image(#3f4544);
+}
+
+window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list row.event.activatable.compressed-row-header label.compressed-entries-label, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list .event.compressed-row-header.view label.compressed-entries-label, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list treeview.view header button.event.compressed-row-header label.compressed-entries-label, treeview.view header window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list button.event.compressed-row-header label.compressed-entries-label, window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list .budgie-menu button.event.compressed-row-header label.compressed-entries-label, .budgie-menu window.background > box.vertical box.horizontal > box.vertical > scrolledwindow > viewport.frame > list button.event.compressed-row-header label.compressed-entries-label {
+  background-image: image(#00CE99);
+  color: #FFFFFF;
+}
+
+/**********************
+  *  Gnome Tweak Tool  *
+  **********************/
+.tweak-categories {
+  border-radius: 0 0 0 8px;
+}
+
+.tweak-titlebar-right > switch,
+dialog.csd > headerbar.titlebar > switch {
+  margin: 12px 0;
+}
+
+/************************
+  * Gnome Control Center *
+  ************************/
+stack > box.vertical > widget > overlay grid.horizontal > stack > button.toggle {
+  margin: 8px 6px;
+}
+
+box.horizontal.titlebar > headerbar > stack > box.vertical > .title {
+  margin: 0;
+}
+
+box.horizontal.titlebar > headerbar > stack > box.vertical > .subtitle {
+  margin: -3px 0;
+}
+
+dialog.background.csd > headerbar.titlebar > label:not(.title):not(.subtitle) {
+  font-weight: 700;
+}
+
 /*********
  * To Do *
  *********/
@@ -5442,6 +5550,84 @@ window.background:not(.csd) > widget > radiobutton > radio {
 
 window.background:not(.csd) > window.background > menu > separator {
   color: rgba(255, 255, 255, 0.08);
+}
+
+/*************
+  * RhythmBox *
+  *************/
+.sidebar-paned .inline-toolbar.horizontal.sidebar-toolbar {
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.08);
+}
+
+window.csd > box.vertical > box.vertical > toolbar.horizontal,
+window.solid-csd > box.vertical > box.vertical > toolbar.horizontal {
+  margin: -1px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+  background-color: transparent;
+}
+
+window.csd > box.vertical > box.vertical > toolbar.horizontal button,
+window.solid-csd > box.vertical > box.vertical > toolbar.horizontal button {
+  min-height: 36px;
+  min-width: 36px;
+  padding: 0;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  border-radius: 100px;
+  -gtk-outline-radius: 100px;
+}
+
+window.csd > box.vertical > box.vertical > frame,
+window.solid-csd > box.vertical > box.vertical > frame {
+  margin: -1px 0;
+  padding: 0;
+}
+
+window.csd > box.vertical > box.vertical > frame > border,
+window.solid-csd > box.vertical > box.vertical > frame > border {
+  border: none;
+}
+
+window.background > box.vertical > box.vertical > toolbar button,
+window.background > box.vertical > box.vertical > toolbar .linked > button {
+  min-width: 52px;
+  min-height: 52px;
+  padding: 0;
+  margin: 0;
+  border-radius: 100px;
+  -gtk-outline-radius: 100px;
+}
+
+window.background > box.vertical > toolbar.primary-toolbar toolitem:first-child .linked > button.image-button.raised {
+  min-width: 52px;
+  min-height: 52px;
+  margin: 0;
+  padding: 0;
+  border-radius: 100px;
+  -gtk-outline-radius: 100px;
+}
+
+window.background > box.vertical > toolbar.primary-toolbar toolitem:first-child .linked > button.image-button.raised > widget > box > image {
+  padding: 0;
+}
+
+window.background > box.vertical > toolbar.primary-toolbar toolitem .linked > button.image-button.raised {
+  min-height: 36px;
+  min-width: 36px;
+  padding: 0;
+  border-radius: 100px;
+  -gtk-outline-radius: 100px;
+}
+
+window.background > box.vertical > toolbar.primary-toolbar toolitem button.flat.scale {
+  min-height: 36px;
+  min-width: 36px;
+  padding: 0;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  border-radius: 100px;
+  -gtk-outline-radius: 100px;
 }
 
 /************

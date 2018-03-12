@@ -3108,7 +3108,6 @@ stacksidebar {
 row {
   image.sidebar-icon { color: $secondary_fg_color; }
 
-  &:hover image.sidebar-icon { color: $primary_color; }
   &:selected image.sidebar-icon { color: $inverse_secondary_fg_color; }
 }
 
@@ -3144,6 +3143,8 @@ placessidebar {
       &:dir(ltr) { padding-right: 8px; }
       &:dir(rtl) { padding-left: 8px; }
     }
+
+    &:hover image.sidebar-icon { color: $primary_color; }
 
     label.sidebar-label {
       &:dir(ltr) { padding-right: 2px; }

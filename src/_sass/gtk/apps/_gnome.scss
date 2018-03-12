@@ -888,6 +888,139 @@ box.vertical > revealer > toolbar.search-bar {
 }
 
 
+ /**************
+  * Gnome-Logs *
+  **************/
+
+// titles inside the button!?
+headerbar > button.flat.popup.title-menu-button.toggle {
+
+  > grid {
+    .title {
+      margin: -3px 0;
+      padding: 2px 4px 0;
+      font-size: 90%;
+    }
+    .subtitle {
+      margin: -3px 0;
+      padding: 0 4px 2px;
+      font-size: 80%;
+    }
+  }
+}
+
+window.background > box.vertical box.horizontal {
+
+  list.categories { border-radius: 0 0 0 $windows_radius; } // side-pane
+
+  > box.vertical > scrolledwindow > viewport.frame > list { // right-pane
+
+    > separator {
+      background-color: transparent; // hide single-line separators
+
+      &.compressed-rows-group-separator { // use opaque colour
+        background-image : image($base_color);
+      }
+    }
+
+    // > 3.25.90
+    row.event.activatable {
+
+      label.compressed-entries-label { // hard-coded background-color?
+        background-image: image($suggested_color);
+        color: $inverse_fg_color;
+        font-weight: 700;
+      }
+
+      &.compressed-row {
+        background-image: image(darken($bg_color, 3%));
+        color: darken($fg_color, 20%);
+
+        &:hover {
+          background-image: image(mix($fg_color, $bg_color, 5%));
+          color: $fg_color;
+        }
+
+        &:active {
+          &, &:focus {
+            background-image: image(mix($fg_color,
+                                        $bg_color, 10%));
+            color: $fg_color;
+            animation: none;
+          }
+        }
+
+        &.popover-activated-row {
+          background-color: $primary_color;
+          color: $inverse_fg_color;
+        }
+
+        &-header {
+          background-image: image($base_color);
+          background-color: $base_color; // stop highlighting
+          color: $primary_color;
+          transition: none;
+          animation: none;
+
+          &:hover {
+            background-color: $divider_color;
+            color: $primary_color;
+          }
+
+          &:active, &:checked {
+            &, &:focus {
+              background-color: $track_color;
+              background-image: image($base_color);
+            }
+          }
+
+          label.compressed-entries-label {
+            background-image: image($primary_color);
+            color: $inverse_fg_color;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+ /**********************
+  *  Gnome Tweak Tool  *
+  **********************/
+
+// sidebar on gnome tweak
+.tweak-categories { border-radius: 0 0 0 $windows_radius; }
+
+.tweak-titlebar-right,
+dialog.csd > headerbar.titlebar { > switch { margin: 12px 0; } }
+
+
+ /************************
+  * Gnome Control Center *
+  ************************/
+
+// users section
+
+stack > box.vertical > widget > overlay grid.horizontal > stack {
+  > button.toggle { margin: 8px 6px; } // Show the button shadow completely
+}
+
+box.horizontal.titlebar > headerbar > stack > box.vertical {
+  > .title { margin: 0; }
+  > .subtitle { margin: -3px 0; }
+}
+
+dialog.background.csd {
+  > headerbar.titlebar {
+
+    > label:not(.title):not(.subtitle) {
+      font-weight: 700;
+    }
+  }
+}
+
+
 /*********
  * To Do *
  *********/

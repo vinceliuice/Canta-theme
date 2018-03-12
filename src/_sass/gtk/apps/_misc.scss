@@ -114,6 +114,96 @@ window.background:not(.csd) {
 }
 
 
+ /*************
+  * RhythmBox *
+  *************/
+
+// add top-border to inline-toolbar
+.sidebar-paned .inline-toolbar.horizontal.sidebar-toolbar {
+  box-shadow: inset 0 1px $border_color;
+}
+
+// tweak border and frame in alt-toolbar
+window.csd > box.vertical > box.vertical,
+window.solid-csd > box.vertical > box.vertical {
+
+  > toolbar.horizontal {
+    margin: -1px 0;
+    border-top: 1px solid $border_color;
+    box-shadow: none;
+    background-color: transparent;
+
+    button {
+      min-height: 36px;
+      min-width: 36px;
+      padding: 0;
+      margin-top: 8px;
+      margin-bottom: 8px;
+      border-radius: 100px;
+      -gtk-outline-radius: 100px;
+    }
+  }
+
+  > frame {
+    margin: -1px 0;
+    padding: 0;
+
+    > border { border: none; }
+  }
+}
+
+
+// force using circle buttons for 'play/pause' etc
+window.background > box.vertical > box.vertical > toolbar {
+  button,
+  .linked > button {
+    min-width: 52px;
+    min-height: 52px;
+    padding: 0;
+    margin: 0;
+    border-radius: 100px;
+    -gtk-outline-radius: 100px;
+  }
+}
+
+window.background > box.vertical > toolbar.primary-toolbar {
+
+  toolitem {
+
+    &:first-child { // 'prev/play/next'
+      .linked > button.image-button.raised {
+        min-width: 52px;
+        min-height: 52px;
+        margin: 0;
+        padding: 0;
+        border-radius: 100px;
+        -gtk-outline-radius: 100px;
+
+        > widget > box > image { padding: 0; }
+      }
+    }
+
+    .linked > button.image-button.raised { // 'shuffle/repeat'
+      min-height: 36px;
+      min-width: 36px;
+      padding: 0;
+      border-radius: 100px;
+      -gtk-outline-radius: 100px;
+    }
+
+    button.flat.scale { // 'volume'
+      min-height: 36px;
+      min-width: 36px;
+      padding: 0;
+      margin-top: 12px;
+      margin-bottom: 12px;
+      border-radius: 100px;
+      -gtk-outline-radius: 100px;
+    }
+  }
+}
+
+
 /************
  * Inkscape *
  ************/

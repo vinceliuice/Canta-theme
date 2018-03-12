@@ -3,7 +3,7 @@ Name=Canta
 Comment=Fresh and simple personality icon theme
 Inherits=Numix-Circle,Adwaita,gnome,hicolor
 
-Directories=actions/symbolic,actions/scalable,devices/scalable,places/scalable,mimetypes/scalable,scalable/categories,scalable/devices,scalable/mimetypes,scalable/emblems,scalable/status
+Directories=actions/symbolic,actions/scalable,devices/scalable,emblems/scalable,places/scalable,mimetypes/scalable,scalable/categories,scalable/devices,scalable/mimetypes,scalable/emblems,scalable/status
 
 [actions/symbolic]
 Size=16
@@ -23,27 +23,34 @@ MaxSize=512
 Size=64
 Context=Places
 Type=Scalable
-MinSize=8
+MinSize=16
 MaxSize=256
+
+[emblems/scalable]
+Size=512
+Context=Emblems
+Type=Scalable
+MinSize=16
+MaxSize=512
 
 [devices/scalable]
 Size=512
 Context=Devices
 Type=Scalable
-MinSize=8
+MinSize=16
 MaxSize=512
 
 [mimetypes/scalable]
 Size=512
 Context=MimeTypes
 Type=Scalable
-MinSize=8
+MinSize=16
 MaxSize=512
 
 [scalable/categories]
 Context=Categories
 Size=16
-MinSize=8
+MinSize=16
 MaxSize=512
 Type=Scalable
 
