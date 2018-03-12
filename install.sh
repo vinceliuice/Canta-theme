@@ -70,7 +70,10 @@ install() {
   mkdir -p                                                                           ${THEME_DIR}/gnome-shell
   cp -ur ${SRC_DIR}/src/gnome-shell/{*.svg,extensions,noise-texture.png,pad-osd.css} ${THEME_DIR}/gnome-shell
   cp -ur ${SRC_DIR}/src/gnome-shell/assets${ELSE_DARK}                               ${THEME_DIR}/gnome-shell/assets
-  cp -ur ${SRC_DIR}/src/gnome-shell/gnome-shell${color}${size}.css     ${THEME_DIR}/gnome-shell/gnome-shell.css
+  cp -ur ${SRC_DIR}/src/gnome-shell/common-assets/{*.svg,dash}                       ${THEME_DIR}/gnome-shell/assets
+  cp -ur ${SRC_DIR}/src/gnome-shell/custom-assets/activities${ELSE_LIGHT}.svg        ${THEME_DIR}/gnome-shell/assets/activities.svg
+  cp -ur ${SRC_DIR}/src/gnome-shell/custom-assets/activities-active${ELSE_LIGHT}.svg ${THEME_DIR}/gnome-shell/assets/activities-active.svg
+  cp -ur ${SRC_DIR}/src/gnome-shell/gnome-shell${color}${size}.css                   ${THEME_DIR}/gnome-shell/gnome-shell.css
   glib-compile-resources \
     --sourcedir=${THEME_DIR}/gnome-shell \
     --target=${THEME_DIR}/gnome-shell/gnome-shell-theme.gresource \
