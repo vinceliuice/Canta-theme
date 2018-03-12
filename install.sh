@@ -12,7 +12,8 @@ else
   DEST_DIR="$HOME/.themes"
 fi
 
-SRC_DIR=`dirname "$0"`
+SRC_DIR=$(cd $(dirname $0) && pwd)
+
 THEME_NAME=Canta
 COLOR_VARIANTS=('' '-dark' '-light')
 SIZE_VARIANTS=('' '-compact')
@@ -43,7 +44,7 @@ install() {
   [[ ${color} == '-dark' ]] && local ELSE_DARK=${color}
   [[ ${color} == '-light' ]] && local ELSE_LIGHT=${color}
 
-  local THEME_DIR=${dest}/${name}${color}${size}
+  local THEME_DIR=${DEST_DIR}/${name}${color}${size}
 
   [[ -d ${THEME_DIR} ]] && rm -rf ${THEME_DIR}
 
@@ -90,7 +91,7 @@ install() {
 
   mkdir -p                                                                           ${THEME_DIR}/metacity-1
   cp -ur ${SRC_DIR}/src/metacity-1/assets/*.png                                      ${THEME_DIR}/metacity-1
-  cp -ur ${SRC_DIR}/src/metacity-1/metacity-theme-1${color}.xml                 ${THEME_DIR}/metacity-1/metacity-theme-1.xml
+  cp -ur ${SRC_DIR}/src/metacity-1/metacity-theme-1${color}.xml                      ${THEME_DIR}/metacity-1/metacity-theme-1.xml
   cd ${THEME_DIR}/metacity-1
 	ln -s metacity-theme-1.xml metacity-theme-2.xml
 	ln -s metacity-theme-1.xml metacity-theme-3.xml
@@ -103,87 +104,6 @@ install() {
   cp -ur ${SRC_DIR}/src/xfwm4/{*.svg,themerc}                                        ${THEME_DIR}/xfwm4
   cp -ur ${SRC_DIR}/src/xfwm4/assets${ELSE_LIGHT}                                    ${THEME_DIR}/xfwm4/assets
 }
-
-while [[ $# -gt 0 ]]; do
-  case "${1}" in
-    -d|--dest)
-      dest="${2}"
-      if [[ ! -d "${dest}" ]]; then
-        echo "ERROR: Destination directory does not exist."
-        exit 1
-      fi
-      shift 2
-      ;;
-    -n|--name)
-      name="${2}"
-      shift 2
-      ;;
-    -c|--color)
-      shift
-      for variant in "${@}"; do
-        case "${variant}" in
-          standard)
-            colors+=("${COLOR_VARIANTS[0]}")
-            shift
-            ;;
-          dark)
-            colors+=("${COLOR_VARIANTS[1]}")
-            shift
-            ;;
-          light)
-            colors+=("${COLOR_VARIANTS[2]}")
-            shift
-            ;;
-          -*|--*)
-            break
-            ;;
-          *)
-            echo "ERROR: Unrecognized color variant '$1'."
-            echo "Try '$0 --help' for more information."
-            exit 1
-            ;;
-        esac
-      done
-      ;;
-    -s|--size)
-      shift
-      for variant in "${@}"; do
-        case "${variant}" in
-          standard)
-            sizes+=("${SIZE_VARIANTS[0]}")
-            shift
-            ;;
-          compact)
-            sizes+=("${SIZE_VARIANTS[1]}")
-            shift
-            ;;
-          -*|--*)
-            break
-            ;;
-          *)
-            echo "ERROR: Unrecognized size variant '$1'."
-            echo "Try '$0 --help' for more information."
-            exit 1
-            ;;
-        esac
-      done
-      ;;
-    -h|--help)
-      usage
-      exit 0
-      ;;
-    *)
-      echo "ERROR: Unrecognized installation option '$1'."
-      echo "Try '$0 --help' for more information."
-      exit 1
-      ;;
-  esac
-done
-
-if [[ ! -w "${dest:-${DEST_DIR}}" ]]; then
-  echo "Please run as root."
-  exit 1
-fi
 
 for color in "${colors[@]:-${COLOR_VARIANTS[@]}}"; do
   for size in "${sizes[@]:-${SIZE_VARIANTS[@]}}"; do
