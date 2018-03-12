@@ -220,13 +220,21 @@ filechooser,
       &:hover {
         color: $primary_color;
         background-color: rgba($divider_color, 0.03);
-        box-shadow: inset 3px 0 $primary_color; }
+        box-shadow: inset 3px 0 $primary_color;
+        image.sidebar-icon { color: $primary_color; }
+      }
 
       &:active { box-shadow: inset 3px 0 $primary_color; }
+
       &:backdrop { opacity: 0.85; }
 
+      &:selected image.sidebar-icon,
+      &:selected:hover image.sidebar-icon { color: $inverse_fg_color; }
+
       &:selected {
+
         &:active { box-shadow: none; }
+
         &:hover {
           box-shadow: none;
           color: $inverse_fg_color;

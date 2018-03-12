@@ -3633,14 +3633,8 @@ placessidebar row > revealer {
   padding: 0 12px;
 }
 
-placessidebar row:hover, placessidebar row:selected:hover {
-  color: #00CF88;
-  box-shadow: inset 3px 0 0 #00CF88;
-}
-
 placessidebar row:selected {
-  color: #00CE99;
-  box-shadow: inset 3px 0 0 #00CE99;
+  color: #FFFFFF;
 }
 
 placessidebar row:disabled {
@@ -3653,10 +3647,6 @@ placessidebar row image.sidebar-icon:dir(ltr) {
 
 placessidebar row image.sidebar-icon:dir(rtl) {
   padding-left: 8px;
-}
-
-placessidebar row:hover image.sidebar-icon {
-  color: #00CE99;
 }
 
 placessidebar row label.sidebar-label:dir(ltr) {
@@ -4597,6 +4587,11 @@ filechooser placessidebar.sidebar row.sidebar-row:hover,
   box-shadow: inset 3px 0 #00CE99;
 }
 
+filechooser placessidebar.sidebar row.sidebar-row:hover image.sidebar-icon,
+.nautilus-window placessidebar.sidebar row.sidebar-row:hover image.sidebar-icon {
+  color: #00CE99;
+}
+
 filechooser placessidebar.sidebar row.sidebar-row:active,
 .nautilus-window placessidebar.sidebar row.sidebar-row:active {
   box-shadow: inset 3px 0 #00CE99;
@@ -4605,6 +4600,13 @@ filechooser placessidebar.sidebar row.sidebar-row:active,
 filechooser placessidebar.sidebar row.sidebar-row:backdrop,
 .nautilus-window placessidebar.sidebar row.sidebar-row:backdrop {
   opacity: 0.85;
+}
+
+filechooser placessidebar.sidebar row.sidebar-row:selected image.sidebar-icon,
+filechooser placessidebar.sidebar row.sidebar-row:selected:hover image.sidebar-icon,
+.nautilus-window placessidebar.sidebar row.sidebar-row:selected image.sidebar-icon,
+.nautilus-window placessidebar.sidebar row.sidebar-row:selected:hover image.sidebar-icon {
+  color: #FFFFFF;
 }
 
 filechooser placessidebar.sidebar row.sidebar-row:selected:active,
