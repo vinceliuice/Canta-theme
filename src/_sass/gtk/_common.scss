@@ -1706,9 +1706,9 @@ popover.background {
   &:backdrop { box-shadow: $shadow_1; }
 
   &, .csd & {
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.3);
+//    border-style: solid;
+//    border-width: 1px;
+//    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.3);
     border-radius: $buttons_radius + 1px;
   }
 
@@ -2913,6 +2913,7 @@ row {
   }
 
   &:selected { @extend %selected_items; }
+  & button.circular { margin: 0 4px; } // To show the circular button shadow completely on row
 }
 
 

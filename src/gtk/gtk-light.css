@@ -2141,9 +2141,6 @@ popover.background:backdrop {
 }
 
 popover.background, .csd popover.background {
-  border-style: solid;
-  border-width: 1px;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.3);
   border-radius: 7px;
 }
 
@@ -3432,6 +3429,10 @@ row.activatable.has-open-popup, .has-open-popup.view, treeview.view header butto
   box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.15);
   background-image: radial-gradient(circle farthest-corner at center, alpha(currentColor, 0.15) 10%, transparent 0%);
   background-size: 0% 0%;
+}
+
+row button.circular {
+  margin: 0 4px;
 }
 
 /*********************
