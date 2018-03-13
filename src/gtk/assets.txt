@@ -108,6 +108,7 @@ background-img-top
 background-img-top-light
 background-img-top-dark
 background-img-bottom
+background-img-bottom-light
 background-img-bottom-dark
 titlebutton-close
 titlebutton-close-backdrop

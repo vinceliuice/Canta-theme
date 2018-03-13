@@ -1593,7 +1593,7 @@ headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-but
 .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:only-child, .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:only-child,
 headerbar .linked:not(.vertical).path-bar > button:only-child,
 headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:only-child {
-  border-radius: 100px;
+  border-radius: 6px;
 }
 
 .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:first-child, .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-child,
@@ -4388,7 +4388,7 @@ button.emoji-section:last-child {
 .nautilus-window notebook > stack {
   background-color: #fcfcfc;
   border-bottom-right-radius: 10px;
-  background-image: -gtk-scaled(url("assets/background-img-bottom.png"), url("assets/background-img-bottom@2.png"));
+  background-image: -gtk-scaled(url("assets/background-img-bottom-light.png"), url("assets/background-img-bottom-light@2.png"));
   background-repeat: no-repeat;
   background-position: top right;
 }

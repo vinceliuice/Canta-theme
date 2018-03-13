@@ -1255,7 +1255,7 @@ headerbar {
       }
     }
 
-    &:only-child { border-radius: 100px; }
+    &:only-child { border-radius: $buttons_radius; }
     &:first-child { border-radius: 100px 0 0 100px; padding-left: 8px; }
     &:last-child { border-radius: 0 100px 100px 0; padding-right: 8px; }
     }

@@ -11,8 +11,8 @@
 .nautilus-window notebook > stack {
   background-color: $base_color;
   border-bottom-right-radius: $windows_radius + 2px;
-  background-image: -gtk-scaled(url("assets/background-img-bottom#{$asset_suffix}.png"),
-                                url("assets/background-img-bottom#{$asset_suffix}@2.png"));
+  background-image: -gtk-scaled(url("assets/background-img-bottom#{$asset_suffix_darker}.png"),
+                                url("assets/background-img-bottom#{$asset_suffix_darker}@2.png"));
   background-repeat: no-repeat;
   background-position: top right;
 }

@@ -1593,7 +1593,7 @@ headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-but
 .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:only-child, .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:only-child,
 headerbar .linked:not(.vertical).path-bar > button:only-child,
 headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:only-child {
-  border-radius: 100px;
+  border-radius: 6px;
 }
 
 .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:first-child, .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-child,
