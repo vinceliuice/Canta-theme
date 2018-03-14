@@ -1,6 +1,5 @@
 $asset_suffix: if($variant == 'dark', '-dark', '');
-$asset_suffix_light: if($titlebar == 'dark', '', '-light');
-$asset_suffix_darker: if($variant == 'dark', '-dark', $asset_suffix_light);
+$asset_suffix_light: if($titlebar == 'light' and $variant == 'light', '', '-dark');
 $extra_background_clip: if($variant == 'light', padding-box, border-box);
 
 // opacities

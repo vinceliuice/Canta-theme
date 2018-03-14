@@ -3664,7 +3664,7 @@ placessidebar row.sidebar-placeholder-row {
   background-clip: content-box;
 }
 
-placessidebar row.sidebar-new-bookmark-row {
+placessidebar row.sidebar-new-bookmark-row, placessidebar row.sidebar-new-bookmark-row image.sidebar-icon {
   color: #FFAC00;
 }
 
@@ -4388,13 +4388,13 @@ button.emoji-section:last-child {
 .nautilus-window notebook > stack {
   background-color: #fcfcfc;
   border-bottom-right-radius: 10px;
-  background-image: -gtk-scaled(url("assets/background-img-bottom-light.png"), url("assets/background-img-bottom-light@2.png"));
+  background-image: -gtk-scaled(url("assets/background-img-bottom.png"), url("assets/background-img-bottom@2.png"));
   background-repeat: no-repeat;
   background-position: top right;
 }
 
 .nautilus-window headerbar {
-  background-image: -gtk-scaled(url("assets/background-img-top-light.png"), url("assets/background-img-top-light@2.png"));
+  background-image: -gtk-scaled(url("assets/background-img-top.png"), url("assets/background-img-top@2.png"));
   background-repeat: no-repeat;
   background-position: bottom right;
 }
@@ -4557,7 +4557,7 @@ filechooser.csd.background, filechooser placessidebar,
 .nautilus-window.csd.background,
 .nautilus-window placessidebar {
   background-color: rgba(250, 250, 250, 0.97);
-  border-radius: 0 0 8px 10px;
+  border-radius: 0 0 10px 8px;
 }
 
 filechooser.maximized placessidebar,

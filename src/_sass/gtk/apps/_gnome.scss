@@ -11,16 +11,16 @@
 .nautilus-window notebook > stack {
   background-color: $base_color;
   border-bottom-right-radius: $windows_radius + 2px;
-  background-image: -gtk-scaled(url("assets/background-img-bottom#{$asset_suffix_darker}.png"),
-                                url("assets/background-img-bottom#{$asset_suffix_darker}@2.png"));
+  background-image: -gtk-scaled(url("assets/background-img-bottom#{$asset_suffix}.png"),
+                                url("assets/background-img-bottom#{$asset_suffix}@2.png"));
   background-repeat: no-repeat;
   background-position: top right;
 }
 
 // Set nautilus background pictures
 .nautilus-window headerbar {
-  background-image: -gtk-scaled(url("assets/background-img-top#{$asset_suffix_darker}.png"),
-                                url("assets/background-img-top#{$asset_suffix_darker}@2.png"));
+  background-image: -gtk-scaled(url("assets/background-img-top#{$asset_suffix_light}.png"),
+                                url("assets/background-img-top#{$asset_suffix_light}@2.png"));
   background-repeat: no-repeat;
   background-position: bottom right;
 }
@@ -205,7 +205,7 @@ filechooser,
   &.csd.background, placessidebar list { background-color: transparent; }
   &.csd.background, placessidebar {
     background-color: transparentize($lighter_bg_color, 0.03);
-    border-radius: 0 0 $windows_radius ($windows_radius + 2px); // It also has an effect on nautilus notebook stacks background
+    border-radius: 0 0 ($windows_radius + 2px) $windows_radius; // It also has an effect on nautilus notebook stacks background
   }
 
   &.maximized placessidebar { border-radius: 0; }

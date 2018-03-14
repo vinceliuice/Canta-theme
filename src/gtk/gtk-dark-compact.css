@@ -3664,7 +3664,7 @@ placessidebar row.sidebar-placeholder-row {
   background-clip: content-box;
 }
 
-placessidebar row.sidebar-new-bookmark-row {
+placessidebar row.sidebar-new-bookmark-row, placessidebar row.sidebar-new-bookmark-row image.sidebar-icon {
   color: #FFAC00;
 }
 
@@ -4557,7 +4557,7 @@ filechooser.csd.background, filechooser placessidebar,
 .nautilus-window.csd.background,
 .nautilus-window placessidebar {
   background-color: rgba(76, 83, 81, 0.97);
-  border-radius: 0 0 8px 10px;
+  border-radius: 0 0 10px 8px;
 }
 
 filechooser.maximized placessidebar,
