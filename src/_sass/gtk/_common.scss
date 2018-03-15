@@ -1133,6 +1133,8 @@ headerbar {
 
       &:disabled { color: $inverse_disabled_fg_color; }
 
+      &:hover { color: $inverse_fg_color; }
+
       &:checked {
         border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
                                       currentColor 100%,
@@ -1165,20 +1167,6 @@ headerbar {
       .arrow { -gtk-icon-source: -gtk-icontheme('pan-down-symbolic'); }
     }
   }
-
-  // special case for stack-switchers path-bar
-  $header_path_button_border: -gtk-scaled(url("assets/headerbar-pathbar-button-checked.png"),
-                                          url("assets/headerbar-pathbar-button-checked@2.png"));
-  $header_path_button_border_compact: -gtk-scaled(url("assets/headerbar-pathbar-button-checked-compact.png"),
-                                                  url("assets/headerbar-pathbar-button-checked-compact@2.png"));
-  $stack_switcher_firstbutton_border: -gtk-scaled(url("assets/headerbar-pathbar-firstbutton-checked.png"),
-                                                  url("assets/headerbar-pathbar-firstbutton-checked@2.png"));
-  $stack_switcher_firstbutton_border_compact: -gtk-scaled(url("assets/headerbar-pathbar-firstbutton-checked-compact.png"),
-                                                          url("assets/headerbar-pathbar-firstbutton-checked-compact@2.png"));
-  $stack_switcher_lastbutton_border: -gtk-scaled(url("assets/headerbar-pathbar-lastbutton-checked.png"),
-                                                 url("assets/headerbar-pathbar-lastbutton-checked@2.png"));
-  $stack_switcher_lastbutton_border_compact: -gtk-scaled(url("assets/headerbar-pathbar-lastbutton-checked-compact.png"),
-                                                         url("assets/headerbar-pathbar-lastbutton-checked-compact@2.png"));
 
   .linked:not(.vertical).path-bar,
   .linked:not(.vertical):not(.path-bar).stack-switcher {
@@ -1333,6 +1321,7 @@ headerbar {
 .titlebar .background {
   border-top-left-radius: $windows_radius;
   border-top-right-radius: $windows_radius;
+  background-color: $titlebar_bg_color;
 }
 
 .background.tiled .titlebar,
@@ -1380,8 +1369,8 @@ headerbar { // headerbar border rounding
 %header_separator {
   min-width: 0;
   min-height: 0;
-  background-color: $titlebar_bg_color;
-  border-width: 0;
+  background-color: transparent;
+  border: none;
 }
 
 .titlebar:not(headerbar) {
@@ -1394,7 +1383,7 @@ headerbar { // headerbar border rounding
     box-shadow: none;
   }
 
-  > separator { @extend %header_separator; }
+  > separator { background-color: $titlebar_bg_color; } // separator between titlebars
 
   @extend %titlebar;
 }

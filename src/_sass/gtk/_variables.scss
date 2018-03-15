@@ -43,6 +43,20 @@ $shorter_transition: all $shorter_duration $deceleration_curve;
 $longer_transition: all $longer_duration $deceleration_curve;
 $shadow_transition: box-shadow $shorter_duration $deceleration_curve;
 
+// special case for headerbar stack-switchers and path-bar
+$header_path_button_border: -gtk-scaled(url("assets/headerbar-pathbar-button-checked.png"),
+                                        url("assets/headerbar-pathbar-button-checked@2.png"));
+$header_path_button_border_compact: -gtk-scaled(url("assets/headerbar-pathbar-button-checked-compact.png"),
+                                                url("assets/headerbar-pathbar-button-checked-compact@2.png"));
+$stack_switcher_firstbutton_border: -gtk-scaled(url("assets/headerbar-pathbar-firstbutton-checked.png"),
+                                                url("assets/headerbar-pathbar-firstbutton-checked@2.png"));
+$stack_switcher_firstbutton_border_compact: -gtk-scaled(url("assets/headerbar-pathbar-firstbutton-checked-compact.png"),
+                                                        url("assets/headerbar-pathbar-firstbutton-checked-compact@2.png"));
+$stack_switcher_lastbutton_border: -gtk-scaled(url("assets/headerbar-pathbar-lastbutton-checked.png"),
+                                               url("assets/headerbar-pathbar-lastbutton-checked@2.png"));
+$stack_switcher_lastbutton_border_compact: -gtk-scaled(url("assets/headerbar-pathbar-lastbutton-checked-compact.png"),
+                                                       url("assets/headerbar-pathbar-lastbutton-checked-compact@2.png"));
+
 // shadows
 // based shadow values:
 // https://material-design.storage.googleapis.com/images/layout-principles-dimensionality-shadows-08_large_mdpi.png

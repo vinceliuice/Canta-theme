@@ -1364,6 +1364,11 @@ headerbar.selection-mode button:not(.suggested-action):not(.destructive-action):
   color: rgba(255, 255, 255, 0.5);
 }
 
+.selection-mode.titlebar:not(headerbar) button:not(.suggested-action):not(.destructive-action):hover,
+headerbar.selection-mode button:not(.suggested-action):not(.destructive-action):hover {
+  color: #FFFFFF;
+}
+
 .selection-mode.titlebar:not(headerbar) button:not(.suggested-action):not(.destructive-action):checked,
 headerbar.selection-mode button:not(.suggested-action):not(.destructive-action):checked {
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), currentColor 100%, transparent 0%) 0 0 2/0 0 2px;
@@ -1693,6 +1698,7 @@ headerbar spinbutton button {
 .titlebar .background {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  background-color: #FFFFFF;
 }
 
 .background.tiled .titlebar,
@@ -1754,11 +1760,11 @@ window.solid-csd headerbar:only-child {
 }
 
 .titlebar:not(headerbar) separator.titlebutton,
-headerbar separator.titlebutton, .titlebar:not(headerbar) > separator {
+headerbar separator.titlebutton {
   min-width: 0;
   min-height: 0;
-  background-color: #FFFFFF;
-  border-width: 0;
+  background-color: transparent;
+  border: none;
 }
 
 window.csd > .titlebar:not(headerbar) {
@@ -1767,6 +1773,10 @@ window.csd > .titlebar:not(headerbar) {
   background-image: none;
   border-style: none;
   box-shadow: none;
+}
+
+.titlebar:not(headerbar) > separator {
+  background-color: #FFFFFF;
 }
 
 /************
