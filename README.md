@@ -39,9 +39,31 @@ Run
 
 
 Or double-click to open that script files and select "run at the terminal" at nautilus.
-## Icon 
+## Icon
 #### Canta icon theme
-Canta icon theme : https://github.com/vinceliuice/Canta-theme/tree/master/src/icons
+Canta icon theme use numix-icon-theme-circle icon theme for Inherits,
+
+so if you want a better experience you should install numix-circle first
+
+#### numix-icon-theme-circle : https://github.com/numixproject/numix-icon-theme-circle
+
+(Just install numix-circle nomal, Canta icon theme will use it's icons resources for missing part!)
+
+#### Install Canta icon theme
+
+Open ../Canta-theme/src/icons then
+
+    ./install.sh
+
+Or double-click to open that script files and select "run at the terminal" at nautilus.
+
+When running the installer script in ubuntu16.04 or later, if you had this error:
+
+    XMLLINT not set and xmllint not found in path; skipping xml preprocessing.
+
+To fix it you have to install libxml2-utils
+
+    sudo apt install libxml2-utils
 
 ## Screenshots
 #### GNOME Shell
@@ -50,4 +72,3 @@ Canta icon theme : https://github.com/vinceliuice/Canta-theme/tree/master/src/ic
 ![3](https://github.com/vinceliuice/Canta-theme/blob/master/src/screenshots/screenshot3.jpeg?raw=true)
 ![4](https://github.com/vinceliuice/Canta-theme/blob/master/src/screenshots/screenshot4.jpeg?raw=true)
 ![5](https://github.com/vinceliuice/Canta-theme/blob/master/src/screenshots/screenshot5.jpeg?raw=true)
-
