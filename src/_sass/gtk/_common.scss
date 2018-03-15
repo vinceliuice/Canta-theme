@@ -1380,7 +1380,7 @@ headerbar { // headerbar border rounding
 %header_separator {
   min-width: 0;
   min-height: 0;
-  background: none;
+  background-color: $titlebar_bg_color;
   border-width: 0;
 }
 

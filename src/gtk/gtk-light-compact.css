@@ -1750,7 +1750,7 @@ window.solid-csd headerbar:only-child {
 headerbar separator.titlebutton, .titlebar:not(headerbar) > separator {
   min-width: 0;
   min-height: 0;
-  background: none;
+  background-color: #FFFFFF;
   border-width: 0;
 }
 
@@ -4719,6 +4719,30 @@ frame.gedit-map-frame > border:dir(ltr) {
 
 frame.gedit-map-frame > border:dir(rtl) {
   border-style: none solid none none;
+}
+
+.gedit-side-panel-paned.horizontal > box.vertical > stack > grid.horizontal {
+  padding: 3px 3px 0;
+}
+
+.gedit-side-panel-paned.horizontal > box.vertical > stack > grid.horizontal > box.horizontal {
+  margin: 0 0 2px;
+}
+
+.gedit-side-panel-paned.horizontal > box.vertical > stack > grid.horizontal > box.horizontal button.image-button.small-button {
+  padding: 4px;
+  border-radius: 6px;
+  -gtk-outline-radius: 6px;
+}
+
+.gedit-side-panel-paned.horizontal > box.vertical > stack > grid.horizontal > box.horizontal button.popup.small-button.toggle {
+  padding: 4px;
+}
+
+.gedit-side-panel-paned.horizontal > box.vertical > stack > grid.horizontal > scrolledwindow {
+  margin: 2px 6px 6px;
+  border-radius: 6px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
 }
 
 /**************

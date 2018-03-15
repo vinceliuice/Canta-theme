@@ -351,6 +351,35 @@ frame.gedit-map-frame > border {
   &:dir(rtl) { border-style: none solid none none; }
 }
 
+.gedit-side-panel-paned.horizontal {
+
+  // 'file-browser' pane
+  > box.vertical > stack > grid.horizontal {
+    padding: 3px 3px 0;
+
+    > box.horizontal {  // header-part
+      margin: 0 0 2px;
+
+      button.image-button.small-button {
+        // FIXME: why does gedit break our geometry everytime?
+        padding: 4px;
+        border-radius: $buttons_radius;
+        -gtk-outline-radius: $buttons_radius;
+      }
+
+      button.popup.small-button.toggle {
+        padding: 4px;
+      }
+    }
+
+    > scrolledwindow { // raised widget
+      margin: 2px 6px 6px;
+      border-radius: $buttons_radius;
+      box-shadow: $shadow_1;
+    }
+  }
+}
+
 
 /**************
  * Tweak Tool *
