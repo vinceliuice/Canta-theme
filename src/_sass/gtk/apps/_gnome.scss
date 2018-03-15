@@ -351,12 +351,6 @@ frame.gedit-map-frame > border {
   &:dir(rtl) { border-style: none solid none none; }
 }
 
-.gedit-panel-paned {
-  notebook > header.top { // show border
-    box-shadow: inset 0 -1px $border_color;
-  }
-}
-
 paned.titlebar.horizontal { // show border
   headerbar { box-shadow: inset 0 -1px $border_color; }
 }

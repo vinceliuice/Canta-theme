@@ -1243,7 +1243,7 @@ headerbar {
       }
     }
 
-    &:only-child { border-radius: $buttons_radius; }
+    &:only-child { border-radius: 100px; }
     &:first-child { border-radius: 100px 0 0 100px; padding-left: 8px; }
     &:last-child { border-radius: 0 100px 100px 0; padding-right: 8px; }
     }
@@ -1261,7 +1261,7 @@ headerbar {
   .maximized &,
   .fullscreen & {
     border-radius: 0;
-    box-shadow: $shadow_1;
+    box-shadow: $shadow_6;
   }
 
   &.default-decoration {
@@ -1289,8 +1289,8 @@ headerbar {
       // margin-left: -2px;
       // margin-right: -2px;
       // margin-top: -2px;
-       border-radius: 0;
-       box-shadow: inset 0 1px $titlebar_highlight_color;
+      // border-radius: 0;
+      // box-shadow: inset 0 1px $titlebar_highlight_color;
     }
   }
 }
@@ -1321,7 +1321,6 @@ headerbar {
 .titlebar .background {
   border-top-left-radius: $windows_radius;
   border-top-right-radius: $windows_radius;
-  background-color: $titlebar_bg_color;
 }
 
 .background.tiled .titlebar,
@@ -1338,7 +1337,6 @@ headerbar {
 headerbar { // headerbar border rounding
   window separator:first-child + &, // tackles the paned container case
   window &:first-child { border-top-left-radius: $windows_radius; }
-
   window &:last-child { border-top-right-radius: $windows_radius; }
 
   window stack & { // tackles the stacked headerbars case
@@ -1379,7 +1377,7 @@ headerbar { // headerbar border rounding
     padding: 0;
     background-color: transparent;
     background-image: none;
-    border-style: none;
+    border: none;
     box-shadow: none;
   }
 
