@@ -1031,6 +1031,10 @@ searchbar,
   background-clip: border-box;
 }
 
+actionbar { // set bottom border radius
+  border-radius: 0 0 $windows_radius $windows_radius;
+}
+
 
 /***************
  * Header bars *

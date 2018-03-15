@@ -1231,6 +1231,10 @@ searchbar,
   background-clip: border-box;
 }
 
+actionbar {
+  border-radius: 0 0 8px 8px;
+}
+
 /***************
  * Header bars *
  ***************/
