@@ -4658,8 +4658,7 @@ filechooser placessidebar.sidebar row.sidebar-row:selected:hover,
 }
 
 .gedit-document-panel row button.flat {
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin: 8px;
 }
 
 .gedit-document-panel-group-row:not(:first-child) {
@@ -4767,6 +4766,10 @@ paned.titlebar.horizontal headerbar {
   margin: 2px 6px 6px;
   border-radius: 6px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+.gedit-side-panel-paned.horizontal > box.vertical > stack > grid.horizontal > scrolledwindow row.activatable, .gedit-side-panel-paned.horizontal > box.vertical > stack > grid.horizontal > scrolledwindow .view, .gedit-side-panel-paned.horizontal > box.vertical > stack > grid.horizontal > scrolledwindow treeview.view header button, treeview.view header .gedit-side-panel-paned.horizontal > box.vertical > stack > grid.horizontal > scrolledwindow button, .gedit-side-panel-paned.horizontal > box.vertical > stack > grid.horizontal > scrolledwindow .budgie-menu button, .budgie-menu .gedit-side-panel-paned.horizontal > box.vertical > stack > grid.horizontal > scrolledwindow button {
+  padding: 3px;
 }
 
 /**************

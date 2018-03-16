@@ -272,8 +272,7 @@ filechooser,
 
   // Try to look as the notebook tab close button
   row button.flat {
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin: 8px;
 
     @extend %small_button;
   }
@@ -380,6 +379,8 @@ paned.titlebar.horizontal { // show border
       margin: 2px 6px 6px;
       border-radius: $buttons_radius;
       box-shadow: $shadow_1;
+
+      row.activatable { padding: 3px; }
     }
   }
 }
