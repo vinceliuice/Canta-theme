@@ -76,28 +76,6 @@ Here's an example to change the _accent color_:
 
   > Note: `inkscape` and `optipng` must be installed to run the script.
 
-## Changing the color scheme with script
-
-To easily change the color scheme, you can use the `change_color.sh` script (or
-just use the [oomox](https://github.com/actionless/oomox) app).
-
-Originally `change_color.sh` (and the `scripts/` dir) was implemented for oomox,
-but you can also run it on the command line without oomox like this:
-
-> Note: This script only supports GTK2 and GTK3 for now.
-
-For `bash`:
-
-```bash
-./change_color.sh -o my-test-theme <(echo -e "BG=F5F5F5\nFG=000000\nMENU_BG=FFFFFF\nMENU_FG=000000\nSEL_BG=42A5F5\nSEL_FG=FFFFFF\nTXT_BG=FFFFFF\nTXT_FG=000000\nBTN_BG=FAFAFA\nBTN_FG=000000\nACCENT_BG=FF4081\n")
-```
-
-For `fish`:
-
-```fish
-./change_color.sh -o my-test-theme (echo -e "BG=F5F5F5\nFG=000000\nMENU_BG=FFFFFF\nMENU_FG=000000\nSEL_BG=42A5F5\nSEL_FG=FFFFFF\nTXT_BG=FFFFFF\nTXT_FG=000000\nBTN_BG=FAFAFA\nBTN_FG=000000\nACCENT_BG=FF4081\n" | psub)
-```
-
 ## Useful Links
 
 #### Upstream theme sources
