@@ -74,10 +74,10 @@ install() {
   cp -ur ${SRC_DIR}/src/gnome-shell/custom-assets/activities${ELSE_LIGHT}.svg        ${THEME_DIR}/gnome-shell/assets/activities.svg
   cp -ur ${SRC_DIR}/src/gnome-shell/custom-assets/activities-active${ELSE_LIGHT}.svg ${THEME_DIR}/gnome-shell/assets/activities-active.svg
   cp -ur ${SRC_DIR}/src/gnome-shell/gnome-shell${color}${size}.css                   ${THEME_DIR}/gnome-shell/gnome-shell.css
-  glib-compile-resources \
-    --sourcedir=${THEME_DIR}/gnome-shell \
-    --target=${THEME_DIR}/gnome-shell/gnome-shell-theme.gresource \
-    ${SRC_DIR}/src/gnome-shell/gnome-shell-theme.gresource.xml
+  # glib-compile-resources \
+  #   --sourcedir=${THEME_DIR}/gnome-shell \
+  #   --target=${THEME_DIR}/gnome-shell/gnome-shell-theme.gresource \
+  #   ${SRC_DIR}/src/gnome-shell/gnome-shell-theme.gresource.xml
 
   mkdir -p                                                                           ${THEME_DIR}/gtk-2.0
   cp -ur ${SRC_DIR}/src/gtk-2.0/{apps.rc,hacks.rc,main.rc}                           ${THEME_DIR}/gtk-2.0

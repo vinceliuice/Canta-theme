@@ -47,6 +47,8 @@ $alt_base_color:   if($variant == 'light', $grey_50,  mix($base_color, $bg_color
 $lighter_bg_color: if($variant == 'light', $grey_50,  fade($green_grey_500));
 $alt_lighter_bg_color: if($variant == 'light', $grey_200, fade($green_grey_600)); // for gnome-shell sub menu
 $darker_bg_color:  if($variant == 'light', $grey_200, fade($green_grey_900));
+$keyboard_bg_color:  if($variant == 'light', $grey_50, fade($green_grey_400)); // for gnome-shell keyboard
+$alt_keyboard_bg_color:  if($variant == 'light', $grey_300, fade($green_grey_900)); // for gnome-shell keyboard
 
 $titlebar_bg_color:     if($titlebar == 'dark', if($variant == 'light', $green_grey_700, $green_grey_800), $white);
 $alt_titlebar_bg_color: if($titlebar == 'dark', $green_grey_600, $grey_300);
@@ -88,6 +90,7 @@ $warning_bg_color:  $orange_400;
 $error_bg_color:    $red_400;
 
 $border_color:             if($variant == 'light', rgba($black, 0.08), rgba($white, 0.08));
+$deep_border_color:        if($variant == 'light', rgba($black, 0.12), rgba($white, 0.12)); // for gnome-shell keyboard buttons
 $alt_border_color:         rgba($black, 0.2); // for non-native GTK+ apps (e.g. Firefox and Chrome)
 $highlight_color:          if($variant == 'light', rgba($white, 0.4),  rgba($white, 0.1));
 $titlebar_highlight_color: if($titlebar == 'dark', rgba($white, 0.1),  rgba($white, 0.4));
