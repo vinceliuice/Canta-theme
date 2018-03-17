@@ -1934,9 +1934,9 @@ StScrollBar {
   .keyboard-subkeys { //long press on a key popup
     color: inherit;
     -arrow-border-radius: $material_radius;
-    -arrow-background-color: $keyboard_bg_color;
+    -arrow-background-color: $alt_panel_bg_color;
     -arrow-border-width: 0;
-    -arrow-border-color: $keyboard_bg_color;
+    -arrow-border-color: transparent;
     -arrow-base: 20px;
     -arrow-rise: 10px;
     -boxpointer-gap: 5px;
