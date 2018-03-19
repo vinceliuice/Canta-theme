@@ -1247,9 +1247,9 @@ headerbar {
       }
     }
 
-    &:only-child { border-radius: $theme_radius; }
-    &:first-child { border-radius: $theme_radius 0 0 $theme_radius; padding-left: 8px; }
-    &:last-child { border-radius: 0 $theme_radius $theme_radius 0; padding-right: 8px; }
+    &:only-child { border-radius: $circular_radius; }
+    &:first-child { border-radius: $circular_radius 0 0 $circular_radius; padding-left: 8px; }
+    &:last-child { border-radius: 0 $circular_radius $circular_radius 0; padding-right: 8px; }
     }
   }
 
@@ -2134,7 +2134,7 @@ switch {
   min-width: $switch_width;
   min-height: $switch_height;
   border: 0 solid transparent;
-  border-radius: $circular_radius;
+  border-radius: 999px;
   background-color: $track_color;
   background-clip: padding-box;
   font-size: 0;
@@ -2152,8 +2152,8 @@ switch {
     min-width: $switch_height;
     min-height: $switch_height;
     margin: 3px;
-    border-radius: $circular_radius;
-    -gtk-outline-radius: $circular_radius;
+    border-radius: 999px;
+    -gtk-outline-radius: 999px;
     box-shadow: $shadow_1;
     background-color: $base_color;
   }

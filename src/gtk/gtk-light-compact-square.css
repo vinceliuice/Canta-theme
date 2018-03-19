@@ -470,7 +470,7 @@ treeview entry.flat, treeview entry.flat:focus, treeview entry, treeview entry:f
 
 .entry-tag, .documents-entry-tag, .photos-entry-tag {
   margin: 4px;
-  border-radius: 9999px;
+  border-radius: 8px;
   box-shadow: none;
   background-color: #00CE99;
   color: #FFFFFF;
@@ -865,16 +865,16 @@ radio, headerbar button.titlebutton, .csd headerbar button.titlebutton, headerba
 .csd .titlebar.default-decoration button.titlebutton, .nautilus-window headerbar > revealer > button, .raven .raven-header:not(.top) button.image-button, .raven .expander-button,
 button.close,
 button.circular {
-  border-radius: 9999px;
-  -gtk-outline-radius: 9999px;
+  border-radius: 8px;
+  -gtk-outline-radius: 8px;
 }
 
 spinbutton:not(.vertical) button, notebook > header tab button.flat, button.sidebar-button, .nautilus-window .floating-bar button, .gedit-document-panel row button.flat, .gedit-search-slider button:dir(ltr), .gedit-search-slider button:dir(rtl), .pluma-window paned.horizontal box.vertical box.horizontal button.flat {
   min-height: 20px;
   min-width: 20px;
   padding: 0;
-  border-radius: 9999px;
-  -gtk-outline-radius: 9999px;
+  border-radius: 8px;
+  -gtk-outline-radius: 8px;
 }
 
 .stack-switcher > button.needs-attention > label,
@@ -2491,7 +2491,7 @@ scrollbar slider {
   min-width: 8px;
   min-height: 8px;
   border: 4px solid transparent;
-  border-radius: 9999px;
+  border-radius: 8px;
   background-clip: padding-box;
   background-color: rgba(0, 0, 0, 0.38);
 }
@@ -2539,7 +2539,7 @@ scrollbar.overlay-indicator:not(.dragging):not(.hovering) button {
   min-height: 4px;
   margin: 3px;
   border: 1px solid rgba(252, 252, 252, 0.3);
-  border-radius: 9999px;
+  border-radius: 8px;
   background-color: rgba(0, 0, 0, 0.38);
   background-clip: padding-box;
   -gtk-icon-source: none;
@@ -2610,7 +2610,7 @@ switch {
   min-width: 30px;
   min-height: 16px;
   border: 0 solid transparent;
-  border-radius: 9999px;
+  border-radius: 999px;
   background-color: rgba(0, 0, 0, 0.26);
   background-clip: padding-box;
   font-size: 0;
@@ -2633,8 +2633,8 @@ switch slider {
   min-width: 16px;
   min-height: 16px;
   margin: 3px;
-  border-radius: 9999px;
-  -gtk-outline-radius: 9999px;
+  border-radius: 999px;
+  -gtk-outline-radius: 999px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
   background-color: #fcfcfc;
 }
@@ -4314,7 +4314,7 @@ popover.background button.model:disabled:checked, row:disabled:selected, calenda
  * Touch Copy & Paste *
  **********************/
 cursor-handle {
-  border-radius: 9999px;
+  border-radius: 8px;
   background-color: #FFAC00;
   background-image: none;
 }
@@ -5218,7 +5218,7 @@ GdMainIconView.content-view {
 
 .documents-counter {
   margin: 8px;
-  border-radius: 9999px;
+  border-radius: 8px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15);
   background-color: #FFAC00;
   color: #FFFFFF;

@@ -26,8 +26,7 @@ $menuitem_size: 28px;
 $buttons_radius: 6px;
 $windows_radius: 8px;
 $material_radius: 4px;
-$circular_radius: 9999px;
-$theme_radius: if($radius == 'circle', $circular_radius, $windows_radius);
+$circular_radius: if($radius == 'circle', 9999px, $windows_radius);
 
 // durations
 $shorter_duration: 180ms;
