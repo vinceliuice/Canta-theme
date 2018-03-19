@@ -16,14 +16,21 @@ if [ ! -z "${SIZE_VARIANTS:-}" ]; then
   IFS=', ' read -r -a _SIZE_VARIANTS <<< "${SIZE_VARIANTS:-}"
 fi
 
+_RADIUS_VARIANTS=('' '-square')
+if [ ! -z "${RADIUS_VARIANTS:-}" ]; then
+  IFS=', ' read -r -a _RADIUS_VARIANTS <<< "${RADIUS_VARIANTS:-}"
+fi
+
 SASSC_OPT="-M -t expanded"
 
 echo "== Generating the CSS..."
 
 for color in "${_COLOR_VARIANTS[@]}"; do
   for size in "${_SIZE_VARIANTS[@]}"; do
-      sassc $SASSC_OPT src/gtk/gtk${color}${size}.{scss,css}
+    for radius in "${_RADIUS_VARIANTS[@]}"; do
+      sassc $SASSC_OPT src/gtk/gtk${color}${size}${radius}.{scss,css}
       sassc $SASSC_OPT src/gnome-shell/gnome-shell${color}${size}.{scss,css}
+    done
   done
 done
 

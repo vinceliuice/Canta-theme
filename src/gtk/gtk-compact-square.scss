@@ -1,7 +1,7 @@
-$variant: 'dark';
+$variant: 'light';
 $titlebar: 'dark';
-$compact: 'false';
-$radius: 'circle';
+$compact: 'true';
+$radius: 'square';
 
 @import '../_sass/gtk/variables';
 @import '../_sass/colors';

@@ -14,7 +14,7 @@ mix () {
 print_usage() {
 	echo "usage: $0 [-o OUTPUT_THEME_NAME] [-p PATH_LIST] PATH_TO_PRESET"
 	echo "examples:"
-	echo "       $0 -o my-theme-name <(echo -e "BG=d8d8d8\\nFG=101010\\nMENU_BG=3c3c3c\\nMENU_FG=e6e6e6\\nSEL_BG=ad7fa8\\nSEL_FG=ffffff\\nTXT_BG=ffffff\\nTXT_FG=1a1a1a\\nBTN_BG=f5f5f5\\nBTN_FG=111111\\n")"
+	echo "       $0 -o my-theme-name <(echo -e "BG=d8d8d8\\nFG=101010\\nMENU_BG=3c3c3c\\nMENU_FG=e6e6e6\\nSEL_BG=00ce99\\nSEL_FG=ffffff\\nTXT_BG=ffffff\\nTXT_FG=1a1a1a\\nBTN_BG=f5f5f5\\nBTN_FG=111111\\n")"
 	echo "       $0 ../colors/retro/twg"
 	echo "       $0 --hidpi True ../colors/retro/clearlooks"
 	exit 1
@@ -145,7 +145,7 @@ for FILEPATH in "${PATHLIST[@]}"; do
 		-e 's/#E0E0E0/%SEL_BG%/g' \
 		-e 's/#F5F5F5/%BG%/g' \
 		-e 's/#FAFAFA/%BTN_BG%/g' \
-		-e 's/#FF4081/%ACCENT_BG%/g' \
+		-e 's/#FFAC00/%ACCENT_BG%/g' \
 		-e 's/#00CE99/%SEL_BG%/g' \
 		-e 's/#FFFFFF/%TXT_BG%/g' \
 		-e 's/#333e43/%MENU_BG%/g' \

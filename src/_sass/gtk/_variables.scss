@@ -1,6 +1,7 @@
 $asset_suffix: if($variant == 'dark', '-dark', '');
 $asset_suffix_light: if($titlebar == 'light' and $variant == 'light', '', '-dark');
 $extra_background_clip: if($variant == 'light', padding-box, border-box);
+$asset_radius: if($radius == 'circle', '-circle', '-square');
 
 // opacities
 $higher_opacity: 0.9;
@@ -26,6 +27,7 @@ $buttons_radius: 6px;
 $windows_radius: 8px;
 $material_radius: 4px;
 $circular_radius: 9999px;
+$theme_radius: if($radius == 'circle', $circular_radius, $windows_radius);
 
 // durations
 $shorter_duration: 180ms;
@@ -44,18 +46,24 @@ $longer_transition: all $longer_duration $deceleration_curve;
 $shadow_transition: box-shadow $shorter_duration $deceleration_curve;
 
 // special case for headerbar stack-switchers and path-bar
-$header_path_button_border: -gtk-scaled(url("assets/headerbar-pathbar-button-checked.png"),
-                                        url("assets/headerbar-pathbar-button-checked@2.png"));
-$header_path_button_border_compact: -gtk-scaled(url("assets/headerbar-pathbar-button-checked-compact.png"),
-                                                url("assets/headerbar-pathbar-button-checked-compact@2.png"));
-$stack_switcher_firstbutton_border: -gtk-scaled(url("assets/headerbar-pathbar-firstbutton-checked.png"),
-                                                url("assets/headerbar-pathbar-firstbutton-checked@2.png"));
-$stack_switcher_firstbutton_border_compact: -gtk-scaled(url("assets/headerbar-pathbar-firstbutton-checked-compact.png"),
-                                                        url("assets/headerbar-pathbar-firstbutton-checked-compact@2.png"));
-$stack_switcher_lastbutton_border: -gtk-scaled(url("assets/headerbar-pathbar-lastbutton-checked.png"),
-                                               url("assets/headerbar-pathbar-lastbutton-checked@2.png"));
-$stack_switcher_lastbutton_border_compact: -gtk-scaled(url("assets/headerbar-pathbar-lastbutton-checked-compact.png"),
-                                                       url("assets/headerbar-pathbar-lastbutton-checked-compact@2.png"));
+$header_path_button_border:
+    -gtk-scaled(url("assets/button-checked#{$asset_radius}.png"),
+                url("assets/button-checked#{$asset_radius}@2.png"));
+$header_path_button_border_compact:
+    -gtk-scaled(url("assets/button-checked-compact#{$asset_radius}.png"),
+                url("assets/button-checked-compact#{$asset_radius}@2.png"));
+$stack_switcher_firstbutton_border:
+    -gtk-scaled(url("assets/firstbutton-checked#{$asset_radius}.png"),
+                url("assets/firstbutton-checked#{$asset_radius}@2.png"));
+$stack_switcher_firstbutton_border_compact:
+    -gtk-scaled(url("assets/firstbutton-checked-compact#{$asset_radius}.png"),
+                url("assets/firstbutton-checked-compact#{$asset_radius}@2.png"));
+$stack_switcher_lastbutton_border:
+    -gtk-scaled(url("assets/lastbutton-checked#{$asset_radius}.png"),
+                url("assets/lastbutton-checked#{$asset_radius}@2.png"));
+$stack_switcher_lastbutton_border_compact:
+    -gtk-scaled(url("assets/lastbutton-checked-compact#{$asset_radius}.png"),
+                url("assets/lastbutton-checked-compact#{$asset_radius}@2.png"));
 
 // shadows
 // based shadow values:

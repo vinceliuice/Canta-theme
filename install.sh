@@ -17,6 +17,7 @@ SRC_DIR=$(cd $(dirname $0) && pwd)
 THEME_NAME=Canta
 COLOR_VARIANTS=('' '-dark' '-light')
 SIZE_VARIANTS=('' '-compact')
+RADIUS_VARIANTS=('' '-square')
 
 usage() {
   printf "%s\n" "Usage: $0 [OPTIONS...]"
@@ -40,11 +41,12 @@ install() {
   local name=${2}
   local color=${3}
   local size=${4}
+  local radius=${5}
 
   [[ ${color} == '-dark' ]] && local ELSE_DARK=${color}
   [[ ${color} == '-light' ]] && local ELSE_LIGHT=${color}
 
-  local THEME_DIR=${DEST_DIR}/${name}${color}${size}
+  local THEME_DIR=${DEST_DIR}/${name}${color}${size}${radius}
 
   [[ -d ${THEME_DIR} ]] && rm -rf ${THEME_DIR}
 
@@ -88,9 +90,9 @@ install() {
 
   mkdir -p                                                                           ${THEME_DIR}/gtk-3.0
   ln -sf ../gtk-assets                                                               ${THEME_DIR}/gtk-3.0/assets
-  cp -ur ${SRC_DIR}/src/gtk/gtk${color}${size}.css                                   ${THEME_DIR}/gtk-3.0/gtk.css
+  cp -ur ${SRC_DIR}/src/gtk/gtk${color}${size}${radius}.css                          ${THEME_DIR}/gtk-3.0/gtk.css
   [[ ${color} != '-dark' ]] && \
-  cp -ur ${SRC_DIR}/src/gtk/gtk-dark${size}.css                                      ${THEME_DIR}/gtk-3.0/gtk-dark.css
+  cp -ur ${SRC_DIR}/src/gtk/gtk-dark${size}${radius}.css                             ${THEME_DIR}/gtk-3.0/gtk-dark.css
 
   mkdir -p                                                                           ${THEME_DIR}/metacity-1
   cp -ur ${SRC_DIR}/src/metacity-1/assets/*.png                                      ${THEME_DIR}/metacity-1
@@ -110,7 +112,9 @@ install() {
 
 for color in "${colors[@]:-${COLOR_VARIANTS[@]}}"; do
   for size in "${sizes[@]:-${SIZE_VARIANTS[@]}}"; do
-    install "${dest:-${DEST_DIR}}" "${name:-${THEME_NAME}}" "${color}" "${size}"
+    for radius in "${radius[@]:-${RADIUS_VARIANTS[@]}}"; do
+      install "${dest:-${DEST_DIR}}" "${name:-${THEME_NAME}}" "${color}" "${size}" "${radius}"
+    done
   done
 done
 

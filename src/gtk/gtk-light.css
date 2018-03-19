@@ -1478,7 +1478,7 @@ headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked,
 headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:checked,
 headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:checked,
 headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:checked {
-  border-image-source: -gtk-scaled(url("assets/headerbar-pathbar-button-checked.png"), url("assets/headerbar-pathbar-button-checked@2.png"));
+  border-image-source: -gtk-scaled(url("assets/button-checked-circle.png"), url("assets/button-checked-circle@2.png"));
   border-image-width: 8px 16px 8px 16px;
   border-image-slice: 8 16 8 16;
   border-image-repeat: stretch;
@@ -1532,7 +1532,7 @@ headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-ch
 headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:first-child:checked,
 headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:first-child:checked,
 headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:first-child:checked {
-  border-image-source: -gtk-scaled(url("assets/headerbar-pathbar-firstbutton-checked.png"), url("assets/headerbar-pathbar-firstbutton-checked@2.png"));
+  border-image-source: -gtk-scaled(url("assets/firstbutton-checked-circle.png"), url("assets/firstbutton-checked-circle@2.png"));
 }
 
 .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:last-child:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button:last-child:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.image-button:last-child:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button:last-child:checked,
@@ -1548,7 +1548,7 @@ headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:last-chi
 headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:last-child:checked,
 headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:last-child:checked,
 headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:last-child:checked {
-  border-image-source: -gtk-scaled(url("assets/headerbar-pathbar-lastbutton-checked.png"), url("assets/headerbar-pathbar-lastbutton-checked@2.png"));
+  border-image-source: -gtk-scaled(url("assets/lastbutton-checked-circle.png"), url("assets/lastbutton-checked-circle@2.png"));
 }
 
 .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.image-button:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button:disabled,
@@ -1635,14 +1635,14 @@ headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-but
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:only-child,
 headerbar .linked:not(.vertical).path-bar > button:only-child,
 headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:only-child {
-  border-radius: 100px;
+  border-radius: 9999px;
 }
 
 .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:first-child,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-child,
 headerbar .linked:not(.vertical).path-bar > button:first-child,
 headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-child {
-  border-radius: 100px 0 0 100px;
+  border-radius: 9999px 0 0 9999px;
   padding-left: 8px;
 }
 
@@ -1650,7 +1650,7 @@ headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-ch
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:last-child,
 headerbar .linked:not(.vertical).path-bar > button:last-child,
 headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:last-child {
-  border-radius: 0 100px 100px 0;
+  border-radius: 0 9999px 9999px 0;
   padding-right: 8px;
 }
 
