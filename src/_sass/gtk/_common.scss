@@ -1247,9 +1247,9 @@ headerbar {
       }
     }
 
-    &:only-child { border-radius: $circular_radius; }
-    &:first-child { border-radius: $circular_radius 0 0 $circular_radius; padding-left: 8px; }
-    &:last-child { border-radius: 0 $circular_radius $circular_radius 0; padding-right: 8px; }
+    &:only-child { border-radius: $square_radius; }
+    &:first-child { border-radius: $square_radius 0 0 $square_radius; padding-left: 8px; }
+    &:last-child { border-radius: 0 $square_radius $square_radius 0; padding-right: 8px; }
     }
   }
 
