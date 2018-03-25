@@ -58,13 +58,13 @@ install() {
 
   echo "[Desktop Entry]" >> ${THEME_DIR}/index.theme
   echo "Type=X-GNOME-Metatheme" >> ${THEME_DIR}/index.theme
-  echo "Name=Canta${color}${size}" >> ${THEME_DIR}/index.theme
+  echo "Name=Canta${color}${size}${radius}" >> ${THEME_DIR}/index.theme
   echo "Comment=An Flat Gtk+ theme based on Material Design" >> ${THEME_DIR}/index.theme
   echo "Encoding=UTF-8" >> ${THEME_DIR}/index.theme
   echo "" >> ${THEME_DIR}/index.theme
   echo "[X-GNOME-Metatheme]" >> ${THEME_DIR}/index.theme
-  echo "GtkTheme=Canta${color}${size}" >> ${THEME_DIR}/index.theme
-  echo "MetacityTheme=Canta${color}${size}" >> ${THEME_DIR}/index.theme
+  echo "GtkTheme=Canta${color}${size}${radius}" >> ${THEME_DIR}/index.theme
+  echo "MetacityTheme=Canta${color}${size}${radius}" >> ${THEME_DIR}/index.theme
   echo "IconTheme=Adwaita" >> ${THEME_DIR}/index.theme
   echo "CursorTheme=Adwaita" >> ${THEME_DIR}/index.theme
   echo "ButtonLayout=menu:minimize,maximize,close" >> ${THEME_DIR}/index.theme
@@ -112,7 +112,7 @@ install() {
 
 for color in "${colors[@]:-${COLOR_VARIANTS[@]}}"; do
   for size in "${sizes[@]:-${SIZE_VARIANTS[@]}}"; do
-    for radius in "${radius[@]:-${RADIUS_VARIANTS[@]}}"; do
+    for radius in "${radiuss[@]:-${RADIUS_VARIANTS[@]}}"; do
       install "${dest:-${DEST_DIR}}" "${name:-${THEME_NAME}}" "${color}" "${size}" "${radius}"
     done
   done

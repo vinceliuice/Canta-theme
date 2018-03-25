@@ -1401,6 +1401,14 @@ headerbar.selection-mode .selection-menu .arrow {
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
 
+.titlebar:not(headerbar) .linked:not(.vertical).path-bar > button,
+.titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button,
+headerbar .linked:not(.vertical).path-bar > button,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
 .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button label,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button label,
 headerbar .linked:not(.vertical).path-bar > button label,
@@ -1414,14 +1422,14 @@ headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button label {
 headerbar .linked:not(.vertical).path-bar > button.text-button.image-button label,
 headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button label {
   padding-left: 0;
-  padding-right: 8px;
+  padding-right: 0;
 }
 
 .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button image,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button image,
 headerbar .linked:not(.vertical).path-bar > button.text-button.image-button image,
 headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button image {
-  padding-left: 8px;
+  padding-left: 0;
   padding-right: 0;
 }
 
@@ -1444,7 +1452,7 @@ headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-but
   transition: none;
   box-shadow: none;
   outline-offset: -6px;
-  -gtk-outline-radius: 100px;
+  -gtk-outline-radius: 6px;
 }
 
 .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:hover, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button:hover, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.image-button:hover, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button:hover,
@@ -4246,7 +4254,7 @@ headerbar button.titlebutton.close:backdrop, headerbar button.titlebutton.maximi
 .csd
 .titlebar.default-decoration button.titlebutton.restore:backdrop {
   color: transparent;
-  background-color: rgba(0, 0, 0, 0.38);
+  background-color: rgba(0, 0, 0, 0.12);
 }
 
 headerbar button.titlebutton.close, .csd headerbar button.titlebutton.close, headerbar.default-decoration button.titlebutton.close,
