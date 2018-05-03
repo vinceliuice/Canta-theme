@@ -97,7 +97,7 @@ MatePanelAppletFrameDBus {
                                 0 0 0 / 0 0 0px;
 
   &:checked {
-    color: titlebar_fg_color;
+    color: $titlebar_fg_color;
     background-color: $divider_color;
     border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
                                   $primary_color 100%,
