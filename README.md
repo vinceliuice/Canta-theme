@@ -53,7 +53,7 @@ so if you want a better experience you should install numix-circle first
 
 Open ../Canta-theme/src/icons then
 
-    ./install.sh
+    ./installer.sh
 
 Or double-click to open that script files and select "run at the terminal" at nautilus.
 
