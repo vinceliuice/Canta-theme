@@ -660,13 +660,8 @@ button.text-button.image-button image:not(:only-child) {
 }
 
 toolbar .linked > button, .titlebar:not(headerbar) .linked > button:not(.suggested-action):not(.destructive-action),
-headerbar .linked > button:not(.suggested-action):not(.destructive-action), popover.background .linked > button:not(.suggested-action):not(.destructive-action), actionbar > revealer > box .linked > button:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification .linked > button,
-toolbar .linked.vertical > button,
-.titlebar:not(headerbar) .linked.vertical > button:not(.suggested-action):not(.destructive-action),
-headerbar .linked.vertical > button:not(.suggested-action):not(.destructive-action),
-popover.background .linked.vertical > button:not(.suggested-action):not(.destructive-action),
-actionbar > revealer > box .linked.vertical > button:not(.suggested-action):not(.destructive-action):not(.server-list-button),
-.app-notification .linked.vertical > button, .linked >
+headerbar .linked > button:not(.suggested-action):not(.destructive-action), popover.background .linked > button:not(.suggested-action):not(.destructive-action), actionbar > revealer > box .linked > button:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification .linked > button, toolbar .linked.vertical > button, .titlebar:not(headerbar) .linked.vertical > button:not(.suggested-action):not(.destructive-action),
+headerbar .linked.vertical > button:not(.suggested-action):not(.destructive-action), popover.background .linked.vertical > button:not(.suggested-action):not(.destructive-action), actionbar > revealer > box .linked.vertical > button:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification .linked.vertical > button, .linked >
 button.flat,
 .linked.vertical >
 button.flat {
@@ -674,13 +669,8 @@ button.flat {
 }
 
 toolbar .linked > button.text-button.image-button, .titlebar:not(headerbar) .linked > button.text-button.image-button:not(.suggested-action):not(.destructive-action),
-headerbar .linked > button.text-button.image-button:not(.suggested-action):not(.destructive-action), popover.background .linked > button.text-button.image-button:not(.suggested-action):not(.destructive-action), actionbar > revealer > box .linked > button.text-button.image-button:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification .linked > button.text-button.image-button,
-toolbar .linked.vertical > button.text-button.image-button,
-.titlebar:not(headerbar) .linked.vertical > button.text-button.image-button:not(.suggested-action):not(.destructive-action),
-headerbar .linked.vertical > button.text-button.image-button:not(.suggested-action):not(.destructive-action),
-popover.background .linked.vertical > button.text-button.image-button:not(.suggested-action):not(.destructive-action),
-actionbar > revealer > box .linked.vertical > button.text-button.image-button:not(.suggested-action):not(.destructive-action):not(.server-list-button),
-.app-notification .linked.vertical > button.text-button.image-button, .linked >
+headerbar .linked > button.text-button.image-button:not(.suggested-action):not(.destructive-action), popover.background .linked > button.text-button.image-button:not(.suggested-action):not(.destructive-action), actionbar > revealer > box .linked > button.text-button.image-button:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification .linked > button.text-button.image-button, toolbar .linked.vertical > button.text-button.image-button, .titlebar:not(headerbar) .linked.vertical > button.text-button.image-button:not(.suggested-action):not(.destructive-action),
+headerbar .linked.vertical > button.text-button.image-button:not(.suggested-action):not(.destructive-action), popover.background .linked.vertical > button.text-button.image-button:not(.suggested-action):not(.destructive-action), actionbar > revealer > box .linked.vertical > button.text-button.image-button:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification .linked.vertical > button.text-button.image-button, .linked >
 button.flat.text-button.image-button,
 .linked.vertical >
 button.flat.text-button.image-button {
@@ -5987,6 +5977,7 @@ MatePanelAppletFrameDBus {
 }
 
 .mate-panel-menu-bar #tasklist-button {
+  color: rgba(255, 255, 255, 0.7);
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #00CE99 0%, transparent 0%) 0 0 0/0 0 0px;
 }
 
@@ -6033,6 +6024,10 @@ PanelApplet.wnck-applet .wnck-pager:active {
 
 PanelApplet.wnck-applet .wnck-pager:selected {
   background-color: #00CE99;
+}
+
+#clock-applet-button {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .mate-panel-menu-bar.horizontal #clock-applet-button label {
