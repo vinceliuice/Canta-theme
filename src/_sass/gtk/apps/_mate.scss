@@ -91,6 +91,7 @@ MatePanelAppletFrameDBus {
 }
 
 .mate-panel-menu-bar #tasklist-button {
+  color: $titlebar_secondary_fg_color;
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
                                 $primary_color 0%,
                                 transparent 0%)
@@ -138,6 +139,8 @@ PanelApplet.wnck-applet .wnck-pager {
 }
 
 #clock-applet-button {
+  color: $titlebar_secondary_fg_color;
+
   .mate-panel-menu-bar.horizontal & label { padding: 0 8px; }
   .mate-panel-menu-bar.vertical & label { padding: 8px 0; }
 }
