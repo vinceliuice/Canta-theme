@@ -1559,6 +1559,14 @@ menubar,
     padding: 4px 8px;
     color: $titlebar_secondary_fg_color;
 
+    menu {
+      border-radius: 0 0 $buttons_radius $buttons_radius;
+
+      menu { //submenu
+        border-radius: $buttons_radius;
+      }
+    }
+
     &:hover { // Seems like it :hover even with keyboard focus
 //      transition: none;
 //      background-color: $titlebar_divider_color;
@@ -1582,10 +1590,10 @@ menu,
   box-shadow: inset 0 1px $highlight_color;
   background-color: rgba($menu_bg_color, 0.96);
   border: 1px solid $border_color; // adds borders in a non composited env
+  border-radius: $buttons_radius;
 
   .csd & {
     border: none; // axes borders in a composited env
-    border-radius: $buttons_radius;
   }
 
   menuitem {

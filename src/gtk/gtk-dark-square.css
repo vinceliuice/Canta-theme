@@ -660,8 +660,13 @@ button.text-button.image-button image:not(:only-child) {
 }
 
 toolbar .linked > button, .titlebar:not(headerbar) .linked > button:not(.suggested-action):not(.destructive-action),
-headerbar .linked > button:not(.suggested-action):not(.destructive-action), popover.background .linked > button:not(.suggested-action):not(.destructive-action), actionbar > revealer > box .linked > button:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification .linked > button, toolbar .linked.vertical > button, .titlebar:not(headerbar) .linked.vertical > button:not(.suggested-action):not(.destructive-action),
-headerbar .linked.vertical > button:not(.suggested-action):not(.destructive-action), popover.background .linked.vertical > button:not(.suggested-action):not(.destructive-action), actionbar > revealer > box .linked.vertical > button:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification .linked.vertical > button, .linked >
+headerbar .linked > button:not(.suggested-action):not(.destructive-action), popover.background .linked > button:not(.suggested-action):not(.destructive-action), actionbar > revealer > box .linked > button:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification .linked > button,
+toolbar .linked.vertical > button,
+.titlebar:not(headerbar) .linked.vertical > button:not(.suggested-action):not(.destructive-action),
+headerbar .linked.vertical > button:not(.suggested-action):not(.destructive-action),
+popover.background .linked.vertical > button:not(.suggested-action):not(.destructive-action),
+actionbar > revealer > box .linked.vertical > button:not(.suggested-action):not(.destructive-action):not(.server-list-button),
+.app-notification .linked.vertical > button, .linked >
 button.flat,
 .linked.vertical >
 button.flat {
@@ -669,8 +674,13 @@ button.flat {
 }
 
 toolbar .linked > button.text-button.image-button, .titlebar:not(headerbar) .linked > button.text-button.image-button:not(.suggested-action):not(.destructive-action),
-headerbar .linked > button.text-button.image-button:not(.suggested-action):not(.destructive-action), popover.background .linked > button.text-button.image-button:not(.suggested-action):not(.destructive-action), actionbar > revealer > box .linked > button.text-button.image-button:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification .linked > button.text-button.image-button, toolbar .linked.vertical > button.text-button.image-button, .titlebar:not(headerbar) .linked.vertical > button.text-button.image-button:not(.suggested-action):not(.destructive-action),
-headerbar .linked.vertical > button.text-button.image-button:not(.suggested-action):not(.destructive-action), popover.background .linked.vertical > button.text-button.image-button:not(.suggested-action):not(.destructive-action), actionbar > revealer > box .linked.vertical > button.text-button.image-button:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification .linked.vertical > button.text-button.image-button, .linked >
+headerbar .linked > button.text-button.image-button:not(.suggested-action):not(.destructive-action), popover.background .linked > button.text-button.image-button:not(.suggested-action):not(.destructive-action), actionbar > revealer > box .linked > button.text-button.image-button:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification .linked > button.text-button.image-button,
+toolbar .linked.vertical > button.text-button.image-button,
+.titlebar:not(headerbar) .linked.vertical > button.text-button.image-button:not(.suggested-action):not(.destructive-action),
+headerbar .linked.vertical > button.text-button.image-button:not(.suggested-action):not(.destructive-action),
+popover.background .linked.vertical > button.text-button.image-button:not(.suggested-action):not(.destructive-action),
+actionbar > revealer > box .linked.vertical > button.text-button.image-button:not(.suggested-action):not(.destructive-action):not(.server-list-button),
+.app-notification .linked.vertical > button.text-button.image-button, .linked >
 button.flat.text-button.image-button,
 .linked.vertical >
 button.flat.text-button.image-button {
@@ -2006,6 +2016,16 @@ menubar > menuitem,
   color: rgba(255, 255, 255, 0.7);
 }
 
+menubar > menuitem menu,
+.menubar > menuitem menu {
+  border-radius: 0 0 6px 6px;
+}
+
+menubar > menuitem menu menu,
+.menubar > menuitem menu menu {
+  border-radius: 6px;
+}
+
 menubar > menuitem:hover,
 .menubar > menuitem:hover {
   color: #FFFFFF;
@@ -2034,13 +2054,13 @@ menu,
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
   background-color: rgba(63, 69, 68, 0.96);
   border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
 }
 
 .csd menu, .csd
 .menu, .csd
 .context-menu {
   border: none;
-  border-radius: 6px;
 }
 
 menu menuitem,
@@ -6554,6 +6574,16 @@ popover.background.places-menu row {
 
 .budgie-panel separator {
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+.budgie-panel menubar > menuitem menu,
+.budgie-panel .menubar > menuitem menu {
+  border-radius: 0 0 6px 6px;
+}
+
+.budgie-panel menubar > menuitem menu menu,
+.budgie-panel .menubar > menuitem menu menu {
+  border-radius: 6px;
 }
 
 .budgie-panel .alert {

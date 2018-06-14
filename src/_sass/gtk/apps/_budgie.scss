@@ -298,6 +298,22 @@ popover.background.places-menu {
 
   separator { background-color: $titlebar_track_color; }
 
+  // Budgie styled Gtk Menus
+  menubar,
+  .menubar {
+
+    > menuitem {
+
+      menu {
+        border-radius: 0 0 $buttons_radius $buttons_radius;
+
+        menu { //submenu
+          border-radius: $buttons_radius;
+        }
+      }
+    }
+  }
+
   // used to indicate unread notifications
   .alert { color: $destructive_color; }
 
