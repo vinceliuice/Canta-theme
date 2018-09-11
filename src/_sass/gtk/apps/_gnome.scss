@@ -6,24 +6,38 @@
 // hard-coded css:
 // https://gitlab.gnome.org/GNOME/nautilus/blob/master/src/resources/css/nautilus.css
 
-.nautilus-window,
-.nautilus-window notebook,
-.nautilus-window notebook > stack {
-  background-color: $base_color;
-  border-radius: 0 0 $windows_radius $windows_radius;
+%nautilus_bg_img {
   background-image: -gtk-scaled(url("assets/background-img-bottom#{$asset_suffix}.png"),
                                 url("assets/background-img-bottom#{$asset_suffix}@2.png"));
   background-repeat: no-repeat;
   background-position: top right;
 }
 
-// Set nautilus background pictures
-.nautilus-window headerbar {
+%headerbar_bg_img {
   background-image: -gtk-scaled(url("assets/background-img-top#{$asset_suffix_light}.png"),
                                 url("assets/background-img-top#{$asset_suffix_light}@2.png"));
   background-repeat: no-repeat;
   background-position: bottom right;
 }
+
+%nautilus_none_img {
+  background-image: none;
+}
+
+%headerbar_none_img {
+  background-image: none;
+}
+
+.nautilus-window,
+.nautilus-window notebook,
+.nautilus-window notebook > stack {
+  background-color: $base_color;
+  border-radius: 0 0 $windows_radius $windows_radius;
+  @extend %nautilus_none_img;
+}
+
+// Set nautilus background pictures
+.nautilus-window headerbar { @extend %headerbar_none_img; }
 
 // No border radius when window maximized
 .nautilus-window.maximized,

@@ -26,12 +26,18 @@ usage() {
   printf "  %-25s%s\n" "-n, --name NAME" "Specify theme name (Default: ${THEME_NAME})"
   printf "  %-25s%s\n" "-c, --color VARIANTS..." "Specify theme color variant(s) [standard|dark|light] (Default: All variants)"
   printf "  %-25s%s\n" "-s, --size VARIANT" "Specify theme size variant [standard|compact] (Default: All variants)"
+  printf "  %-25s%s\n" "-r, --radius VARIANT" "Specify theme radius variant [standard|square] (Default: All variants)"
+  printf "  %-25s%s\n" "-g, --gdm" "Install GDM theme"
   printf "  %-25s%s\n" "-h, --help" "Show this help"
   printf "\n%s\n" "INSTALLATION EXAMPLES:"
   printf "%s\n" "Install all theme variants into ~/.themes"
   printf "  %s\n" "$0 --dest ~/.themes"
+  printf "%s\n" "Install all theme variants into ~/.themes including GDM theme"
+  printf "  %s\n" "$0 --dest ~/.themes --gdm"
   printf "%s\n" "Install standard theme variant only"
   printf "  %s\n" "$0 --color standard --size standard"
+  printf "%s\n" "Install square theme variant only"
+  printf "  %s\n" "$0 --color standard --size standard --radius square"
   printf "%s\n" "Install specific theme variants with different name into ~/.themes"
   printf "  %s\n" "$0 --dest ~/.themes --name MyTheme --color light dark --size compact"
 }
@@ -76,10 +82,6 @@ install() {
   cp -ur ${SRC_DIR}/src/gnome-shell/custom-assets/activities${ELSE_LIGHT}.svg        ${THEME_DIR}/gnome-shell/assets/activities.svg
   cp -ur ${SRC_DIR}/src/gnome-shell/custom-assets/activities-active${ELSE_LIGHT}.svg ${THEME_DIR}/gnome-shell/assets/activities-active.svg
   cp -ur ${SRC_DIR}/src/gnome-shell/gnome-shell${color}${size}.css                   ${THEME_DIR}/gnome-shell/gnome-shell.css
-  # glib-compile-resources \
-  #   --sourcedir=${THEME_DIR}/gnome-shell \
-  #   --target=${THEME_DIR}/gnome-shell/gnome-shell-theme.gresource \
-  #   ${SRC_DIR}/src/gnome-shell/gnome-shell-theme.gresource.xml
 
   mkdir -p                                                                           ${THEME_DIR}/gtk-2.0
   cp -ur ${SRC_DIR}/src/gtk-2.0/{apps.rc,hacks.rc,main.rc}                           ${THEME_DIR}/gtk-2.0
@@ -109,6 +111,131 @@ install() {
   cp -ur ${SRC_DIR}/src/xfwm4/{*.svg,themerc}                                        ${THEME_DIR}/xfwm4
   cp -ur ${SRC_DIR}/src/xfwm4/assets${ELSE_LIGHT}                                    ${THEME_DIR}/xfwm4/assets
 }
+
+install_gdm() {
+    local THEME_DIR=${1}/${2}${3}${4}${5}
+      # bakup and install files related to gdm theme
+      if [[ ! -f /usr/share/gnome-shell/gnome-shell-theme.gresource.bak ]]; then
+          mv -f /usr/share/gnome-shell/gnome-shell-theme.gresource \
+                /usr/share/gnome-shell/gnome-shell-theme.gresource.bak
+      fi
+      if [[ -f /usr/share/gnome-shell/theme/ubuntu.css ]]; then
+          if [[ ! -f /usr/share/gnome-shell/theme/ubuntu.css.bak ]]; then
+              mv -f /usr/share/gnome-shell/theme/ubuntu.css \
+                     /usr/share/gnome-shell/theme/ubuntu.css.bak
+          fi
+          cp -af ${THEME_DIR}/gnome-shell/gnome-shell.css \
+                 /usr/share/gnome-shell/theme/ubuntu.css
+      fi
+      glib-compile-resources \
+       --sourcedir=${THEME_DIR}/gnome-shell \
+       --target=/usr/share/gnome-shell/gnome-shell-theme.gresource \
+       ${THEME_DIR}/gnome-shell/gnome-shell-theme.gresource.xml
+  echo "Installing 'gnome-shell-theme.gresource'..."
+}
+
+while [[ $# -gt 0 ]]; do
+  case "${1}" in
+    -d|--dest)
+      dest="${2}"
+      if [[ ! -d "${dest}" ]]; then
+        echo "ERROR: Destination directory does not exist."
+        exit 1
+      fi
+      shift 2
+      ;;
+    -n|--name)
+      name="${2}"
+      shift 2
+      ;;
+    -g|--gdm)
+      gdm=true
+      shift 1
+      ;;
+    -c|--color)
+      shift
+      for variant in "${@}"; do
+        case "${variant}" in
+          standard)
+            colors+=("${COLOR_VARIANTS[0]}")
+            shift
+            ;;
+          dark)
+            colors+=("${COLOR_VARIANTS[1]}")
+            shift
+            ;;
+          light)
+            colors+=("${COLOR_VARIANTS[2]}")
+            shift
+            ;;
+          -*|--*)
+            break
+            ;;
+          *)
+            echo "ERROR: Unrecognized color variant '$1'."
+            echo "Try '$0 --help' for more information."
+            exit 1
+            ;;
+        esac
+      done
+      ;;
+    -s|--size)
+      shift
+      for variant in "${@}"; do
+        case "${variant}" in
+          standard)
+            sizes+=("${SIZE_VARIANTS[0]}")
+            shift
+            ;;
+          compact)
+            sizes+=("${SIZE_VARIANTS[1]}")
+            shift
+            ;;
+          -*|--*)
+            break
+            ;;
+          *)
+            echo "ERROR: Unrecognized size variant '$1'."
+            echo "Try '$0 --help' for more information."
+            exit 1
+            ;;
+        esac
+      done
+      ;;
+    -r|--radius)
+      shift
+      for variant in "${@}"; do
+        case "${variant}" in
+          standard)
+            radiuss+=("${RADIUS_VARIANTS[0]}")
+            shift
+            ;;
+          square)
+            radiuss+=("${RADIUS_VARIANTS[1]}")
+            shift
+            ;;
+          -*|--*)
+            break
+            ;;
+          *)
+            echo "ERROR: Unrecognized size variant '$1'."
+            echo "Try '$0 --help' for more information."
+            exit 1
+            ;;
+        esac
+      done
+      ;;
+    -h|--help)
+      usage
+      exit 0
+      ;;
+    *)
+      echo "ERROR: Unrecognized installation option '$1'."
+      echo "Try '$0 --help' for more information."
+      exit 1
+      ;;
+  esac
+done
 
 for color in "${colors[@]:-${COLOR_VARIANTS[@]}}"; do
   for size in "${sizes[@]:-${SIZE_VARIANTS[@]}}"; do

@@ -31,14 +31,28 @@ Search for the engines in your distributions repository or install the engines f
 
 Open the terminal at current directory.
 
-
 Run
-
 
     ./install.sh
 
+### Install tips
 
-Or double-click to open that script files and select "run at the terminal" at nautilus.
+OPTIONS:
+
+  -d, --dest DIR           Specify theme destination directory (Default: $HOME/.themes)
+  -n, --name NAME          Specify theme name (Default: Canta)
+  -c, --color VARIANTS...  Specify theme color variant(s) [standard|dark|light] (Default: All variants)
+  -s, --size VARIANT       Specify theme size variant [standard|compact] (Default: All variants)
+  -r, --radius VARIANT     Specify theme radius variant [standard|square] (Default: All variants)
+  -g, --gdm                Install GDM theme
+  -h, --help               Show this help
+
+FOR EXAMPLE
+
+  ./install.sh -c light -s compact -r square
+
+Install specify light compact square version of Canta theme
+
 ## Icon
 #### Canta icon theme
 Canta icon theme use numix-icon-theme-circle icon theme for Inherits,
