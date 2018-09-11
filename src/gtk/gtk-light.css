@@ -2016,6 +2016,16 @@ menubar > menuitem,
   color: rgba(0, 0, 0, 0.54);
 }
 
+menubar > menuitem menu,
+.menubar > menuitem menu {
+  border-radius: 0 0 6px 6px;
+}
+
+menubar > menuitem menu menu,
+.menubar > menuitem menu menu {
+  border-radius: 6px;
+}
+
 menubar > menuitem:hover,
 .menubar > menuitem:hover {
   color: rgba(0, 0, 0, 0.75);
@@ -2044,13 +2054,13 @@ menu,
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
   background-color: rgba(255, 255, 255, 0.96);
   border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
 }
 
 .csd menu, .csd
 .menu, .csd
 .context-menu {
   border: none;
-  border-radius: 6px;
 }
 
 menu menuitem,
@@ -6561,6 +6571,16 @@ popover.background.places-menu row {
 
 .budgie-panel separator {
   background-color: rgba(0, 0, 0, 0.26);
+}
+
+.budgie-panel menubar > menuitem menu,
+.budgie-panel .menubar > menuitem menu {
+  border-radius: 0 0 6px 6px;
+}
+
+.budgie-panel menubar > menuitem menu menu,
+.budgie-panel .menubar > menuitem menu menu {
+  border-radius: 6px;
 }
 
 .budgie-panel .alert {
