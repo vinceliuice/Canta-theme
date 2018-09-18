@@ -1,0 +1,71 @@
+#!/bin/bash
+
+show_question() {
+  echo -e "\033[1;34m$@\033[0m"
+}
+
+show_dir() {
+  echo -e "\033[1;32m$@\033[0m"
+}
+
+show_error() {
+  echo -e "\033[1;31m$@\033[0m"
+}
+
+end() {
+  echo -e "\nExiting...\n"
+  exit 0
+}
+
+continue() {
+  show_question "\nDo you want to continue? (y)es, (n)o : \n"
+  read INPUT
+  case $INPUT in
+    [Yy]* ) ;;
+    [Nn]* ) end;;
+    * ) show_error "\nSorry, try again."; continue;;
+  esac
+}
+
+radius() {
+  show_question "\nWhich style of headerbar button do you prefer?: (f)circle, (g)square : \n"
+  read INPUT
+  case $INPUT in
+    [Ff]* ) radius="standard" && install;;
+    [Gg]* ) radius="square" && install;;
+    * ) show_error "\nSorry, try again."; continue;;
+  esac
+}
+
+
+device() {
+  show_question "\nWhat is your device? Laptop or PC (d)laptop, (e)pc : \n"
+  read INPUT
+  case $INPUT in
+    [Dd]* ) size="compact" && radius;;
+    [Ee]* ) size="standard" && radius;;
+    * ) show_error "\nSorry, try again."; continue;;
+  esac
+}
+
+color() {
+  show_question "\nWhat color variant do you want to install: (a)standard, (b)light, (c)dark : \n"
+  read INPUT
+  case $INPUT in
+    [Aa]* ) color="standard" && device;;
+    [Bb]* ) color="light" && device;;
+    [Cc]* ) color="dark" && device;;
+    * ) show_error "\nSorry, try again."; continue;;
+  esac
+}
+
+install() {
+  ./install.sh --color ${color} --size ${size} --radius ${radius}
+}
+
+echo -e "\e[1m\n+----------------------------------------------+"
+echo -e "|       Canta GTK Theme Installer Script       |"
+echo -e "+----------------------------------------------+\n\e[0m"
+
+color
+
