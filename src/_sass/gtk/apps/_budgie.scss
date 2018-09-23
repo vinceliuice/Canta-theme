@@ -805,9 +805,11 @@ box.vertical > stack > box.vertical {
   background-color: $lighter_bg_color;
 
   decoration { border-radius: $buttons_radius; }
+  &.background { border-radius: $buttons_radius; }
 }
 
 // Session Dialog
+.budgie-polkit-dialog,
 .budgie-session-dialog {
   @extend %budgie_dialog;
 
@@ -829,7 +831,6 @@ box.vertical > stack > box.vertical {
 
 // PolKit Dialog
 .budgie-polkit-dialog {
-  @extend %budgie_dialog;
 
   .message { color: $hint_fg_color; }
 
