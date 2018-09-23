@@ -92,7 +92,7 @@ install() {
 
   # update icon caches
 
-  update-icon-caches $DEST_DIR/Canta
+  gtk-update-icon-cache $DEST_DIR/Canta
 
   echo -e "\nInstallation complete!"
   show_tips "\nIf you want a better experience you should install numix-circle first!"

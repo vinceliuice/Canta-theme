@@ -4,6 +4,28 @@
 /******************
  * Budgie Desktop *
  ******************/
+
+ %budgie_flat_button {
+  color: $titlebar_fg_color;
+
+  &:hover {
+    color: $titlebar_fg_color;
+    background-color: rgba($titlebar_fg_color, 0.15);
+  }
+
+  &:disabled { color: rgba($titlebar_fg_color, 0.5); }
+
+  &:checked, &:active {
+    background-color: rgba($titlebar_fg_color, 0.25);
+    color: $titlebar_fg_color;
+  }
+
+  &:checked:disabled {
+    background-color: rgba($titlebar_fg_color, 0.1);
+    color: rgba($titlebar_fg_color, 0.65);
+  }
+}
+
 // Container for both the "panel" area and the shadow. Wise to keep
 // this transparent..
 .budgie-container { background-color: transparent; }
@@ -20,9 +42,9 @@
 }
 
 .budgie-popover {
-  border-style: solid;
-  border-width: 1px;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.3);
+  border-style: none;
+  border-width: 0;
+  border-color: $lighter_bg_color;
   border-radius: $material_radius + 1px;
   box-shadow: $shadow_2;
   background-color: rgba($lighter_bg_color, 0.95);
@@ -38,6 +60,8 @@
 
     &:hover { box-shadow: none; }
   }
+
+  switch { margin-left: 56px; margin-right: 6px; }
 
   &:not(.budgie-menu) button.flat:not(.image-button) {
     min-height: $menuitem_size;
@@ -315,7 +339,7 @@ popover.background.places-menu {
   }
 
   // used to indicate unread notifications
-  .alert { color: $destructive_color; }
+  .alert { color: $info_bg_color; }
 
   // End Section needs to be fancy
   .end-region {
@@ -325,8 +349,8 @@ popover.background.places-menu {
   // Tasklist
   #tasklist-button {
     padding: 0 4px;
-
     @extend %underscores;
+//    &:hover { @extend %budgie_flat_button:hover; }
   }
 
   &.vertical #tasklist-button { min-height: 32px; }
@@ -334,8 +358,9 @@ popover.background.places-menu {
   // Icon Tasklist
   button.flat.launcher {
     padding: 0;
-
     @extend %underscores;
+
+//    &:hover { @extend %budgie_flat_button:hover; }
 
     // for indicator colors
     &:not(:checked) {
@@ -348,7 +373,9 @@ popover.background.places-menu {
   }
 
   .unpinned button.flat.launcher,
-  .pinned button.flat.launcher.running { @extend %underscores:checked; }
+  .pinned button.flat.launcher.running {
+    &:active, &:checked { @extend %underscores:checked; }
+  }
 }
 
 %underscores {
@@ -372,6 +399,116 @@ popover.background.places-menu {
       }
     }
   }
+}
+
+// icon tasklist styling
+%icon_tasklist_droptarget,
+box.pinned { // drop-target
+  &:drop(active) {
+    border: none;
+    border-radius: 0;
+    background-color: rgba($warning_bg_color, 0.2);
+    box-shadow: inset 0 0 0 1px $warning_bg_color;
+  }
+}
+
+.budgie-panel {
+  @at-root %budgie_icon_tasklist_button,
+  button.flat.launcher {
+    min-width: 16px;
+    min-height: 16px;
+    padding: 0;
+    border-radius: 0;
+    background-position: center center;
+
+    > image { opacity: 0.87; }
+
+    &:hover {
+      -gtk-icon-effect: highlight;
+      > image { opacity: 1.0; }
+    }
+    &:active {
+      > image { opacity: 1.0; }
+    }
+    &:checked {
+      background-color: transparent;
+      &:hover { -gtk-icon-effect: highlight; }
+      > image { opacity: 1.0; }
+    }
+  }
+
+  @at-root %running_budgie_icon_tasklist_button,
+  .unpinned button.flat.launcher,
+  .pinned button.flat.launcher.running {
+    &:hover { -gtk-icon-effect: highlight; }
+
+    > image {
+      background-repeat: no-repeat;
+      opacity: 1.0;
+    }
+
+    &:active,
+    &:checked {
+      > image { background-image: none; }
+    }
+  }
+}
+
+// draw underscores and dots
+@each $position, $_dot in (top, 6px 3px),
+                          (bottom, 6px 3px),
+                          (left, 3px 6px),
+                          (right, 3px 6px) {
+  .#{$position} .budgie-panel {
+
+    .unpinned button.flat.launcher,
+    .pinned button.flat.launcher.running {
+      > image {
+        background-image: image($accent_color);
+        background-size: #{$_dot};
+        background-position: #{$position} center;
+      }
+
+      &:active, &:checked { > image { background-image: none; } }
+    }
+  }
+}
+
+//@each $position, $_dot in (top, 6px 3px),
+//                          (bottom, 6px 3px),
+//                          (left, 3px 6px),
+//                          (right, 3px 6px) {
+//  .#{$position} {
+//    box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher {
+//    &.running {
+//      > image {
+//        background-image: image($accent_color);
+//        background-size:  #{$_dot};
+//        background-position: #{$position} center;
+//        background-repeat: no-repeat;
+//        opacity: 1.0;
+//      }
+//    &:checked, &:active { > image { background-image: none; } }
+//    }
+//    }
+//  }
+//}
+
+// upcoming icon tasklist
+widget.icon-tasklist {
+  > box:drop(active) { // drop-target
+    @extend %icon_tasklist_droptarget;
+  }
+}
+
+*:drop(active):focus,
+*:drop(active) {
+    box-shadow: inset 0 0 0 1px $warning_bg_color;
+}
+
+// menubar-style'ed app menu
+menubar.-vala-panel-background > menuitem { // override global values
+  font-weight: 700;
 }
 
 frame.raven-frame > border {
@@ -409,7 +546,6 @@ $pos_list: ((top, bottom), (bottom, top), (left, right), (right, left));
 
   stackswitcher.linked > button {
     @extend %flat_button;
-    @extend %button_selected.flat;
 
     border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
                                   $warning_bg_color 0%,
@@ -446,6 +582,7 @@ $pos_list: ((top, bottom), (bottom, top), (left, right), (right, left));
       color: $inverse_fg_color;
 
       stackswitcher button {
+        @extend %button_selected.flat;
         margin: -$container_padding 0;
         min-height: $medium_size;
       }
@@ -538,6 +675,87 @@ calendar.raven-calendar {
     padding: ($large_size - 24px) / 2;
 
     @extend %button_selected.flat;
+  }
+}
+
+// notification list
+box.vertical > stack > box.vertical {
+
+  > .raven-background > viewport.frame {
+    padding: 0; // reset padding for full-width list node
+
+    list { background-color: transparent; }
+
+    > list > row.activatable {
+      margin-left: -8px;
+      margin-right: -2px;
+      background-color: transparent;
+
+      > grid > *, // legacy
+      > box.vertical * { color: $fg_color; }
+
+      image { padding-left: 8px; }
+
+      button.image-button { // 'dismiss'
+        min-height: 32px;
+        min-width: 32px;
+        margin: 8px;
+        image { padding: 0; }
+      }
+
+      // sub-list rows grouping
+      list {
+        border-radius: 2px;
+        border-top: 1px solid $border_color;
+        border-bottom: 1px solid $border_color;
+
+        > row.activatable {
+          border-bottom: 1px solid $border_color;
+          &:last-child { border-bottom: none; }
+
+          &:selected {
+            background-color: rgba($fg_color, 0.06);
+          }
+
+          label { padding: 0 16px; }
+
+          button.image-button { // 'close'
+            min-height: 24px;
+            min-width: 24px;
+            image { padding: 0; }
+          }
+
+//          box.horizontal > label:first-child { font-weight: 500; } // title labels
+        }
+      }
+
+      &:selected {
+        background-color: rgba($primary_color, 0.75);
+
+        > grid > *,
+        > box.vertical * { color: white; }
+
+        button.image-button { // 'dismiss'
+          border: none;
+
+          &:hover { background-color: rgba(white, 0.25); }
+          &:active, &:checked { background-color: rgba(white, 0.35); }
+        }
+
+        list {
+          border: 1px solid rgba(white, 0.12);
+
+          > row.activatable {
+            border-bottom: 1px solid rgba(white, 0.12);
+            &:last-child { border-bottom: none; }
+
+            &:selected {
+              background-color: rgba($primary_color, 0.65);
+            }
+          }
+        }
+      }
+    }
   }
 }
 
