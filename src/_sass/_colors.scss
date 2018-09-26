@@ -53,11 +53,11 @@ $alt_keyboard_bg_color:  if($variant == 'light', $grey_300, fade($green_grey_900
 $titlebar_bg_color:     if($titlebar == 'dark', if($variant == 'light', $green_grey_700, $green_grey_800), $white);
 $alt_titlebar_bg_color: if($titlebar == 'dark', $green_grey_600, $grey_300);
 
-$panel_bg_color:        rgba($titlebar_bg_color, $secondary_opacity);
-$alt_panel_bg_color:    rgba($alt_titlebar_bg_color, $secondary_opacity);
+$panel_bg_color:         rgba($green_grey_800, $secondary_opacity);
+$alt_panel_bg_color:     rgba($green_grey_700, $secondary_opacity);
 $inverse_panel_bg_color: rgba($inverse_fg_color, 0.1);
-$solid_panel_bg_color:  if($titlebar == 'dark', $green_grey_900, $panel_bg_color);
-$opaque_panel_bg_color: if($titlebar == 'dark', $green_grey_900, mix($grey_300, $grey_400, 50%)); // for Unity panel which cannot use translucent colors
+$solid_panel_bg_color:   if($titlebar == 'dark', $green_grey_800, $green_grey_800);
+$opaque_panel_bg_color:  if($titlebar == 'dark', $green_grey_800, $green_grey_800); // for Unity panel which cannot use translucent colors
 
 $gdm_bg_color:  if($variant == 'light', $green_grey_700, $green_grey_800);
 $menu_bg_color: if($variant == 'light', $white, $base_color);

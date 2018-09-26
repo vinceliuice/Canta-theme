@@ -1121,7 +1121,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #panel.solid {
-  background-color: #323837;
+  background-color: #3b4342;
   /* transition from transparent to solid */
   transition-duration: 250ms;
   background-gradient-direction: none;
@@ -1133,7 +1133,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #panel.solid .panel-corner {
-  -panel-corner-background-color: #323837;
+  -panel-corner-background-color: #3b4342;
 }
 
 #panel.solid .panel-button {
@@ -2373,7 +2373,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #keyboard {
-  background-color: rgba(93, 105, 102, 0.75);
+  background-color: rgba(71, 80, 78, 0.75);
 }
 
 .keyboard-layout {
@@ -2404,9 +2404,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .keyboard-key:grayed {
-  background-color: rgba(93, 105, 102, 0.75);
+  background-color: rgba(71, 80, 78, 0.75);
   color: #FFFFFF;
-  border-color: rgba(93, 105, 102, 0.75);
+  border-color: rgba(71, 80, 78, 0.75);
 }
 
 .keyboard-key.default-key {
@@ -2466,7 +2466,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .keyboard-subkeys {
   color: inherit;
   -arrow-border-radius: 8px;
-  -arrow-background-color: rgba(93, 105, 102, 0.75);
+  -arrow-background-color: rgba(71, 80, 78, 0.75);
   -arrow-border-width: 0;
   -arrow-border-color: transparent;
   -arrow-base: 20px;
@@ -2868,7 +2868,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .screen-shield-notifications-container .screen-shield-notification-source {
   padding: 8px;
   border: none;
-  background-color: rgba(93, 105, 102, 0.75);
+  background-color: rgba(71, 80, 78, 0.75);
   color: #FFFFFF;
   border-radius: 8px;
 }
@@ -2890,7 +2890,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #panel.lock-screen {
-  background-color: rgba(93, 105, 102, 0.75);
+  background-color: rgba(71, 80, 78, 0.75);
 }
 
 .screen-shield-background {

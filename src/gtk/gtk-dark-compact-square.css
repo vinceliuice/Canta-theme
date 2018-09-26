@@ -5895,7 +5895,7 @@ UnityDecoration .menuitem:hover {
 
 UnityPanelWidget,
 .unity-panel {
-  background-color: #323837;
+  background-color: #3b4342;
   color: #FFFFFF;
 }
 
@@ -5931,7 +5931,7 @@ UnityPanelWidget:backdrop,
 }
 
 .mate-panel-menu-bar {
-  background-color: #323837;
+  background-color: #3b4342;
   font-weight: 500;
 }
 
@@ -6548,7 +6548,7 @@ popover.background.places-menu row {
 
 .budgie-panel {
   transition: background-color 270ms cubic-bezier(0, 0, 0.2, 1);
-  background-color: #323837;
+  background-color: #3b4342;
   color: rgba(255, 255, 255, 0.7);
   font-weight: 500;
 }
@@ -6584,6 +6584,21 @@ popover.background.places-menu row {
 
 .budgie-panel separator {
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+.budgie-panel menubar > menuitem,
+.budgie-panel .menubar > menuitem {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.budgie-panel menubar > menuitem:hover,
+.budgie-panel .menubar > menuitem:hover {
+  color: #FFFFFF;
+}
+
+.budgie-panel menubar > menuitem:disabled,
+.budgie-panel .menubar > menuitem:disabled {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .budgie-panel menubar > menuitem menu,
@@ -7177,7 +7192,7 @@ box.vertical > stack > box.vertical > .raven-background > viewport.frame > list 
  * LightDM GTK+ Greeter *
  ************************/
 #panel_window {
-  background-color: rgba(93, 105, 102, 0.75);
+  background-color: rgba(71, 80, 78, 0.75);
   color: #FFFFFF;
 }
 

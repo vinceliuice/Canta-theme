@@ -16,7 +16,7 @@
   font-weight: 500;
 
   // Avoid changing the menu text color
-  &:not(.popup) { color: $titlebar_secondary_fg_color; }
+  &:not(.popup) { color: $inverse_secondary_fg_color; }
 
   button {
     @extend %flat_button;
@@ -62,14 +62,14 @@ MatePanelAppletFrameDBus {
 .mate-panel-menu-bar {
   // set normal menubar button
   menubar > menuitem {
-    color: $titlebar_secondary_fg_color;
+    color: $inverse_secondary_fg_color;
 
     &:hover {
       background-color: $divider_color;
-      color: $titlebar_fg_color;
+      color: $inverse_fg_color;
     }
 
-    &:disabled { color: $titlebar_disabled_fg_color; }
+    &:disabled { color: $inverse_disabled_fg_color; }
   }
 
   &.horizontal menubar > menuitem { padding: 0 8px; }
@@ -91,15 +91,15 @@ MatePanelAppletFrameDBus {
 }
 
 .mate-panel-menu-bar #tasklist-button {
-  color: $titlebar_secondary_fg_color;
+  color: $inverse_secondary_fg_color;
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
                                 $primary_color 0%,
                                 transparent 0%)
                                 0 0 0 / 0 0 0px;
 
   &:checked {
-    color: $titlebar_fg_color;
-    background-color: $divider_color;
+    color: $inverse_fg_color;
+    background-color: $inverse_divider_color;
     border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
                                   $primary_color 100%,
                                   transparent 0%)
@@ -131,9 +131,9 @@ PanelApplet.wnck-applet .wnck-pager {
   background-color: transparent;
   color: $alt_primary_color;
 
-  &:hover { background-color: $divider_color; }
+  &:hover { background-color: $inverse_divider_color; }
 
-  &:active { background-color: $track_color; }
+  &:active { background-color: $inverse_track_color; }
 
   &:selected { background-color: $primary_color; }
 }
@@ -198,8 +198,8 @@ na-tray-applet widget box widget {
   &:not(:selected) > box { transition: $shorter_transition; }
 
   &:selected > box {
-    background-color: $divider_color;
-    color: $fg_color;
+    background-color: $inverse_divider_color;
+    color: $inverse_fg_color;
   }
 }
 
