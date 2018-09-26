@@ -42,8 +42,8 @@
 }
 
 .budgie-popover {
-  border-style: none;
-  border-width: 0;
+  margin: 0;
+  padding: 0;
   border-color: $lighter_bg_color;
   border-radius: $material_radius + 1px;
   box-shadow: $shadow_2;
@@ -112,6 +112,21 @@
     separator { margin: 4px 0; }
 
     flowboxchild { padding: 0; }
+  }
+}
+
+// budgie specific popover widgets
+window.budgie-popover:not(.csd) {
+
+  > frame.container {
+    margin: 0 -1px -1px; // remove gap
+
+    .bottom & { padding: 2px 0 2px; } // revive bottom padding
+
+    &,
+    > border {
+      border-style: none; // hide container borders
+    }
   }
 }
 

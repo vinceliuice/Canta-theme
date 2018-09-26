@@ -6275,8 +6275,8 @@ na-tray-applet {
 }
 
 .budgie-popover {
-  border-style: none;
-  border-width: 0;
+  margin: 0;
+  padding: 0;
   border-color: #4c5351;
   border-radius: 5px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15);
@@ -6364,6 +6364,19 @@ na-tray-applet {
 
 .budgie-popover.workspace-popover flowboxchild {
   padding: 0;
+}
+
+window.budgie-popover:not(.csd) > frame.container {
+  margin: 0 -1px -1px;
+}
+
+.bottom window.budgie-popover:not(.csd) > frame.container {
+  padding: 2px 0 2px;
+}
+
+window.budgie-popover:not(.csd) > frame.container,
+window.budgie-popover:not(.csd) > frame.container > border {
+  border-style: none;
 }
 
 .workspace-switcher .workspace-layout {
