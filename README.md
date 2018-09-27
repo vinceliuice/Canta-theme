@@ -45,6 +45,7 @@ OPTIONS:
   -s, --size VARIANT       Specify theme size variant [standard|compact] (Default: All variants)
   -r, --radius VARIANT     Specify theme radius variant [standard|square] (Default: All variants)
   -g, --gdm                Install GDM theme
+  -i, --icon               Install icon theme
   -h, --help               Show this help
 
 FOR EXAMPLE
@@ -65,19 +66,7 @@ so if you want a better experience you should install numix-circle first
 
 #### Install Canta icon theme
 
-Open ../Canta-theme/src/icons then
-
-    ./installer.sh
-
-Or double-click to open that script files and select "run at the terminal" at nautilus.
-
-When running the installer script in ubuntu16.04 or later, if you had this error:
-
-    XMLLINT not set and xmllint not found in path; skipping xml preprocessing.
-
-To fix it you have to install libxml2-utils
-
-    sudo apt install libxml2-utils
+    ./install.sh -i
 
 ## Screenshots
 #### GNOME Shell

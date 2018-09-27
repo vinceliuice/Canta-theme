@@ -866,7 +866,7 @@ StScrollBar {
     -natural-hpadding: 12px;
     -minimum-hpadding: 6px;
     font-weight: bold;
-    color: $titlebar_secondary_fg_color;
+    color: $inverse_secondary_fg_color;
     text-shadow: none;
     transition-duration: $longer_duration;
 
@@ -884,7 +884,7 @@ StScrollBar {
     }
 
     &:hover {
-      color: $titlebar_fg_color;
+      color: $inverse_fg_color;
       text-shadow: none;
 
       .system-status-icon,
@@ -899,7 +899,7 @@ StScrollBar {
       // a box-shadow
       background-color: rgba($panel_bg_color, 0.01);
       box-shadow: inset 0 -2px 0px $primary_color;
-      color: $titlebar_fg_color;
+      color: $inverse_fg_color;
 
       & > .system-status-icon { icon-shadow: none; }
     }
@@ -908,8 +908,8 @@ StScrollBar {
     .unlock-screen &,
     .login-screen &,
     .lock-screen & {
-      color: $titlebar_secondary_fg_color;
-      &:focus, &:hover, &:active { color: $titlebar_fg_color; }
+      color: $inverse_secondary_fg_color;
+      &:focus, &:hover, &:active { color: $inverse_fg_color; }
     }
   }
 
@@ -940,11 +940,11 @@ StScrollBar {
     }
 
     .panel-button {
-      color: $titlebar_secondary_fg_color;
+      color: $inverse_secondary_fg_color;
       text-shadow: none;
 
       &:hover, &:active, &:overview, &:focus, &:checked {
-        color: $titlebar_fg_color;
+        color: $inverse_fg_color;
       }
     }
 
@@ -973,7 +973,7 @@ StScrollBar {
   &:active, &:overview, &:focus, &:checked {
     background-color: rgba($panel_bg_color, 0.01);
     box-shadow: inset 0 -2px 0px $primary_color;
-    color: $titlebar_fg_color;
+    color: $inverse_fg_color;
     border: none;
 
     > * { background-image: url("assets/activities-active.svg"); }
