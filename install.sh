@@ -34,9 +34,10 @@ usage() {
   printf "\n%s\n" "OPTIONS:"
   printf "  %-25s%s\n" "-d, --dest DIR" "Specify theme destination directory (Default: ${DEST_DIR})"
   printf "  %-25s%s\n" "-n, --name NAME" "Specify theme name (Default: ${THEME_NAME})"
-  printf "  %-25s%s\n" "-c, --color VARIANTS..." "Specify theme color variant(s) [standard|dark|light] (Default: All variants)"
+  printf "  %-25s%s\n" "-c, --color VARIANTS" "Specify theme color variant(s) [standard|dark|light] (Default: All variants)"
   printf "  %-25s%s\n" "-s, --size VARIANT" "Specify theme size variant [standard|compact] (Default: All variants)"
   printf "  %-25s%s\n" "-r, --radius VARIANT" "Specify theme radius variant [standard|square] (Default: All variants)"
+  printf "  %-25s%s\n" "-b, --bgimg VARIANT" "Specify theme nautilus background image variant(s)"
   printf "  %-25s%s\n" "-g, --gdm" "Install GDM theme"
   printf "  %-25s%s\n" "-i, --icon" "Install icon theme"
   printf "  %-25s%s\n" "-h, --help" "Show this help"
@@ -163,6 +164,65 @@ install_icon() {
   show_tips "Because Canta icon theme use numix-icon-theme-circle icon theme for Inherits!\n"
 }
 
+# check command avalibility
+function has_command() {
+    command -v $1 > /dev/null
+}
+
+install_package() {
+  if [ ! "$(which sassc 2> /dev/null)" ]; then
+     echo sassc needs to be installed to generate the css.
+     if has_command zypper; then
+
+      # openSUSE
+      sudo zypper in sassc
+        elif has_command apt-get; then
+
+      # Debian or Debian-like
+      sudo apt-get install sassc
+        elif has_command dnf; then
+
+      # Fedora
+      sudo dnf install sassc
+        elif has_command yum; then
+
+      # RedHat
+      sudo yum install sassc
+        elif has_command pacman; then
+
+      # ArchLinux
+      sudo pacman -S --noconfirm sassc
+      fi
+  fi
+}
+
+install_img() {
+
+  NBG_N="@extend %nautilus_none_img;"
+  NBG_I="@extend %nautilus_bg_img;"
+
+  HDG_N="@extend %headerbar_none_img;"
+  HDG_I="@extend %headerbar_bg_img;"
+
+  cd ${SRC_DIR}/src/_sass/gtk/apps
+  cp -an _gnome.scss _gnome.scss.bak
+  sed -i "s/$NBG_N/$NBG_I/g" _gnome.scss
+  sed -i "s/$HDG_N/$HDG_I/g" _gnome.scss
+
+  # Install Packages
+  install_package
+
+  echo -e "\nInstalling specify theme with nautilus background image ...\n"
+
+  # compile scss to css
+  cd ${SRC_DIR}
+  ./parse-sass.sh
+
+  # install
+  ./install.sh
+
+}
+
 while [[ $# -gt 0 ]]; do
   case "${1}" in
     -d|--dest)
@@ -183,6 +243,10 @@ while [[ $# -gt 0 ]]; do
       ;;
     -i|--icon)
       install_icon
+      exit 0
+      ;;
+    -b|--bgimg)
+      install_img
       exit 0
       ;;
     -c|--color)
