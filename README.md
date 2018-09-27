@@ -51,11 +51,11 @@ OPTIONS:
 
 FOR EXAMPLE
 
-  ./install.sh -c light -s compact -r square
+    ./install.sh -c light -s compact -r square
 
 Install specify light compact square version of Canta theme
 
-  ./install.sh -b
+    ./install.sh -b
 
 Install specify Canta theme with nautilus background image
 

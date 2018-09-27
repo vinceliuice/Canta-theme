@@ -15,7 +15,7 @@
    version="1.1"
    id="svg410"
    sodipodi:docname="assets.svg"
-   inkscape:version="0.92.3pre0 (0ab9bec, 2018-03-03)">
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
   <metadata
      id="metadata412">
     <rdf:RDF>
@@ -30,13 +30,13 @@
   <sodipodi:namedview
      showgrid="true"
      id="namedview4"
-     inkscape:zoom="1.9999999"
-     inkscape:cx="852.03799"
-     inkscape:cy="319.54003"
+     inkscape:zoom="0.99999995"
+     inkscape:cx="638.58249"
+     inkscape:cy="108.06297"
      inkscape:window-width="1366"
-     inkscape:window-height="740"
+     inkscape:window-height="701"
      inkscape:window-x="0"
-     inkscape:window-y="28"
+     inkscape:window-y="34"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg410"
      inkscape:snap-nodes="true"
@@ -75,13 +75,13 @@
      id="background-img-top-dark"
      x="753.04974"
      y="142.69615"
-     style="opacity:0.75;filter:url(#filter1661)"
+     style="opacity:0.35;filter:url(#filter1661)"
      inkscape:label="#image1440"
      transform="translate(34.648234)" />
   <image
      inkscape:label="#image4816"
      clip-path="url(#clipPath1396)"
-     style="opacity:1"
+     style="opacity:0.5"
      width="360"
      height="250"
      preserveAspectRatio="none"
@@ -99,7 +99,8 @@
      width="360"
      clip-path="url(#clipPath1408)"
      inkscape:label="#image1651"
-     transform="translate(34.648234)" />
+     transform="translate(34.648234)"
+     style="opacity:0.5" />
   <image
      y="142.69615"
      x="486.28842"
@@ -108,7 +109,7 @@
      preserveAspectRatio="none"
      height="250"
      width="360"
-     style="opacity:0.5;filter:url(#filter1643)"
+     style="opacity:0.35;filter:url(#filter1643)"
      clip-path="url(#clipPath1400)"
      inkscape:label="#image4816" />
   <rect
