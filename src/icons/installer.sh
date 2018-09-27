@@ -65,7 +65,7 @@ install() {
   # PREVIEW
 
   # Show destination directory
-  echo -e "\nCanta Gtk Theme will be installed in:\n"
+  echo -e "\nCanta Icon Theme will be installed in:\n"
   show_dir "\t$DEST_DIR"
   if [ "$UID" -eq "$ROOT_UID" ]; then
     echo -e "\nIt will be available to all users."

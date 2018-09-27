@@ -153,7 +153,7 @@ install_icon() {
   show_info "\nInstalling Canta..."
 
   # Copying files
-  cp -ur ${SRC_DIR}/src/ ${ICON_DEST_DIR}
+  cp -ur ${SRC_DIR}/src/icons/Canta ${ICON_DEST_DIR}
 
   # update icon caches
   gtk-update-icon-cache ${ICON_DEST_DIR}/Canta
