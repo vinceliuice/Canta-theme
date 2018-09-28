@@ -378,10 +378,11 @@ popover.background.places-menu {
   // Icon Tasklist
   button.flat.launcher {
     padding: 0;
+    transition: border-image $ripple_duration * 2 $deceleration_curve;
     @extend %underscores;
     &:checked, &:active {
       @extend %budgie_flat_button:checked;
-      transition: none;
+//      transition: background-color 0, border-image 350ms;
     }
 
     // for indicator colors
