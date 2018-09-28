@@ -10,18 +10,23 @@
 
   &:hover {
     color: $inverse_fg_color;
-    background-color: rgba($inverse_fg_color, 0.15);
+    background-color: rgba($inverse_fg_color, 0.1);
   }
 
   &:disabled { color: rgba($inverse_fg_color, 0.5); }
 
-  &:checked, &:active {
+  &:checked {
+    background-color: rgba($inverse_fg_color, 0.15);
+    color: $inverse_fg_color;
+  }
+
+  &:active {
     background-color: rgba($inverse_fg_color, 0.25);
     color: $inverse_fg_color;
   }
 
   &:checked:disabled {
-    background-color: rgba($inverse_fg_color, 0.1);
+    background-color: rgba($inverse_fg_color, 0.05);
     color: rgba($inverse_fg_color, 0.65);
   }
 }
@@ -374,8 +379,7 @@ popover.background.places-menu {
   button.flat.launcher {
     padding: 0;
     @extend %underscores;
-
-//    &:hover { @extend %budgie_flat_button:hover; }
+    &:checked { @extend %budgie_flat_button:checked; }
 
     // for indicator colors
     &:not(:checked) {
@@ -385,12 +389,6 @@ popover.background.places-menu {
 
       &:disabled { color: $inverse_disabled_secondary_fg_color; }
     }
-  }
-
-  .unpinned button.flat.launcher,
-  .pinned button.flat.launcher.running,
-  .pinned button.launcher.running.sidebar-button {
-    &:active, &:checked { @extend %underscores:checked; }
   }
 }
 
@@ -481,25 +479,7 @@ popover.background.places-menu {
   }
 }
 
-//@each $position, $_dot in (top, 6px 3px),
-//                          (bottom, 6px 3px),
-//                          (left, 3px 6px),
-//                          (right, 3px 6px) {
-//  .#{$position} {
-//    box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher {
-//    &.running {
-//      > image {
-//        background-image: image($accent_color);
-//        background-size:  #{$_dot};
-//        background-position: #{$position} center;
-//        background-repeat: no-repeat;
-//        opacity: 1.0;
-//      }
-//    &:checked, &:active { > image { background-image: none; } }
-//    }
-//    }
-//  }
-//}
+box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher { &, &:checked, &:active { border-image: none; } } // unset before drawing indicators
 
 // icon tasklist styling
 %icon_tasklist_droptarget,
