@@ -2070,7 +2070,7 @@ menu,
 menu menuitem,
 .menu menuitem,
 .context-menu menuitem {
-  transition: background-color 180ms cubic-bezier(0, 0, 0.2, 1);
+  transition: none;
   min-height: 20px;
   min-width: 40px;
   padding: 4px 8px;
@@ -6683,7 +6683,7 @@ popover.background.places-menu row {
 }
 
 .budgie-panel button.flat.launcher:checked, .budgie-panel button.flat.launcher:active {
-  transition: background-color 0, border-image 450ms;
+  transition: background-color 0, border-image 450ms cubic-bezier(0, 0, 0.2, 1);
 }
 
 .budgie-panel button.flat.launcher:not(:checked) {

@@ -381,7 +381,7 @@ popover.background.places-menu {
     @extend %underscores;
     &:checked, &:active {
       @extend %budgie_flat_button:checked;
-      transition: background-color 0, border-image 450ms;
+      transition: background-color 0, border-image $ripple_duration $deceleration_curve;
     }
 
     // for indicator colors

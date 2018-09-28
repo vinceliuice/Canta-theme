@@ -1597,7 +1597,7 @@ menu,
   }
 
   menuitem {
-    transition: background-color $shorter_duration $deceleration_curve;
+    transition: none;
     min-height: 20px;
     min-width: 40px;
     padding: 4px 8px;
