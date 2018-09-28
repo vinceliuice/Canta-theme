@@ -381,7 +381,7 @@ popover.background.places-menu {
     @extend %underscores;
     &:checked, &:active {
       @extend %budgie_flat_button:checked;
-      &:hover { transition: none; }
+      transition: none;
     }
 
     // for indicator colors

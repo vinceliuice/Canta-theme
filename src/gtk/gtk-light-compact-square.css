@@ -6682,7 +6682,7 @@ popover.background.places-menu row {
   padding: 0;
 }
 
-.budgie-panel button.flat.launcher:checked:hover, .budgie-panel button.flat.launcher:active:hover {
+.budgie-panel button.flat.launcher:checked, .budgie-panel button.flat.launcher:active {
   transition: none;
 }
 

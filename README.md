@@ -53,11 +53,11 @@ FOR EXAMPLE
 
     ./install.sh -c light -s compact -r square
 
-Install specify light compact square version of Canta theme
+Install light compact square version of Canta theme
 
     ./install.sh -b
 
-Install specify Canta theme with nautilus background image
+Install Canta theme with nautilus background image
 
 ## Icon
 #### Canta icon theme
@@ -69,7 +69,7 @@ so if you want a better experience you should install numix-circle first
 
 (Just install numix-circle nomal, Canta icon theme will use it's icons resources for missing part!)
 
-#### Install Canta icon theme
+#### Install Canta theme with icon theme
 
     ./install.sh -i
 

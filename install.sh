@@ -37,7 +37,7 @@ usage() {
   printf "  %-25s%s\n" "-c, --color VARIANTS" "Specify theme color variant(s) [standard|dark|light] (Default: All variants)"
   printf "  %-25s%s\n" "-s, --size VARIANT" "Specify theme size variant [standard|compact] (Default: All variants)"
   printf "  %-25s%s\n" "-r, --radius VARIANT" "Specify theme radius variant [standard|square] (Default: All variants)"
-  printf "  %-25s%s\n" "-b, --bgimg VARIANT" "Specify theme nautilus background image variant(s)"
+  printf "  %-25s%s\n" "-b, --bgimg" "Install theme with nautilus background image"
   printf "  %-25s%s\n" "-g, --gdm" "Install GDM theme"
   printf "  %-25s%s\n" "-i, --icon" "Install icon theme"
   printf "  %-25s%s\n" "-h, --help" "Show this help"
@@ -151,7 +151,7 @@ install_gdm() {
 }
 
 install_icon() {
-  show_info "\nInstalling Canta..."
+  echo -e "\nInstalling Canta icon theme..."
 
   # Copying files
   cp -ur ${SRC_DIR}/src/icons/Canta ${ICON_DEST_DIR}
@@ -159,7 +159,7 @@ install_icon() {
   # update icon caches
   gtk-update-icon-cache ${ICON_DEST_DIR}/Canta
 
-  show_info "\nInstallation complete!"
+  echo -e "\nInstallation complete!"
   show_tips "\nIf you want a better experience you should install numix-circle first!"
   show_tips "Because Canta icon theme use numix-icon-theme-circle icon theme for Inherits!\n"
 }
@@ -242,8 +242,8 @@ while [[ $# -gt 0 ]]; do
       shift 1
       ;;
     -i|--icon)
-      install_icon
-      exit 0
+      icon='true'
+      shift 1
       ;;
     -b|--bgimg)
       install_img
@@ -344,6 +344,10 @@ done
 
 if [[ "${gdm:-}" == 'true' ]]; then
   install_gdm "${dest:-${DEST_DIR}}" "${name:-${THEME_NAME}}" "${color}" "${size}" "${radius}"
+fi
+
+if [[ "${icon:-}" == 'true' ]]; then
+  install_icon "${dest:-${DEST_DIR}}" "${name:-${THEME_NAME}}" "${color}" "${size}" "${radius}"
 fi
 
 echo
