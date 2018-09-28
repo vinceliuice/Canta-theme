@@ -6261,12 +6261,44 @@ na-tray-applet {
 /******************
  * Budgie Desktop *
  ******************/
-.budgie-panel button.flat.launcher:checked {
+.budgie-panel button.flat.launcher:checked, .budgie-panel button.flat.launcher:active, .top .budgie-panel .unpinned button.flat.launcher:active, .top .budgie-panel .unpinned button.flat.launcher:checked,
+.top .budgie-panel .pinned button.flat.launcher.running:active,
+.top .budgie-panel .pinned button.flat.launcher.running:checked,
+.top .budgie-panel .pinned button.launcher.running.sidebar-button:active,
+.top .budgie-panel .pinned button.launcher.running.sidebar-button:checked, .bottom .budgie-panel .unpinned button.flat.launcher:active, .bottom .budgie-panel .unpinned button.flat.launcher:checked,
+.bottom .budgie-panel .pinned button.flat.launcher.running:active,
+.bottom .budgie-panel .pinned button.flat.launcher.running:checked,
+.bottom .budgie-panel .pinned button.launcher.running.sidebar-button:active,
+.bottom .budgie-panel .pinned button.launcher.running.sidebar-button:checked, .left .budgie-panel .unpinned button.flat.launcher:active, .left .budgie-panel .unpinned button.flat.launcher:checked,
+.left .budgie-panel .pinned button.flat.launcher.running:active,
+.left .budgie-panel .pinned button.flat.launcher.running:checked,
+.left .budgie-panel .pinned button.launcher.running.sidebar-button:active,
+.left .budgie-panel .pinned button.launcher.running.sidebar-button:checked, .right .budgie-panel .unpinned button.flat.launcher:active, .right .budgie-panel .unpinned button.flat.launcher:checked,
+.right .budgie-panel .pinned button.flat.launcher.running:active,
+.right .budgie-panel .pinned button.flat.launcher.running:checked,
+.right .budgie-panel .pinned button.launcher.running.sidebar-button:active,
+.right .budgie-panel .pinned button.launcher.running.sidebar-button:checked {
   background-color: rgba(255, 255, 255, 0.15);
   color: #FFFFFF;
 }
 
-.budgie-panel button.flat.launcher:disabled:checked {
+.budgie-panel button.flat.launcher:disabled:checked, .budgie-panel button.flat.launcher:disabled:active, .top .budgie-panel .unpinned button.flat.launcher:disabled:active, .top .budgie-panel .unpinned button.flat.launcher:disabled:checked,
+.top .budgie-panel .pinned button.flat.launcher.running:disabled:active,
+.top .budgie-panel .pinned button.flat.launcher.running:disabled:checked,
+.top .budgie-panel .pinned button.launcher.running.sidebar-button:disabled:active,
+.top .budgie-panel .pinned button.launcher.running.sidebar-button:disabled:checked, .bottom .budgie-panel .unpinned button.flat.launcher:disabled:active, .bottom .budgie-panel .unpinned button.flat.launcher:disabled:checked,
+.bottom .budgie-panel .pinned button.flat.launcher.running:disabled:active,
+.bottom .budgie-panel .pinned button.flat.launcher.running:disabled:checked,
+.bottom .budgie-panel .pinned button.launcher.running.sidebar-button:disabled:active,
+.bottom .budgie-panel .pinned button.launcher.running.sidebar-button:disabled:checked, .left .budgie-panel .unpinned button.flat.launcher:disabled:active, .left .budgie-panel .unpinned button.flat.launcher:disabled:checked,
+.left .budgie-panel .pinned button.flat.launcher.running:disabled:active,
+.left .budgie-panel .pinned button.flat.launcher.running:disabled:checked,
+.left .budgie-panel .pinned button.launcher.running.sidebar-button:disabled:active,
+.left .budgie-panel .pinned button.launcher.running.sidebar-button:disabled:checked, .right .budgie-panel .unpinned button.flat.launcher:disabled:active, .right .budgie-panel .unpinned button.flat.launcher:disabled:checked,
+.right .budgie-panel .pinned button.flat.launcher.running:disabled:active,
+.right .budgie-panel .pinned button.flat.launcher.running:disabled:checked,
+.right .budgie-panel .pinned button.launcher.running.sidebar-button:disabled:active,
+.right .budgie-panel .pinned button.launcher.running.sidebar-button:disabled:checked {
   background-color: rgba(255, 255, 255, 0.05);
   color: rgba(255, 255, 255, 0.65);
 }
@@ -6650,6 +6682,10 @@ popover.background.places-menu row {
   padding: 0;
 }
 
+.budgie-panel button.flat.launcher:checked:hover, .budgie-panel button.flat.launcher:active:hover {
+  transition: none;
+}
+
 .budgie-panel button.flat.launcher:not(:checked) {
   color: rgba(255, 255, 255, 0.5);
 }
@@ -6771,6 +6807,14 @@ button.flat.launcher:checked > image {
   background-position: top center;
 }
 
+.top .budgie-panel .unpinned button.flat.launcher:active:hover, .top .budgie-panel .unpinned button.flat.launcher:checked:hover,
+.top .budgie-panel .pinned button.flat.launcher.running:active:hover,
+.top .budgie-panel .pinned button.flat.launcher.running:checked:hover,
+.top .budgie-panel .pinned button.launcher.running.sidebar-button:active:hover,
+.top .budgie-panel .pinned button.launcher.running.sidebar-button:checked:hover {
+  transition: none;
+}
+
 .top .budgie-panel .unpinned button.flat.launcher:active > image, .top .budgie-panel .unpinned button.flat.launcher:checked > image,
 .top .budgie-panel .pinned button.flat.launcher.running:active > image,
 .top .budgie-panel .pinned button.flat.launcher.running:checked > image,
@@ -6785,6 +6829,14 @@ button.flat.launcher:checked > image {
   background-image: image(#FFAC00);
   background-size: 6px 3px;
   background-position: bottom center;
+}
+
+.bottom .budgie-panel .unpinned button.flat.launcher:active:hover, .bottom .budgie-panel .unpinned button.flat.launcher:checked:hover,
+.bottom .budgie-panel .pinned button.flat.launcher.running:active:hover,
+.bottom .budgie-panel .pinned button.flat.launcher.running:checked:hover,
+.bottom .budgie-panel .pinned button.launcher.running.sidebar-button:active:hover,
+.bottom .budgie-panel .pinned button.launcher.running.sidebar-button:checked:hover {
+  transition: none;
 }
 
 .bottom .budgie-panel .unpinned button.flat.launcher:active > image, .bottom .budgie-panel .unpinned button.flat.launcher:checked > image,
@@ -6803,6 +6855,14 @@ button.flat.launcher:checked > image {
   background-position: left center;
 }
 
+.left .budgie-panel .unpinned button.flat.launcher:active:hover, .left .budgie-panel .unpinned button.flat.launcher:checked:hover,
+.left .budgie-panel .pinned button.flat.launcher.running:active:hover,
+.left .budgie-panel .pinned button.flat.launcher.running:checked:hover,
+.left .budgie-panel .pinned button.launcher.running.sidebar-button:active:hover,
+.left .budgie-panel .pinned button.launcher.running.sidebar-button:checked:hover {
+  transition: none;
+}
+
 .left .budgie-panel .unpinned button.flat.launcher:active > image, .left .budgie-panel .unpinned button.flat.launcher:checked > image,
 .left .budgie-panel .pinned button.flat.launcher.running:active > image,
 .left .budgie-panel .pinned button.flat.launcher.running:checked > image,
@@ -6817,6 +6877,14 @@ button.flat.launcher:checked > image {
   background-image: image(#FFAC00);
   background-size: 3px 6px;
   background-position: right center;
+}
+
+.right .budgie-panel .unpinned button.flat.launcher:active:hover, .right .budgie-panel .unpinned button.flat.launcher:checked:hover,
+.right .budgie-panel .pinned button.flat.launcher.running:active:hover,
+.right .budgie-panel .pinned button.flat.launcher.running:checked:hover,
+.right .budgie-panel .pinned button.launcher.running.sidebar-button:active:hover,
+.right .budgie-panel .pinned button.launcher.running.sidebar-button:checked:hover {
+  transition: none;
 }
 
 .right .budgie-panel .unpinned button.flat.launcher:active > image, .right .budgie-panel .unpinned button.flat.launcher:checked > image,

@@ -379,7 +379,10 @@ popover.background.places-menu {
   button.flat.launcher {
     padding: 0;
     @extend %underscores;
-    &:checked { @extend %budgie_flat_button:checked; }
+    &:checked, &:active {
+      @extend %budgie_flat_button:checked;
+      &:hover { transition: none; }
+    }
 
     // for indicator colors
     &:not(:checked) {
@@ -474,7 +477,11 @@ popover.background.places-menu {
         background-position: #{$position} center;
       }
 
-      &:active, &:checked { > image { background-image: none; } }
+      &:active, &:checked {
+        @extend %budgie_flat_button:checked;
+        &:hover { transition: none; }
+        > image { background-image: none; }
+      }
     }
   }
 }
