@@ -1554,7 +1554,7 @@ menubar,
   background-color: $titlebar_bg_color;
 
   > menuitem {
-    transition: $shorter_transition;
+    transition: none;
     min-height: 20px;
     padding: 4px 8px;
     color: $titlebar_secondary_fg_color;
