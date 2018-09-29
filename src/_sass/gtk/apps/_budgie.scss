@@ -47,8 +47,6 @@
 }
 
 .budgie-popover {
-  margin: 0;
-  padding: 0;
   border-color: $lighter_bg_color;
   border-radius: $material_radius + 1px;
   box-shadow: $shadow_2;
@@ -67,6 +65,30 @@
   }
 
   switch { margin-left: 56px; margin-right: 6px; }
+
+  button {
+    @extend %simple_flat_button;
+
+    &:checked {
+      color: white;
+      background-color: $primary_color;
+    }
+  }
+
+  entry,
+  spinbutton:not(.vertical) { @extend %entry.flat; }
+
+  spinbutton:not(.vertical) entry { @extend %spinbutton_entry; }
+  button.combo { @extend %combo_flat; }
+
+  .linked entry { &:first-child, &:last-child { border-radius: 0; } }
+
+  .linked:not(.vertical) > combobox {
+    > box > button.combo { border-radius: 0; }
+    &:first-child > box > button.combo { border-radius: 0; }
+    &:last-child > box > button.combo { border-radius: 0; }
+    &:only-child > box > button.combo { border-radius: 0; }
+  }
 
   &:not(.budgie-menu) button.flat:not(.image-button) {
     min-height: $menuitem_size;
@@ -510,11 +532,6 @@ widget.icon-tasklist {
     box-shadow: inset 0 0 0 1px $warning_bg_color;
 }
 
-// menubar-style'ed app menu
-menubar.-vala-panel-background > menuitem { // override global values
-  font-weight: 700;
-}
-
 frame.raven-frame > border {
   border-style: none;
   box-shadow: none;
@@ -532,7 +549,7 @@ $pos_list: ((top, bottom), (bottom, top), (left, right), (right, left));
   }
 
   // Shadows
-   .#{$pos} .shadow-block { background-image: linear-gradient(to $b_pos, rgba(black, 0.2), transparent); }
+   .#{$pos} .shadow-block { background-image: linear-gradient(to $b_pos, rgba(black, 0.23), rgba(black, 0.08), transparent); }
 }
 
 // Raven
