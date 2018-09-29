@@ -37,7 +37,7 @@ usage() {
   printf "  %-25s%s\n" "-c, --color VARIANTS" "Specify theme color variant(s) [standard|dark|light] (Default: All variants)"
   printf "  %-25s%s\n" "-s, --size VARIANT" "Specify theme size variant [standard|compact] (Default: All variants)"
   printf "  %-25s%s\n" "-r, --radius VARIANT" "Specify theme radius variant [standard|square] (Default: All variants)"
-  printf "  %-25s%s\n" "-b, --bgimg" "Install theme with nautilus background image"
+  printf "  %-25s%s\n" "-b, --bgimg" "Install theme with nautilus background image (this option must be the last one!)"
   printf "  %-25s%s\n" "-g, --gdm" "Install GDM theme"
   printf "  %-25s%s\n" "-i, --icon" "Install icon theme"
   printf "  %-25s%s\n" "-h, --help" "Show this help"
@@ -219,7 +219,13 @@ install_img() {
   ./parse-sass.sh
 
   # install
-  ./install.sh
+  for color in "${colors[@]:-${COLOR_VARIANTS[@]}}"; do
+  for size in "${sizes[@]:-${SIZE_VARIANTS[@]}}"; do
+  for radius in "${radiuss[@]:-${RADIUS_VARIANTS[@]}}"; do
+  install "${dest:-${DEST_DIR}}" "${name:-${THEME_NAME}}" "${color}" "${size}" "${radius}"
+  done
+  done
+  done
 
 }
 

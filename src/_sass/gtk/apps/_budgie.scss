@@ -37,8 +37,12 @@
 
 .budgie-settings-window buttonbox.inline-toolbar {
   border-style: none none solid;
+  padding: 0 2px;
+  margin: 0;
 
   button {
+    margin: 4px 2px;
+    min-height: 16px;
     border-radius: $buttons_radius;
     -gtk-outline-radius: $buttons_radius;
 

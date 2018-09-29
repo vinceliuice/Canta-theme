@@ -872,7 +872,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 /* Pad OSD */
 .pad-osd-window {
   padding: 32px;
-  background-color: rgba(59, 67, 66, 0.75);
+  background-color: rgba(59, 67, 66, 0.85);
 }
 
 .pad-osd-window .pad-osd-title-box {
@@ -1008,7 +1008,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 /* TOP BAR */
 #panel {
-  background-color: rgba(59, 67, 66, 0.75);
+  background-color: rgba(59, 67, 66, 0.85);
   /* transition from solid to transparent */
   transition-duration: 250ms;
   font-weight: bold;
@@ -1016,7 +1016,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #panel:overview, #panel.unlock-screen, #panel.login-screen, #panel.lock-screen {
-  background-color: rgba(59, 67, 66, 0.75);
+  background-color: rgba(59, 67, 66, 0.85);
 }
 
 #panel #panelLeft, #panel #panelCenter {
@@ -1025,7 +1025,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #panel .panel-corner {
   -panel-corner-radius: 0;
-  -panel-corner-background-color: rgba(59, 67, 66, 0.75);
+  -panel-corner-background-color: rgba(59, 67, 66, 0.85);
   -panel-corner-border-width: 2px;
   -panel-corner-border-color: transparent;
 }
@@ -2373,7 +2373,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #keyboard {
-  background-color: rgba(71, 80, 78, 0.75);
+  background-color: rgba(71, 80, 78, 0.85);
 }
 
 .keyboard-layout {
@@ -2404,9 +2404,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .keyboard-key:grayed {
-  background-color: rgba(71, 80, 78, 0.75);
+  background-color: rgba(71, 80, 78, 0.85);
   color: #FFFFFF;
-  border-color: rgba(71, 80, 78, 0.75);
+  border-color: rgba(71, 80, 78, 0.85);
 }
 
 .keyboard-key.default-key {
@@ -2466,7 +2466,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .keyboard-subkeys {
   color: inherit;
   -arrow-border-radius: 8px;
-  -arrow-background-color: rgba(71, 80, 78, 0.75);
+  -arrow-background-color: rgba(71, 80, 78, 0.85);
   -arrow-border-width: 0;
   -arrow-border-color: transparent;
   -arrow-base: 20px;
@@ -2868,7 +2868,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .screen-shield-notifications-container .screen-shield-notification-source {
   padding: 8px;
   border: none;
-  background-color: rgba(71, 80, 78, 0.75);
+  background-color: rgba(71, 80, 78, 0.85);
   color: #FFFFFF;
   border-radius: 8px;
 }
@@ -2890,7 +2890,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #panel.lock-screen {
-  background-color: rgba(71, 80, 78, 0.75);
+  background-color: rgba(71, 80, 78, 0.85);
 }
 
 .screen-shield-background {
@@ -3069,7 +3069,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 /* Dash to Dock */
 #dashtodockContainer #dash {
-  background-color: rgba(59, 67, 66, 0.75);
+  background-color: rgba(59, 67, 66, 0.85);
 }
 
 #dashtodockContainer:overview #dash {
@@ -3267,7 +3267,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 /* Simple Dock */
 #dash:desktop {
-  background-color: rgba(59, 67, 66, 0.75);
+  background-color: rgba(59, 67, 66, 0.85);
 }
 
 /* GPaste */

@@ -53,8 +53,8 @@ $alt_keyboard_bg_color:  if($variant == 'light', $grey_300, fade($green_grey_900
 $titlebar_bg_color:     if($titlebar == 'dark', if($variant == 'light', $green_grey_700, $green_grey_800), $white);
 $alt_titlebar_bg_color: if($titlebar == 'dark', $green_grey_600, $grey_300);
 
-$panel_bg_color:         rgba($green_grey_800, $secondary_opacity);
-$alt_panel_bg_color:     rgba($green_grey_700, $secondary_opacity);
+$panel_bg_color:         rgba($green_grey_800, $secondary_opacity + 0.1);
+$alt_panel_bg_color:     rgba($green_grey_700, $secondary_opacity + 0.1);
 $inverse_panel_bg_color: rgba($inverse_fg_color, 0.1);
 $solid_panel_bg_color:   if($titlebar == 'dark', $green_grey_800, $green_grey_800);
 $opaque_panel_bg_color:  if($titlebar == 'dark', $green_grey_800, $green_grey_800); // for Unity panel which cannot use translucent colors
@@ -90,6 +90,7 @@ $warning_bg_color:  $orange_400;
 $error_bg_color:    $red_400;
 
 $border_color:             if($variant == 'light', rgba($black, 0.08), rgba($white, 0.08));
+$solid_border_color:       if($variant =='light', darken($bg_color, 8%), lighten($bg_color, 8%));
 $alt_border_color:         rgba($black, 0.2); // for non-native GTK+ apps (e.g. Firefox and Chrome)
 $highlight_color:          if($variant == 'light', rgba($white, 0.4),  rgba($white, 0.1));
 $titlebar_highlight_color: if($titlebar == 'dark', rgba($white, 0.1),  rgba($white, 0.4));

@@ -3667,12 +3667,12 @@ filechooserbutton:drop(active) {
 }
 
 stacksidebar.sidebar:dir(ltr) list, stacksidebar.sidebar.left list, stacksidebar.sidebar.left:dir(rtl) list, .sidebar:dir(ltr), .sidebar.left, .sidebar.left:dir(rtl) {
-  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  border-right: 1px solid #e1e1e1;
   border-left-style: none;
 }
 
 stacksidebar.sidebar:dir(rtl) list, stacksidebar.sidebar.right list, .sidebar:dir(rtl), .sidebar.right {
-  border-left: 1px solid rgba(0, 0, 0, 0.08);
+  border-left: 1px solid #e1e1e1;
   border-right-style: none;
 }
 
@@ -6305,9 +6305,13 @@ na-tray-applet {
 
 .budgie-settings-window buttonbox.inline-toolbar {
   border-style: none none solid;
+  padding: 0 2px;
+  margin: 0;
 }
 
 .budgie-settings-window buttonbox.inline-toolbar button {
+  margin: 4px 2px;
+  min-height: 16px;
   border-radius: 6px;
   -gtk-outline-radius: 6px;
 }
@@ -6628,7 +6632,7 @@ popover.background.places-menu row {
 }
 
 .budgie-panel.transparent {
-  background-color: rgba(59, 67, 66, 0.75);
+  background-color: rgba(59, 67, 66, 0.85);
 }
 
 .budgie-panel button {
@@ -7267,7 +7271,7 @@ box.vertical > stack > box.vertical > .raven-background > viewport.frame > list 
  * LightDM GTK+ Greeter *
  ************************/
 #panel_window {
-  background-color: rgba(71, 80, 78, 0.75);
+  background-color: rgba(71, 80, 78, 0.85);
   color: #FFFFFF;
 }
 
@@ -7390,5 +7394,5 @@ FIXME this is really an API */
 @define-color placeholder_text_color #747474;
 @define-color budgie_tasklist_indicator_color #FFAC00;
 @define-color budgie_tasklist_indicator_color_active #FFAC00;
-@define-color budgie_tasklist_indicator_color_active_window rgba(189, 136, 22, 0.885);
+@define-color budgie_tasklist_indicator_color_active_window rgba(179, 131, 26, 0.931);
 @define-color budgie_tasklist_indicator_color_attention #FF6D00;
