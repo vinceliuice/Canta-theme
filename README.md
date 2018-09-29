@@ -39,15 +39,15 @@ Run
 
 OPTIONS:
 
-    -d, --dest DIR                  Specify theme destination directory (Default: $HOME/.themes)
-    -n, --name NAME               Specify theme name (Default: Canta)
-    -c, --color VARIANTS...     Specify theme color variant(s) [standard|dark|light] (Default: All variants)
-    -s, --size VARIANT           Specify theme size variant [standard|compact] (Default: All variants)
-    -r, --radius VARIANT        Specify theme radius variant [standard|square] (Default: All variants)
-    -b, --bgimg                  Install theme with nautilus background image (this option must be the last one!)
-    -g, --gdm                     Install GDM theme
-    -i, --icon                     Install icon theme
-    -h, --help                     Show this help
+    -d, --dest DIR                        Specify theme destination directory (Default: $HOME/.themes)
+    -n, --name NAME                Specify theme name (Default: Canta)
+    -c, --color VARIANTS...      Specify theme color variant(s) [standard|dark|light] (Default: All variants)
+    -s, --size VARIANT               Specify theme size variant [standard|compact] (Default: All variants)
+    -r, --radius VARIANT          Specify theme radius variant [standard|square] (Default: All variants)
+    -b, --bgimg                           Install theme with nautilus background image (this option must be the last one!)
+    -g, --gdm                               Install GDM theme
+    -i, --icon                                 Install icon theme
+    -h, --help                               Show this help
 
 FOR EXAMPLE
 
