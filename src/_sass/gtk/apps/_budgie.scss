@@ -454,7 +454,6 @@ popover.background.places-menu {
       opacity: 1.0;
     }
 
-    &:active,
     &:checked {
       > image { background-image: none; }
     }
@@ -477,7 +476,7 @@ popover.background.places-menu {
         background-position: #{$position} center;
       }
 
-      &:active, &:checked {
+      &:checked {
         @extend %budgie_flat_button:checked;
         &:hover { transition: none; }
         > image { background-image: none; }
@@ -486,7 +485,7 @@ popover.background.places-menu {
   }
 }
 
-box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher { &, &:checked, &:active { border-image: none; } } // unset before drawing indicators
+box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher { &, &:checked { border-image: none; } } // unset before drawing indicators
 
 // icon tasklist styling
 %icon_tasklist_droptarget,
