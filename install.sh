@@ -17,7 +17,7 @@ fi
 SRC_DIR=$(cd $(dirname $0) && pwd)
 
 THEME_NAME=Canta
-COLOR_VARIANTS=('' '-dark' '-light')
+COLOR_VARIANTS=('' '-light' '-dark')
 SIZE_VARIANTS=('' '-compact')
 RADIUS_VARIANTS=('' '-square')
 
@@ -34,7 +34,7 @@ usage() {
   printf "\n%s\n" "OPTIONS:"
   printf "  %-25s%s\n" "-d, --dest DIR" "Specify theme destination directory (Default: ${DEST_DIR})"
   printf "  %-25s%s\n" "-n, --name NAME" "Specify theme name (Default: ${THEME_NAME})"
-  printf "  %-25s%s\n" "-c, --color VARIANTS" "Specify theme color variant(s) [standard|dark|light] (Default: All variants)"
+  printf "  %-25s%s\n" "-c, --color VARIANTS" "Specify theme color variant(s) [standard|light|dark] (Default: All variants)"
   printf "  %-25s%s\n" "-s, --size VARIANT" "Specify theme size variant [standard|compact] (Default: All variants)"
   printf "  %-25s%s\n" "-r, --radius VARIANT" "Specify theme radius variant [standard|square] (Default: All variants)"
   printf "  %-25s%s\n" "-b, --bgimg" "Install theme with nautilus background image"
@@ -245,17 +245,17 @@ while [[ $# -gt 0 ]]; do
       ;;
     -c|--color)
       shift
-      for variant in "${@}"; do
-        case "${variant}" in
+      for color in "${@}"; do
+        case "${color}" in
           standard)
             colors+=("${COLOR_VARIANTS[0]}")
             shift
             ;;
-          dark)
+          light)
             colors+=("${COLOR_VARIANTS[1]}")
             shift
             ;;
-          light)
+          dark)
             colors+=("${COLOR_VARIANTS[2]}")
             shift
             ;;
@@ -272,8 +272,8 @@ while [[ $# -gt 0 ]]; do
       ;;
     -s|--size)
       shift
-      for variant in "${@}"; do
-        case "${variant}" in
+      for size in "${@}"; do
+        case "${size}" in
           standard)
             sizes+=("${SIZE_VARIANTS[0]}")
             shift
@@ -295,8 +295,8 @@ while [[ $# -gt 0 ]]; do
       ;;
     -r|--radius)
       shift
-      for variant in "${@}"; do
-        case "${variant}" in
+      for radius in "${@}"; do
+        case "${radius}" in
           standard)
             radiuss+=("${RADIUS_VARIANTS[0]}")
             shift
