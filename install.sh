@@ -37,7 +37,7 @@ usage() {
   printf "  %-25s%s\n" "-c, --color VARIANTS" "Specify theme color variant(s) [standard|dark|light] (Default: All variants)"
   printf "  %-25s%s\n" "-s, --size VARIANT" "Specify theme size variant [standard|compact] (Default: All variants)"
   printf "  %-25s%s\n" "-r, --radius VARIANT" "Specify theme radius variant [standard|square] (Default: All variants)"
-  printf "  %-25s%s\n" "-b, --bgimg" "Install theme with nautilus background image (this option must be the last one!)"
+  printf "  %-25s%s\n" "-b, --bgimg" "Install theme with nautilus background image"
   printf "  %-25s%s\n" "-g, --gdm" "Install GDM theme"
   printf "  %-25s%s\n" "-i, --icon" "Install icon theme"
   printf "  %-25s%s\n" "-h, --help" "Show this help"
@@ -173,34 +173,32 @@ install_package() {
   if [ ! "$(which sassc 2> /dev/null)" ]; then
      echo sassc needs to be installed to generate the css.
      if has_command zypper; then
-
-      # openSUSE
       sudo zypper in sassc
         elif has_command apt-get; then
-
-      # Debian or Debian-like
       sudo apt-get install sassc
         elif has_command dnf; then
-
-      # Fedora
       sudo dnf install sassc
         elif has_command yum; then
-
-      # RedHat
       sudo yum install sassc
         elif has_command pacman; then
-
-      # ArchLinux
       sudo pacman -S --noconfirm sassc
       fi
   fi
 }
 
-install_img() {
+install_theme() {
+  for color in "${colors[@]:-${COLOR_VARIANTS[@]}}"; do
+    for size in "${sizes[@]:-${SIZE_VARIANTS[@]}}"; do
+     for radius in "${radiuss[@]:-${RADIUS_VARIANTS[@]}}"; do
+       install "${dest:-${DEST_DIR}}" "${name:-${THEME_NAME}}" "${color}" "${size}" "${radius}"
+     done
+    done
+  done
+}
 
+install_img() {
   NBG_N="@extend %nautilus_none_img;"
   NBG_I="@extend %nautilus_bg_img;"
-
   HDG_N="@extend %headerbar_none_img;"
   HDG_I="@extend %headerbar_bg_img;"
 
@@ -217,16 +215,6 @@ install_img() {
   # compile scss to css
   cd ${SRC_DIR}
   ./parse-sass.sh
-
-  # install
-  for color in "${colors[@]:-${COLOR_VARIANTS[@]}}"; do
-  for size in "${sizes[@]:-${SIZE_VARIANTS[@]}}"; do
-  for radius in "${radiuss[@]:-${RADIUS_VARIANTS[@]}}"; do
-  install "${dest:-${DEST_DIR}}" "${name:-${THEME_NAME}}" "${color}" "${size}" "${radius}"
-  done
-  done
-  done
-
 }
 
 while [[ $# -gt 0 ]]; do
@@ -252,8 +240,8 @@ while [[ $# -gt 0 ]]; do
       shift 1
       ;;
     -b|--bgimg)
-      install_img
-      exit 0
+      bgimg='true'
+      shift 1
       ;;
     -c|--color)
       shift
@@ -340,13 +328,9 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-for color in "${colors[@]:-${COLOR_VARIANTS[@]}}"; do
-  for size in "${sizes[@]:-${SIZE_VARIANTS[@]}}"; do
-    for radius in "${radiuss[@]:-${RADIUS_VARIANTS[@]}}"; do
-      install "${dest:-${DEST_DIR}}" "${name:-${THEME_NAME}}" "${color}" "${size}" "${radius}"
-    done
-  done
-done
+if [[ "${bgimg:-}" != 'true' ]]; then
+  install_theme
+fi
 
 if [[ "${gdm:-}" == 'true' ]]; then
   install_gdm "${dest:-${DEST_DIR}}" "${name:-${THEME_NAME}}" "${color}" "${size}" "${radius}"
@@ -354,6 +338,10 @@ fi
 
 if [[ "${icon:-}" == 'true' ]]; then
   install_icon "${dest:-${DEST_DIR}}" "${name:-${THEME_NAME}}" "${color}" "${size}" "${radius}"
+fi
+
+if [[ "${bgimg:-}" == 'true' ]]; then
+  install_img && install_theme
 fi
 
 echo
