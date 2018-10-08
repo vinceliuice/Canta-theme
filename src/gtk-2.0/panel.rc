@@ -1,5 +1,5 @@
 # Panel
-gtk-color-scheme = "panel_bg_color:#3b4342\npanel_fg_color:#EFEFEF"
+gtk-color-scheme = "panel_bg_color:#272a2a\npanel_fg_color:#EFEFEF"
 
 style "theme-panel" {
   GtkButton::inner-border = { 0, 0, 0, 0 }

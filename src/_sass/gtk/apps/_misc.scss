@@ -213,6 +213,57 @@ window.background > box.vertical > toolbar.primary-toolbar {
   }
 }
 
+ /***********
+  *  Geary  *
+  ***********/
+
+%folder_frame_border { border-width: 0; }
+
+%folder_frame {
+
+  &:dir(ltr) { border: none; }
+  &:dir(rtl) { border: none; }
+
+  treeview.view.sidebar {
+
+    &.cell { // = row height of placessidebar
+//      padding-top: rem(4px);
+//      padding-bottom: rem(4px);
+    }
+  }
+}
+
+.geary-titlebar-left {
+  // remove unexpected "hardcoded" vertical separator
+  separator { opacity: 0; }
+}
+
+// left-pane styling (legacy)
+.sidebar.vertical > paned.sidebar-pane-separator {
+
+  .folder-frame {
+    > border { @extend %folder_frame_border; }
+
+    > scrolledwindow { @extend %folder_frame; }
+  }
+}
+
+// left-pane styling (current)
+.sidebar.vertical > paned.geary-sidebar-pane-separator {
+
+  .geary-folder-frame {
+    > border { @extend  %folder_frame_border; }
+
+    > scrolledwindow { @extend %folder_frame; }
+  }
+}
+
+// right-pane styling (current)
+stack#conversation_viewer {
+  scrolledwindow.geary-conversation-scroller > viewport.frame {
+    border: none; // unset borders
+  }
+}
 
 /************
  * Inkscape *
@@ -414,7 +465,7 @@ window#whiskermenu-window {
 
     treeview.view {
       &:selected:hover {
-        background-color: transparent;
+//        background-color: transparent;
         color: $fg_color;
       }
     }

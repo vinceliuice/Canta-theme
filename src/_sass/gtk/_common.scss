@@ -1068,10 +1068,14 @@ headerbar {
     @extend .dim-label;
   }
 
-  .linked:not(.vertical) > entry:not(.flat) {
-    border-radius: $buttons_radius;
-    background-color: lighten($titlebar_bg_color, 5%);
+  entry {
+    background-color: if($variant == 'light', $base_color, lighten($base_color, 5%));
+    &:focus { background-color: if($variant == 'light', lighten($base_color, 3%), lighten($base_color, 8%)); }
   }
+
+  // Reset headerbar linked rules
+  .linked:not(.vertical) > entry:not(.flat) { border-radius: $buttons_radius; }
+//  .linked:not(.vertical) > button { @extend %circular_button; }
 
   button:not(.suggested-action):not(.destructive-action) {
     @extend %button_basic.flat;
@@ -1921,7 +1925,7 @@ notebook {
       border-color: transparent; //
 
       background-image: radial-gradient(circle farthest-corner at center,
-                                        $primary_color 10%,
+                                        $track_color 10%,
                                         transparent 0%);
       background-repeat: no-repeat;
       background-position: center;
