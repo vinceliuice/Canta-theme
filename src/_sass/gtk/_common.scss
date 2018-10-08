@@ -1295,16 +1295,6 @@ headerbar {
     // workaround for non-animatable buttons
     .background:not(.csd) & button.titlebutton:active { background-size: 1000% 1000%; }
   }
-
-  .solid-csd & {
-    &:dir(rtl), &:dir(ltr) { // specificity bump
-      // margin-left: -2px;
-      // margin-right: -2px;
-      // margin-top: -2px;
-      // border-radius: 0;
-      // box-shadow: inset 0 1px $titlebar_highlight_color;
-    }
-  }
 }
 
 headerbar {
@@ -3581,6 +3571,7 @@ decoration {
     margin: 0;
     // padding: 4px;
     border-radius: 0;
+    border: solid 2px $titlebar_bg_color;
     box-shadow: none;
     // box-shadow: inset 0 0 0 4px $titlebar_bg_color;
     background-color: $titlebar_bg_color;

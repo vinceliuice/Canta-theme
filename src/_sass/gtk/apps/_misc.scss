@@ -233,8 +233,10 @@ window.background > box.vertical > toolbar.primary-toolbar {
   }
 }
 
+.geary-titlebar-right,
 .geary-titlebar-left {
   // remove unexpected "hardcoded" vertical separator
+  .solid-csd & { border-radius: 0; box-shadow: none; }
   separator { opacity: 0; }
 }
 

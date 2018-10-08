@@ -4102,6 +4102,7 @@ messagedialog.csd decoration {
 .solid-csd decoration {
   margin: 0;
   border-radius: 0;
+  border: solid 2px #FFFFFF;
   box-shadow: none;
   background-color: #FFFFFF;
 }
@@ -5829,6 +5830,13 @@ window.background > box.vertical > toolbar.primary-toolbar toolitem button.flat.
   border: none;
 }
 
+.solid-csd .geary-titlebar-right, .solid-csd
+.geary-titlebar-left {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.geary-titlebar-right separator,
 .geary-titlebar-left separator {
   opacity: 0;
 }
