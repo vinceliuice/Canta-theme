@@ -1068,7 +1068,10 @@ headerbar {
     @extend .dim-label;
   }
 
-  .linked:not(.vertical) > entry:not(.flat) { border-radius: $buttons_radius; }
+  .linked:not(.vertical) > entry:not(.flat) {
+    border-radius: $buttons_radius;
+    background-color: lighten($titlebar_bg_color, 5%);
+  }
 
   button:not(.suggested-action):not(.destructive-action) {
     @extend %button_basic.flat;
@@ -1391,6 +1394,32 @@ headerbar { // headerbar border rounding
   @extend %titlebar;
 }
 
+.titlebar {
+  :not(headerbar) .path-bar {
+    button {
+      border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
+                                    $primary_color 0%,
+                                    transparent 0%)
+                                    0 0 0 / 0 0 0;
+
+      &:checked, &:active {
+        color: $titlebar_fg_color;
+        background-color: transparent;
+        border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
+                                      $primary_color 100%,
+                                      transparent 0%)
+                                      0 0 2 / 0 0 2px;
+      }
+      &:checked:backdrop, &:active:backdrop {
+        color: $titlebar_secondary_fg_color;
+        border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
+                                      $titlebar_disabled_fg_color 100%,
+                                      transparent 0%)
+                                      0 0 2 / 0 0 2px;
+      }
+    }
+  }
+}
 
 /************
  * Pathbars *
@@ -3018,6 +3047,24 @@ messagedialog { // Message Dialog styling
     &:backdrop { color: $secondary_fg_color; }
   }
 
+  .dialog-action-area button {
+    padding: 4px 12px;
+    border-top: 1px solid $border_color;
+    border-radius: 0;
+
+    @extend %simple_flat_button;
+
+    &:first-child {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+
+    &:last-child {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+
   &.csd { // rounded bottom border styling for csd version
     &.background {
       // bigger radius for better antialiasing
@@ -3032,9 +3079,15 @@ messagedialog { // Message Dialog styling
 
       @extend %simple_flat_button;
 
-      &:first-child { border-bottom-left-radius: $windows_radius; }
+      &:first-child {
+        border-bottom-left-radius: $windows_radius;
+        border-top-left-radius: 0;
+      }
 
-      &:last-child { border-bottom-right-radius: $windows_radius; }
+      &:last-child {
+        border-bottom-right-radius: $windows_radius;
+        border-top-right-radius: 0;
+      }
     }
   }
 
