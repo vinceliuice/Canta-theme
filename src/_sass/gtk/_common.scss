@@ -514,8 +514,7 @@ button {
 
   // overlay / OSD style
   @at-root %osd_button,
-  .osd & {
-  }
+  .osd & { }
 
   // Suggested and Destructive Action buttons
   @each $b_type, $b_color in (suggested-action, $suggested_color),
@@ -1403,32 +1402,32 @@ headerbar { // headerbar border rounding
   @extend %titlebar;
 }
 
-.titlebar {
-  :not(headerbar) .path-bar {
-    button {
-      border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
-                                    $primary_color 0%,
-                                    transparent 0%)
-                                    0 0 0 / 0 0 0;
-
-      &:checked, &:active {
-        color: $titlebar_fg_color;
-        background-color: transparent;
-        border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
-                                      $primary_color 100%,
-                                      transparent 0%)
-                                      0 0 2 / 0 0 2px;
-      }
-      &:checked:backdrop, &:active:backdrop {
-        color: $titlebar_secondary_fg_color;
-        border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
-                                      $titlebar_disabled_fg_color 100%,
-                                      transparent 0%)
-                                      0 0 2 / 0 0 2px;
-      }
-    }
-  }
-}
+//.titlebar {
+//  :not(headerbar) .path-bar {
+//    button {
+//      border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
+//                                    $primary_color 0%,
+//                                    transparent 0%)
+//                                    0 0 0 / 0 0 0;
+//
+//      &:checked, &:active {
+//        color: $titlebar_fg_color;
+//        background-color: transparent;
+//        border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
+//                                      $primary_color 100%,
+//                                      transparent 0%)
+//                                      0 0 2 / 0 0 2px;
+//      }
+//      &:checked:backdrop, &:active:backdrop {
+//        color: $titlebar_secondary_fg_color;
+//        border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
+//                                      $titlebar_disabled_fg_color 100%,
+//                                      transparent 0%)
+//                                      0 0 2 / 0 0 2px;
+//      }
+//    }
+//  }
+//}
 
 /************
  * Pathbars *

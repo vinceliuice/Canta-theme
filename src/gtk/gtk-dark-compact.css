@@ -1868,21 +1868,6 @@ window.csd > .titlebar:not(headerbar) {
   background-color: #3b4342;
 }
 
-.titlebar :not(headerbar) .path-bar button {
-  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #00CE99 0%, transparent 0%) 0 0 0/0 0 0;
-}
-
-.titlebar :not(headerbar) .path-bar button:checked, .titlebar :not(headerbar) .path-bar button:active {
-  color: #FFFFFF;
-  background-color: transparent;
-  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #00CE99 100%, transparent 0%) 0 0 2/0 0 2px;
-}
-
-.titlebar :not(headerbar) .path-bar button:checked:backdrop, .titlebar :not(headerbar) .path-bar button:active:backdrop {
-  color: rgba(255, 255, 255, 0.7);
-  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), rgba(255, 255, 255, 0.5) 100%, transparent 0%) 0 0 2/0 0 2px;
-}
-
 /************
  * Pathbars *
  ************/
@@ -4502,11 +4487,76 @@ button.emoji-section:last-child {
   background-image: none;
 }
 
+.nautilus-window headerbar .path-bar-box button {
+  margin: 0;
+  padding: 2px 6px;
+  border-radius: 9999px;
+  border: 2px solid #00CE99;
+  color: #FFFFFF;
+  background-color: transparent;
+}
+
+.nautilus-window headerbar .path-bar-box button:hover {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.nautilus-window headerbar .path-bar-box button:active {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.nautilus-window headerbar .path-bar-box button:checked {
+  color: rgba(255, 255, 255, 0.7);
+  background-color: #3b4342;
+  box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.05);
+  background-image: radial-gradient(circle farthest-corner at center, alpha(currentColor, 0.05) 10%, transparent 0%);
+  background-size: 0% 0%;
+}
+
+.nautilus-window headerbar .path-bar-box button:checked:hover {
+  color: #FFFFFF;
+  background-color: #3b4342;
+}
+
+.nautilus-window headerbar .path-bar-box button:disabled {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+}
+
+.nautilus-window headerbar .path-bar-box button:checked:disabled {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: #3b4342;
+}
+
+.nautilus-window headerbar .path-bar-box button:backdrop {
+  color: rgba(255, 255, 255, 0.7);
+  background-color: transparent;
+}
+
+.nautilus-window headerbar .path-bar-box button:checked:backdrop {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: #3b4342;
+}
+
 .nautilus-window,
 .nautilus-window notebook,
 .nautilus-window notebook > stack {
   background-color: #3f4544;
   border-radius: 0 0 8px 8px;
+}
+
+.nautilus-window headerbar .path-bar-box {
+  margin: 6px 0;
+  padding: 0;
+  border-radius: 9999px;
+  color: #FFFFFF;
+  background-color: #00CE99;
+}
+
+.nautilus-window headerbar .path-bar-box.background.frame {
+  border: none;
+  background-color: transparent;
 }
 
 .nautilus-window.maximized,

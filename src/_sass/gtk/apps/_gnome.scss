@@ -28,6 +28,53 @@
   background-image: none;
 }
 
+%pathbar_box_button {
+  margin: 0;
+  padding: 2px 6px;
+  border-radius: $square_radius - 2px;
+  border: 2px solid $primary_color;
+  color: $inverse_fg_color;
+  background-color: transparent;
+
+  &:hover {
+    color: $inverse_fg_color;
+    background-color: rgba($inverse_fg_color, 0.08);
+  }
+  &:active {
+    color: $inverse_fg_color;
+    background-color: rgba($inverse_fg_color, 0.12);
+  }
+  &:checked {
+    color: $titlebar_secondary_fg_color;
+    background-color: $titlebar_bg_color;
+    box-shadow: inset 0 0 0 9999px $row_fill_color;
+    background-image: radial-gradient(circle farthest-corner at center,
+                                      $row_fill_color 10%,
+                                      transparent 0%);
+    background-size: 0% 0%;
+  }
+  &:checked:hover {
+    color: $titlebar_fg_color;
+    background-color: $titlebar_bg_color;
+  }
+  &:disabled {
+    color: $inverse_disabled_fg_color;
+    background-color: transparent;
+  }
+  &:checked:disabled {
+    color: $titlebar_disabled_fg_color;
+    background-color: $titlebar_bg_color;
+  }
+  &:backdrop {
+    color: $inverse_secondary_fg_color;
+    background-color: transparent;
+  }
+  &:checked:backdrop {
+    color: $titlebar_hint_fg_color;
+    background-color: $titlebar_bg_color;
+  }
+}
+
 .nautilus-window,
 .nautilus-window notebook,
 .nautilus-window notebook > stack {
@@ -36,8 +83,29 @@
   @extend %nautilus_none_img;
 }
 
-// Set nautilus background pictures
-.nautilus-window headerbar { @extend %headerbar_none_img; }
+.nautilus-window headerbar {
+  @extend %headerbar_none_img; // Set nautilus background pictures
+
+  .path-bar-box { // Fixed nautilus 3.30 pathbar
+    margin: $container_padding 0;
+    padding: 0;
+    border-radius: $square_radius;
+    color: $inverse_fg_color;
+    background-color: $primary_color;
+
+    button { @extend %pathbar_box_button; }
+
+    &.width-maximized {
+//      button { @extend %pathbar_box_button; }
+    }
+
+    // workaround for 3.30.1
+    &.background.frame {
+      border: none;
+      background-color: transparent;
+    }
+  }
+}
 
 // No border radius when window maximized
 .nautilus-window.maximized,
