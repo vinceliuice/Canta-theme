@@ -68,6 +68,10 @@
   &:backdrop {
     color: $inverse_secondary_fg_color;
     background-color: transparent;
+    &:hover {
+      color: $inverse_secondary_fg_color;
+      background-color: rgba($inverse_secondary_fg_color, 0.08);
+    }
   }
   &:checked:backdrop {
     color: $titlebar_hint_fg_color;

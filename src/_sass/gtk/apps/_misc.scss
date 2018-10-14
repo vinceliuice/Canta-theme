@@ -467,7 +467,7 @@ window#whiskermenu-window {
 
     treeview.view {
       &:selected:hover {
-//        background-color: transparent;
+        background-color: $row_fill_color;
         color: $fg_color;
       }
     }
