@@ -2281,6 +2281,11 @@ popover.background button:not(.suggested-action):not(.destructive-action):checke
   color: #FFFFFF;
 }
 
+popover.background checkbutton.text-button,
+popover.background radiobutton.text-button {
+  outline-style: none;
+}
+
 popover.background.menu button,
 popover.background button.model {
   min-height: 32px;
@@ -4489,9 +4494,10 @@ button.emoji-section:last-child {
 
 .nautilus-window headerbar .path-bar-box button {
   margin: 0;
-  padding: 2px 6px;
+  padding: 0 6px;
+  min-height: 30px;
   border-radius: 6px;
-  border: 2px solid #00CE99;
+  border: 3px solid #00CE99;
   color: #FFFFFF;
   background-color: transparent;
 }
@@ -4553,7 +4559,6 @@ button.emoji-section:last-child {
 
 .nautilus-window headerbar .path-bar-box {
   margin: 6px 0;
-  padding: 0;
   border-radius: 8px;
   color: #FFFFFF;
   background-color: #00CE99;

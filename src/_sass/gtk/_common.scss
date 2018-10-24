@@ -1775,10 +1775,12 @@ popover.background {
     &:checked { @include button(checked); }
   }
 
+  checkbutton.text-button,
+  radiobutton.text-button { outline-style: none; }
+
   &.menu button,
   button.model {
     @extend %simple_flat_button;
-
     min-height: 32px;
     padding: 0 8px;
     border-radius: $buttons_radius;
@@ -1787,7 +1789,6 @@ popover.background {
   }
 
   separator { margin: 4px 0; }
-
   list separator { margin: 0; }
 }
 
@@ -2311,7 +2312,6 @@ radio {
     padding: 0;
 
     &:dir(ltr) { margin-right: 8px; }
-
     &:dir(rtl) { margin-left: 8px; }
 
     &:not(:checked):not(:indeterminate):not(:disabled) { color: $secondary_fg_color; }

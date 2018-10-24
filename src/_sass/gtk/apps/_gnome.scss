@@ -30,9 +30,10 @@
 
 %pathbar_box_button {
   margin: 0;
-  padding: 2px 6px;
+  padding: 0 6px;
+	min-height: $small_size + 6px;
   border-radius: $square_radius - 2px;
-  border: 2px solid $primary_color;
+  border: 3px solid $primary_color;
   color: $inverse_fg_color;
   background-color: transparent;
 
@@ -92,7 +93,7 @@
 
   .path-bar-box { // Fixed nautilus 3.30 pathbar
     margin: $container_padding 0;
-    padding: 0;
+//    padding: 2px 0;
     border-radius: $square_radius;
     color: $inverse_fg_color;
     background-color: $primary_color;
