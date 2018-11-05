@@ -42,9 +42,9 @@ $inverse_divider_color:               rgba($white, 0.12);
 
 // Background colors
 $bg_color:         if($variant == 'light', $grey_100, fade($green_grey_700));
-$base_color:       if($variant == 'light', darken($white, 1%),    fade($green_grey_600));
-$alt_base_color:   if($variant == 'light', $grey_50,  mix($base_color, $bg_color, 50%));
-$lighter_bg_color: if($variant == 'light', $grey_50,  fade($green_grey_500));
+$base_color:       if($variant == 'light', darken($white, 1%), fade($green_grey_600));
+$alt_base_color:   if($variant == 'light', $grey_50, mix($base_color, $bg_color, 50%));
+$lighter_bg_color: if($variant == 'light', $grey_50, fade($green_grey_500));
 $alt_lighter_bg_color: if($variant == 'light', $grey_200, fade($green_grey_600)); // for gnome-shell sub menu
 $darker_bg_color:  if($variant == 'light', $grey_200, fade($green_grey_900));
 $keyboard_bg_color:  if($variant == 'light', $grey_50, fade($green_grey_600)); // for gnome-shell keyboard

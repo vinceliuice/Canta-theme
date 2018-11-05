@@ -15,8 +15,8 @@
    viewBox="0 0 52.916664 52.916668"
    version="1.1"
    id="svg5064"
-   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
-   sodipodi:docname="metacity_assets.svg">
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="assets.svg">
   <defs
      id="defs5058">
     <linearGradient
@@ -53,20 +53,20 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.959798"
-     inkscape:cx="129.04947"
-     inkscape:cy="115.46506"
+     inkscape:zoom="1.4"
+     inkscape:cx="51.125279"
+     inkscape:cy="167.21842"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
      units="px"
      inkscape:snap-bbox="true"
      inkscape:bbox-nodes="true"
-     inkscape:window-width="1366"
-     inkscape:window-height="678"
-     inkscape:window-x="0"
-     inkscape:window-y="31"
-     inkscape:window-maximized="1">
+     inkscape:window-width="730"
+     inkscape:window-height="476"
+     inkscape:window-x="79"
+     inkscape:window-y="225"
+     inkscape:window-maximized="0">
     <inkscape:grid
        type="xygrid"
        id="grid6887" />
@@ -1648,60 +1648,6 @@
          x="32.416054"
          y="270.54813" />
     </g>
-    <rect
-       ry="4.5991987e-06"
-       y="278.47263"
-       x="14.784905"
-       height="5.2916665"
-       width="5.2916665"
-       id="trough_middle"
-       style="opacity:0;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.13229166;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
-       inkscape:label="#rect6938" />
-    <rect
-       style="opacity:0;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.13229166;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
-       id="trough_unfocused_right"
-       width="5.2916665"
-       height="5.2916665"
-       x="21.399488"
-       y="285.08722"
-       ry="4.5991987e-06"
-       inkscape:label="#rect6984" />
-    <rect
-       ry="4.5991987e-06"
-       y="278.47263"
-       x="21.399488"
-       height="5.2916665"
-       width="5.2916665"
-       id="trough_right"
-       style="opacity:0;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.13229166;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
-       inkscape:label="#rect6986" />
-    <rect
-       style="opacity:0;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.13229166;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
-       id="trough_unfocused_middle"
-       width="5.2916665"
-       height="5.2916665"
-       x="14.784905"
-       y="285.08722"
-       ry="4.5991987e-06"
-       inkscape:label="#rect6988" />
-    <rect
-       ry="4.5991987e-06"
-       y="285.08722"
-       x="8.1703234"
-       height="5.2916665"
-       width="5.2916665"
-       id="trough_unfocused_left"
-       style="opacity:0;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.13229166;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
-       inkscape:label="#rect6990" />
-    <rect
-       style="opacity:0;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.13229166;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
-       id="trough_left"
-       width="5.2916665"
-       height="5.2916665"
-       x="8.1703234"
-       y="278.47263"
-       ry="4.5991987e-06"
-       inkscape:label="#rect6992" />
     <g
        style="display:inline"
        id="unshade"
