@@ -4310,6 +4310,7 @@ headerbar,
 .titlebar.default-decoration button.titlebutton.close:hover,
 .csd
 .titlebar.default-decoration button.titlebutton.close:hover {
+  color: #FFFFFF;
   background-color: rgba(255, 172, 0, 0.85);
 }
 
@@ -6580,7 +6581,7 @@ na-tray-applet {
 }
 
 .budgie-popover {
-  border-color: #FAFAFA;
+  border-color: rgba(250, 250, 250, 0.95);
   border-radius: 5px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15);
   background-color: rgba(250, 250, 250, 0.95);
@@ -7528,6 +7529,91 @@ box.vertical > stack > box.vertical > .raven-background > viewport.frame > list 
 
 .budgie-run-dialog scrolledwindow {
   border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.budgie-panel box.titlebar {
+  min-width: 16px;
+  min-height: 16px;
+  border-radius: 0;
+  background: unset;
+  box-shadow: none;
+  border: none;
+}
+
+.budgie-panel box.titlebar > widget > label {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.budgie-panel box.titlebar > button.image-button.titlebutton {
+  min-width: 16px;
+  min-height: 16px;
+  padding: 0;
+  margin: 0;
+  background: none;
+  box-shadow: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.budgie-panel box.titlebar > button.image-button.titlebutton image {
+  border-radius: 100px;
+  background-size: 16px 16px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.budgie-panel box.titlebar > button.image-button.titlebutton:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.budgie-panel box.titlebar > button.image-button.titlebutton:hover image {
+  background-image: image(rgba(255, 255, 255, 0.12));
+}
+
+.budgie-panel box.titlebar > button.image-button.titlebutton:active {
+  color: #FFFFFF;
+}
+
+.budgie-panel box.titlebar > button.image-button.titlebutton:active image {
+  background-image: image(rgba(255, 255, 255, 0.3));
+}
+
+.budgie-panel box.titlebar > button.image-button.titlebutton.close {
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+}
+
+.budgie-panel box.titlebar > button.image-button.titlebutton.close:hover {
+  color: #FFFFFF;
+}
+
+.budgie-panel box.titlebar > button.image-button.titlebutton.close:hover image {
+  background-image: image(#FFAC00);
+}
+
+.budgie-panel box.titlebar > button.image-button.titlebutton.close:active image {
+  background-image: image(#e69b00);
+}
+
+.budgie-panel box.titlebar > button.image-button.titlebutton:disabled image {
+  opacity: 0;
+}
+
+.budgie-panel box.titlebar.horizontal {
+  padding: 0 3px;
+}
+
+.budgie-panel box.titlebar.horizontal > widget > label:dir(ltr) {
+  padding-right: 3px;
+}
+
+.budgie-panel box.titlebar.horizontal > widget > label:dir(rtl) {
+  padding-left: 3px;
+}
+
+.budgie-panel box.titlebar.horizontal > button.image-button.titlebutton {
+  padding: 0 3px;
 }
 
 /************************

@@ -51,7 +51,7 @@
 }
 
 .budgie-popover {
-  border-color: $lighter_bg_color;
+  border-color: rgba($lighter_bg_color, 0.95);
   border-radius: $material_radius + 1px;
   box-shadow: $shadow_2;
   background-color: rgba($lighter_bg_color, 0.95);
@@ -877,4 +877,69 @@ box.vertical > stack > box.vertical {
   list .dim-label { opacity: 1; }
 
   scrolledwindow { border-top: 1px solid $border_color; }
+}
+
+// pixel-saver(?) applet
+.budgie-panel box.titlebar {
+  min-width: 16px;
+  min-height: 16px;
+  border-radius: 0;
+  background: unset;
+  box-shadow: none;
+  border: none;
+
+  > widget > label { color: $inverse_secondary_fg_color; } // titles
+
+  > button.image-button.titlebutton {
+    min-width: 16px;
+    min-height: 16px;
+    padding: 0;
+    margin: 0;
+    background: none;
+    box-shadow: none;
+    border: none;
+    color: $inverse_secondary_fg_color;
+
+    image {
+      border-radius: 100px;
+      background-size: 16px 16px;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    &:hover {
+      color: $inverse_secondary_fg_color;
+      image { background-image: image($inverse_divider_color); }
+    }
+
+    &:active {
+      color: $inverse_fg_color;
+      image { background-image: image($inverse_track_color); }
+    }
+
+    &.close {
+      padding: 0;
+      margin: 0;
+      box-shadow: none;
+      &:hover {
+        color: $inverse_fg_color;
+        image { background-image: image($accent_color); }
+      }
+      &:active image { background-image: image(darken($accent_color, 5%)); }
+    }
+
+    // hide unneeded button images when Raven widget was shown
+    &:disabled image { opacity: 0; }
+  }
+
+  &.horizontal { // spacing
+    padding: 0 3px;
+
+    > widget > label {
+      &:dir(ltr) { padding-right: 3px; }
+      &:dir(rtl) { padding-left: 3px; }
+    }
+
+    > button.image-button.titlebutton { padding: 0 3px; }
+  }
 }

@@ -3676,7 +3676,10 @@ headerbar,
       @at-root %windows_close_button,
       &.close { // Window Close button
         background-color: $accent_color;
-        &:hover { background-color: rgba($accent_color, 0.85); }
+        &:hover {
+          color: $titlebar_fg_color;
+          background-color: rgba($accent_color, 0.85);
+        }
         &:active, &:checked { background-color: darken($accent_color, 3%); }
       }
     }
