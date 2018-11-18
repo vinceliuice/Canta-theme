@@ -5,6 +5,36 @@
  * Budgie Desktop *
  ******************/
 
+ %budgie_button {
+   color: $secondary_fg_color;
+   background-color: transparent;
+   box-shadow: none;
+   &:hover {
+     color: $fg_color;
+     background-color: rgba($fg_color, 0.1);
+     box-shadow: none;
+   }
+   &:disabled {
+     color: $disabled_fg_color;
+     background-color: transparent;
+   }
+   &:checked {
+     background-color: rgba($fg_color, 0.15);
+     color: $fg_color;
+     box-shadow: none;
+   }
+   &:active {
+     background-color: rgba($fg_color, 0.12);
+     color: $fg_color;
+     box-shadow: none;
+   }
+   &:checked:disabled {
+     background-color: rgba($fg_color, 0.08);
+     color: rgba($fg_color, 0.65);
+     box-shadow: none;
+   }
+ }
+
  %budgie_flat_button {
   color: $inverse_fg_color;
 
@@ -705,12 +735,12 @@ calendar.raven-calendar {
 // notification list
 box.vertical > stack > box.vertical {
 
-  > .raven-background > viewport.frame {
+  .raven-background > viewport.frame {
     padding: 0; // reset padding for full-width list node
 
     list { background-color: transparent; }
 
-    > list > row.activatable {
+    list > row.activatable {
       margin-left: -8px;
       margin-right: -2px;
       background-color: transparent;
@@ -733,7 +763,7 @@ box.vertical > stack > box.vertical {
         border-top: 1px solid $border_color;
         border-bottom: 1px solid $border_color;
 
-        > row.activatable {
+        row.activatable {
           border-bottom: 1px solid $border_color;
           &:last-child { border-bottom: none; }
 
@@ -746,7 +776,12 @@ box.vertical > stack > box.vertical {
           button.image-button { // 'close'
             min-height: 24px;
             min-width: 24px;
+            @extend %budgie_button;
             image { padding: 0; }
+
+            &, &:hover, &:active, &:checked {
+              box-shadow: 0 0 100px rgba($fg_color, 0.06); // use shadow reset background
+            }
           }
 
 //          box.horizontal > label:first-child { font-weight: 500; } // title labels
