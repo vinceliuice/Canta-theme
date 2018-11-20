@@ -637,7 +637,7 @@ $pos_list: ((top, bottom), (bottom, top), (left, right), (right, left));
 
       stackswitcher button {
         @extend %button_selected.flat;
-        margin: -$container_padding 0;
+        margin: -6px 0;
         min-height: $medium_size;
       }
 

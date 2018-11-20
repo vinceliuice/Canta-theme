@@ -742,12 +742,12 @@ button.flat:checked:disabled {
 
 
 button.osd {
-  padding: 12px 16px;
+  padding: 9px 13px;
 }
 
 
 button.osd.image-button {
-  padding: 12px;
+  padding: 9px;
 }
 
 
@@ -1021,7 +1021,7 @@ spinbutton:not(.vertical) {
 
 notebook > stack:not(:only-child) spinbutton:not(.vertical) entry, notebook > stack:not(:only-child) spinbutton:not(.vertical) entry:focus, notebook > stack:not(:only-child) spinbutton:not(.vertical) entry:disabled, .budgie-popover spinbutton:not(.vertical) entry,
 spinbutton:not(.vertical) entry {
-  min-width: 32px;
+  min-width: 26px;
   margin: 0;
   border-image: none;
   border-radius: 0;
@@ -1051,13 +1051,13 @@ spinbutton.vertical:drop(active) {
 
 spinbutton.vertical entry {
   min-height: 36px;
-  min-width: 48px;
+  min-width: 42px;
   padding: 0;
 }
 
 spinbutton.vertical button {
   min-height: 36px;
-  min-width: 48px;
+  min-width: 42px;
   padding: 0;
 }
 
@@ -1240,7 +1240,7 @@ actionbar {
 .titlebar:not(headerbar),
 headerbar {
   transition: background-color 180ms cubic-bezier(0, 0, 0.2, 1), color 270ms cubic-bezier(0, 0, 0.2, 1);
-  min-height: 48px;
+  min-height: 42px;
   padding: 0 6px;
   box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.12), 0 5px 5px -5px rgba(0, 0, 0, 0.06), inset 0 1px rgba(255, 255, 255, 0.1);
   background-color: #47504e;
@@ -1775,8 +1775,8 @@ headerbar button {
 }
 
 headerbar switch {
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin-top: 9px;
+  margin-bottom: 9px;
 }
 
 headerbar spinbutton button {
@@ -2776,8 +2776,8 @@ check,
 radio {
   min-height: 24px;
   min-width: 24px;
-  margin: -12px;
-  padding: 12px;
+  margin: -9px;
+  padding: 9px;
 }
 
 check:checked, check:indeterminate,
@@ -2879,8 +2879,8 @@ check:indeterminate {
 
 
 radio {
-  border-image-slice: 24;
-  border-image-width: 24px;
+  border-image-slice: 21;
+  border-image-width: 21px;
 }
 
 
@@ -2900,12 +2900,12 @@ radio {
 
 
 radio:checked:not(:indeterminate) {
-  border-image-source: -gtk-gradient(radial, center center, 0, center center, 0.10417, to(#FFAC00), to(transparent));
+  border-image-source: -gtk-gradient(radial, center center, 0, center center, 0.11905, to(#FFAC00), to(transparent));
 }
 
 
 radio:checked:not(:indeterminate):disabled {
-  border-image-source: -gtk-gradient(radial, center center, 0, center center, 0.10417, to(rgba(255, 172, 0, 0.5)), to(transparent));
+  border-image-source: -gtk-gradient(radial, center center, 0, center center, 0.11905, to(rgba(255, 172, 0, 0.5)), to(transparent));
 }
 
 window.background:not(.csd) > widget > checkbutton > check,
@@ -4127,7 +4127,6 @@ messagedialog.csd decoration {
   padding: 0;
   min-width: 16px;
   min-height: 16px;
-  border-radius: 100px;
   animation: none;
   box-shadow: none;
   color: transparent;
@@ -5906,35 +5905,13 @@ window.background:not(.csd) > window.background > menu > separator {
   color: rgba(0, 0, 0, 0.08);
 }
 
-#MozillaGtkWidget.background {
-  background-color: #FAFAFA;
-}
-
-#MozillaGtkWidget.background,
-#MozillaGtkWidget.background decoration {
+#MozillaGtkWidget.background, #MozillaGtkWidget.background decoration {
   border-radius: 2px 2px 0 0;
 }
 
 #MozillaGtkWidget.background headerbar.titlebar {
   border-radius: 2px 2px 0 0;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-}
-
-#MozillaGtkWidget.background .background,
-#MozillaGtkWidget.background frame,
-#MozillaGtkWidget.background separator,
-#MozillaGtkWidget.background scrolledwindow {
-  background-color: #F5F5F5;
-}
-
-#MozillaGtkWidget.background *:not(menuitem):hover, #MozillaGtkWidget.background *:not(menuitem):hover button,
-#MozillaGtkWidget.background *:focus,
-#MozillaGtkWidget.background *:focus button,
-#MozillaGtkWidget.background *:active,
-#MozillaGtkWidget.background *:active button,
-#MozillaGtkWidget.background *:checked,
-#MozillaGtkWidget.background *:checked button {
-  color: rgba(0, 0, 0, 0.75);
 }
 
 /*************
@@ -7477,7 +7454,7 @@ frame.raven-frame > border {
 
 .raven .powerstrip button {
   margin: 2px 0 1px;
-  padding: 12px;
+  padding: 9px;
 }
 
 .raven .option-subtitle {
@@ -7504,7 +7481,7 @@ calendar.raven-calendar:selected {
 }
 
 .raven-mpris button.image-button {
-  padding: 12px;
+  padding: 9px;
 }
 
 box.vertical > stack > box.vertical .raven-background > viewport.frame {

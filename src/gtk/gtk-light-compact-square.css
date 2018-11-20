@@ -742,12 +742,12 @@ button.flat:checked:disabled {
 
 
 button.osd {
-  padding: 10px 14px;
+  padding: 7px 11px;
 }
 
 
 button.osd.image-button {
-  padding: 10px;
+  padding: 7px;
 }
 
 
@@ -974,7 +974,7 @@ modelbutton.flat arrow.right {
 button.color {
   min-height: 20px;
   min-width: 20px;
-  padding: 6px;
+  padding: 4px;
 }
 
 /*********
@@ -1021,7 +1021,7 @@ spinbutton:not(.vertical) {
 
 notebook > stack:not(:only-child) spinbutton:not(.vertical) entry, notebook > stack:not(:only-child) spinbutton:not(.vertical) entry:focus, notebook > stack:not(:only-child) spinbutton:not(.vertical) entry:disabled, .budgie-popover spinbutton:not(.vertical) entry,
 spinbutton:not(.vertical) entry {
-  min-width: 28px;
+  min-width: 22px;
   margin: 0;
   border-image: none;
   border-radius: 0;
@@ -1051,13 +1051,13 @@ spinbutton.vertical:drop(active) {
 
 spinbutton.vertical entry {
   min-height: 32px;
-  min-width: 44px;
+  min-width: 38px;
   padding: 0;
 }
 
 spinbutton.vertical button {
   min-height: 32px;
-  min-width: 44px;
+  min-width: 38px;
   padding: 0;
 }
 
@@ -1162,7 +1162,7 @@ toolbar {
 
 toolbar.osd, .app-notification, frame.documents-dropdown {
   transition: box-shadow 180ms cubic-bezier(0, 0, 0.2, 1);
-  padding: 6px;
+  padding: 4px;
   border-radius: 6px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15), inset 0 1px rgba(255, 255, 255, 0.4);
   background-color: #fcfcfc;
@@ -1209,11 +1209,11 @@ toolbar:not(.inline-toolbar):not(.osd) spinbutton button {
 }
 
 toolbar:not(.inline-toolbar):not(.osd) switch {
-  margin: 8px 2px;
+  margin: 6px 2px;
 }
 
 .inline-toolbar {
-  padding: 6px;
+  padding: 4px;
   border-style: solid;
   border-width: 0 1px 1px;
   border-color: rgba(0, 0, 0, 0.08);
@@ -1222,7 +1222,7 @@ toolbar:not(.inline-toolbar):not(.osd) switch {
 
 searchbar,
 .location-bar {
-  padding: 6px;
+  padding: 4px;
   border-style: solid;
   border-width: 0 0 1px;
   border-color: rgba(0, 0, 0, 0.08);
@@ -1240,8 +1240,8 @@ actionbar {
 .titlebar:not(headerbar),
 headerbar {
   transition: background-color 180ms cubic-bezier(0, 0, 0.2, 1), color 270ms cubic-bezier(0, 0, 0.2, 1);
-  min-height: 44px;
-  padding: 0 6px;
+  min-height: 38px;
+  padding: 0 4px;
   box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.12), 0 5px 5px -5px rgba(0, 0, 0, 0.06), inset 0 1px rgba(255, 255, 255, 0.4);
   background-color: #FFFFFF;
   color: rgba(0, 0, 0, 0.75);
@@ -1717,7 +1717,7 @@ headerbar {
 .default-decoration.titlebar:not(headerbar),
 headerbar.default-decoration {
   min-height: 20px;
-  padding: 6px 12px;
+  padding: 4px 12px;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
 }
 
@@ -1770,13 +1770,13 @@ headerbar:dir(ltr) {
 headerbar entry,
 headerbar spinbutton,
 headerbar button {
-  margin-top: 6px;
-  margin-bottom: 6px;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 headerbar switch {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 7px;
+  margin-bottom: 7px;
 }
 
 headerbar spinbutton button {
@@ -2431,7 +2431,7 @@ notebook > header tab {
   transition: all 270ms cubic-bezier(0, 0, 0.2, 1), background-size 0, background-image 0;
   min-height: 20px;
   min-width: 20px;
-  padding: 6px 12px;
+  padding: 4px 12px;
   outline-offset: -6px;
   border-width: 1px;
   border-color: transparent;
@@ -2480,13 +2480,13 @@ notebook > header tab button.flat {
 }
 
 notebook > header tab button.flat:last-child {
-  margin-left: 6px;
-  margin-right: -6px;
+  margin-left: 4px;
+  margin-right: -8px;
 }
 
 notebook > header tab button.flat:first-child {
-  margin-left: -6px;
-  margin-right: 6px;
+  margin-left: -8px;
+  margin-right: 4px;
 }
 
 notebook > header.top tabs, notebook > header.bottom tabs {
@@ -2678,7 +2678,7 @@ scrollbar.horizontal button.up {
  **********/
 switch {
   transition: all 270ms cubic-bezier(0, 0, 0.2, 1);
-  margin: 6px 0;
+  margin: 4px 0;
   padding: 0;
   min-width: 30px;
   min-height: 16px;
@@ -2776,8 +2776,8 @@ check,
 radio {
   min-height: 24px;
   min-width: 24px;
-  margin: -10px;
-  padding: 10px;
+  margin: -7px;
+  padding: 7px;
 }
 
 check:checked, check:indeterminate,
@@ -2879,8 +2879,8 @@ check:indeterminate {
 
 
 radio {
-  border-image-slice: 22;
-  border-image-width: 22px;
+  border-image-slice: 19;
+  border-image-width: 19px;
 }
 
 
@@ -2900,12 +2900,12 @@ radio {
 
 
 radio:checked:not(:indeterminate) {
-  border-image-source: -gtk-gradient(radial, center center, 0, center center, 0.11364, to(#FFAC00), to(transparent));
+  border-image-source: -gtk-gradient(radial, center center, 0, center center, 0.13158, to(#FFAC00), to(transparent));
 }
 
 
 radio:checked:not(:indeterminate):disabled {
-  border-image-source: -gtk-gradient(radial, center center, 0, center center, 0.11364, to(rgba(255, 172, 0, 0.5)), to(transparent));
+  border-image-source: -gtk-gradient(radial, center center, 0, center center, 0.13158, to(rgba(255, 172, 0, 0.5)), to(transparent));
 }
 
 window.background:not(.csd) > widget > checkbutton > check,
@@ -3416,7 +3416,7 @@ frame.flat > border {
 }
 
 actionbar > revealer > box {
-  padding: 6px;
+  padding: 4px;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
@@ -4127,7 +4127,6 @@ messagedialog.csd decoration {
   padding: 0;
   min-width: 16px;
   min-height: 16px;
-  border-radius: 100px;
   animation: none;
   box-shadow: none;
   color: transparent;
@@ -4688,7 +4687,7 @@ button.emoji-section:last-child {
 }
 
 .nautilus-window headerbar .path-bar-box {
-  margin: 6px 0;
+  margin: 4px 0;
   color: rgba(0, 0, 0, 0.75);
   background-color: transparent;
 }
@@ -4968,12 +4967,12 @@ filechooser placessidebar.sidebar row.sidebar-row:selected:hover,
 }
 
 .gedit-search-slider entry:dir(ltr) {
-  margin-right: -58px;
-  padding-right: 58px;
+  margin-right: -52px;
+  padding-right: 52px;
 }
 
 .gedit-search-slider entry:dir(ltr) .gedit-search-entry-occurrences-tag {
-  margin-left: 6px;
+  margin-left: 4px;
 }
 
 .gedit-search-slider entry:dir(ltr) image.right {
@@ -4981,12 +4980,12 @@ filechooser placessidebar.sidebar row.sidebar-row:selected:hover,
 }
 
 .gedit-search-slider entry:dir(rtl) {
-  margin-left: -58px;
-  padding-left: 58px;
+  margin-left: -52px;
+  padding-left: 52px;
 }
 
 .gedit-search-slider entry:dir(rtl) .gedit-search-entry-occurrences-tag {
-  margin-right: 6px;
+  margin-right: 4px;
 }
 
 .gedit-search-slider entry:dir(rtl) image.left {
@@ -5006,15 +5005,15 @@ filechooser placessidebar.sidebar row.sidebar-row:selected:hover,
 }
 
 .gedit-search-slider button {
-  border: solid 6px transparent;
+  border: solid 4px transparent;
 }
 
 .gedit-search-slider button:last-child:dir(ltr), .gedit-search-slider button:not(:first-child):dir(rtl) {
-  margin-left: -3px;
+  margin-left: -2px;
 }
 
 .gedit-search-slider button:first-child:dir(rtl), .gedit-search-slider button:not(:last-child):dir(ltr) {
-  margin-right: -3px;
+  margin-right: -2px;
 }
 
 frame.gedit-map-frame > border:dir(ltr) {
@@ -5285,7 +5284,7 @@ docktab {
   min-height: 20px;
   min-width: 20px;
   margin-bottom: -1px;
-  padding: 6px 6px;
+  padding: 4px 6px;
   outline-offset: -6px;
   border-width: 1px;
   border-color: transparent;
@@ -5906,35 +5905,13 @@ window.background:not(.csd) > window.background > menu > separator {
   color: rgba(0, 0, 0, 0.08);
 }
 
-#MozillaGtkWidget.background {
-  background-color: #FAFAFA;
-}
-
-#MozillaGtkWidget.background,
-#MozillaGtkWidget.background decoration {
+#MozillaGtkWidget.background, #MozillaGtkWidget.background decoration {
   border-radius: 2px 2px 0 0;
 }
 
 #MozillaGtkWidget.background headerbar.titlebar {
   border-radius: 2px 2px 0 0;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
-}
-
-#MozillaGtkWidget.background .background,
-#MozillaGtkWidget.background frame,
-#MozillaGtkWidget.background separator,
-#MozillaGtkWidget.background scrolledwindow {
-  background-color: #F5F5F5;
-}
-
-#MozillaGtkWidget.background *:not(menuitem):hover, #MozillaGtkWidget.background *:not(menuitem):hover button,
-#MozillaGtkWidget.background *:focus,
-#MozillaGtkWidget.background *:focus button,
-#MozillaGtkWidget.background *:active,
-#MozillaGtkWidget.background *:active button,
-#MozillaGtkWidget.background *:checked,
-#MozillaGtkWidget.background *:checked button {
-  color: rgba(0, 0, 0, 0.75);
 }
 
 /*************
@@ -7477,7 +7454,7 @@ frame.raven-frame > border {
 
 .raven .powerstrip button {
   margin: 2px 0 1px;
-  padding: 10px;
+  padding: 7px;
 }
 
 .raven .option-subtitle {
@@ -7504,7 +7481,7 @@ calendar.raven-calendar:selected {
 }
 
 .raven-mpris button.image-button {
-  padding: 10px;
+  padding: 7px;
 }
 
 box.vertical > stack > box.vertical .raven-background > viewport.frame {
@@ -7699,7 +7676,7 @@ box.vertical > stack > box.vertical .raven-background > viewport.frame list > ro
 
 .budgie-run-dialog entry.search {
   font-size: 120%;
-  padding: 6px 14px;
+  padding: 4px 12px;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
   background-color: transparent;
 }

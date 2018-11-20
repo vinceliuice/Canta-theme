@@ -407,13 +407,9 @@ button {
     @include button(normal);
 
     &:hover { @include button(hover); }
-
     &:active { @include button(active); }
-
     &:disabled { @include button(disabled); }
-
     &:checked { @include button(checked); }
-
     &:checked:disabled { @include button(checked-disabled); }
 
     @at-root %flat_button, &.flat {
@@ -421,14 +417,11 @@ button {
         @include button(flat-normal);
 
         &:hover { @include button(flat-hover); }
-
         &:active { @include button(flat-active); }
-
         &:disabled { @include button(flat-disabled); }
       }
 
       &:checked { @include button(flat-checked); }
-
       &:checked:disabled { @include button(flat-checked-disabled); }
     }
 
@@ -450,7 +443,6 @@ button {
 
       label {
         &:first-child { margin-left: 16px - ($medium_size - 24px) / 2; }
-
         &:last-child { margin-right: 16px - ($medium_size - 24px) / 2; }
       }
 
@@ -458,7 +450,6 @@ button {
     }
 
     .linked > & { @extend %linked; }
-
     .linked.vertical > & { @extend %linked_vertical; }
 
     .linked > &.flat,
@@ -466,7 +457,6 @@ button {
       border-radius: $buttons_radius;
 
       &.image-button { @extend %circular_button; }
-
       &.text-button.image-button {
         border-radius: $buttons_radius;
         -gtk-outline-radius: $buttons_radius;
@@ -488,7 +478,6 @@ button {
       color: $inverse_secondary_fg_color;
 
       &:hover, &:active { color: $inverse_fg_color; }
-
       &:disabled { color: $inverse_disabled_secondary_fg_color; }
 
       &:checked {
@@ -508,7 +497,6 @@ button {
     padding: ($large_size - 24px) / 2 ($large_size - 16px) / 2;
 
     &.image-button { padding: ($large_size - 24px) / 2; }
-
     &:disabled { opacity: 0; }
   }
 
@@ -524,7 +512,6 @@ button {
       color: $inverse_fg_color;
 
       &:disabled { @include button(disabled, $b_color); }
-
       &:checked { background-color: mix($inverse_fg_color, $b_color, percentage($lower_opacity)); }
 
       &.flat {
@@ -532,7 +519,6 @@ button {
         color: $b_color;
 
         &:disabled { @include button(flat-disabled, $b_color); }
-
         &:checked { background-color: rgba($b_color, 0.3); }
       }
 
@@ -790,17 +776,15 @@ spinbutton {
 
     button {
       // margin: $container_padding;
-      border: solid $container_padding transparent;
-
+      border: solid 6px transparent;
       @extend %simple_flat_button;
-
       @extend %small_button;
 
       &.up:dir(ltr),
-      &.down:dir(rtl) { margin-left: -$container_padding / 2; }
+      &.down:dir(rtl) { margin-left: -3px; }
 
       &.up:dir(rtl),
-      &.down:dir(ltr) { margin-right: -$container_padding / 2; }
+      &.down:dir(ltr) { margin-right: -3px; }
     }
   }
 
