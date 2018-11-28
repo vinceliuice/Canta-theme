@@ -1181,6 +1181,48 @@ dialog.background.csd {
   }
 }
 
+window.background.csd > stack {
+  border-radius: 0 0 $windows_radius $windows_radius;
+}
+
+stack.background { background: none; }
+
+// > 3.25.90
+.background.csd scrolledwindow.view {
+  background-color: $base_color;
+  border-bottom-left-radius: $windows_radius;
+
+  > viewport.frame > stack {
+    background-color: transparent;
+
+    > list { // left-pane
+      background-color: transparent;
+
+      > row.activatable:not(:hover):not(:active):not(:selected) {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+
+/************************
+ * Gnome system monitor *
+ ************************/
+window#gnome-system-monitor.background.csd {
+  stack {
+    background-color: $base_color;
+    border-radius: 0 0 $windows_radius $windows_radius;
+
+    scrolledwindow {
+      treeview.view {
+        background-color: transparent;
+        @extend %view;
+      }
+    }
+  }
+}
+
 
 /*********
  * To Do *

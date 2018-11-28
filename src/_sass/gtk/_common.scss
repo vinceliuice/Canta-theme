@@ -84,6 +84,7 @@ notebook:focus tab,
   }
 }
 
+%view,
 .view {
   @extend row.activatable;
 
@@ -91,8 +92,6 @@ notebook:focus tab,
   color: $fg_color;
 
   &:disabled { color: $disabled_fg_color; }
-
-  &:hover, &:active, &:selected { border-radius: $buttons_radius; }
 
   selection,
   &:selected { @extend %selected_items; }
