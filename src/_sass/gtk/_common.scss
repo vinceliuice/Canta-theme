@@ -107,7 +107,7 @@ textview {
   }
 }
 
-// iconview { @extend .view; }
+iconview { @extend %view; border-radius: $buttons_radius; }
 
 .rubberband,
 rubberband {
