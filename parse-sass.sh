@@ -23,14 +23,19 @@ fi
 
 SASSC_OPT="-M -t expanded"
 
-echo "== Generating the CSS..."
-
 for color in "${_COLOR_VARIANTS[@]}"; do
   for size in "${_SIZE_VARIANTS[@]}"; do
     for radius in "${_RADIUS_VARIANTS[@]}"; do
+      echo "==> Generating the gtk${color}${size}${radius}.css..."
       sassc $SASSC_OPT src/gtk/gtk${color}${size}${radius}.{scss,css}
-      sassc $SASSC_OPT src/gnome-shell/gnome-shell${color}${size}.{scss,css}
     done
+  done
+done
+
+for color in "${_COLOR_VARIANTS[@]}"; do
+  for size in "${_SIZE_VARIANTS[@]}"; do
+    echo "==> Generating the gnome-shell${color}${size}.css..."
+    sassc $SASSC_OPT src/gnome-shell/gnome-shell${color}${size}.{scss,css}
   done
 done
 

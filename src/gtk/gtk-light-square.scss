@@ -3,9 +3,14 @@ $titlebar: 'light';
 $compact: 'false';
 $radius: 'square';
 
-@import '../_sass/gtk/variables';
+@import '../_sass/variables';
 @import '../_sass/colors';
 @import '../_sass/gtk/drawing';
 @import '../_sass/gtk/common';
-@import '../_sass/gtk/apps';
+@import '../_sass/gtk/apps/gnome';
+@import '../_sass/gtk/apps/misc';
+@import '../_sass/gtk/apps/unity';
+@import '../_sass/gtk/apps/mate';
+@import '../_sass/gtk/apps/budgie';
+@import '../_sass/gtk/apps/lightdm';
 @import '../_sass/gtk/colors-public';

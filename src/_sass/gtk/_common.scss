@@ -1,3 +1,6 @@
+// Header parthbar button radius
+$square_radius: if($radius == 'circle', $circular_radius, $windows_radius);
+
 * {
   // padding: 0;
   background-clip: padding-box;
@@ -1021,6 +1024,23 @@ actionbar { // set bottom border radius
 /***************
  * Header bars *
  ***************/
+
+// special case for headerbar stack-switchers and path-bar
+$asset_radius: if($radius == 'circle', '-circle', '-square');
+
+$header_path_button_border: -gtk-scaled(url("assets/button-checked#{$asset_radius}.png"),
+                                        url("assets/button-checked#{$asset_radius}@2.png"));
+$header_path_button_border_compact: -gtk-scaled(url("assets/button-checked-compact#{$asset_radius}.png"),
+                                                url("assets/button-checked-compact#{$asset_radius}@2.png"));
+$stack_switcher_firstbutton_border: -gtk-scaled(url("assets/firstbutton-checked#{$asset_radius}.png"),
+                                                url("assets/firstbutton-checked#{$asset_radius}@2.png"));
+$stack_switcher_firstbutton_border_compact: -gtk-scaled(url("assets/firstbutton-checked-compact#{$asset_radius}.png"),
+                                                        url("assets/firstbutton-checked-compact#{$asset_radius}@2.png"));
+$stack_switcher_lastbutton_border: -gtk-scaled(url("assets/lastbutton-checked#{$asset_radius}.png"),
+                                               url("assets/lastbutton-checked#{$asset_radius}@2.png"));
+$stack_switcher_lastbutton_border_compact: -gtk-scaled(url("assets/lastbutton-checked-compact#{$asset_radius}.png"),
+                                                       url("assets/lastbutton-checked-compact#{$asset_radius}@2.png"));
+
 %titlebar,
 headerbar {
   transition: background-color $shorter_duration $deceleration_curve, color $longer_duration $deceleration_curve;

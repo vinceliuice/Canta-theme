@@ -150,7 +150,7 @@
 .nautilus-window.maximized notebook > stack { border-radius: 0; }
 
 .nautilus-canvas-item {
-  // border-radius: $material_radius;
+  border-radius: $material_radius;
 }
 
 .nautilus-canvas-item.dim-label,
@@ -162,6 +162,7 @@
   // background-color: rgba($black, $lower_opacity);
   color: $inverse_fg_color;
   text-shadow: $shadow_1;
+  border-radius: $material_radius;
 }
 
 // Toolbar
