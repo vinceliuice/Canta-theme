@@ -1572,13 +1572,8 @@ menubar,
     padding: 4px 8px;
     color: $titlebar_secondary_fg_color;
 
-    menu {
-      border-radius: 0 0 $buttons_radius $buttons_radius;
-
-      menu { //submenu
-        border-radius: $buttons_radius;
-      }
-    }
+    > window.background.popup > decoration,
+    > window.background.popup > menu { border-radius: 0 0 $buttons_radius $buttons_radius; }
 
     &:hover { // Seems like it :hover even with keyboard focus
 //      transition: none;

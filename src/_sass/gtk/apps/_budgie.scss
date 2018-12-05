@@ -379,6 +379,14 @@ popover.background.places-menu {
 
   &.transparent { background-color: $panel_bg_color; }
 
+  .bottom & {
+    border-radius: $windows_radius $windows_radius 0 0;
+
+    &.dock-mode {
+      border-radius: 0 0 0 0;
+    }
+  }
+
   button {
     @extend %flat_button;
 //    @extend %button_selected.flat;
@@ -393,7 +401,6 @@ popover.background.places-menu {
   }
 
   &.horizontal button { padding: 0 4px; }
-
   &.vertical button { padding: 4px 0; }
 
   separator { background-color: $inverse_track_color; }
@@ -405,12 +412,9 @@ popover.background.places-menu {
       color: $inverse_secondary_fg_color;
       &:hover { color: $inverse_fg_color; }
       &:disabled { color: $inverse_disabled_secondary_fg_color; }
-      menu {
-        border-radius: 0 0 $buttons_radius $buttons_radius;
-        menu { //submenu
-          border-radius: $buttons_radius;
-        }
-      }
+
+      > window.background.popup > decoration,
+      > window.background.popup > menu { border-radius: 0 0 $buttons_radius $buttons_radius; }
     }
   }
 
@@ -976,5 +980,18 @@ box.vertical > stack > box.vertical {
     }
 
     > button.image-button.titlebutton { padding: 0 3px; }
+  }
+}
+
+// vala-panel-appmenu
+menubar.-vala-panel-appmenu-private {
+  background: none;
+  > menuitem {
+    color: $inverse_secondary_fg_color;
+    &:hover { color: $inverse_fg_color; }
+    &:disabled { color: $inverse_disabled_secondary_fg_color; }
+
+    > window.background.popup > decoration,
+    > window.background.popup > menu { border-radius: 0 0 $buttons_radius $buttons_radius; }
   }
 }

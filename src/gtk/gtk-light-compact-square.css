@@ -2068,14 +2068,11 @@ menubar > menuitem,
   color: rgba(0, 0, 0, 0.54);
 }
 
-menubar > menuitem menu,
-.menubar > menuitem menu {
+menubar > menuitem > window.background.popup > decoration,
+menubar > menuitem > window.background.popup > menu,
+.menubar > menuitem > window.background.popup > decoration,
+.menubar > menuitem > window.background.popup > menu {
   border-radius: 0 0 6px 6px;
-}
-
-menubar > menuitem menu menu,
-.menubar > menuitem menu menu {
-  border-radius: 6px;
 }
 
 menubar > menuitem:hover,
@@ -7117,6 +7114,14 @@ popover.background.places-menu row {
   background-color: rgba(39, 42, 42, 0.85);
 }
 
+.bottom .budgie-panel {
+  border-radius: 8px 8px 0 0;
+}
+
+.bottom .budgie-panel.dock-mode {
+  border-radius: 0 0 0 0;
+}
+
 .budgie-panel button {
   min-height: 16px;
   min-width: 16px;
@@ -7161,14 +7166,11 @@ popover.background.places-menu row {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.budgie-panel menubar > menuitem menu,
-.budgie-panel .menubar > menuitem menu {
+.budgie-panel menubar > menuitem > window.background.popup > decoration,
+.budgie-panel menubar > menuitem > window.background.popup > menu,
+.budgie-panel .menubar > menuitem > window.background.popup > decoration,
+.budgie-panel .menubar > menuitem > window.background.popup > menu {
   border-radius: 0 0 6px 6px;
-}
-
-.budgie-panel menubar > menuitem menu menu,
-.budgie-panel .menubar > menuitem menu menu {
-  border-radius: 6px;
 }
 
 .budgie-panel .alert {
@@ -7884,6 +7886,27 @@ box.vertical > stack > box.vertical .raven-background > viewport.frame .budgie-m
 
 .budgie-panel box.titlebar.horizontal > button.image-button.titlebutton {
   padding: 0 3px;
+}
+
+menubar.-vala-panel-appmenu-private {
+  background: none;
+}
+
+menubar.-vala-panel-appmenu-private > menuitem {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+menubar.-vala-panel-appmenu-private > menuitem:hover {
+  color: #FFFFFF;
+}
+
+menubar.-vala-panel-appmenu-private > menuitem:disabled {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+menubar.-vala-panel-appmenu-private > menuitem > window.background.popup > decoration,
+menubar.-vala-panel-appmenu-private > menuitem > window.background.popup > menu {
+  border-radius: 0 0 6px 6px;
 }
 
 /************************
