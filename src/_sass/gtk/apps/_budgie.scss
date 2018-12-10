@@ -65,18 +65,24 @@
 // this transparent..
 .budgie-container { background-color: transparent; }
 
-.budgie-settings-window buttonbox.inline-toolbar {
-  border-style: none none solid;
-  padding: 0 2px;
-  margin: 0;
+.budgie-settings-window {
+  buttonbox.inline-toolbar {
+    border-style: none none solid;
+    padding: 0 2px;
+    margin: 0;
 
-  button {
-    margin: 4px 2px;
-    min-height: 16px;
-    border-radius: $buttons_radius;
-    -gtk-outline-radius: $buttons_radius;
+    button {
+      margin: 4px 2px;
+      min-height: 16px;
+      border-radius: $buttons_radius;
+      -gtk-outline-radius: $buttons_radius;
 
-    @extend %simple_flat_button;
+      @extend %simple_flat_button;
+    }
+  }
+
+  list.sidebar {
+    border-radius: 0 0 0 $windows_radius;
   }
 }
 
@@ -887,7 +893,6 @@ box.vertical > stack > box.vertical {
     @extend %simple_flat_button;
 
     &:first-child { border-bottom-left-radius: $buttons_radius; }
-
     &:last-child { border-bottom-right-radius: $buttons_radius; }
   }
 }

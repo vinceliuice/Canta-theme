@@ -1291,6 +1291,11 @@ headerbar .linked:not(.vertical) > entry:not(.flat) {
   border-radius: 6px;
 }
 
+.titlebar:not(headerbar) .linked:not(.vertical) > button.popup,
+headerbar .linked:not(.vertical) > button.popup {
+  border-radius: 9999px;
+}
+
 .titlebar:not(headerbar) button:not(.suggested-action):not(.destructive-action),
 headerbar button:not(.suggested-action):not(.destructive-action) {
   border-image: none;
@@ -6793,6 +6798,10 @@ box.vertical > stack > box.vertical .raven-background > viewport.frame list > ro
   min-height: 16px;
   border-radius: 6px;
   -gtk-outline-radius: 6px;
+}
+
+.budgie-settings-window list.sidebar {
+  border-radius: 0 0 0 8px;
 }
 
 .budgie-popover {
