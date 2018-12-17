@@ -2071,7 +2071,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .show-apps:active .overview-icon,
 .show-apps:checked .overview-icon,
 .show-apps:focus .overview-icon {
-  background-color: #3b4342;
+  background-color: #272a2a;
 }
 
 .app-folder-popup {
