@@ -5943,6 +5943,11 @@ window.background:not(.csd) > widget > radiobutton > radio:not(:checked):disable
   color: rgba(117, 117, 117, 0.5);
 }
 
+window.background:not(.csd) .menu {
+  border-radius: 0;
+  border: none;
+}
+
 window.background:not(.csd) > window > menu,
 window.background:not(.csd) > menu > menu {
   border: none;

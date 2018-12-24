@@ -90,6 +90,11 @@ window.background:not(.csd) {
     }
   }
 
+  .menu { // context-menus
+    border-radius: 0;
+    border: none;
+  }
+
   // remove ugly border around the menus
   > window > menu,
   > menu > menu { border: none; }
