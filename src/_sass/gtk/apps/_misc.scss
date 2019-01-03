@@ -411,7 +411,7 @@ $text_shadow: 0 0 1px rgba(0, 0, 0, 0.26),
 
 .xfce4-panel {
   background-color: $solid_panel_bg_color;
-  color: $inverse_secondary_fg_color;
+  color: $panel_secondary_fg_color;
   font-weight: 700;
   text-shadow: none;
   -gtk-icon-shadow: none;

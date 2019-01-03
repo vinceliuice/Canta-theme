@@ -9,25 +9,30 @@
    color: $secondary_fg_color;
    background-color: transparent;
    box-shadow: none;
+
    &:hover {
      color: $fg_color;
      background-color: rgba($fg_color, 0.1);
      box-shadow: none;
    }
+
    &:disabled {
      color: $disabled_fg_color;
      background-color: transparent;
    }
+
    &:checked {
      background-color: rgba($fg_color, 0.15);
      color: $fg_color;
      box-shadow: none;
    }
+
    &:active {
      background-color: rgba($fg_color, 0.12);
      color: $fg_color;
      box-shadow: none;
    }
+
    &:checked:disabled {
      background-color: rgba($fg_color, 0.08);
      color: rgba($fg_color, 0.65);
@@ -36,28 +41,28 @@
  }
 
  %budgie_flat_button {
-  color: $inverse_fg_color;
+  color: $panel_secondary_fg_color;
 
   &:hover {
-    color: $inverse_fg_color;
-    background-color: rgba($inverse_fg_color, 0.1);
+    color: $panel_fg_color;
+    background-color: rgba($panel_fg_color, 0.1);
   }
 
-  &:disabled { color: rgba($inverse_fg_color, 0.5); }
+  &:disabled { color: rgba($panel_fg_color, 0.5); }
 
   &:checked {
-    background-color: rgba($inverse_fg_color, 0.15);
-    color: $inverse_fg_color;
+    background-color: rgba($panel_fg_color, 0.15);
+    color: $panel_fg_color;
   }
 
   &:active {
-    background-color: rgba($inverse_fg_color, 0.25);
-    color: $inverse_fg_color;
+    background-color: rgba($panel_fg_color, 0.25);
+    color: $panel_fg_color;
   }
 
   &:checked:disabled {
-    background-color: rgba($inverse_fg_color, 0.05);
-    color: rgba($inverse_fg_color, 0.65);
+    background-color: rgba($panel_fg_color, 0.05);
+    color: rgba($panel_fg_color, 0.65);
   }
 }
 
@@ -93,9 +98,7 @@
   background-color: rgba($lighter_bg_color, 0.95);
 
   .container { padding: 2px; }
-
   border { border: none; }
-
   list { background-color: transparent; }
 
   row {
@@ -190,8 +193,7 @@ window.budgie-popover:not(.csd) {
 
     .bottom & { padding: 2px 0 2px; } // revive bottom padding
 
-    &,
-    > border {
+    &, > border {
       border-style: none; // hide container borders
     }
   }
@@ -215,7 +217,7 @@ window.budgie-popover:not(.csd) {
 
   .workspace-item,
   .workspace-add-button {
-    border: 0 solid $inverse_divider_color;
+    border: 0 solid $panel_divider_color;
 
     .top &,
     .bottom & {
@@ -231,7 +233,7 @@ window.budgie-popover:not(.csd) {
   .workspace-item {
     transition: $shorter_transition;
 
-    &.current-workspace { background-color: $inverse_divider_color; }
+    &.current-workspace { background-color: $panel_divider_color; }
   }
 
   .workspace-add-button {
@@ -271,7 +273,6 @@ window.budgie-popover:not(.csd) {
 
   .categories {
     &:dir(ltr) { border-bottom-left-radius: $material_radius; }
-
     &:dir(rtl) { border-bottom-right-radius: $material_radius; }
   }
 
@@ -285,9 +286,7 @@ window.budgie-popover:not(.csd) {
     font-weight: normal;
 
     &:disabled { color: $disabled_fg_color; }
-
     &:checked { @extend %selected_items; }
-
     &:checked:disabled { background-color: $primary_color; } // overriding
   }
 
@@ -308,7 +307,6 @@ popover.background.user-menu {
   padding: 8px;
 
   .content-box { background-color: transparent; }
-
   separator { margin: 4px 0; }
 
   row {
@@ -319,18 +317,14 @@ popover.background.user-menu {
 }
 
 // Raven Trigger
-button.raven-trigger {
-  // padding: 0 4px;
-}
+// button.raven-trigger { padding: 0 4px; }
 
 // Places Menu
 popover.background.places-menu {
   padding: 8px;
 
   // FIXME: untested
-  .message-bar {
-    // margin-bottom: 4px;
-  }
+  // .message-bar { margin-bottom: 4px; }
 
   .name-button.text-button {
     // padding: 4px 8px;
@@ -344,9 +338,7 @@ popover.background.places-menu {
   }
 
   // FIXME: untested
-  .unmount-button {
-    // padding: ($medium_size - 24px) / 2;
-  }
+  // .unmount-button { padding: ($medium_size - 24px) / 2; }
 
   .places-section-header > image {
     &:dir(ltr) { margin: 0 8px - 10px 0 8px - 3px; }
@@ -367,20 +359,18 @@ popover.background.places-menu {
   }
 
   // FIXME: untested
-  .unlock-area {
-    entry {
-    }
-
-    button {
-    }
-  }
+  // .unlock-area {
+  //   entry { }
+  //
+  //   button { }
+  // }
 }
 
 // Panel
 .budgie-panel {
   transition: background-color $longer_duration $deceleration_curve;
   background-color: $solid_panel_bg_color;
-  color: $inverse_secondary_fg_color;
+  color: $panel_secondary_fg_color;
   font-weight: 500;
 
   &.transparent { background-color: $panel_bg_color; }
@@ -401,23 +391,28 @@ popover.background.places-menu {
     min-width: 16px;
     padding: 0;
     border-radius: 0;
-    color: $inverse_secondary_fg_color;
-    &:hover { color: $inverse_fg_color; }
-    &:checked { background-color: $inverse_divider_color; color: $inverse_fg_color; }
+    color: $panel_secondary_fg_color;
+
+    &:hover { color: $panel_fg_color; }
+    &:checked {
+      background-color: $panel_divider_color;
+      color: $panel_fg_color;
+    }
   }
 
   &.horizontal button { padding: 0 4px; }
   &.vertical button { padding: 4px 0; }
 
-  separator { background-color: $inverse_track_color; }
+  separator { background-color: $panel_track_color; }
 
   // Budgie styled Gtk Menus
   menubar,
   .menubar {
     > menuitem {
-      color: $inverse_secondary_fg_color;
-      &:hover { color: $inverse_fg_color; }
-      &:disabled { color: $inverse_disabled_secondary_fg_color; }
+      color: $panel_secondary_fg_color;
+
+      &:hover { color: $panel_fg_color; }
+      &:disabled { color: $panel_disabled_secondary_fg_color; }
 
       > window.background.popup > decoration,
       > window.background.popup > menu { border-radius: 0 0 $buttons_radius $buttons_radius; }
@@ -445,6 +440,7 @@ popover.background.places-menu {
   button.flat.launcher {
     padding: 0;
     @extend %underscores;
+
     &:checked, &:active {
       @extend %budgie_flat_button:checked;
       transition: background-color 0, border-image $ripple_duration $deceleration_curve;
@@ -452,11 +448,10 @@ popover.background.places-menu {
 
     // for indicator colors
     &:not(:checked) {
-      color: $inverse_hint_fg_color;
+      color: $panel_hint_fg_color;
 
-      &:hover, &:active { color: $inverse_secondary_fg_color; }
-
-      &:disabled { color: $inverse_disabled_secondary_fg_color; }
+      &:hover, &:active { color: $panel_secondary_fg_color; }
+      &:disabled { color: $panel_disabled_secondary_fg_color; }
     }
   }
 }
@@ -544,6 +539,7 @@ popover.background.places-menu {
 
       &:checked {
         @extend %budgie_flat_button:checked;
+
         &:hover { transition: none; }
         > image { background-image: none; }
       }
@@ -942,7 +938,7 @@ box.vertical > stack > box.vertical {
     background: none;
     box-shadow: none;
     border: none;
-    color: $inverse_secondary_fg_color;
+    color: $panel_secondary_fg_color;
 
     image {
       border-radius: 100px;
@@ -952,23 +948,25 @@ box.vertical > stack > box.vertical {
     }
 
     &:hover {
-      color: $inverse_secondary_fg_color;
-      image { background-image: image($inverse_divider_color); }
+      color: $panel_fg_color;
+      image { background-image: image($panel_divider_color); }
     }
 
     &:active {
-      color: $inverse_fg_color;
-      image { background-image: image($inverse_track_color); }
+      color: $panel_fg_color;
+      image { background-image: image($panel_track_color); }
     }
 
     &.close {
       padding: 0;
       margin: 0;
       box-shadow: none;
+
       &:hover {
-        color: $inverse_fg_color;
+        color: $panel_fg_color;
         image { background-image: image($accent_color); }
       }
+
       &:active image { background-image: image(darken($accent_color, 5%)); }
     }
 
@@ -992,9 +990,10 @@ box.vertical > stack > box.vertical {
 menubar.-vala-panel-appmenu-private {
   background: none;
   > menuitem {
-    color: $inverse_secondary_fg_color;
-    &:hover { color: $inverse_fg_color; }
-    &:disabled { color: $inverse_disabled_secondary_fg_color; }
+    color: $panel_secondary_fg_color;
+
+    &:hover { color: $panel_fg_color; }
+    &:disabled { color: $panel_disabled_secondary_fg_color; }
 
     > window.background.popup > decoration,
     > window.background.popup > menu { border-radius: 0 0 $buttons_radius $buttons_radius; }

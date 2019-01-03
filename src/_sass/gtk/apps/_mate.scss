@@ -16,7 +16,7 @@
   font-weight: 500;
 
   // Avoid changing the menu text color
-  &:not(.popup) { color: $inverse_secondary_fg_color; }
+  &:not(.popup) { color: $panel_secondary_fg_color; }
 
   button {
     @extend %flat_button;
@@ -41,13 +41,9 @@ PanelToplevel.vertical > grid > button {
   min-height: 24px;
 }
 
-#PanelApplet {
-  // border-width: 0;
-}
+// #PanelApplet { border-width: 0; }
 
-PanelSeparator {
-  color: $divider_color;
-}
+PanelSeparator { color: $divider_color; }
 
 // the grid left from na-tray and wncktasklist
 MatePanelAppletFrameDBus {
@@ -62,14 +58,14 @@ MatePanelAppletFrameDBus {
 .mate-panel-menu-bar {
   // set normal menubar button
   menubar > menuitem {
-    color: $inverse_secondary_fg_color;
+    color: $panel_secondary_fg_color;
 
     &:hover {
-      background-color: $divider_color;
-      color: $inverse_fg_color;
+      background-color: $panel_divider_color;
+      color: $panel_fg_color;
     }
 
-    &:disabled { color: $inverse_disabled_fg_color; }
+    &:disabled { color: $panel_disabled_fg_color; }
   }
 
   &.horizontal menubar > menuitem { padding: 0 8px; }
@@ -131,15 +127,13 @@ PanelApplet.wnck-applet .wnck-pager {
   background-color: transparent;
   color: $alt_primary_color;
 
-  &:hover { background-color: $inverse_divider_color; }
-
-  &:active { background-color: $inverse_track_color; }
-
+  &:hover { background-color: $panel_divider_color; }
+  &:active { background-color: $panel_track_color; }
   &:selected { background-color: $primary_color; }
 }
 
 #clock-applet-button {
-  color: $titlebar_secondary_fg_color;
+  color: $panel_secondary_fg_color;
 
   .mate-panel-menu-bar.horizontal & label { padding: 0 8px; }
   .mate-panel-menu-bar.vertical & label { padding: 8px 0; }

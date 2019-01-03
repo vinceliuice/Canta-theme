@@ -7,7 +7,7 @@
 // the panel widget at the top
 #panel_window {
   background-color: $alt_panel_bg_color;
-  color: $inverse_fg_color;
+  color: $panel_secondary_fg_color;
   // font-weight: bold;
 
   // the menubars/menus of the panel, i.e. indicators
@@ -21,11 +21,11 @@
   }
 
   menubar > menuitem {
-    color: $inverse_secondary_fg_color;
+    color: $panel_secondary_fg_color;
 
-    &:hover { color: $inverse_fg_color; }
+    &:hover { color: $panel_fg_color; }
 
-    &:disabled label { color: $inverse_disabled_secondary_fg_color; }
+    &:disabled label { color: $panel_disabled_secondary_fg_color; }
   }
 }
 

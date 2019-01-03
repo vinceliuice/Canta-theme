@@ -28,24 +28,24 @@ UnityDecoration {
     border-style: none;
     border-radius: $windows_radius $windows_radius 0 0;
     box-shadow: inset 0 1px $titlebar_highlight_color;
-    background-color: $titlebar_bg_color;
-    color: $titlebar_fg_color;
+    background-color: $panel_bg_color;
+    color: $panel_secondary_fg_color;
 
-    &:backdrop { color: $titlebar_secondary_fg_color; }
+    &:backdrop { color: $panel_disabled_fg_color; }
   }
 
-  .left,
-  .right {}
-
-  .bottom {}
+  // .left,
+  // .right {}
+  //
+  // .bottom {}
 
   .menuitem {
-    color: $titlebar_secondary_fg_color;
+    color: $panel_secondary_fg_color;
 
     &:hover {
-      box-shadow: inset 0 -2px $titlebar_indicator_color;
+      box-shadow: inset 0 -2px $indicator_color;
       background-color: transparent;
-      color: $titlebar_fg_color;
+      color: $panel_fg_color;
     }
   }
 }
@@ -65,9 +65,9 @@ sheet-style-dialog.unity-force-quit {
 UnityPanelWidget,
 .unity-panel {
   background-color: $opaque_panel_bg_color;
-  color: $titlebar_fg_color;
+  color: $panel_secondary_fg_color;
 
-  &:backdrop { color: $titlebar_secondary_fg_color; }
+  &:backdrop { color: $panel_disabled_fg_color; }
 }
 
 .unity-panel.menubar,
@@ -81,9 +81,9 @@ UnityPanelWidget,
 
 .unity-panel.menubar.menuitem:hover,
 .unity-panel.menubar .menuitem *:hover {
-  box-shadow: inset 0 -2px $titlebar_indicator_color;
+  box-shadow: inset 0 -2px $indicator_color;
   background-color: transparent;
-  color: $titlebar_fg_color;
+  color: $panel_fg_color;
 }
 
 .menu IdoPlaybackMenuItem.menuitem:active {

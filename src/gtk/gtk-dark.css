@@ -2106,7 +2106,7 @@ menu,
   margin: 4px 0;
   padding: 4px 0;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-  background-color: rgba(63, 69, 68, 0.96);
+  background-color: rgba(52, 57, 56, 0.96);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 6px;
 }
@@ -2253,7 +2253,7 @@ popover.background {
   transition: box-shadow 100ms cubic-bezier(0, 0, 0.2, 1);
   padding: 2px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15);
-  background-color: rgba(63, 69, 68, 0.96);
+  background-color: rgba(52, 57, 56, 0.96);
 }
 
 popover.background:backdrop {
@@ -6211,7 +6211,7 @@ box.vertical > widget > widget:selected {
 
 .xfce4-panel {
   background-color: #272a2a;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.68);
   font-weight: 700;
   text-shadow: none;
   -gtk-icon-shadow: none;
@@ -6332,22 +6332,22 @@ UnityDecoration .top {
   border-style: none;
   border-radius: 8px 8px 0 0;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-  background-color: #272a2a;
-  color: #FFFFFF;
+  background-color: rgba(39, 42, 42, 0.85);
+  color: rgba(255, 255, 255, 0.68);
 }
 
 UnityDecoration .top:backdrop {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 UnityDecoration .menuitem {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.68);
 }
 
 UnityDecoration .menuitem:hover {
-  box-shadow: inset 0 -2px currentColor;
+  box-shadow: inset 0 -2px #00CE99;
   background-color: transparent;
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .background:not(.csd) headerbar:not(.titlebar) {
@@ -6362,12 +6362,12 @@ UnityDecoration .menuitem:hover {
 UnityPanelWidget,
 .unity-panel {
   background-color: #272a2a;
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.68);
 }
 
 UnityPanelWidget:backdrop,
 .unity-panel:backdrop {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .unity-panel.menuitem,
@@ -6377,9 +6377,9 @@ UnityPanelWidget:backdrop,
 
 .unity-panel.menubar.menuitem:hover,
 .unity-panel.menubar .menuitem *:hover {
-  box-shadow: inset 0 -2px currentColor;
+  box-shadow: inset 0 -2px #00CE99;
   background-color: transparent;
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .menu IdoPlaybackMenuItem.menuitem:active {
@@ -6402,7 +6402,7 @@ UnityPanelWidget:backdrop,
 }
 
 .mate-panel-menu-bar:not(.popup) {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.68);
 }
 
 .mate-panel-menu-bar button {
@@ -6438,12 +6438,12 @@ MatePanelAppletFrameDBus {
 }
 
 .mate-panel-menu-bar menubar > menuitem {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.68);
 }
 
 .mate-panel-menu-bar menubar > menuitem:hover {
   background-color: rgba(255, 255, 255, 0.12);
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .mate-panel-menu-bar menubar > menuitem:disabled {
@@ -6518,7 +6518,7 @@ PanelApplet.wnck-applet .wnck-pager:selected {
 }
 
 #clock-applet-button {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.68);
 }
 
 .mate-panel-menu-bar.horizontal #clock-applet-button label {
@@ -6772,7 +6772,7 @@ box.vertical > stack > box.vertical .raven-background > viewport.frame list > ro
 .right .budgie-panel .pinned button.flat.launcher.running:checked,
 .right .budgie-panel .pinned button.launcher.running.sidebar-button:checked {
   background-color: rgba(255, 255, 255, 0.15);
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .budgie-panel button.flat.launcher:disabled:checked, .budgie-panel button.flat.launcher:disabled:active, .top .budgie-panel .unpinned button.flat.launcher:disabled:checked,
@@ -6932,8 +6932,7 @@ window.budgie-popover:not(.csd) > frame.container {
   padding: 2px 0 2px;
 }
 
-window.budgie-popover:not(.csd) > frame.container,
-window.budgie-popover:not(.csd) > frame.container > border {
+window.budgie-popover:not(.csd) > frame.container, window.budgie-popover:not(.csd) > frame.container > border {
   border-style: none;
 }
 
@@ -7120,7 +7119,7 @@ popover.background.places-menu row {
 .budgie-panel {
   transition: background-color 150ms cubic-bezier(0, 0, 0.2, 1);
   background-color: #272a2a;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.68);
   font-weight: 500;
 }
 
@@ -7141,16 +7140,16 @@ popover.background.places-menu row {
   min-width: 16px;
   padding: 0;
   border-radius: 0;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.68);
 }
 
 .budgie-panel button:hover {
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .budgie-panel button:checked {
   background-color: rgba(255, 255, 255, 0.12);
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .budgie-panel.horizontal button {
@@ -7167,12 +7166,12 @@ popover.background.places-menu row {
 
 .budgie-panel menubar > menuitem,
 .budgie-panel .menubar > menuitem {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.68);
 }
 
 .budgie-panel menubar > menuitem:hover,
 .budgie-panel .menubar > menuitem:hover {
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .budgie-panel menubar > menuitem:disabled,
@@ -7212,7 +7211,7 @@ popover.background.places-menu row {
 }
 
 .budgie-panel button.flat.launcher:not(:checked):hover, .budgie-panel button.flat.launcher:not(:checked):active {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.68);
 }
 
 .budgie-panel button.flat.launcher:not(:checked):disabled {
@@ -7838,7 +7837,7 @@ box.vertical > stack > box.vertical .raven-background > viewport.frame .budgie-m
   background: none;
   box-shadow: none;
   border: none;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.68);
 }
 
 .budgie-panel box.titlebar > button.image-button.titlebutton image {
@@ -7849,7 +7848,7 @@ box.vertical > stack > box.vertical .raven-background > viewport.frame .budgie-m
 }
 
 .budgie-panel box.titlebar > button.image-button.titlebutton:hover {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .budgie-panel box.titlebar > button.image-button.titlebutton:hover image {
@@ -7857,7 +7856,7 @@ box.vertical > stack > box.vertical .raven-background > viewport.frame .budgie-m
 }
 
 .budgie-panel box.titlebar > button.image-button.titlebutton:active {
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .budgie-panel box.titlebar > button.image-button.titlebutton:active image {
@@ -7871,7 +7870,7 @@ box.vertical > stack > box.vertical .raven-background > viewport.frame .budgie-m
 }
 
 .budgie-panel box.titlebar > button.image-button.titlebutton.close:hover {
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .budgie-panel box.titlebar > button.image-button.titlebutton.close:hover image {
@@ -7907,11 +7906,11 @@ menubar.-vala-panel-appmenu-private {
 }
 
 menubar.-vala-panel-appmenu-private > menuitem {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.68);
 }
 
 menubar.-vala-panel-appmenu-private > menuitem:hover {
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 menubar.-vala-panel-appmenu-private > menuitem:disabled {
@@ -7928,7 +7927,7 @@ menubar.-vala-panel-appmenu-private > menuitem > window.background.popup > menu 
  ************************/
 #panel_window {
   background-color: rgba(59, 67, 66, 0.85);
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.68);
 }
 
 #panel_window menubar,
@@ -7945,11 +7944,11 @@ menubar.-vala-panel-appmenu-private > menuitem > window.background.popup > menu 
 }
 
 #panel_window menubar > menuitem {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.68);
 }
 
 #panel_window menubar > menuitem:hover {
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 #panel_window menubar > menuitem:disabled label {
