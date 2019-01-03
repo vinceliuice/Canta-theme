@@ -2390,7 +2390,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   border: none;
   color: inherit;
   background-color: #FAFAFA;
-  box-shadow: 0 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px #cfcfcf;
 }
 
 .keyboard-key:focus, .keyboard-key:hover {
@@ -2415,7 +2415,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .keyboard-key.default-key, .keyboard-key.enter-key, .keyboard-key.shift-key-lowercase, .keyboard-key.shift-key-uppercase, .keyboard-key.hide-key, .keyboard-key.layout-key {
   background-color: #E0E0E0;
-  box-shadow: 0 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px #cfcfcf;
 }
 
 .keyboard-key.default-key:focus, .keyboard-key.default-key:hover, .keyboard-key.enter-key:focus, .keyboard-key.enter-key:hover, .keyboard-key.shift-key-lowercase:focus, .keyboard-key.shift-key-lowercase:hover, .keyboard-key.shift-key-uppercase:focus, .keyboard-key.shift-key-uppercase:hover, .keyboard-key.hide-key:focus, .keyboard-key.hide-key:hover, .keyboard-key.layout-key:focus, .keyboard-key.layout-key:hover {

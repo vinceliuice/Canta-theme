@@ -99,7 +99,7 @@ $error_bg_color:    $red_400;
 
 $border_color:             if($variant == 'light', rgba($black, 0.08), rgba($white, 0.08));
 $solid_border_color:       if($variant =='light', darken($bg_color, 8%), lighten($bg_color, 8%));
-$alt_border_color:         rgba($black, 0.2); // for non-native GTK+ apps (e.g. Firefox and Chrome)
+$alt_border_color:         if($variant =='light', darken($bg_color, 15%), darken($bg_color, 5%)); // for non-native GTK+ apps (e.g. Firefox and Chrome)
 $highlight_color:          if($variant == 'light', rgba($white, 0.4),  rgba($white, 0.1));
 $titlebar_highlight_color: if($titlebar == 'dark', rgba($white, 0.1),  rgba($white, 0.4));
 $alt_highlight_color:      rgba($white, 0.2); // for selection-mode headerbar which colored with $primary_color

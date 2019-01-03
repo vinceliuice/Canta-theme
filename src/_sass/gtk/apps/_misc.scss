@@ -9,7 +9,6 @@ overlay > revealer {
   }
 
   &.left > scrolledwindow.frame { margin-right: 32px; }
-
   &.right > scrolledwindow.frame { margin-left: 32px; }
 }
 
@@ -77,7 +76,6 @@ window.background:not(.csd) {
 
     // use 16px assets for hard-coded sizing
     > checkbutton > check { @extend %small_check; }
-
     > radiobutton > radio { @extend %small_radio; }
 
     // make check/radio visible regardless of whether the background is bright or dark
@@ -122,13 +120,12 @@ window.background:not(.csd) {
     }
   }
 
-  > window.background > menu > separator { color: $border_color; }
+  > window.background > menu > separator { color: $solid_border_color; }
 }
 
 //
 // Firefox Quantum
 //
-
 #MozillaGtkWidget.background {
   &, decoration { border-radius: 2px 2px 0 0; } // enforce radius
 

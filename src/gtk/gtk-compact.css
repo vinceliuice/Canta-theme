@@ -5887,7 +5887,7 @@ tooltip.chromium {
  * Firefox *
  ***********/
 window.background:not(.csd) > widget > separator {
-  color: rgba(0, 0, 0, 0.2);
+  color: #cfcfcf;
 }
 
 window.background:not(.csd) > widget > scrollbar {
@@ -5896,12 +5896,12 @@ window.background:not(.csd) > widget > scrollbar {
 
 window.background:not(.csd) > widget > scrollbar,
 window.background:not(.csd) > widget > frame > border {
-  border-color: rgba(0, 0, 0, 0.2);
+  border-color: #cfcfcf;
 }
 
 window.background:not(.csd) > widget > entry,
 window.background:not(.csd) > widget > button > button {
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid #cfcfcf;
   border-radius: 7px;
   box-shadow: none;
 }
@@ -5966,7 +5966,7 @@ window.background:not(.csd) > widget > menubar:disabled {
 }
 
 window.background:not(.csd) > widget > frame {
-  color: rgba(0, 0, 0, 0.2);
+  color: #cfcfcf;
 }
 
 window.background:not(.csd) > widget > checkbutton > check,
@@ -5976,7 +5976,7 @@ window.background:not(.csd) > widget > radiobutton > radio {
 }
 
 window.background:not(.csd) > window.background > menu > separator {
-  color: rgba(0, 0, 0, 0.08);
+  color: #e1e1e1;
 }
 
 #MozillaGtkWidget.background, #MozillaGtkWidget.background decoration {
