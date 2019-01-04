@@ -2483,16 +2483,6 @@ notebook > header tab button.flat {
   margin: 0;
 }
 
-notebook > header tab button.flat:last-child {
-  margin-left: 4px;
-  margin-right: -8px;
-}
-
-notebook > header tab button.flat:first-child {
-  margin-left: -8px;
-  margin-right: 4px;
-}
-
 notebook > header.top tabs, notebook > header.bottom tabs {
   padding-left: 8px;
   padding-right: 8px;

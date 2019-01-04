@@ -1550,7 +1550,6 @@ treeview.view {
   acceleditor > label { background-color: $primary_color; } // see tests/testaccel to test
 }
 
-
 /*********
  * Menus *
  *********/
@@ -1773,9 +1772,7 @@ notebook {
       > tabs {
         margin-bottom: -1px;
         > tab {
-
           &:hover { box-shadow: inset 0 -2px $track_color; }
-
           &:checked { box-shadow: inset 0 -2px $primary_color; }
         }
       }
@@ -1786,9 +1783,7 @@ notebook {
       > tabs {
         margin-top: -1px;
         > tab {
-
           &:hover { box-shadow: inset 0 2px $track_color; }
-
           &:checked { box-shadow: inset 0 2px $primary_color; }
         }
       }
@@ -1799,9 +1794,7 @@ notebook {
       > tabs {
         margin-right: -1px;
         > tab {
-
           &:hover { box-shadow: inset -2px 0 $track_color; }
-
           &:checked { box-shadow: inset -2px 0 $primary_color; }
         }
       }
@@ -1812,9 +1805,7 @@ notebook {
       > tabs {
         margin-left: -1px;
         > tab {
-
           &:hover { box-shadow: inset 2px 0 $track_color; }
-
           &:checked { box-shadow: inset 2px 0 $primary_color; }
         }
       }
@@ -1942,15 +1933,15 @@ notebook {
         padding: 0;
         margin: 0;
 
-        &:last-child {
-          margin-left: $container_padding;
-          margin-right: $container_padding - 12px;
-        }
-
-        &:first-child {
-          margin-left: $container_padding - 12px;
-          margin-right: $container_padding;
-        }
+        // &:last-child {
+        //   margin-left: $container_padding;
+        //   margin-right: $container_padding - 12px;
+        // }
+        //
+        // &:first-child {
+        //   margin-left: $container_padding - 12px;
+        //   margin-right: $container_padding;
+        // }
       }
     }
 
