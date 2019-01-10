@@ -1699,18 +1699,19 @@ menuitem {
 /************
  * Popovers *
  ************/
+popover,
 popover.background {
   transition: $shadow_transition;
   padding: 2px;
-  box-shadow: $shadow_2; // TODO: this should really have a highlight
   background-color: rgba($menu_bg_color, 0.96);
 
   &:backdrop { box-shadow: $shadow_1; }
 
   &, .csd & {
-//    border-style: solid;
-//    border-width: 1px;
-//    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.3);
+    // border-style: solid;
+    // border-width: 1px;
+    // border-color: $border_color;
+    box-shadow: $shadow_2; // TODO: this should really have a highlight
     border-radius: $buttons_radius + 1px;
   }
 

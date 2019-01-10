@@ -34,7 +34,35 @@ window.background > box.vertical > scrolledwindow > widget toolbar {
 /************
  * Chromium *
  ************/
-tooltip.chromium { background-color: $base_color; }
+window.background.chromium {
+  background-color: if($variant == 'light', $bg_color, $menu_bg_color);
+
+  // FIXME: no way to change the toolbar button colors only
+  // toolbar button { color: $secondary_fg_color; }
+
+  // toolbar's border-bottom refers to button's border
+  entry,
+  > button:not(.suggested-action):not(.destructive-action) { border: 1px solid $alt_border_color; }
+
+  > button {
+    box-shadow: none;
+    background-size: auto;
+
+    &:hover { background-image: image($divider_color); }
+
+    &:active { background-image: image($track_color); }
+  }
+
+  // workaround for headerbar's non-animatable buttons
+  headerbar button:active { background-size: 1000% 1000%; }
+
+  spinner { color: $primary_color; }
+
+  // entry uses this as well
+  textview { background-color: $menu_bg_color; }
+}
+
+tooltip.background.chromium { background-color: rgba($base_color, 1); }
 
 
 /***********
@@ -88,9 +116,10 @@ window.background:not(.csd) {
     }
   }
 
-  .menu { // context-menus
+  > menu,
+  > menu > menu {
+    // border: none;
     border-radius: 0;
-    border: none;
   }
 
   // remove ugly border around the menus
