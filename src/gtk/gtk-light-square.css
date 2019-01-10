@@ -6172,7 +6172,7 @@ box.vertical > widget > widget:selected {
 }
 
 .xfce4-panel button.flat, .xfce4-panel button {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(0, 0, 0, 0.62);
   border-radius: 0;
   border: none;
   box-shadow: none;
@@ -6180,12 +6180,12 @@ box.vertical > widget > widget:selected {
 }
 
 .xfce4-panel button:hover:not(:active):not(:checked) {
-  color: #FFFFFF;
+  color: rgba(0, 0, 0, 0.75);
   box-shadow: inset 0 -2px rgba(255, 172, 0, 0.5);
 }
 
 .xfce4-panel button:checked, .xfce4-panel button:active {
-  color: #FFFFFF;
+  color: rgba(0, 0, 0, 0.75);
   box-shadow: inset 0 -2px #FFAC00;
 }
 
