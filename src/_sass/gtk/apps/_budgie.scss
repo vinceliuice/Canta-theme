@@ -377,10 +377,10 @@ popover.background.places-menu {
 
   .bottom & {
     border-radius: $windows_radius $windows_radius 0 0;
+  }
 
-    &.dock-mode {
-      border-radius: 0 0 0 0;
-    }
+  .bottom &.dock-mode {
+    border-radius: 0 0 0 0;
   }
 
   button {
@@ -431,7 +431,7 @@ popover.background.places-menu {
   #tasklist-button {
     padding: 0 4px;
     @extend %underscores;
-//    &:hover { @extend %budgie_flat_button:hover; }
+    // &:hover { @extend %budgie_flat_button:hover; }
   }
 
   &.vertical #tasklist-button { min-height: 32px; }
@@ -494,9 +494,11 @@ popover.background.places-menu {
       -gtk-icon-effect: highlight;
       > image { opacity: 1.0; }
     }
+
     &:active {
       > image { opacity: 1.0; }
     }
+
     &:checked {
       background-color: transparent;
       &:hover { -gtk-icon-effect: highlight; }
@@ -577,16 +579,16 @@ frame.raven-frame > border {
   box-shadow: none;
 }
 
-$pos_list: ((top, bottom), (bottom, top), (left, right), (right, left));
+$pos_list: ((top, bottom), (left, right), (right, left));
 
 @each $pos, $b_pos in $pos_list {
   // Panel borders
   // .#{$pos} .budgie-panel { border-#{$b_pos}: 1px solid $border_color; }
 
   // Raven borders
-  .#{$pos} frame.raven-frame > border {
-    // border-#{$b_pos}: 1px solid $border_color;
-  }
+  // .#{$pos} frame.raven-frame > border {
+  //   border-#{$b_pos}: 1px solid $border_color;
+  // }
 
   // Shadows
    .#{$pos} .shadow-block { background-image: linear-gradient(to $b_pos, rgba(black, 0.23), rgba(black, 0.08), transparent); }

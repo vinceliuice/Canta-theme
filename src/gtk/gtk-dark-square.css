@@ -1302,6 +1302,7 @@ headerbar .linked:not(.vertical) > entry:not(.flat) {
 .titlebar:not(headerbar) .linked:not(.vertical) > button.popup,
 headerbar .linked:not(.vertical) > button.popup {
   border-radius: 9999px;
+  -gtk-outline-radius: 9999px;
 }
 
 .titlebar:not(headerbar) button:not(.suggested-action):not(.destructive-action),
@@ -7472,10 +7473,6 @@ frame.raven-frame > border {
 
 .top .shadow-block {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.08), transparent);
-}
-
-.bottom .shadow-block {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.08), transparent);
 }
 
 .left .shadow-block {

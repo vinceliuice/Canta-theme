@@ -1077,7 +1077,10 @@ headerbar {
 
   // Reset headerbar linked rules
   .linked:not(.vertical) > entry:not(.flat) { border-radius: $buttons_radius; }
-  .linked:not(.vertical) > button.popup { border-radius: $circular_radius; }
+  .linked:not(.vertical) > button.popup {
+    border-radius: $circular_radius;
+    -gtk-outline-radius: $circular_radius;
+  }
 
   button:not(.suggested-action):not(.destructive-action) {
     @extend %button_basic.flat;
