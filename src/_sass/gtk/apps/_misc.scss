@@ -3,33 +3,14 @@
 //
 .nemo-window {
   .nemo-places-sidebar {
-    background-color: $lighter_bg_color;
+    background-color: $bg_color;
 
     &.frame { border-width: 0; }
-    // .places-treeview { @extend row.activatable; }
-  }
 
-  notebook {
-    background-color: $base_color;
+    .places-treeview {
+      // @extend row.activatable;
 
-    .primary-toolbar {
-      background-color: $bg_color;
-
-      button,
-      combobox > .linked > button.combo {
-        @include button(normal);
-        &:hover { @include button(hover); }
-        &:active { @include button(active); }
-        &:disabled { @include button(disabled); }
-        &:checked { @include button(checked); }
-        &:checked:disabled { @include button(checked-disabled); }
-      }
-
-      entry {
-        @include entry(normal);
-        &:focus { @include entry(focus); }
-        &:disabled { @include entry(disabled); }
-      }
+      &:not(:hover):not(:selected) { background-color: transparent; }
     }
   }
 
@@ -47,9 +28,9 @@
     }
   }
 
-  .primary-toolbar {
+  toolbar.primary-toolbar {
     transition: background-color $shorter_duration $deceleration_curve, color $longer_duration $deceleration_curve;
-    padding: $container_padding;
+    padding: 0 10px;
     box-shadow: $shadow_6;
     background-color: $titlebar_bg_color;
     color: $titlebar_fg_color;
@@ -59,16 +40,28 @@
       color: $titlebar_secondary_fg_color;
     }
 
-    button:not(.suggested-action):not(.destructive-action) {
+    > toolitem > box.raised > button,
+    > toolitem > box.linked.raised > button {
       @extend %header_button;
-      min-width: $medium_size - 4px;
+      min-height: $medium_size;
+      min-width: $medium_size;
+      margin: 4px 2px;
+      padding: 0 0;
     }
 
-    .linked:not(.vertical).path-bar {
-      > button {
-        margin-top: $container_padding;
-        margin-bottom: $container_padding;
-        @extend %header_pathbar_button;
+    .linked.path-bar > button {
+      @extend %header_pathbar_button;
+      min-height: 0;
+      margin: 4px 0;
+      padding: 0 10px;
+
+      &:first-child, &:last-child {
+        padding: 0 6px;
+      }
+
+      image, label {
+        padding-left: 0;
+        padding-right: 0;
       }
     }
   }
@@ -76,6 +69,8 @@
   .sidebar {
     scrolledwindow.frame { border: none; } // Removed treeview double borders
   }
+
+  .toolbar button { @extend %button_basic.flat; }
 }
 
 /*********

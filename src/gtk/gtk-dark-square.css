@@ -594,8 +594,8 @@ popover.background.menu button,
 popover.background button.model, notebook > header > tabs > arrow, scrollbar button, check,
 radio, calendar.button, messagedialog .dialog-action-area button, messagedialog.csd .dialog-action-area button, button.sidebar-button, .gedit-search-slider button, popover.messagepopover .popover-action-area button, #mate-menu button, .budgie-settings-window buttonbox.inline-toolbar button, .budgie-popover button, .raven .raven-header:not(.top) button, .drop-shadow button, .budgie-polkit-dialog .linked.horizontal > button,
 .budgie-session-dialog .linked.horizontal > button, .lightdm-gtk-greeter button, :not(headerbar) .caja-pathbar button, .caja-pathbar :not(headerbar) button, :not(headerbar) .path-bar button, layouttabbar button, .mate-panel-menu-bar button, PanelToplevel.horizontal > grid > button, .budgie-panel button, .raven stackswitcher.linked > button, toolbar button, .titlebar:not(headerbar) button:not(.suggested-action):not(.destructive-action),
-headerbar button:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:not(.suggested-action):not(.destructive-action), popover button:not(.suggested-action):not(.destructive-action),
-popover.background button:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button,
+headerbar button:not(.suggested-action):not(.destructive-action), popover button:not(.suggested-action):not(.destructive-action),
+popover.background button:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button, .nemo-window .toolbar button,
 button.flat {
   transition: all 150ms cubic-bezier(0, 0, 0.2, 1), background-size 300ms cubic-bezier(0, 0, 0.2, 1), background-image 600ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: inset 0 0 0 9999px transparent;
@@ -612,7 +612,7 @@ modelbutton.flat:hover,
 popover button.model:hover, notebook > header > tabs > arrow:hover, scrollbar button:hover, check:hover,
 radio:hover, calendar.button:hover, messagedialog .dialog-action-area button:hover, button.sidebar-button:hover, .gedit-search-slider button:hover, popover.messagepopover .popover-action-area button:hover, #mate-menu button:hover, .budgie-settings-window buttonbox.inline-toolbar button:hover, .budgie-popover button:hover, .raven .raven-header:not(.top) button:hover, .drop-shadow button:hover, .budgie-polkit-dialog .linked.horizontal > button:hover,
 .budgie-session-dialog .linked.horizontal > button:hover, .lightdm-gtk-greeter button:hover, :not(headerbar) .caja-pathbar button:hover, .caja-pathbar :not(headerbar) button:hover, :not(headerbar) .path-bar button:hover, layouttabbar button:hover, .mate-panel-menu-bar button:hover, PanelToplevel.horizontal > grid > button:hover, .budgie-panel button:hover, .raven stackswitcher.linked > button:hover, toolbar button:hover, .titlebar:not(headerbar) button:hover:not(.suggested-action):not(.destructive-action),
-headerbar button:hover:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:hover:not(.suggested-action):not(.destructive-action), popover button:hover:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:hover:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:hover,
+headerbar button:hover:not(.suggested-action):not(.destructive-action), popover button:hover:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:hover:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:hover, .nemo-window .toolbar button:hover,
 button.flat:hover {
   box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.15);
   color: #FFFFFF;
@@ -623,7 +623,7 @@ modelbutton.flat:active,
 popover button.model:active, notebook > header > tabs > arrow:active, scrollbar button:active, check:active,
 radio:active, calendar.button:active, messagedialog .dialog-action-area button:active, button.sidebar-button:active, .gedit-search-slider button:active, popover.messagepopover .popover-action-area button:active, #mate-menu button:active, .budgie-settings-window buttonbox.inline-toolbar button:active, .budgie-popover button:active, .raven .raven-header:not(.top) button:active, .drop-shadow button:active, .budgie-polkit-dialog .linked.horizontal > button:active,
 .budgie-session-dialog .linked.horizontal > button:active, .lightdm-gtk-greeter button:active, :not(headerbar) .caja-pathbar button:active, .caja-pathbar :not(headerbar) button:active, :not(headerbar) .path-bar button:active, layouttabbar button:active, .mate-panel-menu-bar button:active, PanelToplevel.horizontal > grid > button:active, .budgie-panel button:active, .raven stackswitcher.linked > button:active, toolbar button:active, .titlebar:not(headerbar) button:active:not(.suggested-action):not(.destructive-action),
-headerbar button:active:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:active:not(.suggested-action):not(.destructive-action), popover button:active:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:active:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:active,
+headerbar button:active:not(.suggested-action):not(.destructive-action), popover button:active:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:active:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:active, .nemo-window .toolbar button:active,
 button.flat:active {
   transition: all 150ms cubic-bezier(0, 0, 0.2, 1), background-size 0, background-image 0;
   animation: ripple_effect 150ms cubic-bezier(0, 0, 0.2, 1) forwards;
@@ -638,7 +638,7 @@ modelbutton.flat:disabled,
 popover button.model:disabled, notebook > header > tabs > arrow:disabled, scrollbar button:disabled, check:disabled,
 radio:disabled, calendar.button:disabled, messagedialog .dialog-action-area button:disabled, button.sidebar-button:disabled, .gedit-search-slider button:disabled, popover.messagepopover .popover-action-area button:disabled, #mate-menu button:disabled, .budgie-settings-window buttonbox.inline-toolbar button:disabled, .budgie-popover button:disabled, .raven .raven-header:not(.top) button:disabled, .drop-shadow button:disabled, .budgie-polkit-dialog .linked.horizontal > button:disabled,
 .budgie-session-dialog .linked.horizontal > button:disabled, .lightdm-gtk-greeter button:disabled, :not(headerbar) .caja-pathbar button:disabled, .caja-pathbar :not(headerbar) button:disabled, :not(headerbar) .path-bar button:disabled, layouttabbar button:disabled, .mate-panel-menu-bar button:disabled, PanelToplevel.horizontal > grid > button:disabled, .budgie-panel button:disabled, .raven stackswitcher.linked > button:disabled, toolbar button:disabled, .titlebar:not(headerbar) button:disabled:not(.suggested-action):not(.destructive-action),
-headerbar button:disabled:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:disabled:not(.suggested-action):not(.destructive-action), popover button:disabled:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:disabled:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:disabled,
+headerbar button:disabled:not(.suggested-action):not(.destructive-action), popover button:disabled:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:disabled:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:disabled, .nemo-window .toolbar button:disabled,
 button.flat:disabled {
   box-shadow: none;
   background-color: transparent;
@@ -646,14 +646,14 @@ button.flat:disabled {
 }
 
 :not(headerbar) .caja-pathbar button:checked, .caja-pathbar :not(headerbar) button:checked, :not(headerbar) .path-bar button:checked, layouttabbar button:checked, .mate-panel-menu-bar button:checked, PanelToplevel.horizontal > grid > button:checked, .budgie-panel button:checked, .raven stackswitcher.linked > button:checked, toolbar button:checked, .titlebar:not(headerbar) button:checked:not(.suggested-action):not(.destructive-action),
-headerbar button:checked:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:checked:not(.suggested-action):not(.destructive-action), popover button:checked:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:checked:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:checked,
+headerbar button:checked:not(.suggested-action):not(.destructive-action), popover button:checked:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:checked:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:checked, .nemo-window .toolbar button:checked,
 button.flat:checked {
   background-color: rgba(255, 255, 255, 0.3);
   color: #FFFFFF;
 }
 
 :not(headerbar) .caja-pathbar button:checked:disabled, .caja-pathbar :not(headerbar) button:checked:disabled, :not(headerbar) .path-bar button:checked:disabled, layouttabbar button:checked:disabled, .mate-panel-menu-bar button:checked:disabled, PanelToplevel.horizontal > grid > button:checked:disabled, .budgie-panel button:checked:disabled, .raven stackswitcher.linked > button:checked:disabled, toolbar button:checked:disabled, .titlebar:not(headerbar) button:checked:disabled:not(.suggested-action):not(.destructive-action),
-headerbar button:checked:disabled:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:checked:disabled:not(.suggested-action):not(.destructive-action), popover button:checked:disabled:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:checked:disabled:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:checked:disabled,
+headerbar button:checked:disabled:not(.suggested-action):not(.destructive-action), popover button:checked:disabled:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:checked:disabled:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:checked:disabled, .nemo-window .toolbar button:checked:disabled,
 button.flat:checked:disabled {
   background-color: rgba(255, 255, 255, 0.12);
   color: rgba(255, 255, 255, 0.5);
@@ -687,14 +687,14 @@ button.text-button.image-button image:not(:only-child) {
 }
 
 toolbar .linked > button, .titlebar:not(headerbar) .linked > button:not(.suggested-action):not(.destructive-action),
-headerbar .linked > button:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar .linked > button:not(.suggested-action):not(.destructive-action), popover .linked > button:not(.suggested-action):not(.destructive-action), actionbar > revealer > box .linked > button:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification .linked > button,
+headerbar .linked > button:not(.suggested-action):not(.destructive-action), popover .linked > button:not(.suggested-action):not(.destructive-action), actionbar > revealer > box .linked > button:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification .linked > button, .nemo-window .toolbar .linked > button,
 toolbar .linked.vertical > button,
 .titlebar:not(headerbar) .linked.vertical > button:not(.suggested-action):not(.destructive-action),
 headerbar .linked.vertical > button:not(.suggested-action):not(.destructive-action),
-.nemo-window .primary-toolbar .linked.vertical > button:not(.suggested-action):not(.destructive-action),
 popover .linked.vertical > button:not(.suggested-action):not(.destructive-action),
 actionbar > revealer > box .linked.vertical > button:not(.suggested-action):not(.destructive-action):not(.server-list-button),
-.app-notification .linked.vertical > button, .linked >
+.app-notification .linked.vertical > button,
+.nemo-window .toolbar .linked.vertical > button, .linked >
 button.flat,
 .linked.vertical >
 button.flat {
@@ -702,14 +702,14 @@ button.flat {
 }
 
 toolbar .linked > button.text-button.image-button, .titlebar:not(headerbar) .linked > button.text-button.image-button:not(.suggested-action):not(.destructive-action),
-headerbar .linked > button.text-button.image-button:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar .linked > button.text-button.image-button:not(.suggested-action):not(.destructive-action), popover .linked > button.text-button.image-button:not(.suggested-action):not(.destructive-action), actionbar > revealer > box .linked > button.text-button.image-button:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification .linked > button.text-button.image-button,
+headerbar .linked > button.text-button.image-button:not(.suggested-action):not(.destructive-action), popover .linked > button.text-button.image-button:not(.suggested-action):not(.destructive-action), actionbar > revealer > box .linked > button.text-button.image-button:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification .linked > button.text-button.image-button, .nemo-window .toolbar .linked > button.text-button.image-button,
 toolbar .linked.vertical > button.text-button.image-button,
 .titlebar:not(headerbar) .linked.vertical > button.text-button.image-button:not(.suggested-action):not(.destructive-action),
 headerbar .linked.vertical > button.text-button.image-button:not(.suggested-action):not(.destructive-action),
-.nemo-window .primary-toolbar .linked.vertical > button.text-button.image-button:not(.suggested-action):not(.destructive-action),
 popover .linked.vertical > button.text-button.image-button:not(.suggested-action):not(.destructive-action),
 actionbar > revealer > box .linked.vertical > button.text-button.image-button:not(.suggested-action):not(.destructive-action):not(.server-list-button),
-.app-notification .linked.vertical > button.text-button.image-button, .linked >
+.app-notification .linked.vertical > button.text-button.image-button,
+.nemo-window .toolbar .linked.vertical > button.text-button.image-button, .linked >
 button.flat.text-button.image-button,
 .linked.vertical >
 button.flat.text-button.image-button {
@@ -884,8 +884,8 @@ button {
 
 
 button.image-button, toolbar .linked > button.image-button, .titlebar:not(headerbar) .linked > button.image-button:not(.suggested-action):not(.destructive-action),
-headerbar .linked > button.image-button:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar .linked > button.image-button:not(.suggested-action):not(.destructive-action), popover .linked > button.image-button:not(.suggested-action):not(.destructive-action), actionbar > revealer > box .linked > button.image-button:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification .linked > button.image-button, toolbar .linked.vertical > button.image-button,
-headerbar .linked.vertical > button.image-button:not(.suggested-action):not(.destructive-action), popover .linked.vertical > button.image-button:not(.suggested-action):not(.destructive-action), .app-notification .linked.vertical > button.image-button, .linked > button.flat.image-button,
+headerbar .linked > button.image-button:not(.suggested-action):not(.destructive-action), popover .linked > button.image-button:not(.suggested-action):not(.destructive-action), actionbar > revealer > box .linked > button.image-button:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification .linked > button.image-button, .nemo-window .toolbar .linked > button.image-button, toolbar .linked.vertical > button.image-button,
+headerbar .linked.vertical > button.image-button:not(.suggested-action):not(.destructive-action), popover .linked.vertical > button.image-button:not(.suggested-action):not(.destructive-action), .app-notification .linked.vertical > button.image-button, .nemo-window .toolbar .linked.vertical > button.image-button, .linked > button.flat.image-button,
 .linked.vertical > button.flat.image-button, .inline-toolbar button:not(.text-button), check,
 radio, #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton, headerbar button.titlebutton, .csd headerbar button.titlebutton, headerbar.default-decoration button.titlebutton,
 .csd headerbar.default-decoration button.titlebutton,
@@ -1250,97 +1250,75 @@ actionbar {
  * Header bars *
  ***************/
 .titlebar:not(headerbar) button:not(.suggested-action):not(.destructive-action),
-headerbar button:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:not(.suggested-action):not(.destructive-action) {
+headerbar button:not(.suggested-action):not(.destructive-action), .nemo-window toolbar.primary-toolbar > toolitem > box.raised > button,
+.nemo-window toolbar.primary-toolbar > toolitem > box.linked.raised > button {
   border-image: none;
   color: rgba(255, 255, 255, 0.7);
 }
 
 .titlebar:not(headerbar) button:hover:not(.suggested-action):not(.destructive-action),
-headerbar button:hover:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:hover:not(.suggested-action):not(.destructive-action), .titlebar:not(headerbar) button:active:not(.suggested-action):not(.destructive-action),
-headerbar button:active:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:active:not(.suggested-action):not(.destructive-action) {
+headerbar button:hover:not(.suggested-action):not(.destructive-action), .nemo-window toolbar.primary-toolbar > toolitem > box.raised > button:hover, .titlebar:not(headerbar) button:active:not(.suggested-action):not(.destructive-action),
+headerbar button:active:not(.suggested-action):not(.destructive-action), .nemo-window toolbar.primary-toolbar > toolitem > box.raised > button:active {
   color: #FFFFFF;
 }
 
 .titlebar:not(headerbar) button:disabled:not(.suggested-action):not(.destructive-action),
-headerbar button:disabled:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:disabled:not(.suggested-action):not(.destructive-action) {
+headerbar button:disabled:not(.suggested-action):not(.destructive-action), .nemo-window toolbar.primary-toolbar > toolitem > box.raised > button:disabled {
   color: rgba(255, 255, 255, 0.3);
 }
 
 .titlebar:not(headerbar) button:checked:not(.suggested-action):not(.destructive-action),
-headerbar button:checked:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:checked:not(.suggested-action):not(.destructive-action) {
+headerbar button:checked:not(.suggested-action):not(.destructive-action), .nemo-window toolbar.primary-toolbar > toolitem > box.raised > button:checked {
   border-image: none;
   background-color: #00CE99;
   color: #FFFFFF;
 }
 
 .titlebar:not(headerbar) button:checked:disabled:not(.suggested-action):not(.destructive-action),
-headerbar button:checked:disabled:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:checked:disabled:not(.suggested-action):not(.destructive-action) {
+headerbar button:checked:disabled:not(.suggested-action):not(.destructive-action), .nemo-window toolbar.primary-toolbar > toolitem > box.raised > button:checked:disabled {
   color: rgba(255, 255, 255, 0.5);
   background-color: rgba(0, 206, 153, 0.5);
 }
 
 .titlebar:not(headerbar) button:backdrop:not(.suggested-action):not(.destructive-action),
-headerbar button:backdrop:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:backdrop:not(.suggested-action):not(.destructive-action) {
+headerbar button:backdrop:not(.suggested-action):not(.destructive-action), .nemo-window toolbar.primary-toolbar > toolitem > box.raised > button:backdrop {
   color: rgba(255, 255, 255, 0.5);
 }
 
 .titlebar:not(headerbar) button:backdrop:hover:not(.suggested-action):not(.destructive-action),
-headerbar button:backdrop:hover:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:backdrop:hover:not(.suggested-action):not(.destructive-action), .titlebar:not(headerbar) button:backdrop:active:not(.suggested-action):not(.destructive-action),
-headerbar button:backdrop:active:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:backdrop:active:not(.suggested-action):not(.destructive-action) {
+headerbar button:backdrop:hover:not(.suggested-action):not(.destructive-action), .nemo-window toolbar.primary-toolbar > toolitem > box.raised > button:backdrop:hover, .titlebar:not(headerbar) button:backdrop:active:not(.suggested-action):not(.destructive-action),
+headerbar button:backdrop:active:not(.suggested-action):not(.destructive-action), .nemo-window toolbar.primary-toolbar > toolitem > box.raised > button:backdrop:active {
   color: rgba(255, 255, 255, 0.7);
 }
 
 .titlebar:not(headerbar) button:backdrop:disabled:not(.suggested-action):not(.destructive-action),
-headerbar button:backdrop:disabled:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:backdrop:disabled:not(.suggested-action):not(.destructive-action) {
+headerbar button:backdrop:disabled:not(.suggested-action):not(.destructive-action), .nemo-window toolbar.primary-toolbar > toolitem > box.raised > button:backdrop:disabled {
   color: rgba(255, 255, 255, 0.3);
 }
 
 .titlebar:not(headerbar) button:backdrop:checked:not(.suggested-action):not(.destructive-action),
-headerbar button:backdrop:checked:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:backdrop:checked:not(.suggested-action):not(.destructive-action) {
+headerbar button:backdrop:checked:not(.suggested-action):not(.destructive-action), .nemo-window toolbar.primary-toolbar > toolitem > box.raised > button:backdrop:checked {
   color: rgba(255, 255, 255, 0.7);
 }
 
 .titlebar:not(headerbar) button:backdrop:checked:disabled:not(.suggested-action):not(.destructive-action),
-headerbar button:backdrop:checked:disabled:not(.suggested-action):not(.destructive-action), .nemo-window .primary-toolbar button:backdrop:checked:disabled:not(.suggested-action):not(.destructive-action) {
+headerbar button:backdrop:checked:disabled:not(.suggested-action):not(.destructive-action), .nemo-window toolbar.primary-toolbar > toolitem > box.raised > button:backdrop:checked:disabled {
   color: rgba(255, 255, 255, 0.3);
 }
 
 .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button,
 headerbar .linked:not(.vertical).path-bar > button,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button {
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.titlebar:not(headerbar) .linked:not(.vertical).path-bar > button label, .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button label, headerbar .linked:not(.vertical).path-bar > button label, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button label, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button label {
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button label, .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button label, headerbar .linked:not(.vertical).path-bar > button.text-button.image-button label, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button label, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.text-button.image-button label {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button image, .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button image, headerbar .linked:not(.vertical).path-bar > button.text-button.image-button image, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button image, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.text-button.image-button image {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.titlebar:not(headerbar) .linked:not(.vertical).path-bar > button,
-.titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button,
-headerbar .linked:not(.vertical).path-bar > button,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button, .nemo-window toolbar.primary-toolbar .linked.path-bar > button, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button,
 headerbar .linked:not(.vertical).path-bar > button.text-button,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.text-button, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.image-button,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.text-button, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.image-button,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button,
 headerbar .linked:not(.vertical).path-bar > button.image-button,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.image-button, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.image-button, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button,
 headerbar .linked:not(.vertical).path-bar > button.text-button.image-button,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.text-button.image-button {
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.text-button.image-button {
   border-radius: 0;
   background-color: #00CE99;
   color: #FFFFFF;
@@ -1353,16 +1331,16 @@ headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-but
 .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:hover,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover,
 headerbar .linked:not(.vertical).path-bar > button:hover,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button:hover, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button:hover,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover, .nemo-window toolbar.primary-toolbar .linked.path-bar > button:hover, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button:hover,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:hover,
 headerbar .linked:not(.vertical).path-bar > button.text-button:hover,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:hover, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.text-button:hover, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.image-button:hover,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:hover, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.text-button:hover, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.image-button:hover,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:hover,
 headerbar .linked:not(.vertical).path-bar > button.image-button:hover,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:hover, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.image-button:hover, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button:hover,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:hover, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.image-button:hover, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button:hover,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:hover,
 headerbar .linked:not(.vertical).path-bar > button.text-button.image-button:hover,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:hover, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.text-button.image-button:hover {
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:hover, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.text-button.image-button:hover {
   color: alpha(#FFFFFF, 0.75);
   background-color: #00CE99;
   transition: all 150ms cubic-bezier(0, 0, 0.2, 1);
@@ -1371,16 +1349,16 @@ headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-but
 .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:checked,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked,
 headerbar .linked:not(.vertical).path-bar > button:checked,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button:checked,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked, .nemo-window toolbar.primary-toolbar .linked.path-bar > button:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button:checked,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:checked,
 headerbar .linked:not(.vertical).path-bar > button.text-button:checked,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:checked, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.text-button:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.image-button:checked,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:checked, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.text-button:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.image-button:checked,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:checked,
 headerbar .linked:not(.vertical).path-bar > button.image-button:checked,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:checked, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.image-button:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button:checked,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:checked, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.image-button:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button:checked,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:checked,
 headerbar .linked:not(.vertical).path-bar > button.text-button.image-button:checked,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:checked, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.text-button.image-button:checked {
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:checked, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.text-button.image-button:checked {
   border-image-source: -gtk-scaled(url("assets/button-checked-square.png"), url("assets/button-checked-square@2.png"));
   border-image-width: 8px 16px 8px 16px;
   border-image-slice: 8 16 8 16;
@@ -1393,158 +1371,158 @@ headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-but
 .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:checked:hover,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked:hover,
 headerbar .linked:not(.vertical).path-bar > button:checked:hover,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked:hover, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button:checked:hover, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button:checked:hover,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked:hover, .nemo-window toolbar.primary-toolbar .linked.path-bar > button:checked:hover, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button:checked:hover,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:checked:hover,
 headerbar .linked:not(.vertical).path-bar > button.text-button:checked:hover,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:checked:hover, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.text-button:checked:hover, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.image-button:checked:hover,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:checked:hover, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.text-button:checked:hover, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.image-button:checked:hover,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:checked:hover,
 headerbar .linked:not(.vertical).path-bar > button.image-button:checked:hover,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:checked:hover, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.image-button:checked:hover, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button:checked:hover,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:checked:hover, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.image-button:checked:hover, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button:checked:hover,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:checked:hover,
 headerbar .linked:not(.vertical).path-bar > button.text-button.image-button:checked:hover,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:checked:hover, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.text-button.image-button:checked:hover {
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:checked:hover, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.text-button.image-button:checked:hover {
   color: #FFFFFF;
 }
 
 .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:checked:disabled,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked:disabled,
 headerbar .linked:not(.vertical).path-bar > button:checked:disabled,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked:disabled, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button:checked:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button:checked:disabled,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked:disabled, .nemo-window toolbar.primary-toolbar .linked.path-bar > button:checked:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button:checked:disabled,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:checked:disabled,
 headerbar .linked:not(.vertical).path-bar > button.text-button:checked:disabled,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:checked:disabled, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.text-button:checked:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.image-button:checked:disabled,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:checked:disabled, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.text-button:checked:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.image-button:checked:disabled,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:checked:disabled,
 headerbar .linked:not(.vertical).path-bar > button.image-button:checked:disabled,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:checked:disabled, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.image-button:checked:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button:checked:disabled,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:checked:disabled, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.image-button:checked:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button:checked:disabled,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:checked:disabled,
 headerbar .linked:not(.vertical).path-bar > button.text-button.image-button:checked:disabled,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:checked:disabled, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.text-button.image-button:checked:disabled {
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:checked:disabled, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.text-button.image-button:checked:disabled {
   color: rgba(255, 255, 255, 0.5);
 }
 
 .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:first-child:checked,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-child:checked,
 headerbar .linked:not(.vertical).path-bar > button:first-child:checked,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-child:checked, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button:first-child:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button:first-child:checked,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-child:checked, .nemo-window toolbar.primary-toolbar .linked.path-bar > button:first-child:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button:first-child:checked,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:first-child:checked,
 headerbar .linked:not(.vertical).path-bar > button.text-button:first-child:checked,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:first-child:checked, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.text-button:first-child:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.image-button:first-child:checked,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:first-child:checked, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.text-button:first-child:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.image-button:first-child:checked,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:first-child:checked,
 headerbar .linked:not(.vertical).path-bar > button.image-button:first-child:checked,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:first-child:checked, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.image-button:first-child:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button:first-child:checked,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:first-child:checked, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.image-button:first-child:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button:first-child:checked,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:first-child:checked,
 headerbar .linked:not(.vertical).path-bar > button.text-button.image-button:first-child:checked,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:first-child:checked, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.text-button.image-button:first-child:checked {
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:first-child:checked, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.text-button.image-button:first-child:checked {
   border-image-source: -gtk-scaled(url("assets/firstbutton-checked-square.png"), url("assets/firstbutton-checked-square@2.png"));
 }
 
 .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:last-child:checked,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:last-child:checked,
 headerbar .linked:not(.vertical).path-bar > button:last-child:checked,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:last-child:checked, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button:last-child:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button:last-child:checked,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:last-child:checked, .nemo-window toolbar.primary-toolbar .linked.path-bar > button:last-child:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button:last-child:checked,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:last-child:checked,
 headerbar .linked:not(.vertical).path-bar > button.text-button:last-child:checked,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:last-child:checked, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.text-button:last-child:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.image-button:last-child:checked,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:last-child:checked, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.text-button:last-child:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.image-button:last-child:checked,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:last-child:checked,
 headerbar .linked:not(.vertical).path-bar > button.image-button:last-child:checked,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:last-child:checked, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.image-button:last-child:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button:last-child:checked,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:last-child:checked, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.image-button:last-child:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button:last-child:checked,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:last-child:checked,
 headerbar .linked:not(.vertical).path-bar > button.text-button.image-button:last-child:checked,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:last-child:checked, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.text-button.image-button:last-child:checked {
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:last-child:checked, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.text-button.image-button:last-child:checked {
   border-image-source: -gtk-scaled(url("assets/lastbutton-checked-square.png"), url("assets/lastbutton-checked-square@2.png"));
 }
 
 .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:disabled,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:disabled,
 headerbar .linked:not(.vertical).path-bar > button:disabled,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:disabled, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button:disabled,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:disabled, .nemo-window toolbar.primary-toolbar .linked.path-bar > button:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button:disabled,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:disabled,
 headerbar .linked:not(.vertical).path-bar > button.text-button:disabled,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:disabled, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.text-button:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.image-button:disabled,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:disabled, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.text-button:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.image-button:disabled,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:disabled,
 headerbar .linked:not(.vertical).path-bar > button.image-button:disabled,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:disabled, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.image-button:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button:disabled,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:disabled, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.image-button:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button:disabled,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:disabled,
 headerbar .linked:not(.vertical).path-bar > button.text-button.image-button:disabled,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:disabled, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.text-button.image-button:disabled {
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:disabled, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.text-button.image-button:disabled {
   color: rgba(255, 255, 255, 0.5);
 }
 
 .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:backdrop,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:backdrop,
 headerbar .linked:not(.vertical).path-bar > button:backdrop,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:backdrop, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button:backdrop, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button:backdrop,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:backdrop, .nemo-window toolbar.primary-toolbar .linked.path-bar > button:backdrop, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button:backdrop,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:backdrop,
 headerbar .linked:not(.vertical).path-bar > button.text-button:backdrop,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:backdrop, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.text-button:backdrop, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.image-button:backdrop,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:backdrop, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.text-button:backdrop, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.image-button:backdrop,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:backdrop,
 headerbar .linked:not(.vertical).path-bar > button.image-button:backdrop,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:backdrop, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.image-button:backdrop, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button:backdrop,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:backdrop, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.image-button:backdrop, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button:backdrop,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:backdrop,
 headerbar .linked:not(.vertical).path-bar > button.text-button.image-button:backdrop,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:backdrop, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.text-button.image-button:backdrop {
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:backdrop, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.text-button.image-button:backdrop {
   color: rgba(255, 255, 255, 0.7);
 }
 
 .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:backdrop:disabled,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:backdrop:disabled,
 headerbar .linked:not(.vertical).path-bar > button:backdrop:disabled,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:backdrop:disabled, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button:backdrop:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button:backdrop:disabled,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:backdrop:disabled, .nemo-window toolbar.primary-toolbar .linked.path-bar > button:backdrop:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button:backdrop:disabled,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:backdrop:disabled,
 headerbar .linked:not(.vertical).path-bar > button.text-button:backdrop:disabled,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:backdrop:disabled, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.text-button:backdrop:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.image-button:backdrop:disabled,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:backdrop:disabled, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.text-button:backdrop:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.image-button:backdrop:disabled,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:backdrop:disabled,
 headerbar .linked:not(.vertical).path-bar > button.image-button:backdrop:disabled,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:backdrop:disabled, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.image-button:backdrop:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button:backdrop:disabled,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:backdrop:disabled, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.image-button:backdrop:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button:backdrop:disabled,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:backdrop:disabled,
 headerbar .linked:not(.vertical).path-bar > button.text-button.image-button:backdrop:disabled,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:backdrop:disabled, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.text-button.image-button:backdrop:disabled {
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:backdrop:disabled, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.text-button.image-button:backdrop:disabled {
   color: rgba(255, 255, 255, 0.3);
 }
 
 .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:backdrop:checked,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:backdrop:checked,
 headerbar .linked:not(.vertical).path-bar > button:backdrop:checked,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:backdrop:checked, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button:backdrop:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button:backdrop:checked,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:backdrop:checked, .nemo-window toolbar.primary-toolbar .linked.path-bar > button:backdrop:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button:backdrop:checked,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:backdrop:checked,
 headerbar .linked:not(.vertical).path-bar > button.text-button:backdrop:checked,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:backdrop:checked, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.text-button:backdrop:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.image-button:backdrop:checked,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:backdrop:checked, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.text-button:backdrop:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.image-button:backdrop:checked,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:backdrop:checked,
 headerbar .linked:not(.vertical).path-bar > button.image-button:backdrop:checked,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:backdrop:checked, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.image-button:backdrop:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button:backdrop:checked,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:backdrop:checked, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.image-button:backdrop:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button:backdrop:checked,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:backdrop:checked,
 headerbar .linked:not(.vertical).path-bar > button.text-button.image-button:backdrop:checked,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:backdrop:checked, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.text-button.image-button:backdrop:checked {
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:backdrop:checked, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.text-button.image-button:backdrop:checked {
   color: rgba(255, 255, 255, 0.5);
 }
 
 .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:backdrop:checked:disabled,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:backdrop:checked:disabled,
 headerbar .linked:not(.vertical).path-bar > button:backdrop:checked:disabled,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:backdrop:checked:disabled, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button:backdrop:checked:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button:backdrop:checked:disabled,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:backdrop:checked:disabled, .nemo-window toolbar.primary-toolbar .linked.path-bar > button:backdrop:checked:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button:backdrop:checked:disabled,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:backdrop:checked:disabled,
 headerbar .linked:not(.vertical).path-bar > button.text-button:backdrop:checked:disabled,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:backdrop:checked:disabled, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.text-button:backdrop:checked:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.image-button:backdrop:checked:disabled,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button:backdrop:checked:disabled, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.text-button:backdrop:checked:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.image-button:backdrop:checked:disabled,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:backdrop:checked:disabled,
 headerbar .linked:not(.vertical).path-bar > button.image-button:backdrop:checked:disabled,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:backdrop:checked:disabled, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.image-button:backdrop:checked:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button:backdrop:checked:disabled,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button:backdrop:checked:disabled, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.image-button:backdrop:checked:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button:backdrop:checked:disabled,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:backdrop:checked:disabled,
 headerbar .linked:not(.vertical).path-bar > button.text-button.image-button:backdrop:checked:disabled,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:backdrop:checked:disabled, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button.text-button.image-button:backdrop:checked:disabled {
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:backdrop:checked:disabled, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.text-button.image-button:backdrop:checked:disabled {
   color: rgba(255, 255, 255, 0.3);
 }
 
 .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:only-child,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:only-child,
 headerbar .linked:not(.vertical).path-bar > button:only-child,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:only-child, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button:only-child {
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:only-child, .nemo-window toolbar.primary-toolbar .linked.path-bar > button:only-child {
   border-radius: 8px;
 }
 
 .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:first-child,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-child,
 headerbar .linked:not(.vertical).path-bar > button:first-child,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-child, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button:first-child {
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-child, .nemo-window toolbar.primary-toolbar .linked.path-bar > button:first-child {
   border-radius: 8px 0 0 8px;
   padding-left: 8px;
 }
@@ -1552,7 +1530,7 @@ headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-ch
 .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:last-child,
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:last-child,
 headerbar .linked:not(.vertical).path-bar > button:last-child,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:last-child, .nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button:last-child {
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:last-child, .nemo-window toolbar.primary-toolbar .linked.path-bar > button:last-child {
   border-radius: 0 8px 8px 0;
   padding-right: 8px;
 }
@@ -1697,6 +1675,38 @@ headerbar.selection-mode .selection-menu arrow {
 .selection-mode.titlebar:not(headerbar) .selection-menu .arrow,
 headerbar.selection-mode .selection-menu .arrow {
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+}
+
+.titlebar:not(headerbar) .linked:not(.vertical).path-bar > button,
+.titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button,
+headerbar .linked:not(.vertical).path-bar > button,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.titlebar:not(headerbar) .linked:not(.vertical).path-bar > button label,
+.titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button label,
+headerbar .linked:not(.vertical).path-bar > button label,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button label {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button label,
+.titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button label,
+headerbar .linked:not(.vertical).path-bar > button.text-button.image-button label,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button label {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.titlebar:not(headerbar) .linked:not(.vertical).path-bar > button.text-button.image-button image,
+.titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button image,
+headerbar .linked:not(.vertical).path-bar > button.text-button.image-button image,
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button image {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .tiled .titlebar:not(headerbar),
@@ -5847,85 +5857,15 @@ button.title label {
 }
 
 .nemo-window .nemo-places-sidebar {
-  background-color: #4c5351;
+  background-color: #343938;
 }
 
 .nemo-window .nemo-places-sidebar.frame {
   border-width: 0;
 }
 
-.nemo-window notebook {
-  background-color: #3f4544;
-}
-
-.nemo-window notebook .primary-toolbar {
-  background-color: #343938;
-}
-
-.nemo-window notebook .primary-toolbar button,
-.nemo-window notebook .primary-toolbar combobox > .linked > button.combo {
-  transition: all 150ms cubic-bezier(0, 0, 0.2, 1), box-shadow 100ms cubic-bezier(0, 0, 0.2, 1), background-size 300ms cubic-bezier(0, 0, 0.2, 1), background-image 600ms cubic-bezier(0, 0, 0.2, 1);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 0 9999px transparent;
-  background-color: #4c5351;
-  background-image: radial-gradient(circle farthest-corner at center, transparent 10%, transparent 0%);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 1000% 1000%;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.nemo-window notebook .primary-toolbar button:hover,
-.nemo-window notebook .primary-toolbar combobox > .linked > button.combo:hover {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15), inset 0 0 0 9999px transparent;
-  color: #FFFFFF;
-}
-
-.nemo-window notebook .primary-toolbar button:active,
-.nemo-window notebook .primary-toolbar combobox > .linked > button.combo:active {
-  transition: all 150ms cubic-bezier(0, 0, 0.2, 1), background-size 0, background-image 0;
-  animation: ripple_effect 150ms cubic-bezier(0, 0, 0.2, 1) forwards;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15), inset 0 0 0 9999px alpha(currentColor, 0.15);
-  background-image: radial-gradient(circle farthest-corner at center, alpha(currentColor, 0.15) 10%, transparent 0%);
-  background-size: 0% 0%;
-  color: #FFFFFF;
-}
-
-.nemo-window notebook .primary-toolbar button:disabled,
-.nemo-window notebook .primary-toolbar combobox > .linked > button.combo:disabled {
-  box-shadow: none;
-  background-color: rgba(255, 255, 255, 0.12);
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.nemo-window notebook .primary-toolbar button:checked,
-.nemo-window notebook .primary-toolbar combobox > .linked > button.combo:checked {
-  background-color: #00CE99;
-  color: #FFFFFF;
-}
-
-.nemo-window notebook .primary-toolbar button:checked:disabled,
-.nemo-window notebook .primary-toolbar combobox > .linked > button.combo:checked:disabled {
-  background-color: rgba(0, 206, 153, 0.3);
-  color: rgba(0, 206, 153, 0.5);
-}
-
-.nemo-window notebook .primary-toolbar entry {
-  transition: all 150ms cubic-bezier(0, 0, 0.2, 1), box-shadow 100ms cubic-bezier(0, 0, 0.2, 1);
-  border-image: none;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
-  background-color: #3f4544;
-  color: #FFFFFF;
-}
-
-.nemo-window notebook .primary-toolbar entry:focus {
-  border-image: none;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15);
-}
-
-.nemo-window notebook .primary-toolbar entry:disabled {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
-  background-color: #3a3f3e;
-  color: rgba(255, 255, 255, 0.5);
+.nemo-window .nemo-places-sidebar .places-treeview:not(:hover):not(:selected) {
+  background-color: transparent;
 }
 
 .nemo-window .nemo-window-pane widget.entry {
@@ -5935,26 +5875,40 @@ button.title label {
   background-color: rgba(0, 206, 153, 0.1);
 }
 
-.nemo-window .primary-toolbar {
+.nemo-window toolbar.primary-toolbar {
   transition: background-color 100ms cubic-bezier(0, 0, 0.2, 1), color 150ms cubic-bezier(0, 0, 0.2, 1);
-  padding: 6px;
+  padding: 0 10px;
   box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.12), 0 5px 5px -5px rgba(0, 0, 0, 0.06);
   background-color: #272a2a;
   color: #FFFFFF;
   border: none;
 }
 
-.nemo-window .primary-toolbar:backdrop {
+.nemo-window toolbar.primary-toolbar:backdrop {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.nemo-window .primary-toolbar button:not(.suggested-action):not(.destructive-action) {
-  min-width: 32px;
+.nemo-window toolbar.primary-toolbar > toolitem > box.raised > button,
+.nemo-window toolbar.primary-toolbar > toolitem > box.linked.raised > button {
+  min-height: 36px;
+  min-width: 36px;
+  margin: 4px 2px;
+  padding: 0 0;
 }
 
-.nemo-window .primary-toolbar .linked:not(.vertical).path-bar > button {
-  margin-top: 6px;
-  margin-bottom: 6px;
+.nemo-window toolbar.primary-toolbar .linked.path-bar > button {
+  min-height: 0;
+  margin: 4px 0;
+  padding: 0 10px;
+}
+
+.nemo-window toolbar.primary-toolbar .linked.path-bar > button:first-child, .nemo-window toolbar.primary-toolbar .linked.path-bar > button:last-child {
+  padding: 0 6px;
+}
+
+.nemo-window toolbar.primary-toolbar .linked.path-bar > button image, .nemo-window toolbar.primary-toolbar .linked.path-bar > button label {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .nemo-window .sidebar scrolledwindow.frame {

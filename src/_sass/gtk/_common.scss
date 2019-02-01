@@ -1041,8 +1041,6 @@ actionbar { // set bottom border radius
                                                         url("assets/lastbutton-checked-compact#{$asset_radius}@2.png"));
 
 %header_button {
-  @extend %button_basic.flat;
-
   border-image: none;
   color: $titlebar_secondary_fg_color;
 
@@ -1074,15 +1072,6 @@ actionbar { // set bottom border radius
 }
 
 %header_pathbar_button {
-  padding-left: 8px; padding-right: 8px;
-
-  label { padding-left: 8px; padding-right: 8px; }
-
-  &.text-button.image-button {
-    label { padding-left: 0; padding-right: 0; }
-    image { padding-left: 0; padding-right: 0; }
-  }
-
   &,
   &.text-button,
   &.image-button,
@@ -1194,6 +1183,7 @@ headerbar {
 
   button:not(.suggested-action):not(.destructive-action) {
     @extend %header_button;
+    @extend %button_basic.flat;
   }
 
   button.suggested-action, button.destructive-action {
@@ -1264,6 +1254,14 @@ headerbar {
   .linked:not(.vertical):not(.path-bar).stack-switcher {
     > button {
       @extend %header_pathbar_button;
+      padding-left: 8px; padding-right: 8px;
+
+      label { padding-left: 8px; padding-right: 8px; }
+
+      &.text-button.image-button {
+        label { padding-left: 0; padding-right: 0; }
+        image { padding-left: 0; padding-right: 0; }
+      }
     }
   }
 
