@@ -30,7 +30,7 @@
 
   toolbar.primary-toolbar {
     transition: background-color $shorter_duration $deceleration_curve, color $longer_duration $deceleration_curve;
-    padding: 0 10px;
+    padding: 0 6px;
     box-shadow: $shadow_6;
     background-color: $titlebar_bg_color;
     color: $titlebar_fg_color;
