@@ -6879,8 +6879,12 @@ box.vertical > stack > box.vertical .raven-background > viewport.frame list > ro
   background-color: rgba(76, 83, 81, 0.95);
 }
 
-.budgie-popover .container {
+.budgie-popover frame.container {
   padding: 2px;
+}
+
+.budgie-popover frame.container > box.vertical > grid.horizontal label {
+  padding-left: 6px;
 }
 
 .budgie-popover border {

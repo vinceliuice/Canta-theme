@@ -97,7 +97,14 @@
   box-shadow: $shadow_2;
   background-color: rgba($lighter_bg_color, 0.95);
 
-  .container { padding: 2px; }
+  frame.container {
+    padding: 2px;
+
+    > box.vertical > grid.horizontal {
+      label { padding-left: 6px; }
+    }
+  }
+
   border { border: none; }
   list { background-color: transparent; }
 
