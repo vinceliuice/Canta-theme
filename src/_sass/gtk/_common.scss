@@ -2149,6 +2149,7 @@ switch {
   border-radius: 999px;
   background-color: $track_color;
   background-clip: padding-box;
+  color: transparent;
   font-size: 0;
 
   &:disabled { background-color: $divider_color; }
@@ -2168,6 +2169,7 @@ switch {
     -gtk-outline-radius: 999px;
     box-shadow: $shadow_1;
     background-color: $base_color;
+    color: transparent;
   }
 
   &:hover slider { box-shadow: $shadow_2; }

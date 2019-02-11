@@ -28,7 +28,6 @@
   background-image: none;
 }
 
-
 %pathbar_box_button {
   margin: 0;
   padding: 0 6px;
@@ -46,6 +45,7 @@
                                   transparent 0%)
                                   0 0 2 / 0 0 2px;
   }
+
   &:checked:backdrop, &:active:backdrop {
     color: $titlebar_secondary_fg_color;
     border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
@@ -57,10 +57,6 @@
 
 %width_maximized_button {
   margin: 0;
-  padding: 0 6px;
-	min-height: $small_size + 6px;
-  border-radius: $square_radius - 2px;
-  border: 3px solid $primary_color;
   color: $inverse_fg_color;
   background-color: transparent;
 	border-image: none;
@@ -69,10 +65,12 @@
     color: $inverse_fg_color;
     background-color: rgba($inverse_fg_color, 0.08);
   }
+
   &:active {
     color: $inverse_fg_color;
     background-color: rgba($inverse_fg_color, 0.12);
   }
+
   &:checked {
     color: $titlebar_secondary_fg_color;
     background-color: $titlebar_bg_color;
@@ -83,18 +81,22 @@
                                       transparent 0%);
     background-size: 0% 0%;
   }
+
   &:checked:hover {
     color: $titlebar_fg_color;
     background-color: $titlebar_bg_color;
   }
+
   &:disabled {
     color: $inverse_disabled_fg_color;
     background-color: transparent;
   }
+
   &:checked:disabled {
     color: $titlebar_disabled_fg_color;
     background-color: $titlebar_bg_color;
   }
+
   &:backdrop {
     color: $inverse_secondary_fg_color;
     background-color: transparent;
@@ -103,10 +105,42 @@
       background-color: rgba($inverse_secondary_fg_color, 0.08);
     }
   }
+
   &:checked:backdrop, &:active:backdrop {
     color: $titlebar_hint_fg_color;
     background-color: $titlebar_bg_color;
 		border-image: none;
+  }
+}
+
+%width_maximized_linked_button {
+  margin: 0;
+  color: $inverse_fg_color;
+  background-color: transparent;
+	border-image: none;
+
+  &:hover {
+    color: $inverse_fg_color;
+    background-color: rgba($inverse_fg_color, 0.08);
+  }
+
+  &:active {
+    color: $inverse_fg_color;
+    background-color: rgba($inverse_fg_color, 0.12);
+  }
+
+  &:checked {
+    color: $inverse_fg_color;
+  }
+
+  &:disabled {
+    color: $inverse_disabled_fg_color;
+    background-color: transparent;
+  }
+
+  &:checked:disabled {
+    color: $titlebar_disabled_fg_color;
+    background-color: $titlebar_bg_color;
   }
 }
 
@@ -126,14 +160,31 @@
     color: $titlebar_fg_color;
     background-color: transparent;
 
-    button { @extend %pathbar_box_button; }
+    button.flat.text-button.toggle,
+    button.flat.image-button.text-button.toggle { @extend %pathbar_box_button; }
+
+    .linked.nautilus-path-bar { // for ≥ 3.31.90
+      button.text-button,
+      button.image-button.text-button {
+        margin-top: 0;
+        margin-bottom: 0;
+        @extend %pathbar_box_button;
+      }
+    }
 
     &.width-maximized {
-      color: $inverse_fg_color;
-      background-color: $primary_color;
+      // color: $inverse_fg_color;
+      background-color: transparent;
       border-radius: $square_radius;
 
-      button { @extend %width_maximized_button; }
+      // button.flat.text-button.toggle,
+      // button.flat.image-button.text-button.toggle {
+      //   padding: 0 6px;
+      // 	min-height: $small_size + 6px;
+      //   border-radius: $square_radius - 2px;
+      //   border: 3px solid $primary_color;
+      //   @extend %width_maximized_button;
+      // }
     }
 
     // workaround for 3.30.1
