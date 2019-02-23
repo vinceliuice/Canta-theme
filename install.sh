@@ -10,8 +10,8 @@ if [ "$UID" -eq "$ROOT_UID" ]; then
   DEST_DIR="/usr/share/themes"
   ICON_DEST_DIR="/usr/share/icons"
 else
-  DEST_DIR="$HOME/.local/share/themes"
-  ICON_DEST_DIR="$HOME/.local/share/icons"
+  DEST_DIR="$HOME/.themes"
+  ICON_DEST_DIR="$HOME/.icons"
 fi
 
 SRC_DIR=$(cd $(dirname $0) && pwd)
@@ -169,6 +169,10 @@ function has_command() {
     command -v $1 > /dev/null
 }
 
+parse_sass() {
+  cd ${SRC_DIR} && ./parse-sass.sh
+}
+
 install_package() {
   if [ ! "$(which sassc 2> /dev/null)" ]; then
      echo sassc needs to be installed to generate the css.
@@ -211,10 +215,13 @@ install_img() {
   install_package
 
   echo -e "\nInstalling specify theme with nautilus background image ...\n"
+}
 
-  # compile scss to css
-  cd ${SRC_DIR}
-  ./parse-sass.sh
+restore_img() {
+  cd ${SRC_DIR}/src/_sass/gtk/apps
+  [[ -d _gnome.scss.bak ]] && rm -rf _gnome.scss
+  mv _gnome.scss.bak _gnome.scss
+  echo -e "Restore scss files ..."
 }
 
 while [[ $# -gt 0 ]]; do
@@ -341,7 +348,7 @@ if [[ "${icon:-}" == 'true' ]]; then
 fi
 
 if [[ "${bgimg:-}" == 'true' ]]; then
-  install_img && install_theme
+  install_img && parse_sass && install_theme && restore_img && parse_sass
 fi
 
 echo
