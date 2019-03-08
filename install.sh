@@ -113,8 +113,8 @@ install() {
   cp -ur ${SRC_DIR}/src/metacity-1/assets/*.png                                      ${THEME_DIR}/metacity-1
   cp -ur ${SRC_DIR}/src/metacity-1/metacity-theme-1${color}.xml                      ${THEME_DIR}/metacity-1/metacity-theme-1.xml
   cd ${THEME_DIR}/metacity-1
-	ln -s metacity-theme-1.xml metacity-theme-2.xml
-	ln -s metacity-theme-1.xml metacity-theme-3.xml
+  ln -s metacity-theme-1.xml metacity-theme-2.xml
+  ln -s metacity-theme-1.xml metacity-theme-3.xml
 
   mkdir -p                                                                           ${THEME_DIR}/unity
   cp -ur ${SRC_DIR}/src/unity/{*.svg,*.png,dash-widgets.json}                        ${THEME_DIR}/unity
@@ -123,6 +123,14 @@ install() {
   mkdir -p                                                                           ${THEME_DIR}/xfwm4
   cp -ur ${SRC_DIR}/src/xfwm4/{*.svg,themerc}                                        ${THEME_DIR}/xfwm4
   cp -ur ${SRC_DIR}/src/xfwm4/assets${ELSE_LIGHT}                                    ${THEME_DIR}/xfwm4/assets
+
+  mkdir -p                                                                           ${THEME_DIR}/cinnamon
+  cp -ur ${SRC_DIR}/src/cinnamon/cinnamon${ELSE_DARK}.css                            ${THEME_DIR}/cinnamon/cinnamon.css
+  cp -ur ${SRC_DIR}/src/cinnamon/assets/common-assets                                ${THEME_DIR}/cinnamon/assets
+  cp -ur ${SRC_DIR}/src/cinnamon/assets/assets${ELSE_DARK}/checkbox/*.svg            ${THEME_DIR}/cinnamon/assets/checkbox
+  cp -ur ${SRC_DIR}/src/cinnamon/assets/assets${ELSE_DARK}/menu/*.svg                ${THEME_DIR}/cinnamon/assets/menu
+  cp -ur ${SRC_DIR}/src/cinnamon/assets/assets${ELSE_DARK}/switch/*.svg              ${THEME_DIR}/cinnamon/assets/switch
+  cp -ur ${SRC_DIR}/src/cinnamon/thumbnail${ELSE_DARK}.png                           ${THEME_DIR}/cinnamon/thumbnail.png
 }
 
 install_gdm() {

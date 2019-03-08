@@ -39,3 +39,8 @@ for color in "${_COLOR_VARIANTS[@]}"; do
   done
 done
 
+echo "==> Generating the cinnamon.css..."
+sassc $SASSC_OPT src/cinnamon/cinnamon.{scss,css}
+echo "==> Generating the cinnamon-dark.css..."
+sassc $SASSC_OPT src/cinnamon/cinnamon-dark.{scss,css}
+
