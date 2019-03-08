@@ -738,7 +738,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   -cinnamon-caption-spacing: 12px;
   spacing: 25px;
   padding: 7px 8px 8px;
-  border-radius: 5px;
+  border-radius: 2px;
   color: #EAEAEA;
   background-color: rgba(33, 35, 41, 0.9);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.28);
@@ -1405,6 +1405,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .menu-favorites-button {
   padding: 10px;
+  border-radius: 5px;
 }
 
 .menu-favorites-button:hover {
@@ -1484,6 +1485,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .menu StScrollView.menu-application-button .popup-menu-item {
   padding: 0;
   spacing: 0;
+  border-radius: 3px;
 }
 
 .menu StScrollView.menu-application-button .popup-menu-item:ltr {

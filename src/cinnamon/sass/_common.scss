@@ -609,7 +609,7 @@ $icon_size: 16px;
   -cinnamon-caption-spacing: 12px;
   spacing: 25px;
   padding: 7px 8px 8px;
-  border-radius: 5px;
+  border-radius: 2px;
   color: $osd_fg_color;
   background-color: shellopacity($osd_bg_color, 0.9);
   box-shadow: $z-depth-1;
@@ -1098,8 +1098,7 @@ $ws_thumb_spacing: 32px;
   }
 }
 
-.lightbox {
-}
+// .lightbox { }
 
 
 // /**********************************
@@ -1247,8 +1246,8 @@ $ws_thumb_spacing: 32px;
 .menu {
   // menu-background class allows the menu applet to be themed separately
   // from other applet menus
-  &-background {
-  }
+
+  // &-background { }
 
   &-favorites-box {
     padding: 7px;
@@ -1266,6 +1265,7 @@ $ws_thumb_spacing: 32px;
 
   &-favorites-button {
     padding: 10px;
+    border-radius: 5px;
     &:hover { @include button(flat-hover); }
   }
 
@@ -1316,6 +1316,7 @@ $ws_thumb_spacing: 32px;
     .popup-menu-item {
       padding: 0;
       spacing: 0;
+      border-radius: 3px;
       &:ltr { padding-left: 7px; }
       &:rtl { padding-right: 7px; }
 
