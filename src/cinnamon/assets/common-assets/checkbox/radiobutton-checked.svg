@@ -14,7 +14,7 @@
    viewBox="0 0 20 20"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.2 2405546, 2018-03-11"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    sodipodi:docname="radiobutton-checked.svg">
   <defs
      id="defs4" />
@@ -25,16 +25,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="14.495689"
-     inkscape:cx="-15.877012"
-     inkscape:cy="9.1244746"
+     inkscape:zoom="10.25"
+     inkscape:cx="-3.4603557"
+     inkscape:cy="9.3784462"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
      units="px"
      width="20px"
-     inkscape:window-width="1920"
-     inkscape:window-height="1026"
+     inkscape:window-width="1366"
+     inkscape:window-height="709"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1">
@@ -79,14 +79,14 @@
     <circle
        cy="1042.3622"
        cx="10"
-       style="fill:none;fill-opacity:1;stroke:#2eb398;stroke-width:1.99981999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#ffac00;stroke-width:1.99981999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="use4439"
        r="9.0000896" />
     <circle
        cy="1042.3622"
        cx="10"
        id="path4513"
-       style="fill:#2eb398;fill-opacity:1;stroke:none;stroke-width:1.25"
+       style="fill:#ffac00;fill-opacity:1;stroke:none;stroke-width:1.25"
        r="5" />
   </g>
 </svg>
