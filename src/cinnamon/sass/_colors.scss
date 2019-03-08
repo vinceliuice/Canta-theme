@@ -35,7 +35,8 @@ $insensitive_osd_secondary_fg_color: shellopacity($osd_secondary_fg_color, 0.28)
 // Accent colors
 //
 
-$accent_color: #00CE99;
+$primary_color: #00CE99;
+$accent_color: #FFAC00;
 $accent_label_color: if($variant == light, mix($accent_color, $fg_color, 80%), mix($accent_color, $fg_color, 60%));
 $secondary_accent_color: shellopacity($accent_color, 0.87);
 $secondary_accent_label_color: shellopacity($accent_label_color, 0.87);
@@ -63,7 +64,7 @@ $semi_fill_color: shellopacity($fg_color, 0.12);
 $hidden_fill_color: rgba(0, 0, 0, 0.01);
 $menuentry_hidden_fill_color: if($variant == light, rgba(255, 255, 255, 0.01), rgba(0, 0, 0, 0.01));
 
-$selected_bg_color: $accent_color;
+$selected_bg_color: $primary_color;
 
 $outline_fill_color: shellopacity($fg_color, 0.2);
 $insensitive_outline_fill_color: shellopacity($outline_fill_color, 0.28);
