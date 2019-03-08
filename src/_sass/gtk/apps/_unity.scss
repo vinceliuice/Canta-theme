@@ -50,12 +50,12 @@ UnityDecoration {
   }
 }
 
-.background:not(.csd) headerbar:not(.titlebar) {
-  border-radius: $buttons_radius;
-  box-shadow: $shadow_1;
-
-  &.inline-toolbar { border-style: none; }
-}
+// .background:not(.csd) headerbar:not(.titlebar) {
+//   border-radius: $buttons_radius;
+//   box-shadow: $shadow_1;
+//
+//   &.inline-toolbar { border-style: none; }
+// }
 
 sheet-style-dialog.unity-force-quit {
   // background-color: $bg_color;
