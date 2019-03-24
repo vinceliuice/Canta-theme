@@ -4697,6 +4697,20 @@ button.emoji-section:last-child {
   border-radius: 3px;
 }
 
+.nautilus-canvas-item.dim-label, label.nautilus-canvas-item.separator, .titlebar:not(headerbar) .nautilus-canvas-item.subtitle,
+headerbar .nautilus-canvas-item.subtitle, .budgie-notification .nautilus-canvas-item.notification-body, .budgie-switcher .nautilus-canvas-item.notification-body,
+.nautilus-list-dim-label {
+  color: rgba(153, 153, 153, 0.875);
+}
+
+.nautilus-canvas-item.dim-label:selected, label.nautilus-canvas-item.separator:selected, .titlebar:not(headerbar) .nautilus-canvas-item.subtitle:selected,
+headerbar .nautilus-canvas-item.subtitle:selected, .budgie-notification .nautilus-canvas-item.notification-body:selected, .budgie-switcher .nautilus-canvas-item.notification-body:selected, .nautilus-canvas-item.dim-label:selected:focus, label.nautilus-canvas-item.separator:selected:focus, .titlebar:not(headerbar) .nautilus-canvas-item.subtitle:selected:focus,
+headerbar .nautilus-canvas-item.subtitle:selected:focus, .budgie-notification .nautilus-canvas-item.notification-body:selected:focus, .budgie-switcher .nautilus-canvas-item.notification-body:selected:focus,
+.nautilus-list-dim-label:selected,
+.nautilus-list-dim-label:selected:focus {
+  color: #ccf5eb;
+}
+
 .nautilus-desktop.nautilus-canvas-item:not(:selected), .caja-desktop.caja-canvas-item:not(:selected) {
   color: #FFFFFF;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
