@@ -1170,6 +1170,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .run-dialog {
   padding: 0 15px 10px 15px;
   border-image: url("assets/misc/osd.svg") 9 9 9 9;
+  background-color: rgba(33, 35, 41, 0.9);
 }
 
 .run-dialog > * {
@@ -1602,7 +1603,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   border-radius: 5px;
   border-image: url("assets/misc/osd.svg") 9 9 9 9;
   color: #EAEAEA;
-  background: none;
+  background-color: #212329;
   font-weight: 700;
   text-align: center;
 }
