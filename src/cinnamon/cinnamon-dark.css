@@ -984,7 +984,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .popup-menu #notification,
 .popup-menu #notification.multi-line-notification {
   border-image: url("assets/misc/message.svg") 9 9 9 9;
-  color: #EAEAEA;
+  color: rgba(234, 234, 234, 0.87);
 }
 
 .menu #notification .notification-button,

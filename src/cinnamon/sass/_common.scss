@@ -860,7 +860,7 @@ $ws_thumb_spacing: 32px;
   .popup-menu & {
     &, &.multi-line-notification {
       border-image: url("assets/misc/message.svg") 9 9 9 9;
-      color: $osd_fg_color;
+      color: $secondary_fg_color;
     }
 
     .notification-button,
