@@ -19,7 +19,7 @@ SRC_DIR=$(cd $(dirname $0) && pwd)
 THEME_NAME=Canta
 COLOR_VARIANTS=('' '-light' '-dark')
 SIZE_VARIANTS=('' '-compact')
-RADIUS_VARIANTS=('' '-square')
+#RADIUS_VARIANTS=('' '-square')
 
 show_info() {
   echo -e "\033[1;34m$@\033[0m"
@@ -36,7 +36,6 @@ usage() {
   printf "  %-25s%s\n" "-n, --name NAME" "Specify theme name (Default: ${THEME_NAME})"
   printf "  %-25s%s\n" "-c, --color VARIANTS" "Specify theme color variant(s) [standard|light|dark] (Default: All variants)"
   printf "  %-25s%s\n" "-s, --size VARIANT" "Specify theme size variant [standard|compact] (Default: All variants)"
-  printf "  %-25s%s\n" "-r, --radius VARIANT" "Specify theme radius variant [standard|square] (Default: All variants)"
   printf "  %-25s%s\n" "-b, --bgimg" "Install theme with nautilus background image"
   printf "  %-25s%s\n" "-g, --gdm" "Install GDM theme"
   printf "  %-25s%s\n" "-i, --icon" "Install icon theme"
@@ -51,7 +50,6 @@ usage() {
   printf "%s\n" "Install standard icon theme only"
   printf "  %s\n" "$0 --color standard --size standard"
   printf "%s\n" "Install square theme variant only"
-  printf "  %s\n" "$0 --color standard --size standard --radius square"
   printf "%s\n" "Install specific theme variants with different name into ~/themes"
   printf "  %s\n" "$0 --dest ~/themes --name MyTheme --color light dark --size compact"
 }
@@ -61,12 +59,12 @@ install() {
   local name=${2}
   local color=${3}
   local size=${4}
-  local radius=${5}
+#  local radius=${5}
 
   [[ ${color} == '-dark' ]] && local ELSE_DARK=${color}
   [[ ${color} == '-light' ]] && local ELSE_LIGHT=${color}
 
-  local THEME_DIR=${dest}/${name}${color}${size}${radius}
+  local THEME_DIR=${dest}/${name}${color}${size}
 
   [[ -d ${THEME_DIR} ]] && rm -rf ${THEME_DIR}
 
@@ -78,13 +76,13 @@ install() {
 
   echo "[Desktop Entry]" >> ${THEME_DIR}/index.theme
   echo "Type=X-GNOME-Metatheme" >> ${THEME_DIR}/index.theme
-  echo "Name=Canta${color}${size}${radius}" >> ${THEME_DIR}/index.theme
+  echo "Name=${name}${color}${size}" >> ${THEME_DIR}/index.theme
   echo "Comment=An Flat Gtk+ theme based on Material Design" >> ${THEME_DIR}/index.theme
   echo "Encoding=UTF-8" >> ${THEME_DIR}/index.theme
   echo "" >> ${THEME_DIR}/index.theme
   echo "[X-GNOME-Metatheme]" >> ${THEME_DIR}/index.theme
-  echo "GtkTheme=Canta${color}${size}${radius}" >> ${THEME_DIR}/index.theme
-  echo "MetacityTheme=Canta${color}${size}${radius}" >> ${THEME_DIR}/index.theme
+  echo "GtkTheme=${name}${color}${size}" >> ${THEME_DIR}/index.theme
+  echo "MetacityTheme=${name}${color}${size}" >> ${THEME_DIR}/index.theme
   echo "IconTheme=Adwaita" >> ${THEME_DIR}/index.theme
   echo "CursorTheme=Adwaita" >> ${THEME_DIR}/index.theme
   echo "ButtonLayout=menu:minimize,maximize,close" >> ${THEME_DIR}/index.theme
@@ -105,9 +103,9 @@ install() {
 
   mkdir -p                                                                           ${THEME_DIR}/gtk-3.0
   ln -sf ../gtk-assets                                                               ${THEME_DIR}/gtk-3.0/assets
-  cp -ur ${SRC_DIR}/src/gtk/gtk${color}${size}${radius}.css                          ${THEME_DIR}/gtk-3.0/gtk.css
+  cp -ur ${SRC_DIR}/src/gtk/gtk${color}${size}.css                                   ${THEME_DIR}/gtk-3.0/gtk.css
   [[ ${color} != '-dark' ]] && \
-  cp -ur ${SRC_DIR}/src/gtk/gtk-dark${size}${radius}.css                             ${THEME_DIR}/gtk-3.0/gtk-dark.css
+  cp -ur ${SRC_DIR}/src/gtk/gtk-dark${size}.css                                      ${THEME_DIR}/gtk-3.0/gtk-dark.css
 
   mkdir -p                                                                           ${THEME_DIR}/metacity-1
   cp -ur ${SRC_DIR}/src/metacity-1/assets/*.png                                      ${THEME_DIR}/metacity-1
@@ -135,7 +133,7 @@ install() {
 }
 
 install_gdm() {
-  local THEME_DIR=${1}/${2}${3}${4}${5}
+  local THEME_DIR=${1}/${2}${3}${4}
   local GS_THEME_FILE="/usr/share/gnome-shell/gnome-shell-theme.gresource"
   local UBUNTU_THEME_FILE="/usr/share/gnome-shell/theme/ubuntu.css"
 
@@ -163,7 +161,7 @@ install_icon() {
   echo -e "\nInstalling Canta icon theme..."
 
   # Copying files
-  cp -ur ${SRC_DIR}/src/icons/Canta ${ICON_DEST_DIR}
+  cp -ur ${SRC_DIR}/icons/Canta ${ICON_DEST_DIR}
 
   # update icon caches
   gtk-update-icon-cache ${ICON_DEST_DIR}/Canta
@@ -203,7 +201,7 @@ install_theme() {
   for color in "${colors[@]:-${COLOR_VARIANTS[@]}}"; do
     for size in "${sizes[@]:-${SIZE_VARIANTS[@]}}"; do
      for radius in "${radiuss[@]:-${RADIUS_VARIANTS[@]}}"; do
-       install "${dest:-${DEST_DIR}}" "${name:-${THEME_NAME}}" "${color}" "${size}" "${radius}"
+       install "${dest:-${DEST_DIR}}" "${name:-${THEME_NAME}}" "${color}" "${size}"
      done
     done
   done
@@ -309,29 +307,6 @@ while [[ $# -gt 0 ]]; do
         esac
       done
       ;;
-    -r|--radius)
-      shift
-      for radius in "${@}"; do
-        case "${radius}" in
-          standard)
-            radiuss+=("${RADIUS_VARIANTS[0]}")
-            shift
-            ;;
-          square)
-            radiuss+=("${RADIUS_VARIANTS[1]}")
-            shift
-            ;;
-          -*|--*)
-            break
-            ;;
-          *)
-            echo "ERROR: Unrecognized size variant '$1'."
-            echo "Try '$0 --help' for more information."
-            exit 1
-            ;;
-        esac
-      done
-      ;;
     -h|--help)
       usage
       exit 0
@@ -349,11 +324,11 @@ if [[ "${bgimg:-}" != 'true' ]]; then
 fi
 
 if [[ "${gdm:-}" == 'true' ]]; then
-  install_gdm "${dest:-${DEST_DIR}}" "${name:-${THEME_NAME}}" "${color}" "${size}" "${radius}"
+  install_gdm "${dest:-${DEST_DIR}}" "${name:-${THEME_NAME}}" "${color}" "${size}"
 fi
 
 if [[ "${icon:-}" == 'true' ]]; then
-  install_icon "${dest:-${DEST_DIR}}" "${name:-${THEME_NAME}}" "${color}" "${size}" "${radius}"
+  install_icon "${dest:-${DEST_DIR}}" "${name:-${THEME_NAME}}" "${color}" "${size}"
 fi
 
 if [[ "${bgimg:-}" == 'true' ]]; then

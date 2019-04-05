@@ -144,6 +144,65 @@
   }
 }
 
+%nautilus_pathbar_button {
+  background-color: $primary_color;
+  color: $inverse_fg_color;
+  transition: none;
+  box-shadow: none;
+  border-radius: 0;
+  outline-offset: -6px;
+  -gtk-outline-radius: $square_radius - 2px;
+
+  &:hover {
+    color: gtkalpha($inverse_fg_color, 0.75);
+    background-color: $primary_color;
+    transition: $longer_transition;
+  }
+
+  &:active {
+    border-image-source: if($compact == 'false', $header_path_button_border, $header_path_button_border_compact);
+    border-image-width: 8px 16px 8px 16px;
+    border-image-slice: 8 16 8 16;
+    border-image-repeat: stretch;
+    transition: $longer_transition, background-size 0, border-image 0;
+    color: $titlebar_secondary_fg_color;
+    background-color: $titlebar_bg_color;
+    box-shadow: none;
+    background-image: none;
+  }
+
+  &:first-child {
+    border-radius: $square_radius 0 0 $square_radius;
+
+    &:active {
+      box-shadow: none;
+      background-image: none;
+      border-image-source: if($compact == 'false', $stack_switcher_firstbutton_border, $stack_switcher_firstbutton_border_compact);
+    }
+  }
+
+  &:last-child {
+    border-radius: 0 $square_radius $square_radius 0;
+
+    &:active {
+      box-shadow: none;
+      background-image: none;
+      border-image-source: if($compact == 'false', $stack_switcher_lastbutton_border, $stack_switcher_lastbutton_border_compact);
+    }
+  }
+
+  &:only-child { border-radius: $square_radius; }
+
+  &:disabled { color: $inverse_disabled_fg_color; }
+
+  &:backdrop {
+    color: $inverse_secondary_fg_color;
+    background-color: rgba($primary_color, 0.75);
+
+    &:disabled { color: $inverse_disabled_secondary_fg_color; }
+  }
+}
+
 .nautilus-window,
 .nautilus-window notebook,
 .nautilus-window notebook > stack {
@@ -164,11 +223,17 @@
     button.flat.image-button.text-button.toggle { @extend %pathbar_box_button; }
 
     .linked.nautilus-path-bar { // for ≥ 3.31.90
-      button.text-button,
-      button.image-button.text-button {
+      > button {
         margin-top: 0;
         margin-bottom: 0;
         @extend %pathbar_box_button;
+
+        &:not(:only-child):last-child {
+          border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
+                                        $primary_color 100%,
+                                        transparent 0%)
+                                        0 0 2 / 0 0 2px;
+        }
       }
     }
 

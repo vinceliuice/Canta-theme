@@ -803,7 +803,16 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   height: 16px;
 }
 
-.popup-menu-boxpointer,
+.popup-menu-boxpointer {
+  -arrow-border-radius: 0;
+  -arrow-background-color: transparent;
+  -arrow-border-width: 0;
+  -arrow-border-color: transparent;
+  -arrow-base: 0;
+  -arrow-rise: 0;
+  -arrow-box-shadow: none;
+}
+
 .candidate-popup-boxpointer {
   -arrow-border-radius: 0;
   -arrow-background-color: transparent;
@@ -818,14 +827,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15);
 }
 
-.popup-menu-boxpointer {
-  -arrow-background-color: transparent;
-}
-
 .popup-menu-boxpointer .popup-menu-content {
-  margin: 0;
+  margin: 5px 8px 12px 12px;
   background-color: transparent;
-  box-shadow: none;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15);
 }
 
 .popup-separator-menu-item {
@@ -1781,6 +1788,50 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   spacing: 24px;
 }
 
+#overview .app-view-controls {
+  width: 320px;
+  padding-bottom: 32px;
+}
+
+#overview .app-view-control {
+  padding: 0 16px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#overview .app-view-control:hover {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+#overview .app-view-control:active {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+#overview .app-view-control:checked {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.01) !important;
+  box-shadow: inset 0 2px 0 #00CE99;
+}
+
+#overview .app-view-control:first-child {
+  border-right-width: 0;
+  border-radius: 6px;
+}
+
+#overview .app-view-control:first-child:checked {
+  border-radius: 0;
+}
+
+#overview .app-view-control:last-child {
+  border-radius: 6px;
+}
+
+#overview .app-view-control:last-child:checked {
+  border-radius: 0;
+}
+
 .overview-controls {
   padding-bottom: 32px;
 }
@@ -1954,50 +2005,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   icon-size: 48px;
 }
 
-.app-view-controls {
-  width: 320px;
-  padding-bottom: 32px;
-}
-
-.app-view-control {
-  padding: 0 16px;
-  font-weight: bold;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.app-view-control:hover {
-  color: #FFFFFF;
-  background-color: rgba(255, 255, 255, 0.12) !important;
-}
-
-.app-view-control:active {
-  color: #FFFFFF;
-  background-color: rgba(255, 255, 255, 0.3) !important;
-}
-
-.app-view-control:checked {
-  color: #FFFFFF;
-  background-color: rgba(255, 255, 255, 0.01) !important;
-  box-shadow: inset 0 2px 0 #00CE99;
-}
-
-.app-view-control:first-child {
-  border-right-width: 0;
-  border-radius: 6px;
-}
-
-.app-view-control:first-child:checked {
-  border-radius: 0;
-}
-
-.app-view-control:last-child {
-  border-radius: 6px;
-}
-
-.app-view-control:last-child:checked {
-  border-radius: 0;
-}
-
 .search-provider-icon:focus, .search-provider-icon:selected, .search-provider-icon:hover,
 .list-search-result:focus,
 .list-search-result:selected,
@@ -2116,26 +2123,46 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   height: 12px;
   border-radius: 12px;
   background-image: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
   background-color: rgba(255, 255, 255, 0.3);
 }
 
 .page-indicator:hover .page-indicator-icon {
   background-image: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
 .page-indicator:active .page-indicator-icon {
   background-image: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
   background-color: rgba(255, 255, 255, 0.7);
 }
 
 .page-indicator:checked .page-indicator-icon {
   background-image: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
   background-color: #FFFFFF;
   transition-duration: 0ms;
 }
 
 .page-indicator:checked:active {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
   background-image: none;
 }
 

@@ -636,8 +636,7 @@ StScrollBar {
   height: 16px;
 }
 
-.popup-menu-boxpointer,
-.candidate-popup-boxpointer {
+.popup-menu-boxpointer {
   -arrow-border-radius: 0;
   -arrow-background-color: transparent;
   -arrow-border-width: 0;
@@ -645,6 +644,16 @@ StScrollBar {
   -arrow-base: 0;
   -arrow-rise: 0;
   -arrow-box-shadow: none; //dreaming. bug #689995
+}
+
+.candidate-popup-boxpointer {
+  -arrow-border-radius: 0;
+  -arrow-background-color: transparent;
+  -arrow-border-width: 0;
+  -arrow-border-color: transparent;
+  -arrow-base: 0;
+  -arrow-rise: 0;
+  -arrow-box-shadow: none;
   margin: 5px 8px 12px 12px;
   background-color: rgba($menu_bg_color, 0.95);
   border-radius: $windows_radius;
@@ -652,13 +661,12 @@ StScrollBar {
 }
 
 .popup-menu-boxpointer {
-
-  -arrow-background-color: transparent;
-
   .popup-menu-content {
-    margin: 0;
+    margin: 5px 8px 12px 12px;
     background-color: transparent;
-    box-shadow: none;
+    background-color: rgba($menu_bg_color, 0.95);
+    border-radius: $windows_radius;
+    box-shadow: $shadow_2;
   }
 }
 
@@ -1450,6 +1458,44 @@ StScrollBar {
 #overview {
   spacing: 24px; //
   StScrollBar { @extend %overview_scrollbar; }
+
+  .app-view-controls { //favorties | all toggle container
+    width: 320px;
+    padding-bottom: 32px;
+  }
+
+  .app-view-control { //favorties | all toggle button
+    padding: 0 16px;
+    font-weight: bold;
+    color: $inverse_secondary_fg_color;
+
+    &:hover {
+      color: $inverse_fg_color;
+      background-color: $inverse_divider_color !important;
+    }
+
+    &:active {
+      color: $inverse_fg_color;
+      background-color: $inverse_track_color !important;
+    }
+
+    &:checked {
+      color: $inverse_fg_color;
+      background-color: rgba($inverse_fg_color, 0.01) !important;
+      box-shadow: inset 0 2px 0 $primary_color;
+    }
+
+    &:first-child {
+      border-right-width: 0;
+      border-radius: $buttons_radius;
+      &:checked { border-radius: 0; }
+    }
+
+    &:last-child {
+      border-radius: $buttons_radius;
+      &:checked { border-radius: 0; }
+    }
+  }
 }
 
 .overview-controls {
@@ -1593,44 +1639,6 @@ StScrollBar {
     icon-size: 48px;
   }
 
-  .app-view-controls { //favorties | all toggle container
-    width: 320px;
-    padding-bottom: 32px;
-  }
-
-  .app-view-control { //favorties | all toggle button
-    padding: 0 16px;
-    font-weight: bold;
-    color: $inverse_secondary_fg_color;
-
-    &:hover {
-      color: $inverse_fg_color;
-      background-color: $inverse_divider_color !important;
-    }
-
-    &:active {
-      color: $inverse_fg_color;
-      background-color: $inverse_track_color !important;
-    }
-
-    &:checked {
-      color: $inverse_fg_color;
-      background-color: rgba($inverse_fg_color, 0.01) !important;
-      box-shadow: inset 0 2px 0 $primary_color;
-    }
-
-    &:first-child {
-      border-right-width: 0;
-      border-radius: $buttons_radius;
-      &:checked { border-radius: 0; }
-    }
-
-    &:last-child {
-      border-radius: $buttons_radius;
-      &:checked { border-radius: 0; }
-    }
-  }
-
   //Icon tile
   .search-provider-icon,
   .list-search-result {
@@ -1734,25 +1742,47 @@ StScrollBar {
       height: 12px;
       border-radius: 12px;
       background-image: none;
+      margin: 0;
+      padding: 0;
+      border: none;
+      box-shadow: none;
       background-color: $inverse_disabled_secondary_fg_color;
     }
 
     &:hover .page-indicator-icon {
       background-image: none;
+      margin: 0;
+      padding: 0;
+      border: none;
+      box-shadow: none;
       background-color: $inverse_disabled_fg_color;
     }
 
     &:active .page-indicator-icon {
       background-image: none;
+      margin: 0;
+      padding: 0;
+      border: none;
+      box-shadow: none;
       background-color: $inverse_secondary_fg_color;
     }
 
     &:checked .page-indicator-icon {
       background-image: none;
+      margin: 0;
+      padding: 0;
+      border: none;
+      box-shadow: none;
       background-color: $inverse_fg_color;
       transition-duration: 0ms;
     }
-    &:checked:active { background-image: none; }
+    &:checked:active {
+      margin: 0;
+      padding: 0;
+      border: none;
+      box-shadow: none;
+      background-image: none;
+    }
   }
 
   .no-frequent-applications-label { @extend %status_text; }
