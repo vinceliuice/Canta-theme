@@ -32,8 +32,8 @@
      inkscape:snap-bbox="true"
      inkscape:bbox-nodes="true"
      inkscape:zoom="1.9666667"
-     inkscape:cx="44.077574"
-     inkscape:cy="395.22244"
+     inkscape:cx="1.2815097"
+     inkscape:cy="396.47951"
      inkscape:window-width="1366"
      inkscape:window-height="712"
      inkscape:window-x="0"
@@ -1388,4 +1388,28 @@
      xlink:href="#base-combo-rtl-entry-insensitive"
      fill="url(#color-base)"
      id="notebook-combo-rtl-entry-insensitive" />
+  <use
+     x="132"
+     y="408"
+     xlink:href="#base-frame"
+     id="frame"
+     width="100%"
+     height="100%"
+     transform="translate(-80,-312)" />
+  <use
+     x="144"
+     y="408"
+     xlink:href="#base-frame-notebook"
+     id="frame-notebook"
+     width="100%"
+     height="100%"
+     transform="translate(-80,-312)" />
+  <use
+     x="156"
+     y="408"
+     xlink:href="#base-frame-inline"
+     id="frame-inline"
+     width="100%"
+     height="100%"
+     transform="translate(-80,-312)" />
 </svg>

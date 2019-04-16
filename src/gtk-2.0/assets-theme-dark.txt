@@ -50,3 +50,6 @@ notebook-combo-ltr-entry-insensitive
 notebook-combo-rtl-entry
 notebook-combo-rtl-entry-active
 notebook-combo-rtl-entry-insensitive
+frame
+frame-notebook
+frame-inline
