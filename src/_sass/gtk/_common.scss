@@ -1024,21 +1024,22 @@ actionbar { // set bottom border radius
 /***************
  * Header bars *
  ***************/
- // special case for headerbar stack-switchers and path-bar
- $asset_radius: if($radius == 'circle', '-circle', '-square');
+// special case for headerbar stack-switchers and path-bar
+$asset_radius: if($radius == 'circle', '-circle', '-square');
+$asset_color: if($color == 'default', '', if($color == 'blue', '-blue', '-indigo'));
 
- $header_path_button_border: -gtk-scaled(url("assets/button-checked#{$asset_radius}.png"),
-                                         url("assets/button-checked#{$asset_radius}@2.png"));
- $header_path_button_border_compact: -gtk-scaled(url("assets/button-checked-compact#{$asset_radius}.png"),
-                                                 url("assets/button-checked-compact#{$asset_radius}@2.png"));
- $stack_switcher_firstbutton_border: -gtk-scaled(url("assets/firstbutton-checked#{$asset_radius}.png"),
-                                                 url("assets/firstbutton-checked#{$asset_radius}@2.png"));
- $stack_switcher_firstbutton_border_compact: -gtk-scaled(url("assets/firstbutton-checked-compact#{$asset_radius}.png"),
-                                                         url("assets/firstbutton-checked-compact#{$asset_radius}@2.png"));
- $stack_switcher_lastbutton_border: -gtk-scaled(url("assets/lastbutton-checked#{$asset_radius}.png"),
-                                                url("assets/lastbutton-checked#{$asset_radius}@2.png"));
- $stack_switcher_lastbutton_border_compact: -gtk-scaled(url("assets/lastbutton-checked-compact#{$asset_radius}.png"),
-                                                        url("assets/lastbutton-checked-compact#{$asset_radius}@2.png"));
+$header_path_button_border: -gtk-scaled(url("assets/button-checked#{$asset_radius}#{$asset_color}.png"),
+                                        url("assets/button-checked#{$asset_radius}#{$asset_color}@2.png"));
+$header_path_button_border_compact: -gtk-scaled(url("assets/button-checked-compact#{$asset_radius}#{$asset_color}.png"),
+                                                url("assets/button-checked-compact#{$asset_radius}#{$asset_color}@2.png"));
+$stack_switcher_firstbutton_border: -gtk-scaled(url("assets/firstbutton-checked#{$asset_radius}#{$asset_color}.png"),
+                                                url("assets/firstbutton-checked#{$asset_radius}#{$asset_color}@2.png"));
+$stack_switcher_firstbutton_border_compact: -gtk-scaled(url("assets/firstbutton-checked-compact#{$asset_radius}#{$asset_color}.png"),
+                                                        url("assets/firstbutton-checked-compact#{$asset_radius}#{$asset_color}@2.png"));
+$stack_switcher_lastbutton_border: -gtk-scaled(url("assets/lastbutton-checked#{$asset_radius}#{$asset_color}.png"),
+                                               url("assets/lastbutton-checked#{$asset_radius}#{$asset_color}@2.png"));
+$stack_switcher_lastbutton_border_compact: -gtk-scaled(url("assets/lastbutton-checked-compact#{$asset_radius}#{$asset_color}.png"),
+                                                       url("assets/lastbutton-checked-compact#{$asset_radius}#{$asset_color}@2.png"));
 
 %header_button {
   border-image: none;
@@ -2192,8 +2193,8 @@ switch {
 /*************************
  * Check and Radio items *
  *************************/
-// draw regular check and radio items using our PNG assets
-// all assets are rendered from assets.svg. never add pngs directly
+// draw regular check and radio items using our PNG common-assets
+// all common-assets are rendered from common-assets.svg. never add pngs directly
 
 // selection-mode
 .view.content-view.check:not(list),
@@ -2212,8 +2213,8 @@ switch {
   @each $s, $as in ('', '-unchecked'),
                    (':checked', '-checked') {
     &#{$s} {
-      -gtk-icon-source: -gtk-scaled(url("assets/selectionmode-checkbox#{$as}#{$asset_suffix}.png"),
-                                    url("assets/selectionmode-checkbox#{$as}#{$asset_suffix}@2.png"));
+      -gtk-icon-source: -gtk-scaled(url("common-assets/selectionmode-checkbox#{$as}#{$asset_suffix}.png"),
+                                    url("common-assets/selectionmode-checkbox#{$as}#{$asset_suffix}@2.png"));
     }
   }
 }
@@ -2292,26 +2293,20 @@ radio {
 
 %check,
 check {
-  & { -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/checkbox-unchecked-symbolic.svg")),
-                              -gtk-recolor(url("assets/scalable/checkbox-unchecked-symbolic.symbolic.png"))); }
+  & { -gtk-icon-source: image(-gtk-recolor(url("common-assets/scalable/checkbox-unchecked-symbolic.svg"))); }
 
-  &:checked { -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/checkbox-checked-symbolic.svg")),
-                                      -gtk-recolor(url("assets/scalable/checkbox-checked-symbolic.symbolic.png"))); }
+  &:checked { -gtk-icon-source: image(-gtk-recolor(url("common-assets/scalable/checkbox-checked-symbolic.svg"))); }
 
-  &:indeterminate { -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/checkbox-mixed-symbolic.svg")),
-                                            -gtk-recolor(url("assets/scalable/checkbox-mixed-symbolic.symbolic.png"))); }
+  &:indeterminate { -gtk-icon-source: image(-gtk-recolor(url("common-assets/scalable/checkbox-mixed-symbolic.svg"))); }
 }
 
 %radio,
 radio {
-  & { -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/radio-unchecked-symbolic.svg")),
-                              -gtk-recolor(url("assets/scalable/radio-unchecked-symbolic.symbolic.png"))); }
+  & { -gtk-icon-source: image(-gtk-recolor(url("common-assets/scalable/radio-unchecked-symbolic.svg"))); }
 
-  // &:checked { -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/radio-checked-symbolic.svg")),
-  //                                     -gtk-recolor(url("assets/scalable/radio-checked-symbolic.symbolic.png"))); }
+  // &:checked { -gtk-icon-source: image(-gtk-recolor(url("common-assets/scalable/radio-checked-symbolic.svg"))); }
 
-  &:indeterminate { -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/radio-mixed-symbolic.svg")),
-                                            -gtk-recolor(url("assets/scalable/radio-mixed-symbolic.symbolic.png"))); }
+  &:indeterminate { -gtk-icon-source: image(-gtk-recolor(url("common-assets/scalable/radio-mixed-symbolic.svg"))); }
 
   border-image-slice: $large_size / 2px;
   border-image-width: $large_size / 2;
@@ -2350,18 +2345,15 @@ menu menuitem check {
     min-width: 16px;
     border-radius: $buttons_radius;
     -gtk-outline-radius: $buttons_radius;
-    -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-checkbox-unchecked-symbolic.svg")),
-                            -gtk-recolor(url("assets/scalable/small-checkbox-unchecked-symbolic.symbolic.png")));
+    -gtk-icon-source: image(-gtk-recolor(url("common-assets/scalable/small-checkbox-unchecked-symbolic.svg")));
   }
 
   &:checked {
-    -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-checkbox-checked-symbolic.svg")),
-                            -gtk-recolor(url("assets/scalable/small-checkbox-checked-symbolic.symbolic.png")));
+    -gtk-icon-source: image(-gtk-recolor(url("common-assets/scalable/small-checkbox-checked-symbolic.svg")));
   }
 
   &:indeterminate {
-    -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-checkbox-mixed-symbolic.svg")),
-                            -gtk-recolor(url("assets/scalable/small-checkbox-mixed-symbolic.symbolic.png")));
+    -gtk-icon-source: image(-gtk-recolor(url("common-assets/scalable/small-checkbox-mixed-symbolic.svg")));
   }
 }
 
@@ -2371,18 +2363,15 @@ menu menuitem radio {
     min-height: 16px;
     min-width: 16px;
     border-image: none;
-    -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-radio-unchecked-symbolic.svg")),
-                            -gtk-recolor(url("assets/scalable/small-radio-unchecked-symbolic.symbolic.png")));
+    -gtk-icon-source: image(-gtk-recolor(url("common-assets/scalable/small-radio-unchecked-symbolic.svg")));
   }
 
   &:checked {
-    -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-radio-checked-symbolic.svg")),
-                            -gtk-recolor(url("assets/scalable/small-radio-checked-symbolic.symbolic.png")));
+    -gtk-icon-source: image(-gtk-recolor(url("common-assets/scalable/small-radio-checked-symbolic.svg")));
   }
 
   &:indeterminate {
-    -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-radio-mixed-symbolic.svg")),
-                            -gtk-recolor(url("assets/scalable/small-radio-mixed-symbolic.symbolic.png")));
+    -gtk-icon-source: image(-gtk-recolor(url("common-assets/scalable/small-radio-mixed-symbolic.svg")));
   }
 }
 
@@ -2453,8 +2442,7 @@ treeview.view radio {
 }
 
 treeview.view radio:checked {
-  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/radio-checked-symbolic.svg")),
-                          -gtk-recolor(url("assets/scalable/radio-checked-symbolic.symbolic.png")));
+  -gtk-icon-source: image(-gtk-recolor(url("common-assets/scalable/radio-checked-symbolic.svg")));
   border-image: none;
 }
 
@@ -2525,7 +2513,7 @@ scale {
     @each $s, $as in ('', ''),
                      (':disabled', '-disabled') {
       &#{$s} {
-        $_url: 'assets/scale-slider#{$as}#{$asset_suffix}';
+        $_url: 'common-assets/scale-slider#{$as}#{$asset_suffix}';
 
         background-image: -gtk-scaled(url('#{$_url}.png'), url('#{$_url}@2.png'));
       }
@@ -2586,7 +2574,7 @@ scale {
           @each $state, $state_infix in ('', ''),
                                         (':disabled', '-disabled') {
             &#{$state} {
-              $_scale_asset: 'assets/scale-#{$dir_infix}-#{$marks_infix}-slider#{$state_infix}#{$asset_suffix}';
+              $_scale_asset: 'common-assets/scale-#{$dir_infix}-#{$marks_infix}-slider#{$state_infix}#{$asset_suffix}';
 
               background-image: -gtk-scaled(url('#{$_scale_asset}.png'), url('#{$_scale_asset}@2.png'));
             }
@@ -3583,13 +3571,13 @@ decoration {
 
   &:backdrop { background-image:none; background-color: $titlebar_divider_color; }
 
-  // Load png assets for each button, Fix the Chrome window restore button bug
+  // Load png common-assets for each button, Fix the Chrome window restore button bug
   @each $k in ('close', 'maximize', 'minimize', 'restore') {
     @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-active') {
 
       &.#{$k}#{$l} {
-        background-image: -gtk-scaled(url('assets/titlebutton-#{$k}#{$m}.png'),
-                                      url('assets/titlebutton-#{$k}#{$m}@2.png'));
+        background-image: -gtk-scaled(url('common-assets/titlebutton-#{$k}#{$m}.png'),
+                                      url('common-assets/titlebutton-#{$k}#{$m}@2.png'));
       }
     }
   }
@@ -3599,8 +3587,8 @@ decoration {
     button.titlebutton {
       @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-active') {
       &.maximize#{$l} {
-        background-image: -gtk-scaled(url('assets/titlebutton-restore#{$m}.png'),
-                                      url('assets/titlebutton-restore#{$m}@2.png'));
+        background-image: -gtk-scaled(url('common-assets/titlebutton-restore#{$m}.png'),
+                                      url('common-assets/titlebutton-restore#{$m}@2.png'));
         }
       }
     }
@@ -3704,7 +3692,7 @@ cursor-handle {
     -GtkWidget-text-handle-width: 24;
     -GtkWidget-text-handle-height: 30;
 
-    $_url: 'assets/scale-horz-marks-before-slider#{$asset_suffix}';
+    $_url: 'common-assets/scale-horz-marks-before-slider#{$asset_suffix}';
     -gtk-icon-source: -gtk-scaled(url('#{$_url}.png'),
                                   url('#{$_url}@2.png'));
   }

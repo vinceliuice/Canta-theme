@@ -11,6 +11,18 @@
   @return mix($c, $grey_900, 50%);
 }
 
+// Theme dark colors
+$theme_grey_50: if($color == 'default', $green_grey_50, $blue_grey_50);
+$theme_grey_100: if($color == 'default', $green_grey_100, $blue_grey_100);
+$theme_grey_200: if($color == 'default', $green_grey_200, $blue_grey_200);
+$theme_grey_300: if($color == 'default', $green_grey_300, $blue_grey_300);
+$theme_grey_400: if($color == 'default', $green_grey_400, $blue_grey_400);
+$theme_grey_500: if($color == 'default', $green_grey_500, $blue_grey_500);
+$theme_grey_600: if($color == 'default', $green_grey_600, $blue_grey_600);
+$theme_grey_700: if($color == 'default', $green_grey_700, $blue_grey_700);
+$theme_grey_800: if($color == 'default', $green_grey_800, $blue_grey_800);
+$theme_grey_900: if($color == 'default', $green_grey_900, $blue_grey_900);
+
 // Foreground colors
 $dark_fg_color:   rgba($black, 0.87);
 $light_fg_color:  $white;
@@ -49,25 +61,25 @@ $panel_track_color:                   if($titlebar == 'light', rgba($black, 0.26
 $panel_divider_color:                 if($titlebar == 'light', rgba($black, 0.12), rgba($white, 0.12));
 
 // Background colors
-$bg_color:               if($variant == 'light', $grey_100, fade($green_grey_700));
-$base_color:             if($variant == 'light', darken($white, 1%), fade($green_grey_600));
+$bg_color:               if($variant == 'light', $grey_100, fade($theme_grey_700));
+$base_color:             if($variant == 'light', darken($white, 1%), fade($theme_grey_600));
 $alt_base_color:         if($variant == 'light', $grey_50, mix($base_color, $bg_color, 50%));
-$lighter_bg_color:       if($variant == 'light', $grey_100, fade($green_grey_500));
-$alt_lighter_bg_color:   if($variant == 'light', $grey_200, fade($green_grey_800)); // for gnome-shell sub menu
-$darker_bg_color:        if($variant == 'light', $grey_200, fade($green_grey_900));
-$keyboard_bg_color:      if($variant == 'light', $grey_50, fade($green_grey_600)); // for gnome-shell keyboard
-$alt_keyboard_bg_color:  if($variant == 'light', $grey_300, fade($green_grey_900)); // for gnome-shell keyboard
+$lighter_bg_color:       if($variant == 'light', $grey_100, fade($theme_grey_500));
+$alt_lighter_bg_color:   if($variant == 'light', $grey_200, fade($theme_grey_800)); // for gnome-shell sub menu
+$darker_bg_color:        if($variant == 'light', $grey_200, fade($theme_grey_900));
+$keyboard_bg_color:      if($variant == 'light', $grey_50, fade($theme_grey_600)); // for gnome-shell keyboard
+$alt_keyboard_bg_color:  if($variant == 'light', $grey_300, fade($theme_grey_900)); // for gnome-shell keyboard
 
-$titlebar_bg_color:      if($titlebar == 'dark', if($variant == 'light', $green_grey_700, $green_grey_900), $white);
-$alt_titlebar_bg_color:  if($titlebar == 'dark', $green_grey_600, $grey_300);
+$titlebar_bg_color:      if($titlebar == 'dark', if($variant == 'light', $theme_grey_700, $theme_grey_900), $white);
+$alt_titlebar_bg_color:  if($titlebar == 'dark', $theme_grey_600, $grey_300);
 
-$panel_bg_color:         rgba(if($titlebar == 'dark', $green_grey_900, $white), 0.85);
-$alt_panel_bg_color:     rgba(if($titlebar == 'dark', $green_grey_800, $grey_50), 0.85);
+$panel_bg_color:         rgba(if($titlebar == 'dark', $theme_grey_900, $white), 0.85);
+$alt_panel_bg_color:     rgba(if($titlebar == 'dark', $theme_grey_800, $grey_50), 0.85);
 $inverse_panel_bg_color: rgba($titlebar_fg_color, 0.1);
-$solid_panel_bg_color:   if($titlebar == 'dark', $green_grey_900, $white);
+$solid_panel_bg_color:   if($titlebar == 'dark', $theme_grey_900, $white);
 $opaque_panel_bg_color:  $solid_panel_bg_color; // for Unity panel which cannot use translucent colors
 
-$gdm_bg_color:  if($variant == 'light', $green_grey_800, $green_grey_900);
+$gdm_bg_color:  if($variant == 'light', $theme_grey_800, $theme_grey_900);
 $menu_bg_color: if($variant == 'light', $white, $bg_color);
 
 $fill_color:      gtkalpha(currentColor, $lower_opacity);
@@ -75,10 +87,21 @@ $semi_fill_color: gtkalpha(currentColor, $lower_opacity / 2);
 $row_fill_color:  gtkalpha(currentColor, 0.05);
 
 // Misc colors
-$primary_color:         #00CE99;
-$alt_primary_color:     #00CF88;
-$progress_color:        #00CC65;
-$accent_color:          #FFAC00;
+$primary_color: #00CE99;
+$alt_primary_color: #00CF88;
+
+@if $color == 'blue' {
+  $primary_color: #3e81ff;
+  $alt_primary_color: #4c89fd;
+}
+
+@if $color == 'indigo' {
+  $primary_color: #7349ff;
+  $alt_primary_color: #8600e8;
+}
+
+$progress_color: $primary_color;
+$accent_color: #FFAC00;
 $disabled_accent_color: rgba($accent_color, 0.5);
 
 $link_color:         $primary_color;

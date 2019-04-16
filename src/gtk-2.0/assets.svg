@@ -14,7 +14,7 @@
    version="1.1"
    id="svg571"
    sodipodi:docname="assets.svg"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
   <metadata
      id="metadata573">
     <rdf:RDF>
@@ -29,13 +29,13 @@
   <sodipodi:namedview
      showgrid="true"
      id="namedview4"
-     inkscape:zoom="19.209734"
-     inkscape:cx="141.54382"
-     inkscape:cy="54.873215"
-     inkscape:window-width="1920"
-     inkscape:window-height="1021"
+     inkscape:zoom="4.8024335"
+     inkscape:cx="146.78622"
+     inkscape:cy="82.655454"
+     inkscape:window-width="1366"
+     inkscape:window-height="712"
      inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-y="28"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg571">
     <inkscape:grid
@@ -1102,6 +1102,41 @@
        xlink:href="#base-treeview-ltr-button-active"
        id="base-treeview-rtl-button-active"
        transform="scale(-1 1)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-bg"
+       id="linearGradient447"
+       x1="0"
+       y1="0"
+       x2="4"
+       y2="0"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(168,396)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-bg"
+       id="linearGradient627"
+       x1="0"
+       y1="0"
+       x2="4"
+       y2="0"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       id="color-bg-3">
+      <stop
+         stop-color="#333e43"
+         id="stop32-6" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#color-bg"
+       id="linearGradient643"
+       x1="0"
+       y1="0"
+       x2="4"
+       y2="0"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(168,388.00848)" />
   </defs>
   <use
      x="8"
@@ -1889,21 +1924,37 @@
      y="396"
      xlink:href="#base-border"
      id="border" />
-  <use
+  <rect
+     height="1"
+     width="1"
+     id="tab"
      x="144"
      y="396"
-     xlink:href="#base-tab"
-     id="tab" />
-  <use
+     style="fill:#00ce99;fill-opacity:1" />
+  <rect
+     height="4"
+     width="4"
+     id="progressbar-progress"
      x="156"
      y="396"
-     xlink:href="#base-progressbar-progress"
-     id="progressbar-progress" />
-  <use
-     x="168"
-     y="396"
-     xlink:href="#base-progressbar-trough"
-     id="progressbar-trough" />
+     style="fill:#00ce99;fill-opacity:1" />
+  <g
+     id="progressbar-trough">
+    <rect
+       style="fill:url(#linearGradient447)"
+       y="396"
+       x="168"
+       id="use441"
+       width="4"
+       height="4" />
+    <rect
+       style="opacity:0.3;fill:#00ce99;fill-opacity:1"
+       y="396"
+       x="168"
+       id="progressbar-trough1"
+       width="4"
+       height="4" />
+  </g>
   <use
      x="132"
      y="408"
@@ -1974,4 +2025,68 @@
      id="pathbar_button_active"
      style="opacity:1;fill:#ffac00;fill-opacity:1;stroke:none;stroke-width:0.81649661;stroke-opacity:1"
      inkscape:label="#rect5320" />
+  <rect
+     height="1"
+     width="1"
+     id="tab-indigo"
+     x="144"
+     y="388.00848"
+     style="fill:#7349ff;fill-opacity:1" />
+  <rect
+     height="4"
+     width="4"
+     id="progressbar-progress-indigo"
+     x="156"
+     y="388.00848"
+     style="fill:#7349ff;fill-opacity:1" />
+  <g
+     id="progressbar-trough-indigo">
+    <rect
+       style="fill:url(#linearGradient643);fill-opacity:1.0"
+       y="388.00848"
+       x="168"
+       id="use637"
+       width="4"
+       height="4" />
+    <rect
+       style="opacity:0.3;fill:#7349ff;fill-opacity:1"
+       y="388"
+       x="168"
+       id="progressbar-trough-indigo1"
+       width="4"
+       height="4" />
+  </g>
+  <rect
+     height="1"
+     width="1"
+     id="tab-blue"
+     x="144"
+     y="380"
+     style="fill:#3e81ff;fill-opacity:1" />
+  <rect
+     height="4"
+     width="4"
+     id="progressbar-progress-blue"
+     x="156"
+     y="380"
+     style="fill:#3e81ff;fill-opacity:1" />
+  <g
+     id="progressbar-trough-blue">
+    <use
+       transform="translate(168,380.00001)"
+       id="use621"
+       xlink:href="#4x4"
+       style="fill:url(#linearGradient627);fill-opacity:1.0"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <rect
+       style="opacity:0.3;fill:#3e81ff;fill-opacity:1"
+       y="380"
+       x="168"
+       id="progressbar-trough-blue1"
+       width="4"
+       height="4" />
+  </g>
 </svg>

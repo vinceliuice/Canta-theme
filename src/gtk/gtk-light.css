@@ -2777,12 +2777,12 @@ switch:checked:disabled slider {
 
 .view.content-view.check:not(list),
 .content-view .tile check:not(list) {
-  -gtk-icon-source: -gtk-scaled(url("assets/selectionmode-checkbox-unchecked.png"), url("assets/selectionmode-checkbox-unchecked@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("common-assets/selectionmode-checkbox-unchecked.png"), url("common-assets/selectionmode-checkbox-unchecked@2.png"));
 }
 
 .view.content-view.check:not(list):checked,
 .content-view .tile check:not(list):checked {
-  -gtk-icon-source: -gtk-scaled(url("assets/selectionmode-checkbox-checked.png"), url("assets/selectionmode-checkbox-checked@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("common-assets/selectionmode-checkbox-checked.png"), url("common-assets/selectionmode-checkbox-checked@2.png"));
 }
 
 checkbutton.text-button,
@@ -2888,17 +2888,17 @@ radio:disabled {
 
 
 check {
-  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/checkbox-unchecked-symbolic.svg")), -gtk-recolor(url("assets/scalable/checkbox-unchecked-symbolic.symbolic.png")));
+  -gtk-icon-source: image(-gtk-recolor(url("common-assets/scalable/checkbox-unchecked-symbolic.svg")));
 }
 
 
 check:checked {
-  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/checkbox-checked-symbolic.svg")), -gtk-recolor(url("assets/scalable/checkbox-checked-symbolic.symbolic.png")));
+  -gtk-icon-source: image(-gtk-recolor(url("common-assets/scalable/checkbox-checked-symbolic.svg")));
 }
 
 
 check:indeterminate {
-  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/checkbox-mixed-symbolic.svg")), -gtk-recolor(url("assets/scalable/checkbox-mixed-symbolic.symbolic.png")));
+  -gtk-icon-source: image(-gtk-recolor(url("common-assets/scalable/checkbox-mixed-symbolic.svg")));
 }
 
 
@@ -2909,12 +2909,12 @@ radio {
 
 
 radio {
-  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/radio-unchecked-symbolic.svg")), -gtk-recolor(url("assets/scalable/radio-unchecked-symbolic.symbolic.png")));
+  -gtk-icon-source: image(-gtk-recolor(url("common-assets/scalable/radio-unchecked-symbolic.svg")));
 }
 
 
 radio:indeterminate {
-  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/radio-mixed-symbolic.svg")), -gtk-recolor(url("assets/scalable/radio-mixed-symbolic.symbolic.png")));
+  -gtk-icon-source: image(-gtk-recolor(url("common-assets/scalable/radio-mixed-symbolic.svg")));
 }
 
 
@@ -2938,17 +2938,17 @@ menu menuitem check {
   min-width: 16px;
   border-radius: 6px;
   -gtk-outline-radius: 6px;
-  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-checkbox-unchecked-symbolic.svg")), -gtk-recolor(url("assets/scalable/small-checkbox-unchecked-symbolic.symbolic.png")));
+  -gtk-icon-source: image(-gtk-recolor(url("common-assets/scalable/small-checkbox-unchecked-symbolic.svg")));
 }
 
 window.background:not(.csd) > widget > checkbutton > check:checked,
 menu menuitem check:checked {
-  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-checkbox-checked-symbolic.svg")), -gtk-recolor(url("assets/scalable/small-checkbox-checked-symbolic.symbolic.png")));
+  -gtk-icon-source: image(-gtk-recolor(url("common-assets/scalable/small-checkbox-checked-symbolic.svg")));
 }
 
 window.background:not(.csd) > widget > checkbutton > check:indeterminate,
 menu menuitem check:indeterminate {
-  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-checkbox-mixed-symbolic.svg")), -gtk-recolor(url("assets/scalable/small-checkbox-mixed-symbolic.symbolic.png")));
+  -gtk-icon-source: image(-gtk-recolor(url("common-assets/scalable/small-checkbox-mixed-symbolic.svg")));
 }
 
 window.background:not(.csd) > widget > radiobutton > radio,
@@ -2956,17 +2956,17 @@ menu menuitem radio {
   min-height: 16px;
   min-width: 16px;
   border-image: none;
-  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-radio-unchecked-symbolic.svg")), -gtk-recolor(url("assets/scalable/small-radio-unchecked-symbolic.symbolic.png")));
+  -gtk-icon-source: image(-gtk-recolor(url("common-assets/scalable/small-radio-unchecked-symbolic.svg")));
 }
 
 window.background:not(.csd) > widget > radiobutton > radio:checked,
 menu menuitem radio:checked {
-  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-radio-checked-symbolic.svg")), -gtk-recolor(url("assets/scalable/small-radio-checked-symbolic.symbolic.png")));
+  -gtk-icon-source: image(-gtk-recolor(url("common-assets/scalable/small-radio-checked-symbolic.svg")));
 }
 
 window.background:not(.csd) > widget > radiobutton > radio:indeterminate,
 menu menuitem radio:indeterminate {
-  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-radio-mixed-symbolic.svg")), -gtk-recolor(url("assets/scalable/small-radio-mixed-symbolic.symbolic.png")));
+  -gtk-icon-source: image(-gtk-recolor(url("common-assets/scalable/small-radio-mixed-symbolic.svg")));
 }
 
 check:not(:checked):active {
@@ -3070,7 +3070,7 @@ treeview.view radio:selected:indeterminate:disabled {
 }
 
 treeview.view radio:checked {
-  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/radio-checked-symbolic.svg")), -gtk-recolor(url("assets/scalable/radio-checked-symbolic.symbolic.png")));
+  -gtk-icon-source: image(-gtk-recolor(url("common-assets/scalable/radio-checked-symbolic.svg")));
   border-image: none;
 }
 
@@ -3125,11 +3125,11 @@ scale slider {
 }
 
 scale slider {
-  background-image: -gtk-scaled(url("assets/scale-slider.png"), url("assets/scale-slider@2.png"));
+  background-image: -gtk-scaled(url("common-assets/scale-slider.png"), url("common-assets/scale-slider@2.png"));
 }
 
 scale slider:disabled {
-  background-image: -gtk-scaled(url("assets/scale-slider-disabled.png"), url("assets/scale-slider-disabled@2.png"));
+  background-image: -gtk-scaled(url("common-assets/scale-slider-disabled.png"), url("common-assets/scale-slider-disabled@2.png"));
 }
 
 scale slider:hover {
@@ -3191,11 +3191,11 @@ scale.horizontal.marks-before:not(.marks-after) slider {
 }
 
 scale.horizontal.marks-before:not(.marks-after) slider {
-  background-image: -gtk-scaled(url("assets/scale-horz-marks-before-slider.png"), url("assets/scale-horz-marks-before-slider@2.png"));
+  background-image: -gtk-scaled(url("common-assets/scale-horz-marks-before-slider.png"), url("common-assets/scale-horz-marks-before-slider@2.png"));
 }
 
 scale.horizontal.marks-before:not(.marks-after) slider:disabled {
-  background-image: -gtk-scaled(url("assets/scale-horz-marks-before-slider-disabled.png"), url("assets/scale-horz-marks-before-slider-disabled@2.png"));
+  background-image: -gtk-scaled(url("common-assets/scale-horz-marks-before-slider-disabled.png"), url("common-assets/scale-horz-marks-before-slider-disabled@2.png"));
 }
 
 scale.horizontal.marks-before:not(.marks-after) slider:hover {
@@ -3218,11 +3218,11 @@ scale.horizontal.marks-after:not(.marks-before) slider {
 }
 
 scale.horizontal.marks-after:not(.marks-before) slider {
-  background-image: -gtk-scaled(url("assets/scale-horz-marks-after-slider.png"), url("assets/scale-horz-marks-after-slider@2.png"));
+  background-image: -gtk-scaled(url("common-assets/scale-horz-marks-after-slider.png"), url("common-assets/scale-horz-marks-after-slider@2.png"));
 }
 
 scale.horizontal.marks-after:not(.marks-before) slider:disabled {
-  background-image: -gtk-scaled(url("assets/scale-horz-marks-after-slider-disabled.png"), url("assets/scale-horz-marks-after-slider-disabled@2.png"));
+  background-image: -gtk-scaled(url("common-assets/scale-horz-marks-after-slider-disabled.png"), url("common-assets/scale-horz-marks-after-slider-disabled@2.png"));
 }
 
 scale.horizontal.marks-after:not(.marks-before) slider:hover {
@@ -3245,11 +3245,11 @@ scale.vertical.marks-before:not(.marks-after) slider {
 }
 
 scale.vertical.marks-before:not(.marks-after) slider {
-  background-image: -gtk-scaled(url("assets/scale-vert-marks-before-slider.png"), url("assets/scale-vert-marks-before-slider@2.png"));
+  background-image: -gtk-scaled(url("common-assets/scale-vert-marks-before-slider.png"), url("common-assets/scale-vert-marks-before-slider@2.png"));
 }
 
 scale.vertical.marks-before:not(.marks-after) slider:disabled {
-  background-image: -gtk-scaled(url("assets/scale-vert-marks-before-slider-disabled.png"), url("assets/scale-vert-marks-before-slider-disabled@2.png"));
+  background-image: -gtk-scaled(url("common-assets/scale-vert-marks-before-slider-disabled.png"), url("common-assets/scale-vert-marks-before-slider-disabled@2.png"));
 }
 
 scale.vertical.marks-before:not(.marks-after) slider:hover {
@@ -3272,11 +3272,11 @@ scale.vertical.marks-after:not(.marks-before) slider {
 }
 
 scale.vertical.marks-after:not(.marks-before) slider {
-  background-image: -gtk-scaled(url("assets/scale-vert-marks-after-slider.png"), url("assets/scale-vert-marks-after-slider@2.png"));
+  background-image: -gtk-scaled(url("common-assets/scale-vert-marks-after-slider.png"), url("common-assets/scale-vert-marks-after-slider@2.png"));
 }
 
 scale.vertical.marks-after:not(.marks-before) slider:disabled {
-  background-image: -gtk-scaled(url("assets/scale-vert-marks-after-slider-disabled.png"), url("assets/scale-vert-marks-after-slider-disabled@2.png"));
+  background-image: -gtk-scaled(url("common-assets/scale-vert-marks-after-slider-disabled.png"), url("common-assets/scale-vert-marks-after-slider-disabled@2.png"));
 }
 
 scale.vertical.marks-after:not(.marks-before) slider:hover {
@@ -3342,11 +3342,11 @@ progressbar.vertical progress {
 }
 
 progressbar trough {
-  background-color: rgba(0, 204, 101, 0.3);
+  background-color: rgba(0, 206, 153, 0.3);
 }
 
 progressbar progress {
-  background-color: #00CC65;
+  background-color: #00CE99;
 }
 
 progressbar trough.empty progress {
@@ -4170,91 +4170,91 @@ messagedialog.csd decoration {
 }
 
 #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.close.titlebutton {
-  background-image: -gtk-scaled(url("assets/titlebutton-close.png"), url("assets/titlebutton-close@2.png"));
+  background-image: -gtk-scaled(url("common-assets/titlebutton-close.png"), url("common-assets/titlebutton-close@2.png"));
 }
 
 #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.close.titlebutton:backdrop {
-  background-image: -gtk-scaled(url("assets/titlebutton-close-backdrop.png"), url("assets/titlebutton-close-backdrop@2.png"));
+  background-image: -gtk-scaled(url("common-assets/titlebutton-close-backdrop.png"), url("common-assets/titlebutton-close-backdrop@2.png"));
 }
 
 #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.close.titlebutton:hover {
-  background-image: -gtk-scaled(url("assets/titlebutton-close-hover.png"), url("assets/titlebutton-close-hover@2.png"));
+  background-image: -gtk-scaled(url("common-assets/titlebutton-close-hover.png"), url("common-assets/titlebutton-close-hover@2.png"));
 }
 
 #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.close.titlebutton:active {
-  background-image: -gtk-scaled(url("assets/titlebutton-close-active.png"), url("assets/titlebutton-close-active@2.png"));
+  background-image: -gtk-scaled(url("common-assets/titlebutton-close-active.png"), url("common-assets/titlebutton-close-active@2.png"));
 }
 
 #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.maximize.titlebutton {
-  background-image: -gtk-scaled(url("assets/titlebutton-maximize.png"), url("assets/titlebutton-maximize@2.png"));
+  background-image: -gtk-scaled(url("common-assets/titlebutton-maximize.png"), url("common-assets/titlebutton-maximize@2.png"));
 }
 
 #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.maximize.titlebutton:backdrop {
-  background-image: -gtk-scaled(url("assets/titlebutton-maximize-backdrop.png"), url("assets/titlebutton-maximize-backdrop@2.png"));
+  background-image: -gtk-scaled(url("common-assets/titlebutton-maximize-backdrop.png"), url("common-assets/titlebutton-maximize-backdrop@2.png"));
 }
 
 #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.maximize.titlebutton:hover {
-  background-image: -gtk-scaled(url("assets/titlebutton-maximize-hover.png"), url("assets/titlebutton-maximize-hover@2.png"));
+  background-image: -gtk-scaled(url("common-assets/titlebutton-maximize-hover.png"), url("common-assets/titlebutton-maximize-hover@2.png"));
 }
 
 #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.maximize.titlebutton:active {
-  background-image: -gtk-scaled(url("assets/titlebutton-maximize-active.png"), url("assets/titlebutton-maximize-active@2.png"));
+  background-image: -gtk-scaled(url("common-assets/titlebutton-maximize-active.png"), url("common-assets/titlebutton-maximize-active@2.png"));
 }
 
 #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.minimize.titlebutton {
-  background-image: -gtk-scaled(url("assets/titlebutton-minimize.png"), url("assets/titlebutton-minimize@2.png"));
+  background-image: -gtk-scaled(url("common-assets/titlebutton-minimize.png"), url("common-assets/titlebutton-minimize@2.png"));
 }
 
 #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.minimize.titlebutton:backdrop {
-  background-image: -gtk-scaled(url("assets/titlebutton-minimize-backdrop.png"), url("assets/titlebutton-minimize-backdrop@2.png"));
+  background-image: -gtk-scaled(url("common-assets/titlebutton-minimize-backdrop.png"), url("common-assets/titlebutton-minimize-backdrop@2.png"));
 }
 
 #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.minimize.titlebutton:hover {
-  background-image: -gtk-scaled(url("assets/titlebutton-minimize-hover.png"), url("assets/titlebutton-minimize-hover@2.png"));
+  background-image: -gtk-scaled(url("common-assets/titlebutton-minimize-hover.png"), url("common-assets/titlebutton-minimize-hover@2.png"));
 }
 
 #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.minimize.titlebutton:active {
-  background-image: -gtk-scaled(url("assets/titlebutton-minimize-active.png"), url("assets/titlebutton-minimize-active@2.png"));
+  background-image: -gtk-scaled(url("common-assets/titlebutton-minimize-active.png"), url("common-assets/titlebutton-minimize-active@2.png"));
 }
 
 #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.restore.titlebutton {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore.png"), url("assets/titlebutton-restore@2.png"));
+  background-image: -gtk-scaled(url("common-assets/titlebutton-restore.png"), url("common-assets/titlebutton-restore@2.png"));
 }
 
 #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.restore.titlebutton:backdrop {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-backdrop.png"), url("assets/titlebutton-restore-backdrop@2.png"));
+  background-image: -gtk-scaled(url("common-assets/titlebutton-restore-backdrop.png"), url("common-assets/titlebutton-restore-backdrop@2.png"));
 }
 
 #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.restore.titlebutton:hover {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-hover.png"), url("assets/titlebutton-restore-hover@2.png"));
+  background-image: -gtk-scaled(url("common-assets/titlebutton-restore-hover.png"), url("common-assets/titlebutton-restore-hover@2.png"));
 }
 
 #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.restore.titlebutton:active {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-active.png"), url("assets/titlebutton-restore-active@2.png"));
+  background-image: -gtk-scaled(url("common-assets/titlebutton-restore-active.png"), url("common-assets/titlebutton-restore-active@2.png"));
 }
 
 .fullscreen #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton button.titlebutton.maximize, #MozillaGtkWidget.background headerbar.titlebar.default-decoration .fullscreen button.titlebutton button.titlebutton.maximize,
 .maximized #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton button.titlebutton.maximize,
 #MozillaGtkWidget.background headerbar.titlebar.default-decoration .maximized button.titlebutton button.titlebutton.maximize {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore.png"), url("assets/titlebutton-restore@2.png"));
+  background-image: -gtk-scaled(url("common-assets/titlebutton-restore.png"), url("common-assets/titlebutton-restore@2.png"));
 }
 
 .fullscreen #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton button.titlebutton.maximize:backdrop, #MozillaGtkWidget.background headerbar.titlebar.default-decoration .fullscreen button.titlebutton button.titlebutton.maximize:backdrop,
 .maximized #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton button.titlebutton.maximize:backdrop,
 #MozillaGtkWidget.background headerbar.titlebar.default-decoration .maximized button.titlebutton button.titlebutton.maximize:backdrop {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-backdrop.png"), url("assets/titlebutton-restore-backdrop@2.png"));
+  background-image: -gtk-scaled(url("common-assets/titlebutton-restore-backdrop.png"), url("common-assets/titlebutton-restore-backdrop@2.png"));
 }
 
 .fullscreen #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton button.titlebutton.maximize:hover, #MozillaGtkWidget.background headerbar.titlebar.default-decoration .fullscreen button.titlebutton button.titlebutton.maximize:hover,
 .maximized #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton button.titlebutton.maximize:hover,
 #MozillaGtkWidget.background headerbar.titlebar.default-decoration .maximized button.titlebutton button.titlebutton.maximize:hover {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-hover.png"), url("assets/titlebutton-restore-hover@2.png"));
+  background-image: -gtk-scaled(url("common-assets/titlebutton-restore-hover.png"), url("common-assets/titlebutton-restore-hover@2.png"));
 }
 
 .fullscreen #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton button.titlebutton.maximize:active, #MozillaGtkWidget.background headerbar.titlebar.default-decoration .fullscreen button.titlebutton button.titlebutton.maximize:active,
 .maximized #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton button.titlebutton.maximize:active,
 #MozillaGtkWidget.background headerbar.titlebar.default-decoration .maximized button.titlebutton button.titlebutton.maximize:active {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-active.png"), url("assets/titlebutton-restore-active@2.png"));
+  background-image: -gtk-scaled(url("common-assets/titlebutton-restore-active.png"), url("common-assets/titlebutton-restore-active@2.png"));
 }
 
 headerbar,
@@ -4522,7 +4522,7 @@ cursor-handle.bottom:dir(ltr), cursor-handle.top:dir(rtl) {
 cursor-handle.insertion-cursor:dir(ltr), cursor-handle.insertion-cursor:dir(rtl) {
   -GtkWidget-text-handle-width: 24;
   -GtkWidget-text-handle-height: 30;
-  -gtk-icon-source: -gtk-scaled(url("assets/scale-horz-marks-before-slider.png"), url("assets/scale-horz-marks-before-slider@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("common-assets/scale-horz-marks-before-slider.png"), url("common-assets/scale-horz-marks-before-slider@2.png"));
 }
 
 .context-menu {
@@ -4631,11 +4631,15 @@ button.emoji-section:last-child {
 .nautilus-window,
 .nautilus-window notebook,
 .nautilus-window notebook > stack {
-  background-image: none;
+  background-image: -gtk-scaled(url("assets/background-img-bottom.png"), url("assets/background-img-bottom@2.png"));
+  background-repeat: no-repeat;
+  background-position: top right;
 }
 
 .nautilus-window headerbar {
-  background-image: none;
+  background-image: -gtk-scaled(url("assets/background-img-top.png"), url("assets/background-img-top@2.png"));
+  background-repeat: no-repeat;
+  background-position: bottom right;
 }
 
 .nautilus-window headerbar .path-bar-box button.flat.text-button.toggle,

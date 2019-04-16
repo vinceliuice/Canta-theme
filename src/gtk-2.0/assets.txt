@@ -139,6 +139,12 @@ border
 tab
 progressbar-progress
 progressbar-trough
+tab-blue
+progressbar-progress-blue
+progressbar-trough-blue
+tab-indigo
+progressbar-progress-indigo
+progressbar-trough-indigo
 frame
 frame-notebook
 frame-inline
