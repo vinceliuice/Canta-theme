@@ -1,11 +1,11 @@
 /* Dash to Dock */
 
 #dashtodockContainer #dash {
-  background-color: $panel_bg_color;
+  background-color: rgba($theme_grey_900, 0.5);
 }
 
 #dashtodockContainer:overview #dash {
-  background-color: $inverse_panel_bg_color;
+  background-color: rgba($theme_grey_900, 0.25);
 }
 
 #dashtodockContainer.extended:overview #dash {
@@ -90,7 +90,7 @@
 /* Simple Dock */
 
 #dash:desktop {
-  background-color: $panel_bg_color;
+  background-color: rgba($theme_grey_900, 0.5);
 }
 
 

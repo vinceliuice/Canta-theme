@@ -3112,11 +3112,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 /* Dash to Dock */
 #dashtodockContainer #dash {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(38, 50, 56, 0.5);
 }
 
 #dashtodockContainer:overview #dash {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(38, 50, 56, 0.25);
 }
 
 #dashtodockContainer.extended:overview #dash {
@@ -3310,7 +3310,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 /* Simple Dock */
 #dash:desktop {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(38, 50, 56, 0.5);
 }
 
 /* GPaste */
