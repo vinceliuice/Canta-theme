@@ -43,10 +43,10 @@ Usage:  `./Install`  **[OPTIONS...]**
 |:--------------------|:-------------|
 |-d, --dest           | Specify theme destination directory (Default: $HOME/.themes)|
 |-n, --name           | Specify theme name (Default: Canta)|
-|-c, --color          | Specify theme color variant(s) **[standard/dark/light]** (Default: All variants)|
+|-c, --color          | Specify theme bright variant(s) **[standard/dark/light]** (Default: All variants)|
+|-t, --theme          | Specify theme color variant(s) **[standard/blue/indigo]** (Default: All variants)|
 |-s, --size           | Specify theme size variant **[standard/compact]** (Default: All variants)||
-|-r, --radius         | Specify theme radius variant **[standard/square]** (Default: All variants)|
-|-b, --bgimg          | Install theme with nautilus background image|
+|-o, --ordinary       | Install theme without nautilus background image|
 |-g, --gdm            | Install GDM theme|
 |-i, --icon           | Install icon theme|
 |-h, --help           | Show this help|

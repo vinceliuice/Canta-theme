@@ -5663,10 +5663,6 @@ dialog.csd > headerbar.titlebar > switch {
 /************************
   * Gnome Control Center *
   ************************/
-stack > box.vertical > widget > overlay grid.horizontal > stack > button.toggle {
-  margin: 8px 6px;
-}
-
 box.horizontal.titlebar > headerbar > stack > box.vertical > .title {
   margin: 0;
 }
@@ -5685,6 +5681,19 @@ window.background.csd > stack {
 
 stack.background {
   background: none;
+}
+
+window.background.csd > headerbar.titlebar > box.horizontal > separator.sidebar,
+window.background.csd > headerbar.titlebar > hdyleaflet > separator.sidebar {
+  border-right-style: none;
+  background: none;
+  min-width: 0;
+}
+
+window.background.csd > box.horizontal > separator.sidebar,
+window.background.csd > hdyleaflet > separator.sidebar {
+  background: none;
+  min-width: 0;
 }
 
 .background.csd scrolledwindow.view {

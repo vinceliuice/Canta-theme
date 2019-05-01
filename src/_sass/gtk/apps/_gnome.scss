@@ -1282,9 +1282,9 @@ dialog.csd > headerbar.titlebar { > switch { margin: 12px 0; } }
 
 // users section
 
-stack > box.vertical > widget > overlay grid.horizontal > stack {
-  > button.toggle { margin: 8px 6px; } // Show the button shadow completely
-}
+// stack > box.vertical > widget > overlay grid.horizontal > stack {
+//   > button.toggle { margin: 8px 6px; } // Show the button shadow completely
+// }
 
 box.horizontal.titlebar > headerbar > stack > box.vertical {
   > .title { margin: 0; }
@@ -1305,6 +1305,23 @@ window.background.csd > stack {
 }
 
 stack.background { background: none; }
+
+window.background.csd {
+  > headerbar.titlebar { // gnome 3.32
+    > box.horizontal > separator.sidebar,
+    > hdyleaflet > separator.sidebar {
+      border-right-style: none;
+      background: none;
+      min-width: 0;
+    }
+  }
+
+  > box.horizontal > separator.sidebar,
+  > hdyleaflet > separator.sidebar {
+    background: none;
+    min-width: 0;
+  }
+}
 
 // > 3.25.90
 .background.csd scrolledwindow.view {
