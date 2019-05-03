@@ -297,39 +297,39 @@
 }
 
 // Floating status bar
-.nautilus-window .floating-bar {
-  @extend %osd;
+.nemo-window,
+.nautilus-window {
+  .floating-bar {
+    @extend %osd;
 
-  // @extend .toolbar.osd;
+    min-height: 32px;
+    padding: 0;
+    border-style: solid solid none;
+    border-width: 1px;
+    border-color: $border_color;
+    border-radius: $windows_radius $windows_radius 0 0;
+    background-color: $base_color;
+    background-clip: $extra_background_clip;
+    transition: $longer_transition, border-width 0;
 
-  min-height: 32px;
-  padding: 0;
-  border-style: solid solid none;
-  border-width: 1px;
-  border-color: $border_color;
-  border-radius: $windows_radius $windows_radius 0 0;
-  background-color: $base_color;
-  background-clip: $extra_background_clip;
-  transition: $longer_transition, border-width 0;
+    &.bottom.left { // axes left border and border radius
+      border-left-style: none;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: $windows_radius;
+    }
 
-  &.bottom.left { // axes left border and border radius
-    margin-right: 8px - 1px;
-    border-left-style: none;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: $windows_radius;
-  }
+    &.bottom.right { // axes right border and border radius
+      border-right-style: none;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: $windows_radius;
+    }
 
-  &.bottom.right { // axes right border and border radius
-    margin-left: 8px - 1px;
-    border-right-style: none;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: $windows_radius;
-  }
+    button {
+      margin: 8px;
 
-  button {
-    margin: (32px - $small_size) / 2;
-
-    @extend %small_button;
+      @extend %small_button;
+      @extend %simple_flat_button;
+    }
   }
 }
 
