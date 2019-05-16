@@ -5734,6 +5734,18 @@ window#gnome-system-monitor.background.csd stack scrolledwindow treeview.view {
   background-color: transparent;
 }
 
+/******************
+ * Gnome terminal *
+ ******************/
+terminal-window > box.vertical > notebook.terminal-notebook > terminal-screen-container > box.horizontal > vte-terminal.terminal-screen {
+  padding: 0;
+  border-radius: 0 0 8px 8px;
+}
+
+terminal-window.background.csd.maximized {
+  border-radius: 0 0 8px 8px;
+}
+
 /*********
  * To Do *
  *********/
