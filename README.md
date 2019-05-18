@@ -69,7 +69,7 @@ so if you want a better experience you should install numix-circle first
 
 #### numix-icon-theme-circle : https://github.com/numixproject/numix-icon-theme-circle
 
-(Just install numix-circle nomal, Canta icon theme will use it's icons resources for missing part!)
+(Just install numix-circle nomal, Canta icon theme will use its icons resources for missing part!)
 
 #### Install Canta theme with icon theme
 
