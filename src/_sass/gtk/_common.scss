@@ -440,8 +440,8 @@ button {
     }
 
     &.text-button.image-button {
-//      border-radius: $buttons_radius;
-//      -gtk-outline-radius: $buttons_radius;
+      // border-radius: $buttons_radius;
+      // -gtk-outline-radius: $buttons_radius;
 
       label {
         &:first-child { margin-left: 16px - ($medium_size - 24px) / 2; }
@@ -1158,6 +1158,10 @@ headerbar {
     &:disabled :not(button) > label { color: $titlebar_disabled_secondary_fg_color; }
   }
 
+  .solid-csd & {
+    box-shadow: $shadow_6;
+  }
+
   .title {
     padding: 0 12px;
     font-weight: bold;
@@ -1306,15 +1310,15 @@ headerbar {
   &.default-decoration:backdrop,
   .csd &.default-decoration:backdrop { box-shadow: none; }
 
-  .solid-csd & {
-    &:dir(rtl), &:dir(ltr) { // specificity bump
-      margin-left: -2px;
-      margin-right: -2px;
-      margin-top: -2px;
-      border-radius: 0;
-      box-shadow: inset 0 1px $alt_highlight_color;
-    }
-  }
+  // .solid-csd & {
+  //   &:dir(rtl), &:dir(ltr) { // specificity bump
+  //     margin-left: -2px;
+  //     margin-right: -2px;
+  //     margin-top: -2px;
+  //     border-radius: 0;
+  //     box-shadow: inset 0 1px $alt_highlight_color;
+  //   }
+  // }
 }
 
 headerbar {
@@ -3538,9 +3542,9 @@ decoration {
 
   .solid-csd & {
     margin: 0;
-    // padding: 4px;
+    padding: 0;
     border-radius: 0;
-    border: solid 2px $titlebar_bg_color;
+    border: solid 1px mix(black, $base_color, 15%);
     box-shadow: none;
     // box-shadow: inset 0 0 0 4px $titlebar_bg_color;
     background-color: $titlebar_bg_color;
@@ -3635,10 +3639,12 @@ headerbar,
       @at-root %windows_close_button,
       &.close { // Window Close button
         background-color: $accent_color;
+
         &:hover {
           color: $titlebar_fg_color;
           background-color: rgba($accent_color, 0.85);
         }
+
         &:active, &:checked { background-color: darken($accent_color, 3%); }
       }
     }

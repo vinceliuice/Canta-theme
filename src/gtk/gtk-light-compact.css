@@ -1566,6 +1566,11 @@ headerbar:backdrop:disabled :not(button) > label {
   color: rgba(0, 0, 0, 0.26);
 }
 
+.solid-csd .titlebar:not(headerbar), .solid-csd
+headerbar {
+  box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.12), 0 5px 5px -5px rgba(0, 0, 0, 0.06);
+}
+
 .titlebar:not(headerbar) .title,
 headerbar .title {
   padding: 0 12px;
@@ -1780,16 +1785,6 @@ headerbar.default-decoration:backdrop,
 .csd
 headerbar.default-decoration:backdrop {
   box-shadow: none;
-}
-
-.solid-csd .titlebar:dir(rtl):not(headerbar), .solid-csd .titlebar:dir(ltr):not(headerbar), .solid-csd
-headerbar:dir(rtl), .solid-csd
-headerbar:dir(ltr) {
-  margin-left: -2px;
-  margin-right: -2px;
-  margin-top: -2px;
-  border-radius: 0;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.2);
 }
 
 headerbar entry,
@@ -3758,12 +3753,12 @@ filechooserbutton:drop(active) {
 }
 
 stacksidebar.sidebar:dir(ltr) list, stacksidebar.sidebar.left list, stacksidebar.sidebar.left:dir(rtl) list, .sidebar:dir(ltr), .sidebar.left, .sidebar.left:dir(rtl) {
-  border-right: 1px solid #e1e1e1;
+  border-right: 1px solid gainsboro;
   border-left-style: none;
 }
 
 stacksidebar.sidebar:dir(rtl) list, stacksidebar.sidebar.right list, .sidebar:dir(rtl), .sidebar.right {
-  border-left: 1px solid #e1e1e1;
+  border-left: 1px solid gainsboro;
   border-right-style: none;
 }
 
@@ -4147,8 +4142,9 @@ messagedialog.csd decoration {
 
 .solid-csd decoration {
   margin: 0;
+  padding: 0;
   border-radius: 0;
-  border: solid 2px #FFFFFF;
+  border: solid 1px #d7d7d7;
   box-shadow: none;
   background-color: #FFFFFF;
 }
@@ -6088,7 +6084,7 @@ window.background:not(.csd) > widget > radiobutton > radio {
 }
 
 window.background:not(.csd) > window.background > menu > separator {
-  color: #e1e1e1;
+  color: gainsboro;
 }
 
 #MozillaGtkWidget.background, #MozillaGtkWidget.background decoration {
