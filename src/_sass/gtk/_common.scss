@@ -1149,6 +1149,7 @@ headerbar {
   box-shadow: $shadow_6, inset 0 1px $titlebar_highlight_color;
   background-color: $titlebar_bg_color;
   color: $titlebar_fg_color;
+  border: none;
 
   &:disabled :not(button) > label { color: $titlebar_disabled_fg_color; }
 
@@ -1302,7 +1303,7 @@ headerbar {
     }
 
     // workaround for non-animatable buttons
-    .background:not(.csd) & button.titlebutton:active { background-size: 1000% 1000%; }
+    // .background:not(.csd) & button.titlebutton:active { background-size: 1000% 1000%; }
   }
 
   &.default-decoration,
@@ -3556,10 +3557,7 @@ decoration {
  *****************/
 
 %title_buttons_solid {
-
-  @extend %circular_button;
-
-  &.close, &.maximize, &.minimize, &.restore {
+  &.close, &.maximize, &.minimize {
     margin: 0 2px;
     padding: 0;
     min-width: 16px;
@@ -3647,7 +3645,7 @@ headerbar,
     }
   }
 
-  &.default-decoration,
+  // &.default-decoration,
   .csd &.default-decoration {
     button.titlebutton {
       @extend %title_buttons_solid;
