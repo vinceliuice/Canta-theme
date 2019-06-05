@@ -3603,10 +3603,7 @@ headerbar,
 .titlebar {
   padding: 0 14px;
 
-  &, .csd &,
-  &.default-decoration,
-  .csd &.default-decoration {  // needed under wayland, since all gtk3 windows are csd windows
-
+  &, .csd & {
     button.titlebutton {
       // @extend %simple_flat_button;
       @extend %circular_button;
@@ -3647,6 +3644,13 @@ headerbar,
 
         &:active, &:checked { background-color: darken($accent_color, 3%); }
       }
+    }
+  }
+
+  &.default-decoration,
+  .csd &.default-decoration {
+    button.titlebutton {
+      @extend %title_buttons_solid;
     }
   }
 }

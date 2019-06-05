@@ -30,13 +30,13 @@
   <sodipodi:namedview
      showgrid="true"
      id="namedview4"
-     inkscape:zoom="3.9999998"
-     inkscape:cx="447.50615"
-     inkscape:cy="338.97098"
+     inkscape:zoom="5.656854"
+     inkscape:cx="469.40738"
+     inkscape:cy="354.9852"
      inkscape:window-width="1366"
-     inkscape:window-height="714"
+     inkscape:window-height="713"
      inkscape:window-x="0"
-     inkscape:window-y="24"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg410"
      inkscape:snap-nodes="true"
@@ -77,7 +77,7 @@
        id="linearGradient2630"
        osb:paint="solid">
       <stop
-         style="stop-color:#ffab00;stop-opacity:1;"
+         style="stop-color:#ffac00;stop-opacity:1;"
          offset="0"
          id="stop2628" />
     </linearGradient>
@@ -85,7 +85,7 @@
        id="linearGradient2624"
        osb:paint="solid">
       <stop
-         style="stop-color:#ffab00;stop-opacity:1;"
+         style="stop-color:#ffac00;stop-opacity:1;"
          offset="0"
          id="stop2622" />
     </linearGradient>
@@ -2172,7 +2172,7 @@
      transform="translate(-47,214.63782)"
      inkscape:label="#g6284"
      id="titlebutton-maximize-backdrop"
-     style="display:inline">
+     style="display:inline;opacity:0.5">
     <g
        transform="translate(-781,-432.63782)"
        style="display:inline;opacity:1"
@@ -2181,7 +2181,7 @@
          ry="8.0000153"
          rx="8.0000143"
          id="ellipse6448"
-         style="display:inline;opacity:0.95;fill:#888888;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="display:inline;opacity:0.95;fill:#b2b2b2;fill-opacity:0.95294118;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          cx="1302"
          cy="255.00002" />
       <g
@@ -2247,7 +2247,7 @@
      transform="translate(-40,214.5527)"
      inkscape:label="#g6308"
      id="titlebutton-minimize-backdrop"
-     style="display:inline">
+     style="display:inline;opacity:0.5">
     <g
        transform="translate(-781,-432.63782)"
        style="display:inline;opacity:1"
@@ -2256,7 +2256,7 @@
          ry="7.9148803"
          rx="7.9148798"
          id="ellipse6478"
-         style="display:inline;opacity:0.95;fill:#888888;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="display:inline;opacity:0.95;fill:#b2b2b2;fill-opacity:0.95294118;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          cx="1273"
          cy="255.00002" />
       <g
@@ -2319,7 +2319,7 @@
        y="-185.63782" />
   </g>
   <g
-     style="display:inline"
+     style="display:inline;opacity:0.5"
      transform="translate(423.37501,184.63782)"
      id="titlebutton-close-backdrop"
      inkscape:label="#g6536">
@@ -2330,7 +2330,7 @@
       <ellipse
          cy="255"
          cx="1302"
-         style="display:inline;opacity:0.95;fill:#888888;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="display:inline;opacity:0.95;fill:#b2b2b2;fill-opacity:0.95294118;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="ellipse6508"
          rx="7.99999"
          ry="7.9999905" />
@@ -2637,7 +2637,7 @@
        y="-185.63782" />
   </g>
   <g
-     style="display:inline"
+     style="display:inline;opacity:0.5"
      id="titlebutton-restore-backdrop"
      inkscape:label="#g6284"
      transform="translate(-25,214.63782)">
@@ -2648,7 +2648,7 @@
       <circle
          cy="255"
          cx="1302"
-         style="display:inline;opacity:0.95;fill:#888888;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="display:inline;opacity:0.95;fill:#b2b2b2;fill-opacity:0.95294118;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="ellipse5429"
          r="8" />
       <g
