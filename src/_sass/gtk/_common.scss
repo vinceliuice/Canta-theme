@@ -1306,11 +1306,6 @@ headerbar {
     // .background:not(.csd) & button.titlebutton:active { background-size: 1000% 1000%; }
   }
 
-  &.default-decoration,
-  .csd &.default-decoration,             // needed under wayland, since all gtk3 windows are csd windows
-  &.default-decoration:backdrop,
-  .csd &.default-decoration:backdrop { box-shadow: none; }
-
   // .solid-csd & {
   //   &:dir(rtl), &:dir(ltr) { // specificity bump
   //     margin-left: -2px;
@@ -1405,7 +1400,8 @@ headerbar { // headerbar border rounding
     background-color: transparent;
     background-image: none;
     border: none;
-    box-shadow: none;
+    box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0), 0 5px 5px -5px rgba(0, 0, 0, 0);
+    border-radius: $windows_radius $windows_radius 0 0;
   }
 
   > separator { background-color: $titlebar_bg_color; } // separator between titlebars

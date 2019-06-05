@@ -1768,18 +1768,6 @@ headerbar.default-decoration button.titlebutton {
   padding: 0;
 }
 
-.default-decoration.titlebar:not(headerbar),
-.csd .default-decoration.titlebar:not(headerbar), .default-decoration.titlebar:backdrop:not(headerbar),
-.csd .default-decoration.titlebar:backdrop:not(headerbar),
-headerbar.default-decoration,
-.csd
-headerbar.default-decoration,
-headerbar.default-decoration:backdrop,
-.csd
-headerbar.default-decoration:backdrop {
-  box-shadow: none;
-}
-
 headerbar entry,
 headerbar spinbutton,
 headerbar button {
@@ -1874,7 +1862,8 @@ window.csd > .titlebar:not(headerbar) {
   background-color: transparent;
   background-image: none;
   border: none;
-  box-shadow: none;
+  box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0), 0 5px 5px -5px rgba(0, 0, 0, 0);
+  border-radius: 8px 8px 0 0;
 }
 
 .titlebar:not(headerbar) > separator {
