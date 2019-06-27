@@ -2907,12 +2907,12 @@ radio {
 
 
 radio:checked:not(:indeterminate) {
-  border-image-source: -gtk-gradient(radial, center center, 0, center center, 0.11905, to(#FFAC00), to(transparent));
+  border-image-source: -gtk-gradient(radial, center center, 0, center center, 0.119047619, to(#FFAC00), to(transparent));
 }
 
 
 radio:checked:not(:indeterminate):disabled {
-  border-image-source: -gtk-gradient(radial, center center, 0, center center, 0.11905, to(rgba(255, 172, 0, 0.5)), to(transparent));
+  border-image-source: -gtk-gradient(radial, center center, 0, center center, 0.119047619, to(rgba(255, 172, 0, 0.5)), to(transparent));
 }
 
 window.background:not(.csd) > widget > checkbutton > check,
@@ -6088,6 +6088,23 @@ window.background > box.vertical > toolbar.primary-toolbar toolitem button.flat.
 
 stack#conversation_viewer scrolledwindow.geary-conversation-scroller > viewport.frame {
   border: none;
+}
+
+window#GearyMainWindow.background.csd box.vertical > paned.horizontal > box.sidebar.vertical {
+  border-bottom-left-radius: 8px;
+}
+
+window#GearyMainWindow.background.csd box.vertical > paned.horizontal > box.sidebar.vertical statusbar {
+  border-bottom-left-radius: 8px;
+}
+
+window#GearyMainWindow.background.csd stack#conversation_viewer {
+  border-bottom-right-radius: 8px;
+}
+
+window#GearyMainWindow.background.csd stack#conversation_viewer scrolledwindow.geary-conversation-scroller viewport.frame list.conversation-listbox {
+  background: none;
+  border-bottom-right-radius: 8px;
 }
 
 /************

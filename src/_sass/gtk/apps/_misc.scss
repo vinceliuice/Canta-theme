@@ -357,10 +357,10 @@ window.background > box.vertical > toolbar.primary-toolbar {
 
   treeview.view.sidebar {
 
-    &.cell { // = row height of placessidebar
-//      padding-top: rem(4px);
-//      padding-bottom: rem(4px);
-    }
+    // &.cell { // = row height of placessidebar
+    //   padding-top: rem(4px);
+    //   padding-bottom: rem(4px);
+    // }
   }
 }
 
@@ -395,6 +395,29 @@ window.background > box.vertical > toolbar.primary-toolbar {
 stack#conversation_viewer {
   scrolledwindow.geary-conversation-scroller > viewport.frame {
     border: none; // unset borders
+  }
+}
+
+window#GearyMainWindow.background.csd {
+  box.vertical > paned.horizontal > box.sidebar.vertical {
+    border-bottom-left-radius: $windows_radius;
+
+    statusbar {
+      border-bottom-left-radius: $windows_radius;
+    }
+  }
+
+  stack#conversation_viewer {
+    border-bottom-right-radius: $windows_radius;
+
+    scrolledwindow.geary-conversation-scroller {
+      viewport.frame {
+        list.conversation-listbox {
+          background: none;
+          border-bottom-right-radius: $windows_radius;
+        }
+      }
+    }
   }
 }
 
