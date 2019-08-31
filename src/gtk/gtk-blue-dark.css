@@ -1366,7 +1366,8 @@ headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-but
   border-image-width: 8px 16px 8px 16px;
   border-image-slice: 8 16 8 16;
   border-image-repeat: stretch;
-  transition: all 150ms cubic-bezier(0, 0, 0.2, 1), background-size 0, border-image 0;
+  transition: all 150ms cubic-bezier(0, 0, 0.2, 1), background-size 0, border-image 0, background-image 0;
+  animation: none;
   color: rgba(255, 255, 255, 0.7);
   background-color: #263238;
 }
@@ -1416,6 +1417,7 @@ headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-bu
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:first-child:checked,
 headerbar .linked:not(.vertical).path-bar > button.text-button.image-button:first-child:checked,
 headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:first-child:checked, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.text-button.image-button:first-child:checked {
+  animation: none;
   border-image-source: -gtk-scaled(url("assets/firstbutton-checked-circle-blue.png"), url("assets/firstbutton-checked-circle-blue@2.png"));
 }
 
@@ -1432,6 +1434,7 @@ headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-bu
 .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:last-child:checked,
 headerbar .linked:not(.vertical).path-bar > button.text-button.image-button:last-child:checked,
 headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button:last-child:checked, .nemo-window toolbar.primary-toolbar .linked.path-bar > button.text-button.image-button:last-child:checked {
+  animation: none;
   border-image-source: -gtk-scaled(url("assets/lastbutton-checked-circle-blue.png"), url("assets/lastbutton-checked-circle-blue@2.png"));
 }
 
@@ -4532,21 +4535,46 @@ button.emoji-section:last-child {
 
 .nautilus-window headerbar .path-bar-box button.flat.text-button.toggle,
 .nautilus-window headerbar .path-bar-box button.flat.image-button.text-button.toggle, .nautilus-window headerbar .path-bar-box .linked.nautilus-path-bar > button {
-  margin: 0;
-  padding: 0 6px;
-  min-height: 36px;
-  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #3e81ff 0%, transparent 0%) 0 0 0/0 0 0;
-}
-
-.nautilus-window headerbar .path-bar-box button.flat.text-button.toggle:checked, .nautilus-window headerbar .path-bar-box .linked.nautilus-path-bar > button:checked, .nautilus-window headerbar .path-bar-box button.flat.text-button.toggle:active, .nautilus-window headerbar .path-bar-box .linked.nautilus-path-bar > button:active {
+  background-color: #3e81ff;
   color: #FFFFFF;
-  background-color: transparent;
-  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #3e81ff 100%, transparent 0%) 0 0 2/0 0 2px;
+  box-shadow: none;
+  border-radius: 0;
+  outline-offset: -6px;
+  -gtk-outline-radius: 9997px;
 }
 
-.nautilus-window headerbar .path-bar-box button.flat.text-button.toggle:checked:backdrop, .nautilus-window headerbar .path-bar-box .linked.nautilus-path-bar > button:checked:backdrop, .nautilus-window headerbar .path-bar-box button.flat.text-button.toggle:active:backdrop, .nautilus-window headerbar .path-bar-box .linked.nautilus-path-bar > button:active:backdrop {
+.nautilus-window headerbar .path-bar-box button.flat.text-button.toggle:hover, .nautilus-window headerbar .path-bar-box .linked.nautilus-path-bar > button:hover {
+  color: #FFFFFF;
+  background-color: #4d8bff;
+}
+
+.nautilus-window headerbar .path-bar-box button.flat.text-button.toggle:active, .nautilus-window headerbar .path-bar-box .linked.nautilus-path-bar > button:active {
+  color: #FFFFFF;
+  background-color: rgba(62, 129, 255, 0.85);
+}
+
+.nautilus-window headerbar .path-bar-box button.flat.text-button.toggle:not(:only-child):first-child, .nautilus-window headerbar .path-bar-box .linked.nautilus-path-bar > button:not(:only-child):first-child {
+  border-radius: 9999px 0 0 9999px;
+}
+
+.nautilus-window headerbar .path-bar-box button.flat.text-button.toggle:not(:only-child):last-child, .nautilus-window headerbar .path-bar-box .linked.nautilus-path-bar > button:not(:only-child):last-child {
+  border-radius: 0 9999px 9999px 0;
+}
+
+.nautilus-window headerbar .path-bar-box button.flat.text-button.toggle:only-child, .nautilus-window headerbar .path-bar-box .linked.nautilus-path-bar > button:only-child {
+  border-radius: 9999px;
+}
+
+.nautilus-window headerbar .path-bar-box button.flat.text-button.toggle:disabled, .nautilus-window headerbar .path-bar-box .linked.nautilus-path-bar > button:disabled {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.nautilus-window headerbar .path-bar-box button.flat.text-button.toggle:backdrop, .nautilus-window headerbar .path-bar-box .linked.nautilus-path-bar > button:backdrop {
   color: rgba(255, 255, 255, 0.7);
-  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), rgba(255, 255, 255, 0.5) 100%, transparent 0%) 0 0 2/0 0 2px;
+}
+
+.nautilus-window headerbar .path-bar-box button.flat.text-button.toggle:backdrop:disabled, .nautilus-window headerbar .path-bar-box .linked.nautilus-path-bar > button:backdrop:disabled {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .nautilus-window,
@@ -4567,13 +4595,21 @@ button.emoji-section:last-child {
   margin-bottom: 0;
 }
 
-.nautilus-window headerbar .path-bar-box .linked.nautilus-path-bar > button:not(:only-child):last-child {
-  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #3e81ff 100%, transparent 0%) 0 0 2/0 0 2px;
+.nautilus-window headerbar .path-bar-box .linked.nautilus-path-bar > button.image-button.text-button {
+  padding-left: 12px;
 }
 
-.nautilus-window headerbar .path-bar-box.width-maximized {
-  background-color: transparent;
-  border-radius: 9999px;
+.nautilus-window headerbar .path-bar-box .linked.nautilus-path-bar > button:not(:only-child):last-child {
+  border-radius: 0 9999px 9999px 0;
+  border-image-width: 8px 16px 8px 16px;
+  border-image-slice: 8 16 8 16;
+  border-image-repeat: stretch;
+  transition: all 150ms cubic-bezier(0, 0, 0.2, 1), background-size 0, border-image 0;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: #263238;
+  box-shadow: none;
+  background-image: none;
+  border-image-source: -gtk-scaled(url("assets/lastbutton-checked-circle-blue.png"), url("assets/lastbutton-checked-circle-blue@2.png"));
 }
 
 .nautilus-window headerbar .path-bar-box.background.frame {

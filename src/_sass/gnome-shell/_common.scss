@@ -641,26 +641,10 @@ StScrollBar {
   -arrow-background-color: transparent;
   -arrow-border-width: 0;
   -arrow-border-color: transparent;
-  -arrow-base: 0;
+  -arrow-base: 48px;
   -arrow-rise: 0;
   -arrow-box-shadow: none; //dreaming. bug #689995
-}
 
-.candidate-popup-boxpointer {
-  -arrow-border-radius: 0;
-  -arrow-background-color: transparent;
-  -arrow-border-width: 0;
-  -arrow-border-color: transparent;
-  -arrow-base: 0;
-  -arrow-rise: 0;
-  -arrow-box-shadow: none;
-  margin: 5px 8px 12px 12px;
-  background-color: rgba($menu_bg_color, 0.95);
-  border-radius: $windows_radius;
-  box-shadow: $shadow_2;
-}
-
-.popup-menu-boxpointer {
   .popup-menu-content {
     margin: 5px 8px 12px 12px;
     background-color: transparent;
@@ -668,6 +652,20 @@ StScrollBar {
     border-radius: $windows_radius;
     box-shadow: $shadow_2;
   }
+}
+
+.candidate-popup-boxpointer {
+  -arrow-border-radius: 0;
+  -arrow-background-color: transparent;
+  -arrow-border-width: 0;
+  -arrow-border-color: transparent;
+  -arrow-base: 48px;
+  -arrow-rise: 0;
+  -arrow-box-shadow: none;
+  margin: 5px 8px 12px 12px;
+  background-color: rgba($menu_bg_color, 0.95);
+  border-radius: $windows_radius;
+  box-shadow: $shadow_2;
 }
 
 .popup-separator-menu-item {

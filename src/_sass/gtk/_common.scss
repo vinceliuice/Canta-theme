@@ -1096,7 +1096,8 @@ $stack_switcher_lastbutton_border_compact: -gtk-scaled(url("assets/lastbutton-ch
       border-image-width: 8px 16px 8px 16px;
       border-image-slice: 8 16 8 16;
       border-image-repeat: stretch;
-      transition: $longer_transition, background-size 0, border-image 0;
+      transition: $longer_transition, background-size 0, border-image 0, background-image 0;
+      animation: none;
       color: $titlebar_secondary_fg_color;
       background-color: $titlebar_bg_color;
 
@@ -1111,12 +1112,14 @@ $stack_switcher_lastbutton_border_compact: -gtk-scaled(url("assets/lastbutton-ch
 
     &:first-child { // Fixed stack-switchers first checked buttons
       &:checked {
+        animation: none;
         border-image-source: if($compact == 'false', $stack_switcher_firstbutton_border, $stack_switcher_firstbutton_border_compact);
       }
     }
 
     &:last-child { // Fixed stack-switchers last checked buttons
       &:checked {
+        animation: none;
         border-image-source: if($compact == 'false', $stack_switcher_lastbutton_border, $stack_switcher_lastbutton_border_compact);
       }
     }
