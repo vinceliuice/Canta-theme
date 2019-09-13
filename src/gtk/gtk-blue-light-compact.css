@@ -2071,10 +2071,10 @@ menubar > menuitem,
   color: rgba(0, 0, 0, 0.54);
 }
 
-menubar > menuitem > window.background.popup > decoration,
-menubar > menuitem > window.background.popup > menu,
-.menubar > menuitem > window.background.popup > decoration,
-.menubar > menuitem > window.background.popup > menu {
+menubar > menuitem > window.background.csd.popup > decoration,
+menubar > menuitem > window.background.csd.popup > menu,
+.menubar > menuitem > window.background.csd.popup > decoration,
+.menubar > menuitem > window.background.csd.popup > menu {
   border-radius: 0 0 6px 6px;
 }
 
@@ -4960,7 +4960,7 @@ frame.gedit-map-frame > border:dir(rtl) {
 }
 
 paned.titlebar.horizontal headerbar {
-  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.08);
+  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.08), inset 0 1px rgba(255, 255, 255, 0.4);
 }
 
 .gedit-side-panel-paned.horizontal > box.vertical > stack > grid.horizontal {
