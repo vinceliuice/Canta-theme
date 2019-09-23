@@ -155,6 +155,8 @@ StScrollBar {
   -slider-active-border-color: transparent; //active trough border
   -slider-border-width: 0;
   -slider-handle-radius: 7px;
+  -slider-handle-border-width: 0;
+  -slider-handle-border-color: $border_color;
 
   // barlevels are for >= 3.29.90
   -barlevel-height: 2px;
@@ -208,9 +210,18 @@ StScrollBar {
 
 /* Switches */
 .toggle-switch {
-  width: 40px;
+  width: 50px;
   height: 20px;
   background-size: contain;
+  background-image: url("assets/toggle-off.svg");
+
+  &:checked { background-image: url("assets/toggle-on.svg"); }
+
+  .popup-menu-item.selected & {
+    background-image: url("assets/toggle-off.svg");
+
+    &:checked { background-image: url("assets/toggle-on.svg"); }
+  }
 }
 
 @each $v in us, intl {
@@ -565,6 +576,7 @@ StScrollBar {
 
 .popup-menu {
   min-width: 200px;
+  color: $secondary_fg_color;
 
   // .popup-menu-arrow { } //defined globally in the TOP BAR
 
