@@ -516,73 +516,6 @@ paned.titlebar.horizontal { // show border
   }
 }
 
-
-/**************
- * Tweak Tool *
- **************/
-// hard-coded css:
-// https://git.gnome.org/browse/gnome-tweak-tool/tree/data/shell.css
-
-// the sidebar
-.tweak-categories {
-  // padding: 4px 0;
-  // background-color: shade(@theme_bg_color, 0.99);
-  background-image: image($lighter_bg_color);
-
-  separator { @extend %hide_separators; }
-}
-
-.tweak {
-  // padding-top: 3px;
-  padding: 3px;
-
-  &.title:hover { box-shadow: none; }
-}
-
-.tweak-group-white,
-.tweak-white,
-.tweak-white:hover {
-  // background-color: white;
-  background-image: image($base_color);
-}
-
-.tweak-startup,
-.tweak-startup:hover {
-  // background-color: lighter(shade(@theme_bg_color, 0.9));
-  background-image: image($base_color);
-}
-
-.tweak-group-startup {
-  // background-color: @view_separators;
-  background-image: image($base_color);
-  border: 1px solid $border_color;
-}
-
-//
-// Workaround for 3.26
-//
-
-row#Focus,
-row#StaticWorkspaceTweak, // for 3.26.0
-row#dynamic-workspaces,
-row#PrimaryWorkspaceTweak, // for 3.26.0
-row#workspaces-only-on-primary {
-  padding: 0;
-  border: 1px solid $border_color;
-
-  row:not(:last-child) { border-bottom: 1px solid $border_color; }
-
-  &.tweak > list { margin-top: -3px; }
-}
-
-// Add more spaces between title and list
-row#Focus,
-row#PrimaryWorkspaceTweak, // for 3.26.0
-row#workspaces-only-on-primary {
-  margin-top: 4px;
-}
-
-
 /***********
  * Builder *
  ***********/
@@ -1159,15 +1092,77 @@ window.background > box.vertical box.horizontal {
 
 
  /**********************
-  *  Gnome Tweak Tool  *
+  *  Gnome Tweaks  *
   **********************/
-
-// sidebar on gnome tweak
-.tweak-categories { border-radius: 0 0 0 $windows_radius; }
 
 .tweak-titlebar-right,
 dialog.csd > headerbar.titlebar { > switch { margin: 12px 0; } }
 
+// the sidebar
+.tweak-categories {
+  // padding: 4px 0;
+  // background-color: shade(@theme_bg_color, 0.99);
+  background-image: image($lighter_bg_color);
+  border-radius: 0 0 0 $windows_radius;
+
+  separator { @extend %hide_separators; }
+}
+
+.tweak {
+  // padding-top: 3px;
+  padding: 3px;
+
+  &.title:hover { box-shadow: none; }
+}
+
+.tweak-group-white,
+.tweak-white,
+.tweak-white:hover {
+  // background-color: white;
+  background-image: image($base_color);
+}
+
+.tweak-startup,
+.tweak-startup:hover {
+  // background-color: lighter(shade(@theme_bg_color, 0.9));
+  background-image: image($base_color);
+}
+
+.tweak-group-startup {
+  // background-color: @view_separators;
+  background-image: image($base_color);
+  border: 1px solid $border_color;
+}
+
+//
+// Workaround for 3.26
+//
+
+row#Focus,
+row#StaticWorkspaceTweak, // for 3.26.0
+row#dynamic-workspaces,
+row#PrimaryWorkspaceTweak, // for 3.26.0
+row#workspaces-only-on-primary {
+  padding: 0;
+  border: 1px solid $border_color;
+
+  row:not(:last-child) { border-bottom: 1px solid $border_color; }
+
+  &.tweak > list { margin-top: -3px; }
+}
+
+// Add more spaces between title and list
+row#Focus,
+row#PrimaryWorkspaceTweak, // for 3.26.0
+row#workspaces-only-on-primary {
+  margin-top: 4px;
+}
+
+hdyleaflet {
+  > headerbar { // Gnome 3.34
+    box-shadow: inset 0 1px $titlebar_highlight_color, inset 0 -1px $border_color;
+  }
+}
 
  /************************
   * Gnome Control Center *
