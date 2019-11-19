@@ -61,7 +61,7 @@ Install light compact square version of Canta theme
 
 Install Canta theme with nautilus background image in $HOME/.tmp
 
-## Icon
+### Icon
 #### Canta icon theme
 Canta icon theme use numix-icon-theme-circle icon theme for Inherits,
 
@@ -74,6 +74,9 @@ so if you want a better experience you should install numix-circle first
 #### Install Canta theme with icon theme
 
     ./install.sh -i
+
+### Kde theme
+[Canta-kde](https://github.com/vinceliuice/Canta-kde)
 
 ## Screenshots
 #### GNOME Shell
