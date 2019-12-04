@@ -135,6 +135,9 @@ install() {
   cp -ur ${SRC_DIR}/src/cinnamon/assets/assets${ELSE_DARK}/misc/*.svg                ${THEME_DIR}/cinnamon/assets/misc
   cp -ur ${SRC_DIR}/src/cinnamon/assets/assets${ELSE_DARK}/switch/*.svg              ${THEME_DIR}/cinnamon/assets/switch
   cp -ur ${SRC_DIR}/src/cinnamon/thumbnail${ELSE_DARK}.png                           ${THEME_DIR}/cinnamon/thumbnail.png
+
+  mkdir -p                                                                           ${THEME_DIR}/plank
+  cp -ur ${SRC_DIR}/src/plank/dock${ELSE_LIGHT}.theme                                ${THEME_DIR}/plank/dock.theme
 }
 
 install_gdm() {
