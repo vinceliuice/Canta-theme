@@ -5513,8 +5513,8 @@ window.background > box.vertical box.horizontal > box.vertical > scrolledwindow 
 }
 
 /**********************
-  *  Gnome Tweaks  *
-  **********************/
+ *  Gnome Tweaks  *
+ **********************/
 .tweak-titlebar-right > switch,
 dialog.csd > headerbar.titlebar > switch {
   margin: 12px 0;
@@ -5585,8 +5585,8 @@ hdyleaflet > headerbar {
 }
 
 /************************
-  * Gnome Control Center *
-  ************************/
+ * Gnome Control Center *
+ ************************/
 box.horizontal.titlebar > headerbar > stack > box.vertical > .title {
   margin: 0;
 }
@@ -5767,6 +5767,68 @@ button.title label {
 
 .geary-titlebar-right:dir(rtl) {
   margin-right: -5px;
+}
+
+.documents-scrolledwin {
+  background-color: transparent;
+}
+
+.documents-scrolledwin .content-view {
+  background-color: transparent;
+  border-radius: 0 0 8px 8px;
+}
+
+.documents-scrolledwin viewport.frame {
+  background-color: transparent;
+}
+
+.documents-scrolledwin viewport.frame widget > frame.content-view {
+  background-color: transparent;
+  border-radius: 0 0 8px 8px;
+}
+
+.documents-scrolledwin viewport.frame widget > frame.content-view border {
+  border: none;
+}
+
+dialog.background.csd > box.vertical.dialog-vbox > grid.horizontal > scrolledwindow.frame > viewport.frame list:first-child {
+  border-radius: 0 0 0 8px;
+}
+
+dialog.background.csd > box.vertical.dialog-vbox > grid.horizontal > scrolledwindow.frame > viewport.frame list:last-child {
+  border-radius: 0 0 8px 0;
+}
+
+dialog.background.csd > box.vertical.dialog-vbox > stack > scrolledwindow,
+dialog.background.csd > box.vertical.dialog-vbox > stack > stack > scrolledwindow {
+  border-radius: 0 0 8px 8px;
+  background-color: #fcfcfc;
+}
+
+dialog.background.csd > box.vertical.dialog-vbox > stack > scrolledwindow iconview.view:not(:hover):not(:selected):not(:active),
+dialog.background.csd > box.vertical.dialog-vbox > stack > stack > scrolledwindow iconview.view:not(:hover):not(:selected):not(:active) {
+  background-color: transparent;
+}
+
+dialog.background.csd > box.vertical.dialog-vbox > stack > scrolledwindow > viewport.frame > list {
+  border-radius: 0 0 8px 8px;
+}
+
+dialog.background.csd > box.vertical.dialog-vbox > stack > scrolledwindow > viewport.frame > list row.activatable:not(:hover):not(:selected):not(:active), dialog.background.csd > box.vertical.dialog-vbox > stack > scrolledwindow > viewport.frame > list iconview:not(:hover):not(:selected):not(:active), window#gnome-system-monitor.background.csd dialog.background.csd > box.vertical.dialog-vbox > stack > scrolledwindow > viewport.frame > list scrolledwindow treeview.view:not(:hover):not(:selected):not(:active),
+dialog.background.csd > box.vertical.dialog-vbox > stack > scrolledwindow > viewport.frame > list .view:not(:hover):not(:selected):not(:active), dialog.background.csd > box.vertical.dialog-vbox > stack > scrolledwindow > viewport.frame > list treeview.view header button:not(:hover):not(:selected):not(:active), treeview.view header dialog.background.csd > box.vertical.dialog-vbox > stack > scrolledwindow > viewport.frame > list button:not(:hover):not(:selected):not(:active), dialog.background.csd > box.vertical.dialog-vbox > stack > scrolledwindow > viewport.frame > list .budgie-menu button:not(:hover):not(:selected):not(:active), .budgie-menu dialog.background.csd > box.vertical.dialog-vbox > stack > scrolledwindow > viewport.frame > list button:not(:hover):not(:selected):not(:active) {
+  background-color: transparent;
+}
+
+dialog.background.csd > box.vertical.dialog-vbox > stack > box.vertical > stack.view > scrolledwindow > treeview.view:not(:hover):not(:selected):not(:active) {
+  background-color: transparent;
+}
+
+dialog.background.csd > box.vertical.dialog-vbox > stack toolbar.toolbar {
+  border-radius: 0 0 8px 8px;
+}
+
+dialog.background.csd > box.vertical.dialog-vbox > notebook > stack {
+  border-radius: 0 0 8px 8px;
 }
 
 .nemo-window .nemo-places-sidebar {
