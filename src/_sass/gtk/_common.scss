@@ -1330,10 +1330,10 @@ headerbar {
     margin-bottom: $container_padding;
   }
 
-  switch {
-    margin-top: ($large_size - 24px) / 2;
-    margin-bottom: ($large_size - 24px) / 2;
-  }
+  // switch {
+  //   margin-top: ($large_size - 32px) / 2;
+  //   margin-bottom: ($large_size - 32px) / 2;
+  // }
 
   // reset button margins of the spinbutton
   spinbutton button {
@@ -3067,6 +3067,25 @@ filechooser {
   #pathbarbox {
     border-bottom: 1px solid $border_color;
     background-color: $bg_color;
+  }
+
+  stack.view {
+    background-color: transparent;
+
+    scrolledwindow {
+      background-color: $base_color;
+      border-radius: 0 0 $windows_radius $windows_radius;
+
+      treeview.view {
+        @extend .view;
+        background-color: transparent;
+      }
+    }
+  }
+
+  .csd & placessidebar {
+    background: none;
+    border-bottom-left-radius: $windows_radius;
   }
 }
 
