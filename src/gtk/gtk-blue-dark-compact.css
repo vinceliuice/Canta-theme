@@ -5581,6 +5581,11 @@ window.background > box.vertical box.horizontal > box.vertical > scrolledwindow 
 /**********************
  *  Gnome Tweaks  *
  **********************/
+.tweak-titlebar-right > switch,
+dialog.csd > headerbar.titlebar > switch {
+  margin: 12px 0;
+}
+
 .tweak-categories {
   background-image: image(#414f56);
   border-radius: 0 0 0 8px;
