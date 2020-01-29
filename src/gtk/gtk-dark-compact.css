@@ -731,29 +731,29 @@ button:disabled {
   color: rgba(255, 255, 255, 0.3);
 }
 
-row:selected button.sidebar-button, infobar.info button.flat, infobar.question button.flat, infobar.warning button.flat, infobar.error button.flat, .raven .raven-header.top stackswitcher button, .raven-mpris button.image-button, row:selected
+row:selected button.sidebar-button, infobar.info button.flat, infobar.question button.flat, infobar.warning button.flat, infobar.error button.flat, .raven-mpris button.image-button, row:selected
 button.flat {
   color: rgba(255, 255, 255, 0.7);
 }
 
-row:selected button.sidebar-button:hover, infobar.info button.flat:hover, infobar.question button.flat:hover, infobar.warning button.flat:hover, infobar.error button.flat:hover, .raven .raven-header.top stackswitcher button:hover, .raven-mpris button.image-button:hover, row:selected button.sidebar-button:active, infobar.info button.flat:active, infobar.question button.flat:active, infobar.warning button.flat:active, infobar.error button.flat:active, .raven .raven-header.top stackswitcher button:active, .raven-mpris button.image-button:active, row:selected
+row:selected button.sidebar-button:hover, infobar.info button.flat:hover, infobar.question button.flat:hover, infobar.warning button.flat:hover, infobar.error button.flat:hover, .raven-mpris button.image-button:hover, row:selected button.sidebar-button:active, infobar.info button.flat:active, infobar.question button.flat:active, infobar.warning button.flat:active, infobar.error button.flat:active, .raven-mpris button.image-button:active, row:selected
 button.flat:hover, row:selected
 button.flat:active {
   color: #FFFFFF;
 }
 
-row:selected button.sidebar-button:disabled, infobar.info button.flat:disabled, infobar.question button.flat:disabled, infobar.warning button.flat:disabled, infobar.error button.flat:disabled, .raven .raven-header.top stackswitcher button:disabled, .raven-mpris button.image-button:disabled, row:selected
+row:selected button.sidebar-button:disabled, infobar.info button.flat:disabled, infobar.question button.flat:disabled, infobar.warning button.flat:disabled, infobar.error button.flat:disabled, .raven-mpris button.image-button:disabled, row:selected
 button.flat:disabled {
   color: rgba(255, 255, 255, 0.3);
 }
 
-row:selected button.sidebar-button:checked, infobar.info button.flat:checked, infobar.question button.flat:checked, infobar.warning button.flat:checked, infobar.error button.flat:checked, .raven .raven-header.top stackswitcher button:checked, .raven-mpris button.image-button:checked, row:selected
+row:selected button.sidebar-button:checked, infobar.info button.flat:checked, infobar.question button.flat:checked, infobar.warning button.flat:checked, infobar.error button.flat:checked, .raven-mpris button.image-button:checked, row:selected
 button.flat:checked {
   background-color: rgba(255, 255, 255, 0.3);
   color: #FFFFFF;
 }
 
-row:selected button.sidebar-button:checked:disabled, infobar.info button.flat:checked:disabled, infobar.question button.flat:checked:disabled, infobar.warning button.flat:checked:disabled, infobar.error button.flat:checked:disabled, .raven .raven-header.top stackswitcher button:checked:disabled, .raven-mpris button.image-button:checked:disabled, row:selected
+row:selected button.sidebar-button:checked:disabled, infobar.info button.flat:checked:disabled, infobar.question button.flat:checked:disabled, infobar.warning button.flat:checked:disabled, infobar.error button.flat:checked:disabled, .raven-mpris button.image-button:checked:disabled, row:selected
 button.flat:checked:disabled {
   background-color: rgba(255, 255, 255, 0.12);
   color: rgba(255, 255, 255, 0.5);
@@ -1011,11 +1011,7 @@ button:visited:active {
   color: #E040FB;
 }
 
-infobar.info *:link, infobar.info button:link,
-infobar.info button:visited, infobar.question *:link, infobar.question button:link,
-infobar.question button:visited, infobar.warning *:link, infobar.warning button:link,
-infobar.warning button:visited, infobar.error *:link, infobar.error button:link,
-infobar.error button:visited, *:link:selected, button:selected:link,
+infobar.info :link, infobar.question :link, infobar.warning :link, infobar.error :link, *:link:selected, button:selected:link,
 button:selected:visited, .selection-mode.titlebar:not(headerbar) .subtitle:link,
 headerbar.selection-mode .subtitle:link,
 *:selected *:link,
@@ -1951,11 +1947,11 @@ treeview.view:drop(active), filechooser stack.view scrolledwindow treeview.view:
   border-color: #FFAC00;
 }
 
-treeview.view:drop(active).after, filechooser stack.view scrolledwindow treeview.view:drop(active).after {
+treeview.view:drop(active).after, filechooser stack.view scrolledwindow treeview:drop(active).after.view {
   border-top-style: none;
 }
 
-treeview.view:drop(active).before, filechooser stack.view scrolledwindow treeview.view:drop(active).before {
+treeview.view:drop(active).before, filechooser stack.view scrolledwindow treeview:drop(active).before.view {
   border-bottom-style: none;
 }
 
@@ -4911,7 +4907,7 @@ filechooser placessidebar.sidebar row.sidebar-row:selected:hover,
 
 .nautilus-window.csd.background notebook > stack {
   background-color: #3f4544;
-  border-radius: 8px;
+  border-radius: 0 0 8px 8px;
 }
 
 .nautilus-window.csd.background notebook scrolledwindow .view:not(:hover):not(:active):not(:selected):not(:checked) {
@@ -7615,12 +7611,12 @@ frame.raven-frame > border {
 }
 
 .raven stackswitcher.linked > button {
-  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #FFA726 0%, transparent 0%) 0 0 0/0 0 0px;
+  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #00CE99 0%, transparent 0%) 0 0 0/0 0 0px;
   border-radius: 0;
 }
 
 .raven stackswitcher.linked > button:checked {
-  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #FFA726 100%, transparent 0%) 0 0 2/0 0 2px;
+  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #00CE99 100%, transparent 0%) 0 0 2/0 0 2px;
   background-color: transparent;
 }
 
@@ -7635,8 +7631,8 @@ frame.raven-frame > border {
 
 .raven .raven-header.top {
   padding: 2px 0;
-  background-color: #00CE99;
-  color: #FFFFFF;
+  background-color: #3f4544;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .raven .raven-header.top stackswitcher button {
@@ -7709,6 +7705,26 @@ frame.raven-frame > border {
 
 .raven .option-subtitle {
   font-size: smaller;
+}
+
+.raven .audio-widget scale.marks-after {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.raven .audio-widget scale.marks-after label {
+  font-size: 90%;
+  padding: 0;
+  margin: -10px 0 0 6px;
+}
+
+.raven .audio-widget button.flat.expander-button {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.raven .audio-widget list.devices-list.sound-devices > row.activatable label, .raven .audio-widget list.devices-list.sound-devices > iconview label, .raven .audio-widget window#gnome-system-monitor.background.csd stack scrolledwindow list.devices-list.sound-devices > treeview.view label, window#gnome-system-monitor.background.csd stack scrolledwindow .raven .audio-widget list.devices-list.sound-devices > treeview.view label, .raven .audio-widget list.devices-list.sound-devices > .view label, .raven .audio-widget filechooser stack.view scrolledwindow list.devices-list.sound-devices > treeview.view label, filechooser stack.view scrolledwindow .raven .audio-widget list.devices-list.sound-devices > treeview.view label, .raven .audio-widget treeview.view header list.devices-list.sound-devices > button label, treeview.view header .raven .audio-widget list.devices-list.sound-devices > button label, .raven .audio-widget filechooser stack.view scrolledwindow treeview.view header list.devices-list.sound-devices > button label, filechooser stack.view scrolledwindow treeview.view header .raven .audio-widget list.devices-list.sound-devices > button label, .raven .audio-widget .budgie-menu list.devices-list.sound-devices > button label, .budgie-menu .raven .audio-widget list.devices-list.sound-devices > button label {
+  padding-left: 12px;
 }
 
 calendar.raven-calendar {

@@ -617,14 +617,14 @@ $pos_list: ((top, bottom), (left, right), (right, left));
     @extend %flat_button;
 
     border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
-                                  $warning_bg_color 0%,
+                                  $primary_color 0%,
                                   transparent 0%)
                                   0 0 0 / 0 0 0px;
     border-radius: 0;
 
     &:checked {
       border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
-                                    $warning_bg_color 100%,
+                                    $primary_color 100%,
                                     transparent 0%)
                                     0 0 2 / 0 0 2px;
       background-color: transparent;
@@ -647,11 +647,12 @@ $pos_list: ((top, bottom), (left, right), (right, left));
 
     &.top {
       padding: 2px 0;
-      background-color: $primary_color;
-      color: $inverse_fg_color;
+      background-color: $base_color;
+      // color: $fg_color;
+      border-bottom: 1px solid $border_color;
 
       stackswitcher button {
-        @extend %button_selected.flat;
+        // @extend %button_selected.flat;
         margin: -6px 0;
         min-height: $medium_size;
       }
@@ -719,6 +720,30 @@ $pos_list: ((top, bottom), (left, right), (right, left));
   }
 
   .option-subtitle { font-size: smaller; }
+
+  .audio-widget {
+    scale.marks-after {
+      padding-top: 0;
+      padding-bottom: 0;
+
+      label {
+        font-size: 90%;
+        padding: 0;
+        margin: -10px 0 0 6px;
+      }
+    }
+
+    button.flat.expander-button {
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
+
+    list.devices-list.sound-devices {
+      > row.activatable {
+        label { padding-left: 12px; }
+      }
+    }
+  }
 }
 
 // Calendar

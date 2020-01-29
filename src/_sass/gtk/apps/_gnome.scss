@@ -382,7 +382,7 @@ filechooser,
 
     > stack {
       background-color: $base_color;
-      border-radius: $windows_radius;
+      border-radius: 0 0 $windows_radius $windows_radius;
     }
 
     scrolledwindow {
