@@ -1217,6 +1217,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .calendar {
   margin-bottom: 0;
+  border-color: transparent;
+  background-color: transparent;
 }
 
 .calendar,
@@ -1224,8 +1226,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .datemenu-displays-box,
 .message-list-sections {
   margin: 0 8px;
-  border-color: transparent;
-  background-color: transparent;
 }
 
 .datemenu-calendar-column {
