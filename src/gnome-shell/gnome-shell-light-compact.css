@@ -860,6 +860,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   border-bottom-style: solid;
 }
 
+.popup-separator-menu-item-separator {
+  background-color: transparent;
+  border-color: transparent;
+}
+
 .background-menu {
   -boxpointer-gap: 4px;
   -arrow-rise: 0;
@@ -1219,6 +1224,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .datemenu-displays-box,
 .message-list-sections {
   margin: 0 8px;
+  border-color: transparent;
+  background-color: transparent;
 }
 
 .datemenu-calendar-column {
@@ -1252,6 +1259,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   min-height: 20px;
   padding: 4px 8px;
   border-radius: 6px;
+  border-color: transparent;
+  background-color: transparent;
 }
 
 .datemenu-today-button {
