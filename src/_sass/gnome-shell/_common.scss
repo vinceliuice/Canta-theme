@@ -590,7 +590,7 @@ StScrollBar {
   .popup-sub-menu {
     background-color: $alt_lighter_bg_color;
     box-shadow: none;
-    border-color: rgba(0, 0, 0, 0.1); //border: none;
+    border-color: rgba(0, 0, 0, 0.08); //border: none;
   }
 
   .popup-menu-content { padding: 8px 0; }
@@ -598,7 +598,6 @@ StScrollBar {
     // min-height: $menuitem_size - 4px * 2;
     spacing: 8px;
     transition-duration: $shorter_duration;
-    // border: none; // it hides separators
 
     &:ltr { padding-right:1.75em; padding-left: 0; padding-top: 6px; padding-bottom: 6px; }
     &:rtl { padding-right: 0; padding-left:1.75em; padding-top: 6px; padding-bottom: 6px; }
@@ -644,7 +643,10 @@ StScrollBar {
   .popup-inactive-menu-item { //all icons and other graphical elements
     color: $fg_color;
 
-    &:insensitive { color: $hint_fg_color; }
+    &:insensitive {
+      // color: $hint_fg_color;
+      color: transparent;
+    }
   }
 
   //.popup-status-menu-item { font-weight: normal;  color: pink; } //dunno what that is
@@ -694,10 +696,10 @@ StScrollBar {
 
 .popup-separator-menu-item {
   //-margin-horizontal: 24px;
-  height: 1px; //height: 0;
-  margin: 0px 40px 10px 40px; //margin: 0;
+  height: 1px;
+  margin: 0px 42px 12px 42px;
   background: none;
-  border-color: rgba(255, 255, 255, 0.08); //border: none;
+  border-color: $border_color;
   border-bottom-width: 1px;
   border-bottom-style: solid;
 

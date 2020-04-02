@@ -750,7 +750,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .popup-menu .popup-sub-menu {
   background-color: #2e3232;
   box-shadow: none;
-  border-color: rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 0, 0, 0.08);
 }
 
 .popup-menu .popup-menu-content {
@@ -825,7 +825,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .popup-menu .popup-inactive-menu-item:insensitive {
-  color: rgba(255, 255, 255, 0.5);
+  color: transparent;
 }
 
 .popup-menu.panel-menu {
@@ -873,7 +873,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .popup-separator-menu-item {
   height: 1px;
-  margin: 0px 40px 10px 40px;
+  margin: 0px 42px 12px 42px;
   background: none;
   border-color: rgba(255, 255, 255, 0.08);
   border-bottom-width: 1px;
