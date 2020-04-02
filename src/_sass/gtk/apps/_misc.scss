@@ -8,8 +8,6 @@
     &.frame { border-width: 0; }
 
     .places-treeview {
-      // @extend row.activatable;
-
       &:not(:hover):not(:selected) { background-color: transparent; }
     }
   }
@@ -70,7 +68,7 @@
     scrolledwindow.frame { border: none; } // Removed treeview double borders
   }
 
-  .toolbar button { @extend %button_basic.flat; }
+  .toolbar button { @extend %flat_button; }
 }
 
 /*********
@@ -605,7 +603,7 @@ window#whiskermenu-window {
     border-radius: 0;
   }
 
-  entry { @extend %entry.flat; }
+  entry { @extend %flat_entry; }
 
   scrolledwindow {
     > viewport button.radio {

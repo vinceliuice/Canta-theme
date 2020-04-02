@@ -169,6 +169,7 @@
   &:selected, &:selected:focus { color: mix($inverse_fg_color, $primary_color, 80%); }
 }
 
+%nautilus-desktop-canvas-item,
 .nautilus-desktop.nautilus-canvas-item:not(:selected) {
   // background-color: rgba($black, $lower_opacity);
   color: $inverse_fg_color;
@@ -631,7 +632,7 @@ popover.omnibar list row:not(:last-child) {
 }
 
 entry.preferences-search {
-  @extend %entry.flat;
+  @extend %flat_entry;
 
   box-shadow: inset 0 -1px $border_color;
   background-color: $base_color;
@@ -773,14 +774,14 @@ buildperspective row {
 }
 
 layoutpane entry.search {
-  @extend %entry.flat;
+  @extend %flat_entry;
 
   box-shadow: inset 0 -1px $border_color;
   background-color: $base_color;
 }
 
 editortweak entry.search {
-  @extend %entry.flat;
+  @extend %flat_entry;
 
   margin-bottom: -1px;
   box-shadow: none;
@@ -999,7 +1000,7 @@ overlay grid.horizontal > revealer > scrolledwindow.frame {
 }
 
 frame.documents-dropdown {
-  @extend toolbar.osd;
+  @extend %toolbar_osd;
 
   margin: 8px;
 

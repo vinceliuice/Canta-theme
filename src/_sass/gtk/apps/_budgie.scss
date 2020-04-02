@@ -126,7 +126,7 @@
   }
 
   entry,
-  spinbutton:not(.vertical) { @extend %entry.flat; }
+  spinbutton:not(.vertical) { @extend %flat_entry; }
 
   spinbutton:not(.vertical) entry { @extend %spinbutton_entry; }
   button.combo { @extend %combo_flat; }
@@ -284,7 +284,7 @@ window.budgie-popover:not(.csd) {
   }
 
   button {
-    @extend row.activatable;
+    @extend %row_activatable;
 
     min-height: 32px;
     padding: 0 8px;
@@ -392,7 +392,6 @@ popover.background.places-menu {
 
   button {
     @extend %flat_button;
-//    @extend %button_selected.flat;
 
     min-height: 16px;
     min-width: 16px;
@@ -438,7 +437,6 @@ popover.background.places-menu {
   #tasklist-button {
     padding: 0 4px;
     @extend %underscores;
-    // &:hover { @extend %budgie_flat_button:hover; }
   }
 
   &.vertical #tasklist-button { min-height: 32px; }
@@ -449,7 +447,8 @@ popover.background.places-menu {
     @extend %underscores;
 
     &:checked, &:active {
-      @extend %budgie_flat_button:checked;
+      background-color: rgba($panel_fg_color, 0.15);
+      color: $panel_fg_color;
       transition: background-color 0, border-image $ripple_duration $deceleration_curve;
     }
 
@@ -547,7 +546,8 @@ popover.background.places-menu {
       }
 
       &:checked {
-        @extend %budgie_flat_button:checked;
+        background-color: rgba($panel_fg_color, 0.15);
+        color: $panel_fg_color;
 
         &:hover { transition: none; }
         > image { background-image: none; }
@@ -652,7 +652,6 @@ $pos_list: ((top, bottom), (left, right), (right, left));
       border-bottom: 1px solid $border_color;
 
       stackswitcher button {
-        // @extend %button_selected.flat;
         margin: -6px 0;
         min-height: $medium_size;
       }
@@ -697,7 +696,7 @@ $pos_list: ((top, bottom), (left, right), (right, left));
     grid > label:first-child { min-height: $medium_size; } // workaround to fix vertical-align
 
     // for <10.4
-    spinbutton:not(.vertical) { @extend %entry.flat; }
+    spinbutton:not(.vertical) { @extend %flat_entry; }
 
     // for <10.4
     button.combo { @extend %combo_flat; }
@@ -768,7 +767,20 @@ calendar.raven-calendar {
   button.image-button {
     padding: ($large_size - 24px) / 2;
 
-    @extend %button_selected.flat;
+    color: $inverse_secondary_fg_color;
+
+    &:hover, &:active { color: $inverse_fg_color; }
+    &:disabled { color: $inverse_disabled_secondary_fg_color; }
+
+    &:checked {
+      background-color: $inverse_track_color;
+      color: $inverse_fg_color;
+    }
+
+    &:checked:disabled {
+      background-color: $inverse_divider_color;
+      color: $inverse_disabled_fg_color;
+    }
   }
 }
 
