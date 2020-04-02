@@ -1021,6 +1021,15 @@ StScrollBar {
     }
   }
 
+  .panel-button.clock-display {
+    &:active, &:overview, &:focus, &:checked {
+      .clock {
+        background: none;
+        box-shadow: none;
+      }
+    }
+  }
+
   .panel-status-indicators-box,
   .panel-status-menu-box {
     spacing: 2px;
@@ -1489,7 +1498,11 @@ StScrollBar {
 
   .nm-dialog-airplane-text { color: $fg_color; }
   .nm-dialog-header-icon { icon-size: 32px; }
-  .nm-dialog-scroll-view { border: none; }
+  .nm-dialog-scroll-view {
+    border: none;
+    background: none;
+    box-shadow: none;
+  }
   .nm-dialog-header { @include font(title); }
 
   .nm-dialog-item {
