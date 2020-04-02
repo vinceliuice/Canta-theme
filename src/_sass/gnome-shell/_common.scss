@@ -590,7 +590,7 @@ StScrollBar {
   .popup-sub-menu {
     background-color: $alt_lighter_bg_color;
     box-shadow: none;
-    border: none;
+    border-color: rgba(0, 0, 0, 0.1); //border: none;
   }
 
   .popup-menu-content { padding: 8px 0; }
@@ -598,7 +598,7 @@ StScrollBar {
     // min-height: $menuitem_size - 4px * 2;
     spacing: 8px;
     transition-duration: $shorter_duration;
-    border: none;
+    // border: none; // it hides separators
 
     &:ltr { padding-right:1.75em; padding-left: 0; padding-top: 6px; padding-bottom: 6px; }
     &:rtl { padding-right: 0; padding-left:1.75em; padding-top: 6px; padding-bottom: 6px; }
@@ -694,18 +694,26 @@ StScrollBar {
 
 .popup-separator-menu-item {
   //-margin-horizontal: 24px;
-  height: 0; //not really the whole box
-  margin: 0;
+  height: 1px; //height: 0;
+  margin: 0px 40px 10px 40px; //margin: 0;
   background: none;
-  border: none;
+  border-color: rgba(255, 255, 255, 0.08); //border: none;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
 
   .popup-separator-menu-item-separator {
     background: none;
+    border: none;
 
     .popup-sub-menu & { //submenu separators
       background: none;
     }
   }
+}
+
+.popup-menu .popup-sub-menu .popup-separator-menu-item {
+  padding: 0px;
+  margin: 4px 40px;
 }
 
 // a little unstructured mess:
@@ -1486,7 +1494,7 @@ StScrollBar {
 
   .nm-dialog-content {
     spacing: 20px;
-    padding: 24px;
+    padding: 24px 10px 24px 24px; // with '= 24px;' left padding is < than rigth one
   }
   .nm-dialog-header-hbox { spacing: 10px; }
   .nm-dialog-airplane-box { spacing: 12px; }
@@ -2000,10 +2008,13 @@ StScrollBar {
       background-color: transparent;
       color: $secondary_fg_color;
       font-weight: 500;
+      border: none;
+      box-shadow: none;
       &:first-child { border-radius: 0 0 0 $buttons_radius; }
       &:last-child { border-radius: 0 0 $buttons_radius 0; }
       &:hover, &focus { background-color: $divider_color; color: $fg_color; }
       &:active { background-color: $track_color; color: $fg_color; }
+      &:focus { color: $fg_color; }
     }
   }
 
