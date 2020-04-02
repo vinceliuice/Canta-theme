@@ -789,7 +789,7 @@ StScrollBar {
     // FIXME: above 'background-color' property rendered correct trough
     // colour already, so keep -background-color style-property transparent
     -barlevel-background-color: transparent;
-    -barlevel-active-background-color: $success_color;
+    -barlevel-active-background-color: $primary_color;
     -barlevel-overdrive-color: $destructive_color;
     -barlevel-overdrive-separator-width: 2px;
     -barlevel-border-width: 0;
