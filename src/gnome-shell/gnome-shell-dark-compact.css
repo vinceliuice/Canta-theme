@@ -750,7 +750,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .popup-menu .popup-sub-menu {
   background-color: #2e3232;
   box-shadow: none;
-  border: none;
+  border-color: rgba(0, 0, 0, 0.1);
 }
 
 .popup-menu .popup-menu-content {
@@ -760,7 +760,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .popup-menu .popup-menu-item {
   spacing: 8px;
   transition-duration: 100ms;
-  border: none;
 }
 
 .popup-menu .popup-menu-item:ltr {
@@ -873,18 +872,26 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .popup-separator-menu-item {
-  height: 0;
-  margin: 0;
+  height: 1px;
+  margin: 0px 40px 10px 40px;
   background: none;
-  border: none;
+  border-color: rgba(255, 255, 255, 0.08);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
 }
 
 .popup-separator-menu-item .popup-separator-menu-item-separator {
   background: none;
+  border: none;
 }
 
 .popup-sub-menu .popup-separator-menu-item .popup-separator-menu-item-separator {
   background: none;
+}
+
+.popup-menu .popup-sub-menu .popup-separator-menu-item {
+  padding: 0px;
+  margin: 4px 40px;
 }
 
 .system-switch-user-submenu-icon.user-icon {
@@ -1789,7 +1796,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .nm-dialog-content {
   spacing: 20px;
-  padding: 24px;
+  padding: 24px 10px 24px 24px;
 }
 
 .nm-dialog-header-hbox {
@@ -2426,6 +2433,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: transparent;
   color: rgba(255, 255, 255, 0.7);
   font-weight: 500;
+  border: none;
+  box-shadow: none;
 }
 
 .notification-banner .notification-button:first-child {
@@ -2443,6 +2452,10 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .notification-banner .notification-button:active {
   background-color: rgba(255, 255, 255, 0.3);
+  color: #FFFFFF;
+}
+
+.notification-banner .notification-button:focus {
   color: #FFFFFF;
 }
 
