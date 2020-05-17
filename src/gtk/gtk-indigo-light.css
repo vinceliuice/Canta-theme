@@ -1280,12 +1280,12 @@ headerbar button:backdrop:checked:disabled:not(.suggested-action):not(.destructi
 }
 
 .nemo-window toolbar.primary-toolbar .linked.path-bar > button,
-headerbar .linked:not(.vertical).path-bar > button,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button,
-headerbar .linked:not(.vertical).path-bar > button.text-button,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button,
-headerbar .linked:not(.vertical).path-bar > button.image-button,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-button {
+headerbar .linked.path-bar:not(.vertical) > button,
+headerbar .linked.stack-switcher:not(.vertical):not(.path-bar) > button,
+headerbar .linked.path-bar:not(.vertical) > button.text-button,
+headerbar .linked.stack-switcher:not(.vertical):not(.path-bar) > button.text-button,
+headerbar .linked.path-bar:not(.vertical) > button.image-button,
+headerbar .linked.stack-switcher:not(.vertical):not(.path-bar) > button.image-button {
   border-radius: 0;
   background-color: #7349ff;
   color: #FFFFFF;
@@ -1296,16 +1296,16 @@ headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.image-bu
 }
 
 .nemo-window toolbar.primary-toolbar .linked.path-bar > button:hover,
-headerbar .linked:not(.vertical).path-bar > button:hover,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover {
+headerbar .linked.path-bar:not(.vertical) > button:hover,
+headerbar .linked.stack-switcher:not(.vertical):not(.path-bar) > button:hover {
   color: alpha(#FFFFFF, 0.75);
   background-color: #7349ff;
   transition: all 150ms cubic-bezier(0, 0, 0.2, 1);
 }
 
 .nemo-window toolbar.primary-toolbar .linked.path-bar > button:checked,
-headerbar .linked:not(.vertical).path-bar > button:checked,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked {
+headerbar .linked.path-bar:not(.vertical) > button:checked,
+headerbar .linked.stack-switcher:not(.vertical):not(.path-bar) > button:checked {
   border-image-source: -gtk-scaled(url("assets/button-checked-circle-indigo.png"), url("assets/button-checked-circle-indigo@2.png"));
   border-image-width: 8px 16px 8px 16px;
   border-image-slice: 8 16 8 16;
@@ -1317,77 +1317,77 @@ headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked 
 }
 
 .nemo-window toolbar.primary-toolbar .linked.path-bar > button:checked:hover,
-headerbar .linked:not(.vertical).path-bar > button:checked:hover,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked:hover {
+headerbar .linked.path-bar:not(.vertical) > button:checked:hover,
+headerbar .linked.stack-switcher:not(.vertical):not(.path-bar) > button:checked:hover {
   color: rgba(0, 0, 0, 0.75);
 }
 
 .nemo-window toolbar.primary-toolbar .linked.path-bar > button:checked:disabled,
-headerbar .linked:not(.vertical).path-bar > button:checked:disabled,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked:disabled {
+headerbar .linked.path-bar:not(.vertical) > button:checked:disabled,
+headerbar .linked.stack-switcher:not(.vertical):not(.path-bar) > button:checked:disabled {
   color: rgba(0, 0, 0, 0.38);
 }
 
 .nemo-window toolbar.primary-toolbar .linked.path-bar > button:first-child:checked,
-headerbar .linked:not(.vertical).path-bar > button:first-child:checked,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-child:checked {
+headerbar .linked.path-bar:not(.vertical) > button:first-child:checked,
+headerbar .linked.stack-switcher:not(.vertical):not(.path-bar) > button:first-child:checked {
   animation: none;
   border-image-source: -gtk-scaled(url("assets/firstbutton-checked-circle-indigo.png"), url("assets/firstbutton-checked-circle-indigo@2.png"));
 }
 
 .nemo-window toolbar.primary-toolbar .linked.path-bar > button:last-child:checked,
-headerbar .linked:not(.vertical).path-bar > button:last-child:checked,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:last-child:checked {
+headerbar .linked.path-bar:not(.vertical) > button:last-child:checked,
+headerbar .linked.stack-switcher:not(.vertical):not(.path-bar) > button:last-child:checked {
   animation: none;
   border-image-source: -gtk-scaled(url("assets/lastbutton-checked-circle-indigo.png"), url("assets/lastbutton-checked-circle-indigo@2.png"));
 }
 
 .nemo-window toolbar.primary-toolbar .linked.path-bar > button:disabled,
-headerbar .linked:not(.vertical).path-bar > button:disabled,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:disabled {
+headerbar .linked.path-bar:not(.vertical) > button:disabled,
+headerbar .linked.stack-switcher:not(.vertical):not(.path-bar) > button:disabled {
   color: rgba(255, 255, 255, 0.5);
 }
 
 .nemo-window toolbar.primary-toolbar .linked.path-bar > button:backdrop,
-headerbar .linked:not(.vertical).path-bar > button:backdrop,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:backdrop {
+headerbar .linked.path-bar:not(.vertical) > button:backdrop,
+headerbar .linked.stack-switcher:not(.vertical):not(.path-bar) > button:backdrop {
   color: rgba(255, 255, 255, 0.7);
 }
 
 .nemo-window toolbar.primary-toolbar .linked.path-bar > button:backdrop:disabled,
-headerbar .linked:not(.vertical).path-bar > button:backdrop:disabled,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:backdrop:disabled {
+headerbar .linked.path-bar:not(.vertical) > button:backdrop:disabled,
+headerbar .linked.stack-switcher:not(.vertical):not(.path-bar) > button:backdrop:disabled {
   color: rgba(255, 255, 255, 0.3);
 }
 
 .nemo-window toolbar.primary-toolbar .linked.path-bar > button:backdrop:checked,
-headerbar .linked:not(.vertical).path-bar > button:backdrop:checked,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:backdrop:checked {
+headerbar .linked.path-bar:not(.vertical) > button:backdrop:checked,
+headerbar .linked.stack-switcher:not(.vertical):not(.path-bar) > button:backdrop:checked {
   color: rgba(0, 0, 0, 0.38);
 }
 
 .nemo-window toolbar.primary-toolbar .linked.path-bar > button:backdrop:checked:disabled,
-headerbar .linked:not(.vertical).path-bar > button:backdrop:checked:disabled,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:backdrop:checked:disabled {
+headerbar .linked.path-bar:not(.vertical) > button:backdrop:checked:disabled,
+headerbar .linked.stack-switcher:not(.vertical):not(.path-bar) > button:backdrop:checked:disabled {
   color: rgba(0, 0, 0, 0.26);
 }
 
 .nemo-window toolbar.primary-toolbar .linked.path-bar > button:only-child,
-headerbar .linked:not(.vertical).path-bar > button:only-child,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:only-child {
+headerbar .linked.path-bar:not(.vertical) > button:only-child,
+headerbar .linked.stack-switcher:not(.vertical):not(.path-bar) > button:only-child {
   border-radius: 9999px;
 }
 
 .nemo-window toolbar.primary-toolbar .linked.path-bar > button:first-child,
-headerbar .linked:not(.vertical).path-bar > button:first-child,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-child {
+headerbar .linked.path-bar:not(.vertical) > button:first-child,
+headerbar .linked.stack-switcher:not(.vertical):not(.path-bar) > button:first-child {
   border-radius: 9999px 0 0 9999px;
   padding-left: 8px;
 }
 
 .nemo-window toolbar.primary-toolbar .linked.path-bar > button:last-child,
-headerbar .linked:not(.vertical).path-bar > button:last-child,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:last-child {
+headerbar .linked.path-bar:not(.vertical) > button:last-child,
+headerbar .linked.stack-switcher:not(.vertical):not(.path-bar) > button:last-child {
   border-radius: 0 9999px 9999px 0;
   padding-right: 8px;
 }
@@ -1534,29 +1534,29 @@ headerbar.selection-mode .selection-menu .arrow {
 }
 
 
-headerbar .linked:not(.vertical).path-bar > button,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button {
+headerbar .linked.path-bar:not(.vertical) > button,
+headerbar .linked.stack-switcher:not(.vertical):not(.path-bar) > button {
   padding-left: 8px;
   padding-right: 8px;
 }
 
 
-headerbar .linked:not(.vertical).path-bar > button label,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button label {
+headerbar .linked.path-bar:not(.vertical) > button label,
+headerbar .linked.stack-switcher:not(.vertical):not(.path-bar) > button label {
   padding-left: 8px;
   padding-right: 8px;
 }
 
 
-headerbar .linked:not(.vertical).path-bar > button.text-button.image-button label,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button label {
+headerbar .linked.path-bar:not(.vertical) > button.text-button.image-button label,
+headerbar .linked.stack-switcher:not(.vertical):not(.path-bar) > button.text-button.image-button label {
   padding-left: 0;
   padding-right: 0;
 }
 
 
-headerbar .linked:not(.vertical).path-bar > button.text-button.image-button image,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button.text-button.image-button image {
+headerbar .linked.path-bar:not(.vertical) > button.text-button.image-button image,
+headerbar .linked.stack-switcher:not(.vertical):not(.path-bar) > button.text-button.image-button image {
   padding-left: 0;
   padding-right: 0;
 }
@@ -1729,11 +1729,11 @@ treeview.view:drop(active) {
   border-color: #FFAC00;
 }
 
-treeview.view:drop(active).after {
+treeview.view.after:drop(active) {
   border-top-style: none;
 }
 
-treeview.view:drop(active).before {
+treeview.view.before:drop(active) {
   border-bottom-style: none;
 }
 
@@ -2238,7 +2238,7 @@ notebook > header tab:hover {
   color: rgba(0, 0, 0, 0.75);
 }
 
-notebook > header tab:hover.reorderable-page {
+notebook > header tab.reorderable-page:hover {
   border-color: rgba(0, 0, 0, 0.08);
   background-color: #FAFAFA;
 }
@@ -2258,7 +2258,7 @@ notebook > header tab:checked:disabled {
   color: rgba(0, 0, 0, 0.38);
 }
 
-notebook > header tab:checked.reorderable-page {
+notebook > header tab.reorderable-page:checked {
   border-color: rgba(0, 0, 0, 0.08);
   background-color: #fcfcfc;
 }
@@ -2403,19 +2403,19 @@ scrollbar.overlay-indicator:not(.dragging):not(.hovering) button:disabled {
   background-color: rgba(0, 0, 0, 0.26);
 }
 
-scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal slider {
+scrollbar.overlay-indicator.horizontal:not(.dragging):not(.hovering) slider {
   min-width: 24px;
 }
 
-scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal button {
+scrollbar.overlay-indicator.horizontal:not(.dragging):not(.hovering) button {
   min-width: 8px;
 }
 
-scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical slider {
+scrollbar.overlay-indicator.vertical:not(.dragging):not(.hovering) slider {
   min-height: 24px;
 }
 
-scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical button {
+scrollbar.overlay-indicator.vertical:not(.dragging):not(.hovering) button {
   min-height: 8px;
 }
 
@@ -2947,7 +2947,7 @@ scale.horizontal.marks-before:not(.marks-after) slider:active {
   background-position: center calc(100% - 3px);
 }
 
-scale.horizontal.marks-before:not(.marks-after).fine-tune slider {
+scale.horizontal.marks-before.fine-tune:not(.marks-after) slider {
   background-position: center calc(100% - 6px);
 }
 
@@ -2974,7 +2974,7 @@ scale.horizontal.marks-after:not(.marks-before) slider:active {
   background-position: center calc(3px);
 }
 
-scale.horizontal.marks-after:not(.marks-before).fine-tune slider {
+scale.horizontal.marks-after.fine-tune:not(.marks-before) slider {
   background-position: center calc(6px);
 }
 
@@ -3001,7 +3001,7 @@ scale.vertical.marks-before:not(.marks-after) slider:active {
   background-position: calc(3px) center;
 }
 
-scale.vertical.marks-before:not(.marks-after).fine-tune slider {
+scale.vertical.marks-before.fine-tune:not(.marks-after) slider {
   background-position: calc(6px) center;
 }
 
@@ -3028,7 +3028,7 @@ scale.vertical.marks-after:not(.marks-before) slider:active {
   background-position: calc(100% - 3px) center;
 }
 
-scale.vertical.marks-after:not(.marks-before).fine-tune slider {
+scale.vertical.marks-after.fine-tune:not(.marks-before) slider {
   background-position: calc(100% - 6px) center;
 }
 
@@ -3809,11 +3809,11 @@ colorswatch:drop(active) {
   box-shadow: none;
 }
 
-colorswatch:drop(active).light overlay {
+colorswatch.light:drop(active) overlay {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12), 0 0 0 2px #FFAC00;
 }
 
-colorswatch:drop(active).dark overlay {
+colorswatch.dark:drop(active) overlay {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12), 0 0 0 2px #FFAC00;
 }
 
@@ -5482,9 +5482,6 @@ button.title label {
   min-height: 36px;
 }
 
-/*********
- * Geary *
- *********/
 .documents-scrolledwin {
   background-color: transparent;
 }
@@ -5899,18 +5896,22 @@ stack#conversation_viewer scrolledwindow.geary-conversation-scroller > viewport.
   border: none;
 }
 
+window.geary-main-window.background.csd box.vertical > paned.horizontal > box.sidebar.vertical,
 window#GearyMainWindow.background.csd box.vertical > paned.horizontal > box.sidebar.vertical {
   border-bottom-left-radius: 8px;
 }
 
+window.geary-main-window.background.csd box.vertical > paned.horizontal > box.sidebar.vertical statusbar,
 window#GearyMainWindow.background.csd box.vertical > paned.horizontal > box.sidebar.vertical statusbar {
   border-bottom-left-radius: 8px;
 }
 
+window.geary-main-window.background.csd stack#conversation_viewer,
 window#GearyMainWindow.background.csd stack#conversation_viewer {
   border-bottom-right-radius: 8px;
 }
 
+window.geary-main-window.background.csd stack#conversation_viewer scrolledwindow.geary-conversation-scroller viewport.frame list.conversation-listbox,
 window#GearyMainWindow.background.csd stack#conversation_viewer scrolledwindow.geary-conversation-scroller viewport.frame list.conversation-listbox {
   background: none;
   border-bottom-right-radius: 8px;
@@ -6042,7 +6043,7 @@ box.vertical > widget > widget:selected {
   border: none;
 }
 
-.xfce4-panel#XfcePanelWindow {
+#XfcePanelWindow.xfce4-panel {
   border: none;
 }
 

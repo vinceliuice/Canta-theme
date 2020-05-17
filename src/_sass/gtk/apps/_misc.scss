@@ -349,17 +349,11 @@ window.background > box.vertical > toolbar.primary-toolbar {
 %folder_frame_border { border-width: 0; }
 
 %folder_frame {
-
   &:dir(ltr) { border: none; }
   &:dir(rtl) { border: none; }
 
-  treeview.view.sidebar {
-
-    // &.cell { // = row height of placessidebar
-    //   padding-top: rem(4px);
-    //   padding-bottom: rem(4px);
-    // }
-  }
+  // treeview.view.sidebar {
+  // }
 }
 
 .geary-titlebar-right,
@@ -396,6 +390,7 @@ stack#conversation_viewer {
   }
 }
 
+window.geary-main-window.background.csd, // > 3.36.0
 window#GearyMainWindow.background.csd {
   box.vertical > paned.horizontal > box.sidebar.vertical {
     border-bottom-left-radius: $windows_radius;
