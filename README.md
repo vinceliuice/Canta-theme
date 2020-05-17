@@ -61,6 +61,24 @@ Install light compact square version of Canta theme
 
 Install Canta theme with nautilus background image in $HOME/.tmp
 
+## Install from Snap
+<a href="https://snapcraft.io/canta-themes">
+<img alt="Get it from the Snap Store" src="https://snapcraft.io/static/images/badges/en/snap-store-white.svg" />
+</a>
+
+You can install the theme from the Snap Store оr by running:
+
+```
+sudo snap install canta-themes
+```
+To connect the theme to an app run:
+```
+sudo snap connect [other snap]:gtk-3-themes canta-themes:gtk-3-themes
+```
+```
+sudo snap connect [other snap]:icon-themes canta-themes:icon-themes
+```
+
 ### Icon
 #### Canta icon theme
 Canta icon theme use numix-icon-theme-circle icon theme for Inherits,
