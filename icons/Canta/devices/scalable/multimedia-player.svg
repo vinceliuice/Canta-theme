@@ -1,0 +1,37 @@
+<svg width="512" height="512" enable-background="new" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb">
+ <defs>
+  <filter id="b" x="-.027273" y="-.021429" width="1.0545" height="1.0429" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="4"/>
+  </filter>
+  <filter id="c" x="-.06" y="-.06" width="1.12" height="1.12" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="6.4"/>
+  </filter>
+  <filter id="a" x="-.024" y="-.024" width="1.048" height="1.048" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="3.84"/>
+  </filter>
+ </defs>
+ <g transform="translate(0,212)">
+  <g>
+   <g transform="translate(-208,16)">
+    <rect transform="matrix(1,0,0,-1,496,-432)" x="-256" y="-640" width="448" height="352" rx="24" ry="24" filter="url(#b)" opacity=".1" stroke="#000" stroke-width="8"/>
+    <rect transform="matrix(1,0,0,-1,496,-432)" x="-256" y="-640" width="448" height="352" rx="24" ry="24" filter="url(#b)" opacity=".2"/>
+    <rect transform="scale(-1)" x="-688" y="-204" width="448" height="352" rx="24" ry="24" fill="#828b8f"/>
+    <g>
+     <path d="m264 206c-13.296 0-24-10.704-24-24v-2c0 13.296 10.704 24 24 24h400c13.296 0 24-10.704 24-24v2c0 13.296-10.704 24-24 24z" opacity=".2"/>
+     <circle cx="464" cy="30" r="192" opacity=".2"/>
+     <circle cx="464" cy="32" r="192" filter="url(#a)" opacity=".2"/>
+    </g>
+    <path d="m264-148c-13.296 0-24 10.704-24 24v2c0-13.296 10.704-24 24-24h400c13.296 0 24 10.704 24 24v-2c0-13.296-10.704-24-24-24z" fill="#fff" opacity=".2"/>
+    <circle cx="464" cy="32" r="192" filter="url(#a)" opacity=".1" stroke="#000" stroke-width="8"/>
+    <circle cx="464" cy="28" r="192" fill="#512da8"/>
+    <circle cx="464" cy="36" r="128" filter="url(#c)" opacity=".2"/>
+    <circle cx="464" cy="28" r="128" fill="#9575cd"/>
+    <g fill="#fff">
+     <path d="m440-12v80l72-40z" fill-rule="evenodd" opacity=".8" stroke="#fff" stroke-linejoin="round" stroke-width="16"/>
+     <path transform="translate(0,-244)" d="m 464,80 a 192,192 0 0 0 -192,192 192,192 0 0 0 0.041,1.17188 A 192,192 0 0 1 464,82 192,192 0 0 1 655.95898,272.82812 192,192 0 0 0 656,272 192,192 0 0 0 464,80 Z" opacity=".1"/>
+     <path transform="translate(0,-244)" d="m464 144a128 128 0 0 0-128 128 128 128 0 0 0 0.041 1.1719 128 128 0 0 1 127.96-127.17 128 128 0 0 1 127.96 126.83 128 128 0 0 0 0.04102-0.82812 128 128 0 0 0-128-128z" opacity=".1"/>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

@@ -1,0 +1,58 @@
+<svg width="512" height="512" enable-background="new" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb">
+ <defs>
+  <filter id="a" x="-.027273" y="-.021429" width="1.0545" height="1.0429" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="4"/>
+  </filter>
+ </defs>
+ <g transform="translate(0,212)">
+  <g></g>
+ </g>
+ <g transform="translate(0,212)">
+  <g></g>
+ </g>
+ <g transform="translate(0,212)">
+  <g></g>
+ </g>
+ <g transform="translate(0,212)">
+  <g></g>
+ </g>
+ <g transform="translate(0,212)">
+  <g></g>
+ </g>
+ <g transform="translate(0,212)">
+  <g></g>
+ </g>
+ <g transform="translate(0,212)">
+  <g></g>
+ </g>
+ <g transform="translate(0,212)">
+  <g></g>
+ </g>
+ <g transform="translate(0,212)">
+  <g>
+   <g transform="translate(-208,2608)">
+    <rect transform="matrix(0 -1 -1 0 0 -2592)" x="-256" y="-640" width="448" height="352" rx="24" ry="24" filter="url(#a)" opacity=".1" stroke="#000" stroke-width="8"/>
+    <rect transform="matrix(0 -1 -1 0 0 -2592)" x="-256" y="-640" width="448" height="352" rx="24" ry="24" filter="url(#a)" opacity=".2"/>
+    <rect transform="matrix(0,-1,-1,0,0,0)" x="2340" y="-640" width="448" height="352" rx="24" ry="24" fill="#78909c"/>
+    <path d="m312-2338c-13.296 0-24-10.704-24-24v-2c0 13.296 10.704 24 24 24h304c13.296 0 24-10.704 24-24v2c0 13.296-10.704 24-24 24z" opacity=".2"/>
+    <path d="m312-2788c-13.296 0-24 10.704-24 24v2c0-13.296 10.704-24 24-24h304c13.296 0 24 10.704 24 24v-2c0-13.296-10.704-24-24-24z" fill="#fff" opacity=".2"/>
+    <g transform="translate(12 1.376)" fill="#fff" opacity=".2">
+     <path d="m454-2623.4c-27.614 0-50 22.386-50 50s22.386 50 50 50 50-22.386 50-50-22.386-50-50-50zm0 20c16.569 0 30 13.431 30 30s-13.431 30-30 30-30-13.431-30-30 13.431-30 30-30z"/>
+     <rect x="424" y="-2503.4" width="60" height="20"/>
+     <rect x="424" y="-2463.4" width="60" height="20"/>
+     <rect transform="rotate(-45)" x="2110.7" y="-1628.6" width="60" height="20"/>
+     <rect transform="rotate(-45)" x="2110.7" y="-1588.6" width="60" height="20"/>
+     <rect transform="rotate(45)" x="-1528.6" y="-2270.7" width="60" height="60"/>
+    </g>
+    <g transform="translate(12 -.62378)" fill="#455a64">
+     <path d="m454-2623.4c-27.614 0-50 22.386-50 50s22.386 50 50 50 50-22.386 50-50-22.386-50-50-50zm0 20c16.569 0 30 13.431 30 30s-13.431 30-30 30-30-13.431-30-30 13.431-30 30-30z"/>
+     <rect x="424" y="-2503.4" width="60" height="20"/>
+     <rect x="424" y="-2463.4" width="60" height="20"/>
+     <rect transform="rotate(-45)" x="2110.7" y="-1628.6" width="60" height="20"/>
+     <rect transform="rotate(-45)" x="2110.7" y="-1588.6" width="60" height="20"/>
+     <rect transform="rotate(45)" x="-1528.6" y="-2270.7" width="60" height="60"/>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

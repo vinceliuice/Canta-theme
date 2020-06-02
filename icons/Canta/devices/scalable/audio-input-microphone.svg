@@ -1,0 +1,23 @@
+<svg width="512" height="512" enable-background="new" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <title>Paper Icon Theme</title>
+ <defs>
+  <filter id="a" x="-.024" y="-.024" width="1.048" height="1.048" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="4.48"/>
+  </filter>
+ </defs>
+ <g transform="translate(0,212)">
+  <g>
+   <g transform="translate(-208,16)">
+    <g>
+     <rect transform="matrix(0,-1,-1,0,0,0)" x="-256" y="-688" width="448" height="448" rx="224" ry="224" filter="url(#a)" opacity=".1" stroke="#000" stroke-width="8"/>
+     <rect transform="matrix(0,-1,-1,0,0,0)" x="-256" y="-688" width="448" height="448" rx="224" ry="224" filter="url(#a)" opacity=".2"/>
+     <rect transform="matrix(0,-1,-1,0,0,0)" x="-252" y="-688" width="448" height="448" rx="224" ry="224" fill="#ff7043"/>
+     <path transform="translate(0,-244)" d="m464 48c-124.1 0-224 99.904-224 224 0 0.67412 3e-3 1.3363 0 2 0-124.1 99.904-224 224-224s224 99.904 224 224c-3e-3 -0.66367 0-1.3259 0-2 0-124.1-99.904-224-224-224z" fill="#fff" opacity=".2"/>
+     <path transform="translate(0,-244)" d="m464 128c-26.592 0-48 21.408-48 48v112c0 26.592 21.408 48 48 48 26.592 0 48-21.408 48-48v-112c0-26.592-21.408-48-48-48zm-96 160c0 48.202 34.603 87.77 80 94.781v33.219h32v-33.219c45.397-7.0115 80-46.579 80-94.781v-32h-31.984v32c0 35.179-28.84 63.984-64.02 63.984-35.179 0-63.984-28.805-63.984-63.984v-32h-32.012z" color="#bebebe" fill="#fff"/>
+     <path d="m464 252c-124.1 0-224-99.904-224-224 0-0.67412 3e-3 -1.3363 0-2 0 124.1 99.904 224 224 224s224-99.904 224-224c-3e-3 0.66367 0 1.3259 0 2 0 124.1-99.904 224-224 224z" opacity=".2"/>
+    </g>
+    <path transform="translate(0,-244)" d="m464 128c-26.592 0-48 21.408-48 48v96c0 26.592 21.408 48 48 48 26.592 0 48-21.408 48-48v-96c0-26.592-21.408-48-48-48zm-96 128v16c0 48.202 34.603 87.77 80 94.781v49.219h32v-49.219c45.397-7.0115 80-46.579 80-94.781v-16h-16-15.984v16c0 35.179-28.84 63.984-64.02 63.984-35.179 0-63.984-28.805-63.984-63.984v-16h-16.012z" color="#bebebe" fill="none"/>
+   </g>
+  </g>
+ </g>
+</svg>

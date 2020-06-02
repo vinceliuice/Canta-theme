@@ -1,0 +1,14 @@
+<svg width="512" height="512" enable-background="new" version="1.0" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="a" x="-.027273" y="-.021429" width="1.0545" height="1.0429" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="4"/>
+  </filter>
+ </defs>
+ <rect transform="matrix(0,-1,-1,0,-208,228)" x="-256" y="-640" width="448" height="352" rx="24" ry="24" filter="url(#a)" opacity=".1" stroke="#000" stroke-width="8"/>
+ <rect transform="matrix(0,-1,-1,0,-208,228)" x="-256" y="-640" width="448" height="352" rx="24" ry="24" filter="url(#a)" opacity=".2"/>
+ <rect transform="matrix(0,-1,-1,0,0,0)" x="-480" y="-432" width="448" height="352" rx="24" ry="24" fill="#78909c"/>
+ <path d="m104 482c-13.296 0-24-10.704-24-24v-2c0 13.296 10.704 24 24 24h304c13.296 0 24-10.704 24-24v2c0 13.296-10.704 24-24 24z" opacity=".2"/>
+ <path d="m104 32c-13.296 0-24 10.704-24 24v2c0-13.296 10.704-24 24-24h304c13.296 0 24 10.704 24 24v-2c0-13.296-10.704-24-24-24z" fill="#fff" opacity=".2"/>
+ <path d="m256 126 96 116h-192z" fill="#455a64" style="paint-order:normal"/>
+ <rect x="160" y="277" width="192" height="50" ry="0" fill="#455a64" style="paint-order:normal"/>
+</svg>

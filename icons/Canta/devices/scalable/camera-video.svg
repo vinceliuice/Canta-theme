@@ -1,0 +1,28 @@
+<svg width="512" height="512" version="1" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="b" x="-.0404" y="-.032464" width="1.0808" height="1.0649" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="0.7575"/>
+  </filter>
+  <filter id="a" x="-.06" y="-.06" width="1.12" height="1.12" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="0.575"/>
+  </filter>
+ </defs>
+ <g transform="matrix(8,0,0,8,-4,0)" stroke-width="2">
+  <rect x="13" y="4" width="45" height="56" rx="8.438" ry="8.4" filter="url(#b)" opacity=".35"/>
+  <rect x="13" y="4" width="45" height="56" rx="8.438" ry="8.4" fill="#4f4f4f"/>
+  <circle transform="matrix(0,-1,-1,0,0,0)" cx="-11.5" cy="-50.5" r="2.5" fill="#fff"/>
+  <circle transform="matrix(0,-1,-1,0,0,0)" cx="-30.5" cy="-35.5" r="11.5" filter="url(#a)" opacity=".35"/>
+  <circle transform="matrix(0,-1,-1,0,0,0)" cx="-30.5" cy="-35.5" r="11.5" fill="#fff"/>
+  <circle transform="rotate(-90)" cx="-30.5" cy="35.5" r="8.5" fill="#007095"/>
+  <circle transform="matrix(0,-1,-1,0,0,0)" cx="-30.5" cy="-35.5" r="4.5" fill="#49acdc"/>
+  <rect x="7" y="14" width="6" height="36" rx="1.5" ry="1.385" fill="#3f3f3f"/>
+  <circle cx="18.5" cy="50.5" r="1.5" opacity=".5"/>
+  <circle cx="24.5" cy="50.5" r="1.5" opacity=".5"/>
+  <circle cx="30.5" cy="50.5" r="1.5" opacity=".5"/>
+  <circle cx="36.5" cy="50.5" r="1.5" opacity=".5"/>
+  <circle cx="21.5" cy="54.5" r="1.5" opacity=".5"/>
+  <circle cx="27.5" cy="54.5" r="1.5" opacity=".5"/>
+  <circle cx="33.5" cy="54.5" r="1.5" opacity=".5"/>
+  <circle transform="matrix(0,-1,-1,0,0,0)" cx="-11.5" cy="-50.5" r="1.5" fill="#ff4d4d"/>
+ </g>
+</svg>

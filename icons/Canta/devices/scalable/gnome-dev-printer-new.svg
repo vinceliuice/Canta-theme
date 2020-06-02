@@ -1,0 +1,34 @@
+<svg width="512" height="512" enable-background="new" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb">
+ <defs>
+  <filter id="b" x="-.022714" y="-.02544" width="1.0454" height="1.0509" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="4.24"/>
+  </filter>
+  <filter id="a" x="-.024" y="-.024" width="1.048" height="1.048" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="2.4"/>
+  </filter>
+ </defs>
+ <g transform="translate(0,212)"></g>
+ <g transform="translate(0,212)"></g>
+ <g transform="translate(0,212)"></g>
+ <g transform="translate(0,212)">
+  <g>
+   <g transform="translate(-208,1936)">
+    <path d="m336-2080v96h-72c-13.296 0-24 10.704-24 24v144c0 13.296 10.704 24 24 24h72v112h256v-112h72c13.296 0 24-10.704 24-24v-144c0-13.296-10.704-24-24-24h-72v-96z" filter="url(#b)" opacity=".1" stroke="#000" stroke-width="8"/>
+    <path d="m336-2080v96h-72c-13.296 0-24 10.704-24 24v144c0 13.296 10.704 24 24 24h72v112h256v-112h72c13.296 0 24-10.704 24-24v-144c0-13.296-10.704-24-24-24h-72v-96z" filter="url(#b)" opacity=".2"/>
+    <rect transform="matrix(0,-1,-1,0,0,0)" x="1796" y="-688" width="192" height="448" rx="24" ry="24" fill="#4d4d4d"/>
+    <path d="m336-1988h256v-95.999h-256z" fill="#ececec"/>
+    <path d="m240-1822v2c0 13.296 10.704 24 24 24h400c13.296 0 24-10.704 24-24v-2c0 13.296-10.704 24-24 24h-400c-13.296 0-24-10.704-24-24z" opacity=".2"/>
+    <path d="m336-1684h256v-192h-256z" fill="#ececec"/>
+    <rect x="280" y="-1948" width="24" height="24" rx="0" ry="12" fill="#f9ce1d"/>
+    <path d="m336-2084v2h256v-2z" fill="#fff" opacity=".4"/>
+    <path d="m240-1962v-2c0-13.296 10.704-24 24-24h400c13.296 0 24 10.704 24 24v2c0-13.296-10.704-24-24-24h-400c-13.296 0-24 10.704-24 24z" fill="#fff" opacity=".2"/>
+    <circle cx="584" cy="-1766" r="120" enable-background="new" filter="url(#a)" opacity=".2"/>
+    <circle cx="584" cy="-1766" r="120" enable-background="new" filter="url(#a)" opacity=".1" stroke="#000" stroke-width="8"/>
+    <circle cx="584" cy="-1772" r="120" enable-background="new" fill="#4bae4f"/>
+    <path d="m576-1844v64h-64v16h64v64h16v-64h64v-16h-64v-64h-16z" enable-background="new" fill="#fff"/>
+   </g>
+  </g>
+ </g>
+ <g transform="translate(0,212)"></g>
+ <g transform="translate(0,212)"></g>
+</svg>

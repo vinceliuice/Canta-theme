@@ -1,0 +1,28 @@
+<svg width="512" height="512" enable-background="new" version="1.0" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="a" x="-.022286" y="-.026" width="1.0446" height="1.052" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="4.16"/>
+  </filter>
+  <filter id="c" x="-.024" y="-.024" width="1.048" height="1.048" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="2.4"/>
+  </filter>
+  <filter id="b" x="-.06" y="-.06" width="1.12" height="1.12" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="6"/>
+  </filter>
+ </defs>
+ <g transform="translate(-208,868)" enable-background="new">
+  <g>
+   <path d="m272-794s-32 0-32 32v288c0 32 32 32 32 32h64l32 32h192l32-32h64s32 4.1581 32-32v-288c0-32-32-32-32-32z" opacity=".2"/>
+   <path d="m272-792s-32 0-32 32v288c0 32 32 32 32 32h64l32 32h192l32-32h64s32 4.1581 32-32v-288c0-32-32-32-32-32z" filter="url(#a)" opacity=".1" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+   <path d="m272-792s-32 0-32 32v288c0 32 32 32 32 32h64l32 32h192l32-32h64s32 4.1581 32-32v-288c0-32-32-32-32-32z" filter="url(#a)" opacity=".2"/>
+  </g>
+  <path d="m272-796s-32 0-32 32v288c0 32 32 32 32 32h64l32 32h192l32-32h64s32 4.1581 32-32v-288c0-32-32-32-32-32z" fill="#e6e6e6"/>
+  <path d="m304-730h320v224h-64l-32 32h-128l-32-32h-64z" fill="#fff" opacity=".4"/>
+  <path d="m304-732h320v224h-64l-32 32h-128l-32-32h-64z" fill="#4d4d4d"/>
+  <path d="m272-796s-32 0-32 32v2c0-32 32-32 32-32h384s32 0 32 32v-2c0-32-32-32-32-32z" fill="#fff" opacity=".2"/>
+  <circle cx="584" cy="-487.9" r="120" enable-background="new" filter="url(#c)" opacity=".2"/>
+  <circle cx="584" cy="-483.9" r="120" enable-background="new" filter="url(#b)" opacity=".2"/>
+  <circle cx="584" cy="-491.9" r="120" enable-background="new" fill="#f44336"/>
+  <path d="m538.75-548.47-11.314 11.312 45.254 45.256-45.254 45.254 11.314 11.314 45.254-45.254 45.254 45.254 11.314-11.314-45.254-45.254 45.254-45.256-11.314-11.312-45.254 45.254z" fill="#fff"/>
+ </g>
+</svg>

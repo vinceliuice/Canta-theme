@@ -1,0 +1,14 @@
+<svg width="512" height="512" version="1" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="a" x="-.044" y="-.030462" width="1.088" height="1.0609" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="0.66"/>
+  </filter>
+ </defs>
+ <g transform="matrix(9.2308 0 0 9.2308 -39.385 -39.385)" stroke-width="1.857">
+  <rect x="14" y="6" width="36" height="52" rx="3" ry="3" filter="url(#a)" opacity=".35"/>
+  <rect x="14" y="6" width="36" height="52" rx="3" ry="3" fill="#333"/>
+  <rect x="16" y="9" width="32" height="42" rx="1.6" ry="1.909" fill="#999"/>
+  <rect x="25" y="7" width="14" height="1" rx=".441" ry=".5" fill="#fff" opacity=".5"/>
+  <circle cx="32" cy="54.5" r="2.5" fill="#f9f9f9" opacity=".5"/>
+ </g>
+</svg>

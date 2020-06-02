@@ -1,0 +1,44 @@
+<svg width="512" height="512" enable-background="new" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb">
+ <defs>
+  <filter id="a" x="-.027273" y="-.021429" width="1.0545" height="1.0429" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="4"/>
+  </filter>
+ </defs>
+ <g transform="translate(0,212)">
+  <g></g>
+ </g>
+ <g transform="translate(0,212)">
+  <g></g>
+ </g>
+ <g transform="translate(0,212)">
+  <g></g>
+ </g>
+ <g transform="translate(0,212)">
+  <g></g>
+ </g>
+ <g transform="translate(0,212)">
+  <g></g>
+ </g>
+ <g transform="translate(0,212)">
+  <g></g>
+ </g>
+ <g transform="translate(0,212)">
+  <g>
+   <g transform="translate(-208,1296)">
+    <rect transform="matrix(0 -1 -1 0 3.3067e-6 -1280)" x="-256" y="-640" width="448" height="352" rx="24" ry="24" filter="url(#a)" opacity=".1" stroke="#000" stroke-width="8"/>
+    <rect transform="matrix(0 -1 -1 0 3.3067e-6 -1280)" x="-256" y="-640" width="448" height="352" rx="24" ry="24" filter="url(#a)" opacity=".2"/>
+    <rect transform="matrix(0,-1,-1,0,0,0)" x="1028" y="-640" width="448" height="352" rx="24" ry="24" fill="#78909c"/>
+    <path d="m312-1026c-13.296 0-24-10.704-24-24v-2c0 13.296 10.704 24 24 24h304c13.296 0 24-10.704 24-24v2c0 13.296-10.704 24-24 24z" opacity=".2"/>
+    <path d="m312-1476c-13.296 0-24 10.704-24 24v2c0-13.296 10.704-24 24-24h304c13.296 0 24 10.704 24 24v-2c0-13.296-10.704-24-24-24z" fill="#fff" opacity=".2"/>
+    <path d="m464-1420.9-0.84765 1.3574-38.455 61.529h23.303v92h-44v-16.539c9.2656-5.5928 14.981-15.607 15-26.459 0-17.109-13.891-31-31-31-17.109 0-31 13.891-31 31 8e-3 10.863 5.7254 20.892 15 26.49v32.51c0 7.8333 4.0642 12.025 8.0527 14.02 3.9885 1.9943 7.9473 1.9805 7.9473 1.9805h60v18.541c-9.2654 5.593-14.981 15.605-15 26.457 0 17.109 13.891 31 31 31 17.109 0 31-13.891 31-31-8e-3 -10.863-5.7252-20.89-15-26.488v-18.512h60s3.9588 0.014 7.9473-1.9805c3.9885-1.9942 8.0527-6.1862 8.0527-14.02v-28.215c1.0469-0.2047 4.167-0.8723 7.6914-2.8418 2.0843-1.1648 4.1482-2.7428 5.5879-4.9024s2.2148-4.9179 1.7109-8.1933l0.01 0.1523v-30l-6e-3 0.1113c0.48671-4.3803-0.24001-7.6754-1.6875-10.088-1.4475-2.4124-3.5846-3.895-5.7226-4.7753-4.2762-1.7608-8.6934-1.2422-8.6934-1.2422l0.10937-0.01h-30c-8.2825 0-12.5 4.0633-14.381 8.0762-1.881 4.0129-1.6172 7.9863-1.6172 7.9863l-2e-3 -0.062v30c0 7.8333 4.0642 12.025 8.0527 14.02 3.1833 1.5917 5.7993 1.8215 6.9473 1.8829v12.098h-44v-92h23.305l-39.305-62.887z" color="#000000" color-rendering="auto" enable-background="accumulate" fill="#fff" fill-rule="evenodd" image-rendering="auto" opacity=".1" shape-rendering="auto" solid-color="#000000" style="isolation:auto;mix-blend-mode:normal;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-transform:none;white-space:normal"/>
+    <path d="m464-1422.9-0.84765 1.3574-38.455 61.529h23.303v92h-44v-16.539c9.2656-5.5928 14.981-15.607 15-26.459 0-17.109-13.891-31-31-31-17.109 0-31 13.891-31 31 8e-3 10.863 5.7254 20.892 15 26.49v32.51c0 7.8333 4.0642 12.025 8.0527 14.02 3.9885 1.9943 7.9473 1.9805 7.9473 1.9805h60v18.541c-9.2654 5.593-14.981 15.605-15 26.457 0 17.109 13.891 31 31 31 17.109 0 31-13.891 31-31-8e-3 -10.863-5.7252-20.89-15-26.488v-18.512h60s3.9588 0.014 7.9473-1.9805c3.9885-1.9942 8.0527-6.1862 8.0527-14.02v-28.215c1.0469-0.2047 4.167-0.8723 7.6914-2.8418 2.0843-1.1648 4.1482-2.7428 5.5879-4.9024s2.2148-4.9179 1.7109-8.1933l0.01 0.1523v-30l-6e-3 0.1113c0.48671-4.3803-0.24001-7.6754-1.6875-10.088-1.4475-2.4124-3.5846-3.895-5.7226-4.7753-4.2762-1.7608-8.6934-1.2422-8.6934-1.2422l0.10937-0.01h-30c-8.2825 0-12.5 4.0633-14.381 8.0762-1.881 4.0129-1.6172 7.9863-1.6172 7.9863l-2e-3 -0.062v30c0 7.8333 4.0642 12.025 8.0527 14.02 3.1833 1.5917 5.7993 1.8215 6.9473 1.8829v12.098h-44v-92h23.305l-39.305-62.887z" color="#000000" color-rendering="auto" enable-background="accumulate" fill="#455a64" fill-rule="evenodd" image-rendering="auto" shape-rendering="auto" solid-color="#000000" style="isolation:auto;mix-blend-mode:normal;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-transform:none;white-space:normal"/>
+   </g>
+  </g>
+ </g>
+ <g transform="translate(0,212)">
+  <g></g>
+ </g>
+ <g transform="translate(0,212)">
+  <g></g>
+ </g>
+</svg>

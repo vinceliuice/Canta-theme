@@ -1,0 +1,44 @@
+<svg width="512" height="512" enable-background="new" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb">
+ <defs>
+  <filter id="a" x="-.027273" y="-.021429" width="1.0545" height="1.0429" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="4"/>
+  </filter>
+ </defs>
+ <g transform="translate(0,212)">
+  <g></g>
+ </g>
+ <g transform="translate(0,212)">
+  <g></g>
+ </g>
+ <g transform="translate(0,212)">
+  <g></g>
+ </g>
+ <g transform="translate(0,212)">
+  <g></g>
+ </g>
+ <g transform="translate(0,212)">
+  <g>
+   <g transform="translate(-208,16)">
+    <rect transform="matrix(0,-1,-1,0,0,0)" x="-256" y="-640" width="448" height="352" rx="24" ry="24" filter="url(#a)" opacity=".1" stroke="#000" stroke-width="8"/>
+    <rect transform="matrix(0,-1,-1,0,0,0)" x="-256" y="-640" width="448" height="352" rx="24" ry="24" filter="url(#a)" opacity=".2"/>
+    <rect transform="matrix(0,-1,-1,0,0,0)" x="-252" y="-640" width="448" height="352" rx="24" ry="24" fill="#78909c"/>
+    <path d="m312 254c-13.296 0-24-10.704-24-24v-2c0 13.296 10.704 24 24 24h304c13.296 0 24-10.704 24-24v2c0 13.296-10.704 24-24 24z" opacity=".2"/>
+    <path d="m312-196c-13.296 0-24 10.704-24 24v2c0-13.296 10.704-24 24-24h304c13.296 0 24 10.704 24 24v-2c0-13.296-10.704-24-24-24z" fill="#fff" opacity=".2"/>
+    <path d="m464-130c61.856 0 112 50.144 112 112s-50.144 112-112 112h-112v-112c0-61.856 50.144-112 112-112zm0 56c-30.928 0-56 25.072-56 56 0 30.928 25.072 56 56 56 30.928 0 56-25.072 56-56 0-30.928-25.072-56-56-56z" enable-background="new" fill="#fff" opacity=".2"/>
+    <path d="m464-132c61.856 0 112 50.144 112 112s-50.144 112-112 112h-112v-112c0-61.856 50.144-112 112-112zm0 56c-30.928 0-56 25.072-56 56 0 30.928 25.072 56 56 56 30.928 0 56-25.072 56-56 0-30.928-25.072-56-56-56z" enable-background="new" fill="#455a64"/>
+   </g>
+  </g>
+ </g>
+ <g transform="translate(0,212)">
+  <g></g>
+ </g>
+ <g transform="translate(0,212)">
+  <g></g>
+ </g>
+ <g transform="translate(0,212)">
+  <g></g>
+ </g>
+ <g transform="translate(0,212)">
+  <g></g>
+ </g>
+</svg>

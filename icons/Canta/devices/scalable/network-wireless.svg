@@ -1,0 +1,44 @@
+<svg width="512" height="512" enable-background="new" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb">
+ <defs>
+  <filter id="b" x="-.10272" y="-.14426" width="1.2054" height="1.2885" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="1.442647"/>
+  </filter>
+  <filter id="a" x="-.13696" y="-.19235" width="1.2739" height="1.3847" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="1.442647"/>
+  </filter>
+  <clipPath id="f">
+   <path d="m160 247c-7.9134 0-15.037 2.8117-20.945 7.1718l20.945 22.819 20.782-22.901c-5.8851-4.3117-12.929-7.0903-20.782-7.0903z" color="#000000" enable-background="accumulate" fill="#2095f2"/>
+  </clipPath>
+  <clipPath id="e">
+   <path d="m160 247c-7.9134 0-15.037 2.8117-20.945 7.1718l20.945 22.819 20.782-22.901c-5.8851-4.3117-12.929-7.0903-20.782-7.0903z" color="#000000" enable-background="accumulate" fill="#2095f2"/>
+  </clipPath>
+  <filter id="d" x="-.020625" y="-.028696" width="1.0412" height="1.0574" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="3.8260868"/>
+  </filter>
+  <filter id="c" x="-.020625" y="-.028696" width="1.0412" height="1.0574" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="3.8260868"/>
+  </filter>
+ </defs>
+ <g transform="translate(0,212)">
+  <g></g>
+  <g>
+   <g transform="translate(-208,16)">
+    <g>
+     <path d="m464-128c-84.434 0-160.44 30.001-223.48 76.522l223.48 243.48 221.74-244.35c-62.793-46.005-137.95-75.652-221.74-75.652z" color="#000000" enable-background="accumulate" opacity=".2"/>
+     <path d="m464-126c-84.434 0-160.44 30.001-223.48 76.522l223.48 243.48 221.74-244.35c-62.793-46.005-137.95-75.652-221.74-75.652z" color="#000000" enable-background="accumulate" filter="url(#d)" opacity=".1" stroke="#000" stroke-width="8"/>
+     <path d="m464-126c-84.434 0-160.44 30.001-223.48 76.522l223.48 243.48 221.74-244.35c-62.793-46.005-137.95-75.652-221.74-75.652z" color="#000000" enable-background="accumulate" filter="url(#c)" opacity=".2"/>
+    </g>
+    <path d="m465.03-132c-84.434 0-160.44 30.001-223.48 76.522l223.48 243.48 221.74-244.35c-62.793-46.005-137.95-75.652-221.74-75.652z" color="#000000" enable-background="accumulate" fill="#607d8b"/>
+    <path transform="matrix(10.67 0 0 10.67 -1242.1 -2767.4)" d="m159.9 252.99c-6.3037 0-12.154 2.0674-16.853 5.5589l16.941 18.441 16.765-18.441c-4.6987-3.4915-10.549-5.5589-16.853-5.5589z" clip-path="url(#f)" color="#000000" enable-background="accumulate" filter="url(#b)" opacity=".2"/>
+    <path d="m464-68.075c-67.259 0-129.68 22.058-179.82 59.312l180.76 196.76 178.88-196.76c-50.135-37.254-112.56-59.312-179.82-59.312z" color="#000000" enable-background="accumulate" fill="#90a4ae"/>
+    <path transform="matrix(10.67 0 0 10.67 -1242.1 -2767.4)" d="m159.9 258.99c-4.7278 0-9.1156 1.5505-12.64 4.1692l12.706 13.831 12.574-13.831c-3.524-2.6186-7.9119-4.1692-12.64-4.1692z" clip-path="url(#e)" color="#000000" enable-background="accumulate" filter="url(#a)" opacity=".2"/>
+    <path d="m464-4.0562c-50.444 0-97.262 16.544-134.86 44.484l135.57 147.57 134.16-147.57c-37.601-27.94-84.419-44.484-134.86-44.484z" color="#000000" enable-background="accumulate" fill="#eceff1"/>
+    <g fill="#fff">
+     <path transform="translate(0,76)" d="m465.03-208c-84.434 0-160.45 29.995-223.48 76.516l1.1016 1.2012c62.821-46.061 138.44-75.717 222.38-75.717 83.301 0 158.07 29.318 220.64 74.867l1.0976-1.2109c-62.793-46.005-137.95-75.656-221.73-75.656z" color="#000000" enable-background="accumulate" opacity=".2"/>
+     <path transform="translate(0,76)" d="m464-144.08c-67.259 0-129.68 22.059-179.81 59.312l1.1016 1.1992c49.947-36.763 111.94-58.512 178.71-58.512 66.775 0 128.77 21.75 178.72 58.518l1.0918-1.2051c-50.135-37.254-112.55-59.312-179.81-59.312z" color="#000000" enable-background="accumulate" opacity=".2"/>
+     <path transform="translate(0,76)" d="m464-80.062c-50.444 0-97.259 16.544-134.86 44.484l1.0996 1.1992c37.413-27.451 83.803-43.684 133.76-43.684 49.959 0 96.352 16.234 133.77 43.688l1.0938-1.2031c-37.601-27.94-84.415-44.484-134.86-44.484z" color="#000000" enable-background="accumulate" opacity=".3"/>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

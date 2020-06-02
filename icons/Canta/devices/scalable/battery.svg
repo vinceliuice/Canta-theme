@@ -1,0 +1,24 @@
+<svg width="512" height="512" enable-background="new" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <filter id="a" x="-.0276" y="-.021231" width="1.0552" height="1.0425" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="3.68"/>
+  </filter>
+ </defs>
+ <g transform="translate(0,212)">
+  <g>
+   <g transform="translate(12 264)" fill="#78909c"></g>
+  </g>
+  <g>
+   <g transform="translate(-208,16)">
+    <path d="m304-162v384c0 17.728 14.272 32 32 32h256c17.728 0 32-14.272 32-32v-384z" opacity=".2"/>
+    <rect x="400" y="-196" width="128" height="96" ry="4" fill="#eceff1"/>
+    <path d="m304-160v384c0 17.728 14.272 32 32 32h256c17.728 0 32-14.272 32-32v-384z" filter="url(#a)" opacity=".1"/>
+    <path d="m304-160v384c0 17.728 14.272 32 32 32h256c17.728 0 32-14.272 32-32v-384z" filter="url(#a)" opacity=".2"/>
+    <rect x="304" y="-100" width="320" height="352" ry="32" fill="#607d8b"/>
+    <rect x="304" y="-164" width="320" height="128" enable-background="new" fill="#ffeb3b"/>
+    <path d="m400 12v48h48l-48 80v-48h-48z" fill="#fff"/>
+    <rect x="304" y="-164" width="320" height="2" enable-background="new" fill="#fff" opacity=".4"/>
+   </g>
+  </g>
+ </g>
+</svg>

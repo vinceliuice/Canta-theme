@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" enable-background="new" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <clipPath id="c">
+   <path d="m291.25 184.09c-32.833 0-59.265 26.432-59.265 59.265s26.432 59.265 59.265 59.265 59.265-26.432 59.265-59.265-26.432-59.265-59.265-59.265zm0 46.566a12.7 12.7 0 0 1 12.7 12.7 12.7 12.7 0 0 1-12.7 12.7 12.7 12.7 0 0 1-12.7-12.7 12.7 12.7 0 0 1 12.7-12.7z" fill="#eaeaea" opacity=".5"/>
+  </clipPath>
+  <filter id="a" x="-.024" y="-.024" width="1.048" height="1.048" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="4.48"/>
+  </filter>
+ </defs>
+ <g transform="translate(0,212)">
+  <g transform="translate(-208,16)">
+   <path d="m464-192c-124.1 0-224 99.904-224 224s99.904 224 224 224 224-99.904 224-224-99.904-224-224-224zm0 176a48 48 0 0 1 48 48 48 48 0 0 1-48 48 48 48 0 0 1-48-48 48 48 0 0 1 48-48z" filter="url(#a)" opacity=".1" stroke="#000" stroke-width="8"/>
+   <path d="m464-192c-124.1 0-224 99.904-224 224s99.904 224 224 224 224-99.904 224-224-99.904-224-224-224zm0 176a48 48 0 0 1 48 48 48 48 0 0 1-48 48 48 48 0 0 1-48-48 48 48 0 0 1 48-48z" filter="url(#a)" opacity=".2"/>
+   <g transform="matrix(8,0,0,8,-1392,-1988)">
+    <path transform="translate(0,76)" d="m232 162a14 14 0 0 0-14 14 14 14 0 0 0 14 14 14 14 0 0 0 14-14 14 14 0 0 0-14-14zm0 8a6 6 0 0 1 6 6 6 6 0 0 1-6 6 6 6 0 0 1-6-6 6 6 0 0 1 6-6z" fill="#e0e2e3" opacity=".8"/>
+    <path transform="translate(0,76)" d="m232 148c-15.512 0-28 12.488-28 28s12.488 28 28 28 28-12.488 28-28-12.488-28-28-28zm0 16a12 12 0 0 1 12 12 12 12 0 0 1-12 12 12 12 0 0 1-12-12 12 12 0 0 1 12-12z" fill="#e0e2e3"/>
+    <g transform="matrix(.47245 0 0 .47245 94.399 137.03)" clip-path="url(#c)" fill="#fff" fill-rule="evenodd">
+     <path transform="matrix(2.8284 -2.8284 2.8284 2.8284 -681.73 175.47)" d="m152 164 8 20 8-20zm8 20-8 20h16z" clip-path="none" opacity=".2"/>
+     <path transform="matrix(2.1492 -3.3736 3.3736 2.1492 -673.36 387.67)" d="m152 164 8 20 8-20zm8 20-8 20h16z" clip-path="none" opacity=".2"/>
+    </g>
+    <path transform="translate(0,76)" d="m232 148c-15.512 0-28 12.488-28 28 0 0.1677 0.0108 0.33301 0.0137 0.5 0.26598-15.279 12.642-27.5 27.986-27.5s27.72 12.221 27.986 27.5c3e-3 -0.16699 0.0137-0.3323 0.0137-0.5 0-15.512-12.488-28-28-28z" fill="#fff" opacity=".1"/>
+   </g>
+  </g>
+ </g>
+</svg>

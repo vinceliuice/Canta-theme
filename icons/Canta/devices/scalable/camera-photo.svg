@@ -1,0 +1,38 @@
+<svg width="512" height="512" enable-background="new" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <filter id="b" x="-.021429" y="-.027273" width="1.0429" height="1.0545" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="4.0000085"/>
+  </filter>
+  <filter id="a" x="-.024" y="-.024" width="1.048" height="1.048" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="2.24"/>
+  </filter>
+ </defs>
+ <g transform="translate(0,212)">
+  <g>
+   <g transform="translate(-208,16)">
+    <rect x="288" y="-164" width="80" height="56" rx="0" ry="8" fill="#fff"/>
+    <rect transform="matrix(0,-1,-1,0,0,0)" x="-208" y="-688" width="352" height="448" rx="24" ry="24" filter="url(#b)" opacity=".1" stroke="#000" stroke-width="8"/>
+    <rect transform="matrix(0,-1,-1,0,0,0)" x="-208" y="-688" width="352" height="448" rx="24" ry="24" filter="url(#b)" opacity=".2"/>
+    <rect x="240" y="-148" width="448" height="352" ry="24" fill="#ccc"/>
+    <path transform="translate(0,-244)" d="m240 128v288h448v-288z" fill="#333"/>
+    <circle cx="312" cy="-58" r="24" opacity=".2"/>
+    <circle cx="312" cy="-60" r="24" fill="#f9f9f9"/>
+    <path d="m264 204c-13.296 0-24-10.704-24-24v-2c0 13.296 10.704 24 24 24h400c13.296 0 24-10.704 24-24v2c0 13.296-10.704 24-24 24z" opacity=".2"/>
+    <path transform="translate(0,-244)" d="m264 96c-13.296 0-24 10.704-24 24v2c0-13.296 10.704-24 24-24h400c13.296 0 24 10.704 24 24v-2c0-13.296-10.704-24-24-24z" fill="#fff" opacity=".2"/>
+    <circle transform="rotate(180 496 0)" cx="496" cy="-32" r="112" fill="#fff" filter="url(#a)" opacity=".1" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+    <circle transform="rotate(180 496 0)" cx="496" cy="-32" r="112" filter="url(#a)" opacity=".2"/>
+    <circle transform="scale(-1)" cx="-496" cy="-28" r="112" fill="#fff"/>
+    <circle transform="scale(-1,1)" cx="-496" cy="28" r="96" fill="#009688"/>
+    <g transform="matrix(-7.0711 7.0711 7.0711 7.0711 -211.11 -2941.8)" fill="#fff">
+     <path transform="translate(0,76)" d="m160 178a6 6 0 0 0-6 6h6z" opacity=".2"/>
+     <path d="m160 254a6 6 0 0 1 6 6h-6z" opacity=".4"/>
+     <path d="m160 266a6 6 0 0 1-6-6h6z" opacity=".4"/>
+     <path d="m160 266a6 6 0 0 0 6-6h-6z" opacity=".6"/>
+    </g>
+    <path transform="translate(0,-244)" d="m496 160a112 112 0 0 0-112 112 112 112 0 0 0 0.041 1.1719 112 112 0 0 1 111.96-111.17 112 112 0 0 1 111.96 110.83 112 112 0 0 0 0.04102-0.82812 112 112 0 0 0-112-112z" fill="#fff" opacity=".2"/>
+    <path transform="translate(0,-244)" d="m240 128v2h448v-2z" opacity=".2"/>
+    <path d="m240 172v2h448v-2z" fill="#fff" opacity=".2"/>
+   </g>
+  </g>
+ </g>
+</svg>

@@ -1,0 +1,23 @@
+<svg width="512" height="512" enable-background="new" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb">
+ <defs>
+  <filter id="a" x="-.022286" y="-.026" width="1.0446" height="1.052" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="4.16"/>
+  </filter>
+ </defs>
+ <g transform="translate(0,212)">
+  <g>
+   <g transform="translate(-208,16)">
+    <g>
+     <path d="m272-154s-32 0-32 32v288c0 32 32 32 32 32h64l32 32h192l32-32h64s32 4.1581 32-32v-288c0-32-32-32-32-32z" opacity=".2"/>
+     <path d="m272-152s-32 0-32 32v288c0 32 32 32 32 32h64l32 32h192l32-32h64s32 4.1581 32-32v-288c0-32-32-32-32-32z" filter="url(#a)" opacity=".1" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+     <path d="m272-152s-32 0-32 32v288c0 32 32 32 32 32h64l32 32h192l32-32h64s32 4.1581 32-32v-288c0-32-32-32-32-32z" filter="url(#a)" opacity=".2"/>
+    </g>
+    <path d="m272-156s-32 0-32 32v288c0 32 32 32 32 32h64l32 32h192l32-32h64s32 4.1581 32-32v-288c0-32-32-32-32-32z" fill="#e6e6e6"/>
+    <path d="m304-90h320v224h-64l-32 32h-128l-32-32h-64z" fill="#fff" opacity=".4"/>
+    <path d="m304-92h320v224h-64l-32 32h-128l-32-32h-64z" fill="#4d4d4d"/>
+    <path d="m272-156s-32 0-32 32v2c0-32 32-32 32-32h384s32 0 32 32v-2c0-32-32-32-32-32z" fill="#fff" opacity=".2"/>
+   </g>
+  </g>
+ </g>
+ <g transform="translate(0,212)"></g>
+</svg>

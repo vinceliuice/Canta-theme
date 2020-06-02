@@ -1,0 +1,26 @@
+<svg width="512" height="512" enable-background="new" version="1.0" xmlns="http://www.w3.org/2000/svg">
+ <title>Paper Icon Theme Template</title>
+ <defs>
+  <filter id="a" x="-.024" y="-.024" width="1.048" height="1.048" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="4.48"/>
+  </filter>
+ </defs>
+ <g transform="translate(0,212)">
+  <g>
+   <g transform="translate(-208,16)">
+    <g>
+     <path d="m264-194c-13.296 0-24 10.704-24 24v352c0 13.296 10.704 24 24 24h24v48h352v-48h24c13.296 0 24-10.704 24-24v-352c0-13.296-10.704-24-24-24z" enable-background="new" opacity=".2"/>
+     <path d="m264-192c-13.296 0-24 10.704-24 24v352c0 13.296 10.704 24 24 24h24v48h352v-48h24c13.296 0 24-10.704 24-24v-352c0-13.296-10.704-24-24-24z" enable-background="new" filter="url(#a)" opacity=".1"/>
+     <path d="m264-192c-13.296 0-24 10.704-24 24v352c0 13.296 10.704 24 24 24h24v48h352v-48h24c13.296 0 24-10.704 24-24v-352c0-13.296-10.704-24-24-24z" enable-background="new" filter="url(#a)" opacity=".2"/>
+    </g>
+    <rect x="240" y="-196" width="448" height="400" ry="24" enable-background="new" fill="#4bae4f"/>
+    <path transform="translate(0,-244)" d="m264 48c-13.296 0-24 10.704-24 24v2c0-13.296 10.704-24 24-24h400c13.296 0 24 10.704 24 24v-2c0-13.296-10.704-24-24-24z" enable-background="new" fill="#fff" opacity=".2"/>
+    <path transform="translate(0,-244)" d="m240 420v4c0 13.296 10.704 24 24 24h400c13.296 0 24-10.704 24-24v-4c0 13.296-10.704 24-24 24h-400c-13.296 0-24-10.704-24-24z" enable-background="new" opacity=".2"/>
+    <rect x="288" y="200" width="352" height="52" ry="0" enable-background="new" fill="#feea3a"/>
+    <rect x="288" y="248" width="352" height="4" ry="0" enable-background="new" opacity=".2"/>
+    <path transform="translate(0,-244)" d="m288 444v2h352v-2z" enable-background="new" fill="#fff" opacity=".2"/>
+    <path d="m437.5-100h-21.5v42.499l1e-5 70.501c-5.0635-1.816-10.311-2.9999-16-2.9999-26.51 0-48 21.49-48 48 0 26.509 21.49 48 48 48 26.51 0 48-21.491 48-48l-1e-5 -110h96l1e-5 65c-5.0635-1.816-10.312-2.9999-16-2.9999-26.51 0-48 21.49-48 48 0 26.509 21.49 48 48 48 26.51 0 48-21.491 48-48l-1e-5 -115.5v-42.499z" enable-background="new" fill="#388e3c" filter="url(#filter14069)"/>
+   </g>
+  </g>
+ </g>
+</svg>

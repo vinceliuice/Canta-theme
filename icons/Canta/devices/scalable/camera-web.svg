@@ -1,0 +1,31 @@
+<svg width="512" height="512" enable-background="new" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <filter id="a" x="-.024" y="-.024" width="1.048" height="1.048" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="4.4799994"/>
+  </filter>
+  <filter id="b" x="-.06" y="-.06" width="1.12" height="1.12" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="7.2"/>
+  </filter>
+ </defs>
+ <g transform="translate(0,212)">
+  <g>
+   <g transform="translate(-208,16)">
+    <rect transform="matrix(0,-1,-1,0,0,0)" x="-256" y="-688" width="448" height="448" rx="224" ry="224" filter="url(#a)" opacity=".1" stroke="#000" stroke-width="8"/>
+    <rect transform="matrix(0,-1,-1,0,0,0)" x="-256" y="-688" width="448" height="448" rx="224" ry="224" filter="url(#a)" opacity=".2"/>
+    <rect transform="matrix(0,-1,-1,0,0,0)" x="-252" y="-688" width="448" height="448" rx="224" ry="224" fill="#e6e6e6"/>
+    <circle cx="464" cy="36" r="144" filter="url(#b)" opacity=".2"/>
+    <circle cx="464" cy="30" r="144" opacity=".2"/>
+    <circle cx="464" cy="28" r="144" fill="#880e4f"/>
+    <circle transform="scale(1,-1)" cx="464" cy="-28" r="112" fill="#e91e63"/>
+    <g transform="matrix(8.4853 8.4853 -8.4853 8.4853 1312.5 -3535.8)" fill="#fff">
+     <path transform="translate(0,76)" d="m160 178a6 6 0 0 0-6 6h6z" opacity=".2"/>
+     <path d="m160 254a6 6 0 0 1 6 6h-6z" opacity=".4"/>
+     <path d="m160 266a6 6 0 0 1-6-6h6z" opacity=".4"/>
+     <path d="m160 266a6 6 0 0 0 6-6h-6z" opacity=".6"/>
+    </g>
+    <path transform="translate(0,-244)" d="m464 48c-124.1 0-224 99.904-224 224 0 0.21643 0.0126 0.4294 0.0176 0.64453 0.72607-123.47 100.34-222.64 223.98-222.64s223.26 99.179 223.98 222.64c0.00487-0.21513 0.01758-0.4281 0.01758-0.64453 0-124.1-99.904-224-224-224z" fill="#fff" opacity=".2"/>
+    <path d="m464 252c-124.1 0-224-99.904-224-224 0-0.21643 0.0126-0.4294 0.0176-0.64453 0.72607 123.47 100.34 222.64 223.98 222.64s223.26-99.179 223.98-222.64c5e-3 0.21513 0.0176 0.4281 0.0176 0.64453 0 124.1-99.904 224-224 224z" opacity=".2"/>
+   </g>
+  </g>
+ </g>
+</svg>

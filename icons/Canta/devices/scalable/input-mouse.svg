@@ -1,0 +1,25 @@
+<svg width="512" height="512" enable-background="new" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <filter id="a" x="-.030667" y="-.019714" width="1.0613" height="1.0394" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="3.68"/>
+  </filter>
+  <filter id="b" x="-.12" y="-.04" width="1.24" height="1.08" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="1.6"/>
+  </filter>
+ </defs>
+ <g transform="translate(0,212)">
+  <g>
+   <g transform="translate(-208,16)">
+    <rect transform="matrix(0,-1,-1,0,0,0)" x="-256" y="-608" width="448" height="288" rx="160" ry="144" filter="url(#a)" opacity=".1" stroke="#000" stroke-width="8"/>
+    <rect transform="matrix(0,-1,-1,0,0,0)" x="-256" y="-608" width="448" height="288" rx="160" ry="144" filter="url(#a)" opacity=".2"/>
+    <rect transform="matrix(0,-1,-1,0,0,0)" x="-252" y="-608" width="448" height="288" rx="160" ry="144" fill="#333"/>
+    <g>
+     <path d="m464 252c-79.776 0-144-71.36-144-160v-2c0 88.64 64.224 160 144 160s144-71.36 144-160v2c0 88.64-64.224 160-144 160z" opacity=".2"/>
+     <rect x="448" y="-112" width="32" height="96" ry="16" filter="url(#b)" opacity=".2"/>
+     <path d="m464-196c79.776 0 144 71.36 144 160v128c0 88.64-64.224 160-144 160z" opacity=".1"/>
+    </g>
+    <rect x="448" y="-116" width="32" height="96" ry="16" fill="#ececec"/>
+   </g>
+  </g>
+ </g>
+</svg>
