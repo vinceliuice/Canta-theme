@@ -153,7 +153,7 @@ DEST_DIR=
 if [ "$UID" -eq "$ROOT_UID" ]; then
   DEST_DIR="/usr/share/icons"
 else
-  DEST_DIR="$HOME/.icons"
+  DEST_DIR="$HOME/.local/share/icons"
 fi
 
 echo -e "\e[1m\n+----------------------------------------------+"
