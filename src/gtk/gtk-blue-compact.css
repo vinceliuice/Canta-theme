@@ -5376,6 +5376,20 @@ window.background.csd > hdyleaflet > separator.sidebar {
   background-color: transparent;
 }
 
+/******************
+ * Gnome Contacts *
+ ******************/
+window.background.csd > headerbar.titlebar.selection-mode > hdyleaflet > headerbar {
+  background: none;
+  box-shadow: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+window.background.csd > overlay > hdyleaflet > separator.sidebar {
+  background: none;
+  min-width: 0;
+}
+
 /************************
  * Gnome system monitor *
  ************************/

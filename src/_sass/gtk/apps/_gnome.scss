@@ -1260,6 +1260,25 @@ window.background.csd {
 }
 
 
+/******************
+ * Gnome Contacts *
+ ******************/
+window.background.csd {
+  > headerbar.titlebar.selection-mode {
+    > hdyleaflet > headerbar {
+      background: none;
+      box-shadow: none;
+      color: $inverse_secondary_fg_color;
+    }
+  }
+
+  > overlay > hdyleaflet > separator.sidebar {
+    background: none;
+    min-width: 0;
+  }
+}
+
+
 /************************
  * Gnome system monitor *
  ************************/
