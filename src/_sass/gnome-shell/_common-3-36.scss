@@ -1,0 +1,448 @@
+
+@import 'common';
+
+/* DASHBOARD */
+
+#dash {
+  font-size: 1em;
+  color: $inverse_fg_color;
+  background-color: $inverse_divider_color;
+  padding: 3px 0;
+  border: none;
+  border-left: 0px;
+  border-radius: 0px $windows_radius $windows_radius 0px;
+
+  &:rtl {
+    border-radius: $windows_radius 0 0 $windows_radius;
+  }
+
+  .placeholder {
+    background-image: url("assets/dash-placeholder.svg");
+    background-size: contain;
+    height: 24px;
+  }
+
+  .empty-dash-drop-target {
+    width: 24px;
+    height: 24px;
+  }
+
+}
+
+.dash-item-container > StWidget {
+  padding: 3px 6px;
+}
+
+.dash-label { //osd tooltip
+  // min-height: 32px - 6px * 2;
+  border-radius: $windows_radius;
+  padding: 7px 8px;
+  color: $fg_color;
+  background-color: $lighter_bg_color;
+  box-shadow: $shadow_2;
+  text-align: center;
+  -x-offset: 8px;
+}
+
+/* App Vault/Grid */
+.icon-grid {
+  spacing: 30px;
+  -shell-grid-horizontal-item-size: 136px;
+  -shell-grid-vertical-item-size: 136px;
+
+  .overview-icon { icon-size: 96px; }
+}
+//.app-display { spacing: 20px; }
+
+// Collections
+.app-folder-popup { //expanded collection
+  -arrow-border-radius: $windows_radius;
+  -arrow-background-color: $inverse_panel_bg_color;
+  -arrow-base: 24px;
+  -arrow-rise: 12px;
+}
+
+.app-folder-popup-bin { padding: 5px; }
+.app-folder-icon {
+  padding: 6px;
+  spacing-rows: 6px;
+  spacing-columns: 6px;
+}
+
+/* ShellMountOperation Dialogs */
+.shell-mount-operation-icon { icon-size: 48px; }
+
+.mount-dialog {
+  spacing: 24px;
+
+  .message-dialog-title {
+    padding-top: 10px;
+    padding-left: 17px;
+    padding-bottom: 6px;
+    max-width: 34em;
+  }
+
+  .message-dialog-title:rtl {
+    padding-left: 0px;
+    padding-right: 17px;
+  }
+
+  .message-dialog-body {
+    padding-left: 17px;
+    width: 28em;
+  }
+
+  .message-dialog-body:rtl {
+    padding-left: 0px;
+    padding-right: 17px;
+  }
+}
+
+.mount-dialog-app-list {
+  max-height: 200px;
+  padding-top: 24px;
+  padding-left: 49px;
+  padding-right: 32px;
+}
+
+.mount-dialog-app-list:rtl {
+  padding-right: 49px;
+  padding-left: 32px;
+}
+
+.mount-dialog-app-list-item {
+  color: $fg_color;
+  &:hover { color: $fg_color; }
+  &:ltr { padding-right: 1em; }
+  &:rtl { padding-left: 1em; }
+}
+
+.mount-dialog-app-list-item-icon {
+  &:ltr { padding-right: 17px; }
+  &:rtl { padding-left: 17px; }
+}
+
+.mount-dialog-app-list-item-name {
+  font-size: 1em;
+}
+
+/* Access Dialog */
+.access-dialog {
+  spacing: 30px;
+}
+
+.access-dialog-main-layout {
+  padding: 12px 20px 0;
+  spacing: 12px;
+}
+
+.access-dialog-content {
+  max-width: 28em;
+  spacing: 20px;
+}
+
+.access-dialog-icon {
+  min-width: 48px;
+  icon-size: 48px;
+}
+
+.access-dialog-title {
+  font-weight: bold;
+}
+
+.access-dialog-subtitle {
+  color: $secondary_fg_color;
+  font-weight: bold;
+}
+
+/* Geolocation Dialog */
+.geolocation-dialog {
+  spacing: 30px;
+}
+
+/* Extension Dialog */
+.extension-dialog {
+  .message-dialog-main-layout { spacing: 24px; padding: 10px; }
+  .message-dialog-title { color: $secondary_fg_color; }
+}
+
+/* Inhibit-Shortcuts Dialog */
+.inhibit-shortcuts-dialog {
+  spacing: 30px;
+}
+
+/* Network Agent Dialog */
+.network-dialog-secret-table {
+  spacing-rows: 15px;
+  spacing-columns: 1em;
+}
+
+.keyring-dialog-control-table {
+  spacing-rows: 15px;
+  spacing-columns: 1em;
+}
+
+//hotplug
+.hotplug-transient-box {
+  spacing: 6px;
+  padding: 2px 72px 2px 12px;
+}
+
+.hotplug-notification-item {
+  padding: 2px 10px;
+  &:focus { padding: 1px 71px 1px 11px; }
+}
+
+.hotplug-notification-item-icon {
+  icon-size: 24px;
+  padding: 2px 5px;
+}
+
+.hotplug-resident-box { spacing: 8px; }
+
+.hotplug-resident-mount {
+  spacing: 8px;
+  border-radius: $windows_radius;
+  &:hover { background-color: $divider_color; }
+  &:active { background-color: $track_color; }
+}
+
+.hotplug-resident-mount-label {
+  color: inherit;
+  padding-left: 6px;
+}
+
+.hotplug-resident-mount-icon {
+  icon-size: 24px;
+  padding-left: 6px;
+}
+
+.hotplug-resident-eject-icon {
+  icon-size: 16px;
+}
+
+.hotplug-resident-eject-button {
+  padding: 7px;
+  border-radius: $buttons_radius;
+  color: $fg_color;
+}
+
+// a little unstructured mess:
+
+.system-switch-user-submenu-icon.user-icon {
+  icon-size: 20px;
+  padding: 0 2px;
+}
+.system-switch-user-submenu-icon.default-icon {
+  icon-size: 16px;
+  padding: 0 4px;
+}
+
+.system-menu-action {
+  color: $secondary_fg_color;
+  border-radius: 100px; /* wish we could do 50% */
+  padding: ($large_size - 16px) / 2;
+  border: none;
+  -st-icon-style: symbolic; // >= 3.29.90
+
+  &:hover, &:focus {
+    background-color: $divider_color;
+    color: $fg_color;
+    border: none;
+    padding: ($large_size - 16px) / 2;
+  }
+  &:active { background-color: $track_color; color: $fg_color; }
+
+  & > StIcon { icon-size: 16px; }
+}
+
+//SCREEN SHIELD
+
+.screen-shield-arrows {
+  padding-bottom: 3em;
+}
+
+.screen-shield-arrows Gjs_Arrow {
+  color: white;
+  width: 80px;
+  height: 48px;
+  -arrow-thickness: 12px;
+  -arrow-shadow: $shadow_1;
+}
+
+.screen-shield-clock {
+  color: white;
+  text-shadow: $shadow_1;
+  font-weight: normal;
+  text-align: center;
+  padding-bottom: 1.5em;
+}
+
+.screen-shield-clock-time {
+  @include font(display-4);
+  text-shadow: $shadow_1;
+}
+
+.screen-shield-clock-date { @include font(display-2); }
+
+.screen-shield-notifications-container {
+  spacing: 6px;
+  width: 30em;
+  background-color: transparent;
+  max-height: 500px;
+  .summary-notification-stack-scrollview {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .notification,
+  .screen-shield-notification-source {
+    padding: 8px;
+    border: none;
+    background-color: $alt_panel_bg_color;
+    color: $panel_fg_color;
+    border-radius: $windows_radius;
+  }
+  .notification { margin-right: 16px; } //compensate for space allocated to the scrollbar
+}
+
+.screen-shield-notification-label {
+  min-height: $small_size - 2px;
+  padding: 2px 0px 0px 16px;
+  font-weight: bold;
+}
+
+.screen-shield-notification-count-text {
+  min-height: $small_size - 2px;
+  padding: 2px 0px 0px 16px;
+  color: $inverse_secondary_fg_color;
+}
+
+#panel.lock-screen { background-color: $alt_panel_bg_color; }
+
+.screen-shield-background { //just the shadow, really
+  background: black;
+  box-shadow: $shadow_5;
+}
+
+/* OVERVIEW */
+
+#overview {
+  spacing: 24px; //
+  StScrollBar { @extend %overview_scrollbar; }
+
+  .app-view-controls { //favorties | all toggle container
+    width: 320px;
+    padding-bottom: 32px;
+  }
+
+  .app-view-control { //favorties | all toggle button
+    padding: 0 16px;
+    font-weight: bold;
+    color: $inverse_secondary_fg_color;
+
+    &:hover {
+      color: $inverse_fg_color;
+      background-color: $inverse_divider_color !important;
+    }
+
+    &:active {
+      color: $inverse_fg_color;
+      background-color: $inverse_track_color !important;
+    }
+
+    &:checked {
+      color: $inverse_fg_color;
+      background-color: rgba($inverse_fg_color, 0.01) !important;
+      box-shadow: inset 0 2px $primary_color;
+    }
+
+    &:first-child {
+      border-right-width: 0;
+      border-radius: $buttons_radius;
+      &:checked { border-radius: 0 0 $buttons_radius $buttons_radius; }
+    }
+
+    &:last-child {
+      border-radius: $buttons_radius;
+      &:checked { border-radius: 0 0 $buttons_radius $buttons_radius; }
+    }
+  }
+}
+
+.window-picker { //container around window thumbnails
+  -horizontal-spacing: 16px;
+  -vertical-spacing: 16px;
+  padding: 0 16px 32px;
+
+  &.external-monitor { padding: 16px; }
+}
+
+.window-clone-border {
+  border: 4px solid $inverse_track_color;
+  border-radius: $windows_radius;
+  // For window decorations with round corners we can't match
+  // the exact shape when the window is scaled. So apply a shadow
+  // to fix that case
+  box-shadow: inset 0 0 0 1px $inverse_track_color;
+}
+.window-caption {
+  spacing: 25px;
+  color: $inverse_fg_color;
+  background-color: $primary_color;
+  border-radius: $windows_radius;
+  border: none;
+  padding: 4px 8px;
+  font-weight: normal;
+  font-size: 1em;
+}
+
+//close buttons
+
+.window-close {
+  transition-duration: 0ms; // FIXME: unless disable the transition, button will distort when hovering
+  height: 36px;
+  width: 36px;
+  -shell-close-overlap: 12px;
+  background-image: url("assets/window-close.svg");
+  background-size: 36px;
+  color: transparent;
+  background-color: transparent;
+  border: 0 none transparent;
+  StIcon { icon-size: 36px; } // for safety
+  box-shadow: none;
+
+  &:hover {
+    height: 36px;
+    width: 36px;
+    background-size: 36px;
+    background-image: url("assets/window-close-hover.svg");
+    box-shadow: none;
+  }
+
+  &:active {
+    height: 36px;
+    width: 36px;
+    background-size: 36px;
+    background-image: url("assets/window-close-active.svg");
+    box-shadow: none;
+  }
+}
+
+// Workspace pager
+.workspace-thumbnails { //container ala dash
+  @extend %overview-panel;
+  visible-width: 32px; //amount visible before hover
+  spacing: 12px;
+  padding: 12px;
+  border-radius: $windows_radius 0 0 $windows_radius;
+  //border-width: 0; //fixme: can't have non unoform borders :(
+  &:rtl { border-radius: 0 $windows_radius $windows_radius 0;}
+}
+
+.workspace-thumbnail-indicator {
+  border: 0 solid $primary_color;
+  border-left-width: 2px;
+  padding: 6px;
+  border-radius: 0;
+}

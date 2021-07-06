@@ -1,0 +1,231 @@
+
+@import 'common';
+
+// app icons
+.icon-grid {
+  row-spacing: 12px;
+  column-spacing: 12px;
+  max-row-spacing: 72px;
+  max-column-spacing: 72px;
+  page-padding-top: 24px;
+  page-padding-bottom: 24px;
+  page-padding-left: 12px;
+  page-padding-right: 12px;
+}
+
+.app-folder-dialog {
+  .page-navigation-hint {
+    width: 80px;
+  }
+
+  .page-navigation-arrow {
+    margin: 18px;
+  }
+}
+
+.apps-scroll-view {
+  padding: 0;
+}
+
+.page-navigation-hint {
+  width: 300px;
+
+  &.dnd {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  &.next:ltr,
+  &.previous:rtl {
+    background-gradient-start: $inverse_divider_color;
+    background-gradient-end: transparent;
+    background-gradient-direction: horizontal;
+    border-radius: 32px 0px 0px 32px;
+  }
+
+  &.previous:ltr,
+  &.next:rtl {
+    background-gradient-start: transparent;
+    background-gradient-end: $inverse_divider_color;
+    background-gradient-direction: horizontal;
+    border-radius: 0px 32px 32px 0px;
+  }
+}
+
+.page-navigation-arrow {
+  margin: $container_padding;
+  width: 24px;
+  height: 24px;
+  color: $inverse_secondary_fg_color;
+  icon-size: 24px;
+}
+
+// Dash
+$dash_background_color: $inverse_divider_color;
+$dash_placeholder_size: 32px;
+$dash_padding: 10px;
+$dash_spacing: 2px;
+$dash_bottom_margin: 24px;
+$dash_border_radius: $dash_padding + $icon_radius;
+
+#dash {
+  margin-top: $container_padding * 2;
+  padding: 0 $dash_padding;
+
+  .placeholder {
+    background-image: none;
+    background-size: contain;
+    height: $dash_placeholder_size;
+  }
+
+  .overview-icon {
+    padding: $dash_padding / 2;
+  }
+}
+
+.dash-background {
+  background-color: $dash_background_color;
+  margin-bottom: $dash_bottom_margin;
+  padding: $dash_padding;
+  border-radius: $dash_border_radius;
+}
+
+// Dash Items
+.dash-item-container .app-well-app, .show-apps {
+  padding: $dash_padding $dash_spacing $dash_padding + $dash_bottom_margin;
+}
+
+.dash-separator {
+  width: 1px;
+  margin: 0 ($dash_spacing + ($dash_padding / 2)) $dash_bottom_margin;
+  background-color: rgba(white, 0.25);
+}
+
+.dash-label { //osd tooltip
+  border-radius: $circular_radius;
+  padding: $container_padding $container_padding * 2;
+  color: $inverse_fg_color;
+  background-color: rgba(black, 0.65);
+  box-shadow: $shadow_2;
+  text-align: center;
+  -x-offset: $container_padding;
+}
+
+// Workspace animation
+.workspace-animation {
+  background-color: rgba($gdm_bg_color, 1);
+}
+
+// reset prev/next month icons
+.calendar {
+  .calendar-change-month-back,
+  .calendar-change-month-forward {
+    padding: 0 2px;
+  }
+}
+
+// Overview
+.controls-manager, .secondary-monitor-workspaces {
+  spacing: $container_padding * 2;
+}
+
+#overviewGroup {
+  background-color: rgba($gdm_bg_color, 1);
+  background-image: url("assets/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#unlockDialogNotifications {
+  StButton#vhandle, StButton#hhandle {
+    background-color: transparentize($gdm_bg_color, 0.7);
+    &:hover, &:focus { background-color: transparentize($gdm_bg_color, 0.5); }
+    &:active { background-color: transparentize($primary_color, 0.5); }
+  }
+}
+
+.search-entry {
+  margin-top: $container_padding * 4;
+  margin-bottom: $container_padding;
+}
+
+// Window picker
+.window-picker {
+  // Space between window thumbnails
+  spacing: $container_padding;
+}
+
+// Window titles
+.window-caption {
+  color: $inverse_secondary_fg_color;
+  background-color: rgba(black, 0.75);
+  border-radius: $circular_radius;
+  padding: $container_padding $container_padding * 2;
+}
+
+$window_close_button_size: 30px;
+$window_close_button_padding: 3px;
+
+// Close button
+.window-close {
+  background-color: rgba($destructive_color, 1);
+  color: white;
+  border-radius: $window_close_button_size * 0.5 + $window_close_button_padding * 2;
+  padding: $window_close_button_padding;
+  height: $window_close_button_size;
+  width: $window_close_button_size;
+  box-shadow: -1px 1px 5px 0px rgba(0,0,0,0.5);
+  transition-duration: 300ms;
+
+  StIcon {
+    color: white;
+  }
+
+  &:hover {
+    color: white;
+    background-color: lighten(rgba($destructive_color, 1), 6%);
+  }
+
+  &:active {
+    color: white;
+    background-color: darken(rgba($destructive_color, 1), 6%);
+  }
+}
+
+.workspace-background {
+  // keep in sync with BACKGROUND_CORNER_RADIUS_PIXELS in workspace.js
+  border-radius: 30px;
+  background-color: $gdm_bg_color;
+  box-shadow: 0 4px 16px 4px transparentize(darken($gdm_bg_color, 30%), 0.7);
+}
+
+/* Workspace pager */
+
+// thumbnails in overview
+.workspace-thumbnails {
+  visible-width: 32px; //amount visible before hover
+  spacing: $container_padding;
+  padding: $container_padding;
+
+  .workspace-thumbnail {
+    color: $inverse_secondary_fg_color;
+    background-color: $inverse_divider_color;
+    border: none;
+    border-radius: $buttons_radius;
+  }
+
+  // drag and drop indicator
+  .placeholder {
+    background-image: url("assets/dash-placeholder.svg");
+    background-size: contain;
+    width: 18px;
+    height: 24px;
+  }
+}
+
+// selected indicator
+.workspace-thumbnail-indicator {
+  border: 3px solid $primary_color;
+  border-radius: 9px;
+  padding: 0px;
+  // background-color: transparentize($primary_color, 0.9);
+}

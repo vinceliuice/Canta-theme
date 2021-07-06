@@ -17,7 +17,6 @@ SRC_DIR=$(cd $(dirname $0) && pwd)
 THEME_NAME=Canta
 COLOR_VARIANTS=('' '-light' '-dark')
 SIZE_VARIANTS=('' '-compact')
-#RADIUS_VARIANTS=('' '-square')
 THEME_VARIANTS=('' '-blue' '-indigo')
 
 show_info() {
@@ -27,6 +26,18 @@ show_info() {
 show_tips() {
   echo -e "\033[1;32m$@\033[0m"
 }
+
+if [[ "$(command -v gnome-shell)" ]]; then
+  SHELL_VERSION="$(gnome-shell --version | cut -d ' ' -f 3 | cut -d . -f -1)"
+  if [[ "${SHELL_VERSION:-}" -ge "40" ]]; then
+    GS_VERSION="new"
+  else
+    GS_VERSION="old"
+  fi
+  else
+    echo "'gnome-shell' not found, using styles for last gnome-shell version available."
+    GS_VERSION="new"
+fi
 
 usage() {
   printf "%s\n" "Usage: $0 [OPTIONS...]"
@@ -60,7 +71,6 @@ install() {
   local theme=${3}
   local color=${4}
   local size=${5}
-#  local radius=${6}
 
   [[ ${color} == '-dark' ]] && local ELSE_DARK=${color}
   [[ ${color} == '-light' ]] && local ELSE_LIGHT=${color}
@@ -92,8 +102,13 @@ install() {
   cp -ur ${SRC_DIR}/src/gnome-shell/{*.svg,extensions,noise-texture.png,pad-osd.css} ${THEME_DIR}/gnome-shell
   cp -ur ${SRC_DIR}/src/gnome-shell/gnome-shell-theme.gresource.xml                  ${THEME_DIR}/gnome-shell
   cp -ur ${SRC_DIR}/src/gnome-shell/assets${ELSE_DARK}                               ${THEME_DIR}/gnome-shell/assets
-  cp -ur ${SRC_DIR}/src/gnome-shell/common-assets/{*.svg,dash}                       ${THEME_DIR}/gnome-shell/assets
-  cp -ur ${SRC_DIR}/src/gnome-shell/gnome-shell${theme}${color}${size}.css           ${THEME_DIR}/gnome-shell/gnome-shell.css
+  cp -ur ${SRC_DIR}/src/gnome-shell/common-assets/*.svg                              ${THEME_DIR}/gnome-shell/assets
+
+  if [[ "${GS_VERSION:-}" == 'new' ]]; then
+    cp -ur ${SRC_DIR}/src/gnome-shell/shell-40-0/gnome-shell${color}${size}.css      ${THEME_DIR}/gnome-shell/gnome-shell.css
+  else
+    cp -ur ${SRC_DIR}/src/gnome-shell/shell-3-36/gnome-shell${color}${size}.css      ${THEME_DIR}/gnome-shell/gnome-shell.css
+  fi
 
   mkdir -p                                                                           ${THEME_DIR}/gtk-2.0
   cp -ur ${SRC_DIR}/src/gtk-2.0/{apps.rc,hacks.rc,panel.rc}                          ${THEME_DIR}/gtk-2.0
@@ -106,9 +121,9 @@ install() {
   mkdir -p                                                                           ${THEME_DIR}/gtk-3.0
   cp -ur ${SRC_DIR}/src/gtk/assets                                                   ${THEME_DIR}/gtk-3.0
   cp -ur ${SRC_DIR}/src/gtk/common-assets                                            ${THEME_DIR}/gtk-3.0
-  cp -ur ${SRC_DIR}/src/gtk/gtk${theme}${color}${size}.css                           ${THEME_DIR}/gtk-3.0/gtk.css
+  cp -ur ${SRC_DIR}/src/gtk/gtk${color}${size}.css                                   ${THEME_DIR}/gtk-3.0/gtk.css
   [[ ${color} != '-dark' ]] && \
-  cp -ur ${SRC_DIR}/src/gtk/gtk${theme}-dark${size}.css                              ${THEME_DIR}/gtk-3.0/gtk-dark.css
+  cp -ur ${SRC_DIR}/src/gtk/gtk-dark${size}.css                                      ${THEME_DIR}/gtk-3.0/gtk-dark.css
 
   mkdir -p                                                                           ${THEME_DIR}/metacity-1
   cp -ur ${SRC_DIR}/src/metacity-1/assets/*.png                                      ${THEME_DIR}/metacity-1
@@ -204,12 +219,10 @@ install_package() {
 }
 
 install_theme() {
-  for theme in "${themes[@]:-${THEME_VARIANTS[@]}}"; do
+  for theme in "${themes[@]:-${THEME_VARIANTS[0]}}"; do
     for color in "${colors[@]:-${COLOR_VARIANTS[@]}}"; do
       for size in "${sizes[@]:-${SIZE_VARIANTS[@]}}"; do
-       for radius in "${radiuss[@]:-${RADIUS_VARIANTS[@]}}"; do
          install "${dest:-${DEST_DIR}}" "${name:-${THEME_NAME}}" "${theme}" "${color}" "${size}"
-       done
       done
     done
   done

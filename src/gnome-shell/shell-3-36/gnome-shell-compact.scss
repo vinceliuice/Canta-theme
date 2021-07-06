@@ -1,0 +1,10 @@
+$variant: 'light';
+$titlebar: 'dark';
+$compact: 'true';
+$color: 'default';
+
+@import '../../_sass/variables';
+@import '../../_sass/colors';
+@import '../../_sass/gnome-shell/drawing';
+@import '../../_sass/gnome-shell/common-3-36';
+@import '../../_sass/gnome-shell/extensions-3-36';
