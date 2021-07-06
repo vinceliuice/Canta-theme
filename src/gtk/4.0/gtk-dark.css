@@ -1438,6 +1438,19 @@ headerbar stackswitcher.linked:not(.vertical) > button {
   margin-bottom: 0;
 }
 
+headerbar stackswitcher.linked:not(.vertical) > button:checked {
+  color: #FFFFFF;
+  background-color: #272a2a;
+}
+
+headerbar stackswitcher.linked:not(.vertical) > button:backdrop:checked {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+headerbar stackswitcher.linked:not(.vertical) > button:backdrop:checked:disabled {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .tiled headerbar, .tiled-top headerbar, .tiled-right headerbar, .tiled-bottom headerbar, .tiled-left headerbar, .maximized headerbar, .fullscreen headerbar {
   border-radius: 0;
   box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.12), 0 5px 5px -5px rgba(0, 0, 0, 0.06);
@@ -3104,36 +3117,40 @@ actionbar > revealer > box {
 }
 
 overshoot.top {
-  background-image: -gtk-gradient(radial, center top, 0, center top, 0.75, to(rgba(0, 207, 136, 0.3)), to(transparent));
+  background-image: radial-gradient(farthest-side at top, rgba(230, 230, 230, 0.08) 85%, rgba(230, 230, 230, 0)), radial-gradient(farthest-side at top, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0));
+  background-size: 100% 3%, 100% 50%;
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: top;
   background-color: transparent;
   border: none;
   box-shadow: none;
 }
 
 overshoot.bottom {
-  background-image: -gtk-gradient(radial, center bottom, 0, center bottom, 0.75, to(rgba(0, 207, 136, 0.3)), to(transparent));
+  background-image: radial-gradient(farthest-side at bottom, rgba(230, 230, 230, 0.08) 85%, rgba(230, 230, 230, 0)), radial-gradient(farthest-side at bottom, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0));
+  background-size: 100% 3%, 100% 50%;
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: bottom;
   background-color: transparent;
   border: none;
   box-shadow: none;
 }
 
 overshoot.left {
-  background-image: -gtk-gradient(radial, left center, 0, left center, 0.75, to(rgba(0, 207, 136, 0.3)), to(transparent));
+  background-image: radial-gradient(farthest-side at left, rgba(230, 230, 230, 0.08) 85%, rgba(230, 230, 230, 0)), radial-gradient(farthest-side at left, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0));
+  background-size: 3% 100%, 50% 100%;
   background-repeat: no-repeat;
-  background-position: left center;
+  background-position: left;
   background-color: transparent;
   border: none;
   box-shadow: none;
 }
 
 overshoot.right {
-  background-image: -gtk-gradient(radial, right center, 0, right center, 0.75, to(rgba(0, 207, 136, 0.3)), to(transparent));
+  background-image: radial-gradient(farthest-side at right, rgba(230, 230, 230, 0.08) 85%, rgba(230, 230, 230, 0)), radial-gradient(farthest-side at right, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0));
+  background-size: 3% 100%, 50% 100%;
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: right;
   background-color: transparent;
   border: none;
   box-shadow: none;
@@ -4100,8 +4117,7 @@ stackswitcher.linked:not(.vertical) > button {
   color: #FFFFFF;
   box-shadow: none;
   border-radius: 9999px;
-  outline-offset: -6px;
-  -gtk-outline-radius: 9997px;
+  outline-offset: -5px;
 }
 
 stackswitcher.linked:not(.vertical) > button:hover {
@@ -4111,12 +4127,13 @@ stackswitcher.linked:not(.vertical) > button:hover {
 
 stackswitcher.linked:not(.vertical) > button:active {
   color: #FFFFFF;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: #02ffbe;
 }
 
 stackswitcher.linked:not(.vertical) > button:checked {
   color: rgba(255, 255, 255, 0.7);
-  background-color: white;
+  background-color: #3f4544;
+  box-shadow: none;
 }
 
 stackswitcher.linked:not(.vertical) > button:disabled {

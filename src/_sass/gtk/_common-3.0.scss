@@ -1288,6 +1288,21 @@ headerbar {
     &.linked:not(.vertical) > button {
       margin-top: 0;
       margin-bottom: 0;
+
+      &:checked {
+        color: $titlebar_fg_color;
+        background-color: rgba($titlebar_bg_color, 1);
+      }
+
+      &:backdrop {
+        &:checked {
+          color: $titlebar_secondary_fg_color;
+        }
+
+        &:checked:disabled {
+          color: $titlebar_disabled_secondary_fg_color;
+        }
+      }
     }
   }
 
@@ -3835,27 +3850,31 @@ cursor-handle {
   caret-color: $accent_color;
 }
 
-%header_stackswitcher_button {
+%stackswitcher_button {
   background-color: $primary_color;
   color: $inverse_fg_color;
   box-shadow: none;
   border-radius: $circular_radius;
-  outline-offset: -6px;
+  outline-offset: -5px;
   -gtk-outline-radius: $square_radius - 2px;
 
   &:hover {
     color: $inverse_fg_color;
-    background-color: lighten($primary_color, 3%);
+    background-color: $inverse_divider_color;
   }
 
   &:active {
-    color: $fg_color;
-    background-color: rgba($inverse_fg_color, 0.85);
+    color: $inverse_fg_color;
+    box-shadow: inset 0 0 0 1000px $inverse_divider_color;
+    background-image: radial-gradient(circle farthest-corner at center,
+                                      $inverse_divider_color 10%,
+                                      transparent 0%);
   }
 
   &:checked {
     color: $secondary_fg_color;
-    background-color: rgba($inverse_fg_color, 1);
+    background-color: rgba($base_color, 1);
+    box-shadow: none;
   }
 
   &:disabled { color: $inverse_disabled_fg_color; }
@@ -3888,7 +3907,7 @@ stackswitcher {
     padding: ($medium_size - 24px) / 2 12px;
     margin-top: 0;
     margin-bottom: 0;
-    @extend %header_stackswitcher_button;
+    @extend %stackswitcher_button;
   }
 
   button.text-button { min-width: 100px; } // FIXME aggregate with buttons

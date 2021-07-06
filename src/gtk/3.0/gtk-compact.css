@@ -1473,6 +1473,19 @@ headerbar stackswitcher.linked:not(.vertical) > button {
   margin-bottom: 0;
 }
 
+headerbar stackswitcher.linked:not(.vertical) > button:checked {
+  color: #FFFFFF;
+  background-color: #47504e;
+}
+
+headerbar stackswitcher.linked:not(.vertical) > button:backdrop:checked {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+headerbar stackswitcher.linked:not(.vertical) > button:backdrop:checked:disabled {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .tiled headerbar, .tiled-top headerbar, .tiled-right headerbar, .tiled-bottom headerbar, .tiled-left headerbar, .maximized headerbar, .fullscreen headerbar {
   border-radius: 0;
   box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.12), 0 5px 5px -5px rgba(0, 0, 0, 0.06);
@@ -4137,23 +4150,25 @@ stackswitcher.linked:not(.vertical) > button {
   color: #FFFFFF;
   box-shadow: none;
   border-radius: 9999px;
-  outline-offset: -6px;
+  outline-offset: -5px;
   -gtk-outline-radius: 9997px;
 }
 
 stackswitcher.linked:not(.vertical) > button:hover {
   color: #FFFFFF;
-  background-color: #00dda4;
+  background-color: rgba(255, 255, 255, 0.12);
 }
 
 stackswitcher.linked:not(.vertical) > button:active {
-  color: rgba(0, 0, 0, 0.75);
-  background-color: rgba(255, 255, 255, 0.85);
+  color: #FFFFFF;
+  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.12);
+  background-image: radial-gradient(circle farthest-corner at center, rgba(255, 255, 255, 0.12) 10%, transparent 0%);
 }
 
 stackswitcher.linked:not(.vertical) > button:checked {
   color: rgba(0, 0, 0, 0.54);
-  background-color: white;
+  background-color: #fcfcfc;
+  box-shadow: none;
 }
 
 stackswitcher.linked:not(.vertical) > button:disabled {

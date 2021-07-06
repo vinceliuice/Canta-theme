@@ -1162,6 +1162,21 @@ headerbar {
     &.linked:not(.vertical) > button {
       margin-top: 0;
       margin-bottom: 0;
+
+      &:checked {
+        color: $titlebar_fg_color;
+        background-color: rgba($titlebar_bg_color, 1);
+      }
+
+      &:backdrop {
+        &:checked {
+          color: $titlebar_secondary_fg_color;
+        }
+
+        &:checked:disabled {
+          color: $titlebar_disabled_secondary_fg_color;
+        }
+      }
     }
   }
 
@@ -3724,8 +3739,7 @@ shortcut > .keycap {
   color: $inverse_fg_color;
   box-shadow: none;
   border-radius: $circular_radius;
-  outline-offset: -6px;
-  -gtk-outline-radius: $square_radius - 2px;
+  outline-offset: -5px;
 
   &:hover {
     color: $inverse_fg_color;
@@ -3733,13 +3747,14 @@ shortcut > .keycap {
   }
 
   &:active {
-    color: $fg_color;
-    background-color: rgba($inverse_fg_color, 0.85);
+    color: $inverse_fg_color;
+    background-color: lighten($primary_color, 10%);
   }
 
   &:checked {
     color: $secondary_fg_color;
-    background-color: rgba($inverse_fg_color, 1);
+    background-color: rgba($base_color, 1);
+    box-shadow: none;
   }
 
   &:disabled { color: $inverse_disabled_fg_color; }
