@@ -100,6 +100,8 @@ $alt_primary_color: #00CF88;
   $alt_primary_color: #8600e8;
 }
 
+$light_primary_color: if($variant == 'light', $primary_color, lighten($primary_color, 20%));
+
 $progress_color: $primary_color;
 $accent_color: #FFAC00;
 $disabled_accent_color: rgba($accent_color, 0.5);

@@ -1,6 +1,4 @@
-#!/bin/bash
-#set -ueo pipefail
-#set -x
+#! /usr/bin/env bash
 
 ROOT_UID=0
 DEST_DIR=

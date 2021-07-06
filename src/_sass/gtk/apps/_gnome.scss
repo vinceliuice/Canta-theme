@@ -349,13 +349,13 @@ filechooser,
       transition: none;
 
       &:hover {
-        color: $primary_color;
-        background-color: rgba($divider_color, 0.03);
-        box-shadow: inset 3px 0 $primary_color;
-        image.sidebar-icon { color: $primary_color; }
+        color: $light_primary_color;
+        background-color: rgba($light_primary_color, 0.08);
+        box-shadow: none;
+        image.sidebar-icon { color: $light_primary_color; }
       }
 
-      &:active { box-shadow: inset 3px 0 $primary_color; }
+      &:active { background-color: rgba($light_primary_color, 0.12); }
 
       &:backdrop { opacity: 0.85; }
 
@@ -1182,13 +1182,25 @@ row#workspaces-only-on-primary {
   margin-top: 4px;
 }
 
-hdyleaflet {
+hdyleaflet, leaflet {
   > headerbar { // Gnome 3.34
     box-shadow: inset 0 1px $titlebar_highlight_color, inset 0 -1px $border_color;
   }
+
+  > stack {
+    border-radius: 0 0 $windows_radius $windows_radius;
+  }
+
+  .titlebar > & > separator.sidebar {
+    min-width: 0;
+    border-right: none;
+    background: none;
+    background-color: transparent;
+  }
 }
 
-window.maximized hdyleaflet {
+window.maximized hdyleaflet,
+window.maximized leaflet {
   > headerbar { // Gnome 3.34
     box-shadow: inset 0 -1px $border_color;
   }
@@ -1211,33 +1223,9 @@ box.horizontal.titlebar > headerbar > stack > box.vertical {
 
 dialog.background.csd {
   > headerbar.titlebar {
-
     > label:not(.title):not(.subtitle) {
       font-weight: 700;
     }
-  }
-}
-
-window.background.csd > stack {
-  border-radius: 0 0 $windows_radius $windows_radius;
-}
-
-stack.background { background: none; }
-
-window.background.csd {
-  > headerbar.titlebar { // gnome 3.32
-    > box.horizontal > separator.sidebar,
-    > hdyleaflet > separator.sidebar {
-      border-right-style: none;
-      background: none;
-      min-width: 0;
-    }
-  }
-
-  > box.horizontal > separator.sidebar,
-  > hdyleaflet > separator.sidebar {
-    background: none;
-    min-width: 0;
   }
 }
 
@@ -1259,7 +1247,6 @@ window.background.csd {
   }
 }
 
-
 /******************
  * Gnome Contacts *
  ******************/
@@ -1271,11 +1258,6 @@ window.background.csd {
       color: $inverse_secondary_fg_color;
     }
   }
-
-  > overlay > hdyleaflet > separator.sidebar {
-    background: none;
-    min-width: 0;
-  }
 }
 
 
@@ -1284,7 +1266,6 @@ window.background.csd {
  ************************/
 window#gnome-system-monitor.background.csd {
   stack {
-    background-color: $base_color;
     border-radius: 0 0 $windows_radius $windows_radius;
 
     scrolledwindow {
@@ -1294,6 +1275,8 @@ window#gnome-system-monitor.background.csd {
       }
     }
   }
+
+  button stack { background-color: transparent; }
 }
 
 /******************
@@ -1456,6 +1439,50 @@ dialog.background.csd {
       > stack {
         border-radius: 0 0 $windows_radius $windows_radius;
       }
+    }
+  }
+}
+
+//
+// unified window
+//
+
+window.background.csd.unified {
+  // Remove the sheen on headerbar...
+  headerbar {
+    box-shadow: $shadow_6;
+
+    &.selection-mode {
+      box-shadow: $shadow_1;
+    }
+  }
+
+  // ...and add it on the window itself
+  > decoration-overlay {
+    box-shadow: inset 0 1px $titlebar_highlight_color;
+  }
+
+  &,
+  > decoration,
+  > decoration-overlay {
+    border-radius: $windows_radius;
+  }
+
+  &.tiled,
+  &.tiled-top,
+  &.tiled-right,
+  &.tiled-bottom,
+  &.tiled-left,
+  &.maximized,
+  &.fullscreen {
+    > decoration-overlay {
+      box-shadow: none;
+    }
+
+    &,
+    > decoration,
+    > decoration-overlay {
+      border-radius: 0;
     }
   }
 }

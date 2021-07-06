@@ -79,6 +79,14 @@ sudo snap connect [other snap]:gtk-3-themes canta-themes:gtk-3-themes
 sudo snap connect [other snap]:icon-themes canta-themes:icon-themes
 ```
 
+To connect the theme to all apps which have available plugs to gtk-common-themes you can run:
+
+``` for i in $(snap connections | grep gtk-common-themes:gtk-3-themes | awk '{print $2}'); do sudo snap connect $i canta-themes:gtk-3-themes; done
+```
+
+``` for i in $(snap connections | grep gtk-common-themes:icon-themes | awk '{print $2}'); do sudo snap connect $i canta-themes:icon-themes; done
+```
+
 ### Icon
 #### Canta icon theme
 Canta icon theme use numix-icon-theme-circle icon theme for Inherits,
