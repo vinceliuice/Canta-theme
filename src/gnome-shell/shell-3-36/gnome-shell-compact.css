@@ -3008,6 +3008,16 @@ StWidget.focused .app-well-app-running-dot {
   padding: 3px 6px;
 }
 
+.dash-label {
+  border-radius: 8px;
+  padding: 7px 8px;
+  color: rgba(0, 0, 0, 0.75);
+  background-color: #F5F5F5;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  -x-offset: 8px;
+}
+
 /* App Vault/Grid */
 .icon-grid {
   spacing: 30px;

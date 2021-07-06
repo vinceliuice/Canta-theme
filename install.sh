@@ -121,9 +121,16 @@ install() {
   mkdir -p                                                                           ${THEME_DIR}/gtk-3.0
   cp -ur ${SRC_DIR}/src/gtk/assets                                                   ${THEME_DIR}/gtk-3.0
   cp -ur ${SRC_DIR}/src/gtk/common-assets                                            ${THEME_DIR}/gtk-3.0
-  cp -ur ${SRC_DIR}/src/gtk/gtk${color}${size}.css                                   ${THEME_DIR}/gtk-3.0/gtk.css
+  cp -ur ${SRC_DIR}/src/gtk/3.0/gtk${color}${size}.css                                   ${THEME_DIR}/gtk-3.0/gtk.css
   [[ ${color} != '-dark' ]] && \
-  cp -ur ${SRC_DIR}/src/gtk/gtk-dark${size}.css                                      ${THEME_DIR}/gtk-3.0/gtk-dark.css
+  cp -ur ${SRC_DIR}/src/gtk/3.0/gtk-dark${size}.css                                      ${THEME_DIR}/gtk-3.0/gtk-dark.css
+
+  mkdir -p                                                                           ${THEME_DIR}/gtk-4.0
+  cp -ur ${SRC_DIR}/src/gtk/assets                                                   ${THEME_DIR}/gtk-4.0
+  cp -ur ${SRC_DIR}/src/gtk/common-assets                                            ${THEME_DIR}/gtk-4.0
+  cp -ur ${SRC_DIR}/src/gtk/4.0/gtk${color}${size}.css                                   ${THEME_DIR}/gtk-4.0/gtk.css
+  [[ ${color} != '-dark' ]] && \
+  cp -ur ${SRC_DIR}/src/gtk/4.0/gtk-dark${size}.css                                      ${THEME_DIR}/gtk-4.0/gtk-dark.css
 
   mkdir -p                                                                           ${THEME_DIR}/metacity-1
   cp -ur ${SRC_DIR}/src/metacity-1/assets/*.png                                      ${THEME_DIR}/metacity-1

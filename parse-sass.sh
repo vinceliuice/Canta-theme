@@ -19,8 +19,10 @@ SASSC_OPT="-M -t expanded"
 
 for color in "${_COLOR_VARIANTS[@]}"; do
     for size in "${_SIZE_VARIANTS[@]}"; do
-        echo "==> Generating the gtk${color}${size}.css..."
-        sassc $SASSC_OPT src/gtk/gtk${color}${size}.{scss,css}
+        echo "==> Generating the 3.0 gtk${color}${size}.css..."
+        sassc $SASSC_OPT src/gtk/3.0/gtk${color}${size}.{scss,css}
+        echo "==> Generating the 4.0 gtk${color}${size}.css..."
+        sassc $SASSC_OPT src/gtk/4.0/gtk${color}${size}.{scss,css}
         echo "==> Generating the 3.36 gnome-shell${color}${size}.css..."
         sassc $SASSC_OPT src/gnome-shell/shell-3-36/gnome-shell${color}${size}.{scss,css}
         echo "==> Generating the 40.0 gnome-shell${color}${size}.css..."
