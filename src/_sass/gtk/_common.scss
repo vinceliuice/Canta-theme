@@ -992,6 +992,8 @@ toolbar {
       &:not(:last-child) { margin-right: 0; }
     }
 
+    stackswitcher.linked > button { margin: 0; }
+
     spinbutton {
       entry,
       button { margin: 0; }
@@ -1153,48 +1155,6 @@ $stack_switcher_lastbutton_border_compact: -gtk-scaled(url("assets/lastbutton-ch
   &:last-child { border-radius: 0 $square_radius $square_radius 0; padding-right: 8px; }
 }
 
-%header_stackswitcher_button {
-  background-color: $primary_color;
-  color: $inverse_fg_color;
-  box-shadow: none;
-  border-radius: $circular_radius;
-  outline-offset: -6px;
-  -gtk-outline-radius: $square_radius - 2px;
-
-  &:hover {
-    color: $inverse_fg_color;
-    background-color: lighten($primary_color, 3%);
-  }
-
-  &:active {
-    color: $fg_color;
-    background-color: rgba($inverse_fg_color, 0.85);
-  }
-
-  &:checked {
-    color: $secondary_fg_color;
-    background-color: rgba($inverse_fg_color, 1);
-  }
-
-  &:disabled { color: $inverse_disabled_fg_color; }
-
-  &:backdrop {
-    color: $inverse_secondary_fg_color;
-
-    &:hover { color: $inverse_fg_color; }
-
-    &:checked {
-      color: $disabled_fg_color;
-    }
-
-    &:checked:disabled {
-      color: $disabled_secondary_fg_color;
-    }
-
-    &:disabled { color: $inverse_disabled_secondary_fg_color; }
-  }
-}
-
 headerbar {
   transition: background-color $shorter_duration $deceleration_curve, color $longer_duration $deceleration_curve;
   min-height: $large_size;
@@ -1321,19 +1281,13 @@ headerbar {
   }
 
   stackswitcher {
-    padding: $container_padding / 2;
     min-height: 0;
     margin-top: $container_padding;
     margin-bottom: $container_padding;
-    background-color: $primary_color;
-    border-radius: $circular_radius;
 
     &.linked:not(.vertical) > button {
-      min-height: 24px - $container_padding;
-      padding: ($medium_size - 24px) / 2 $container_padding * 2;
       margin-top: 0;
       margin-bottom: 0;
-      @extend %header_stackswitcher_button;
     }
   }
 
@@ -3862,13 +3816,70 @@ cursor-handle {
   caret-color: $accent_color;
 }
 
-stackswitcher button.text-button { min-width: 100px; } // FIXME aggregate with buttons
+%header_stackswitcher_button {
+  background-color: $primary_color;
+  color: $inverse_fg_color;
+  box-shadow: none;
+  border-radius: $circular_radius;
+  outline-offset: -6px;
+  -gtk-outline-radius: $square_radius - 2px;
 
-stackswitcher button.circular,
-stackswitcher button.text-button.circular { // FIXME aggregate with buttons
-  min-width: $medium_size;
-  min-height: $medium_size;
-  padding: 0;
+  &:hover {
+    color: $inverse_fg_color;
+    background-color: lighten($primary_color, 3%);
+  }
+
+  &:active {
+    color: $fg_color;
+    background-color: rgba($inverse_fg_color, 0.85);
+  }
+
+  &:checked {
+    color: $secondary_fg_color;
+    background-color: rgba($inverse_fg_color, 1);
+  }
+
+  &:disabled { color: $inverse_disabled_fg_color; }
+
+  &:backdrop {
+    color: $inverse_secondary_fg_color;
+
+    &:hover { color: $inverse_fg_color; }
+
+    &:checked {
+      color: $disabled_fg_color;
+    }
+
+    &:checked:disabled {
+      color: $disabled_secondary_fg_color;
+    }
+
+    &:disabled { color: $inverse_disabled_secondary_fg_color; }
+  }
+}
+
+// stackswitcher
+stackswitcher {
+  padding: 3px;
+  background-color: $primary_color;
+  border-radius: $circular_radius;
+
+  &.linked:not(.vertical) > button {
+    min-height: 24px - 6px;
+    padding: ($medium_size - 24px) / 2 12px;
+    margin-top: 0;
+    margin-bottom: 0;
+    @extend %header_stackswitcher_button;
+  }
+
+  button.text-button { min-width: 100px; } // FIXME aggregate with buttons
+
+  button.circular,
+  button.text-button.circular { // FIXME aggregate with buttons
+    min-width: $medium_size;
+    min-height: $medium_size;
+    padding: 0;
+  }
 }
 
 
