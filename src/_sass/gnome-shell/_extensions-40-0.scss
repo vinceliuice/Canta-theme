@@ -22,7 +22,7 @@
     }
 
     &:overview #dash {
-      background-color: $inverse_divider_color;
+      background-color: $dash_background_color;
       margin-bottom: 0;
 
       .dash-background {
@@ -91,11 +91,11 @@
   }
 
   &.transparent #dash .dash-background { // translucent-mode
-    background-color: $divider_color; // does not work
+    background-color: transparent; // does not work
   }
 
   &:overview #dash .dash-background { // overview-mode #1
-    background-color: $inverse_divider_color;
+    background-color: $dash_background_color;
   }
 
   &.opaque:overview,

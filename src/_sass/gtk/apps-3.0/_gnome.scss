@@ -100,11 +100,16 @@
 .nautilus-window notebook > stack {
   background-color: $base_color;
   border-radius: 0 0 $windows_radius $windows_radius;
-  @extend %nautilus_bg_img;
+
+  @if $theme_image == 'true' {
+    @extend %nautilus_bg_img; // Set nautilus background pictures
+  }
 }
 
 .nautilus-window headerbar {
-  @extend %headerbar_bg_img; // Set nautilus background pictures
+  @if $theme_image == 'true' {
+    @extend %headerbar_bg_img; // Set nautilus background pictures
+  }
 
   .path-bar-box { // Fixed nautilus 3.30 pathbar
     margin: $container_padding 0;
@@ -139,12 +144,6 @@
       }
     }
 
-    // &.width-maximized {
-    //   color: $inverse_fg_color;
-    //   background-color: $primary_color;
-    //   border-radius: $square_radius;
-    // }
-
     // workaround for 3.30.1
     &.background.frame {
       border: none;
@@ -171,7 +170,6 @@
 
 %nautilus-desktop-canvas-item,
 .nautilus-desktop.nautilus-canvas-item:not(:selected) {
-  // background-color: rgba($black, $lower_opacity);
   color: $inverse_fg_color;
   text-shadow: $shadow_1;
   border-radius: $material_radius;

@@ -105,17 +105,17 @@ install() {
   cp -ur ${SRC_DIR}/src/gnome-shell/common-assets/*.svg                              ${THEME_DIR}/gnome-shell/assets
 
   if [[ "${theme}" != '' ]]; then
-  if [[ "${GS_VERSION:-}" == 'new' ]]; then
-    sassc $SASSC_OPT ${SRC_DIR}/src/gnome-shell/shell-40-0/gnome-shell${color}${size}.scss ${THEME_DIR}/gnome-shell/gnome-shell.css
+    if [[ "${GS_VERSION:-}" == 'new' ]]; then
+      sassc $SASSC_OPT ${SRC_DIR}/src/gnome-shell/shell-40-0/gnome-shell${color}${size}.scss ${THEME_DIR}/gnome-shell/gnome-shell.css
+    else
+      sassc $SASSC_OPT ${SRC_DIR}/src/gnome-shell/shell-3-36/gnome-shell${color}${size}.scss ${THEME_DIR}/gnome-shell/gnome-shell.css
+    fi
   else
-    sassc $SASSC_OPT ${SRC_DIR}/src/gnome-shell/shell-3-36/gnome-shell${color}${size}.scss ${THEME_DIR}/gnome-shell/gnome-shell.css
-  fi
-  else
-  if [[ "${GS_VERSION:-}" == 'new' ]]; then
-    cp -ur ${SRC_DIR}/src/gnome-shell/shell-40-0/gnome-shell${color}${size}.css      ${THEME_DIR}/gnome-shell/gnome-shell.css
-  else
-    cp -ur ${SRC_DIR}/src/gnome-shell/shell-3-36/gnome-shell${color}${size}.css      ${THEME_DIR}/gnome-shell/gnome-shell.css
-  fi
+    if [[ "${GS_VERSION:-}" == 'new' ]]; then
+      cp -ur ${SRC_DIR}/src/gnome-shell/shell-40-0/gnome-shell${color}${size}.css    ${THEME_DIR}/gnome-shell/gnome-shell.css
+    else
+      cp -ur ${SRC_DIR}/src/gnome-shell/shell-3-36/gnome-shell${color}${size}.css    ${THEME_DIR}/gnome-shell/gnome-shell.css
+    fi
   fi
 
   mkdir -p                                                                           ${THEME_DIR}/gtk-2.0
@@ -130,7 +130,7 @@ install() {
   cp -ur ${SRC_DIR}/src/gtk/assets                                                   ${THEME_DIR}/gtk-3.0
   cp -ur ${SRC_DIR}/src/gtk/common-assets                                            ${THEME_DIR}/gtk-3.0
 
-  if [[ "${theme}" != '' ]]; then
+  if [[ "${theme}" != '' || "${ordinary:-}" == 'true' ]]; then
     sassc $SASSC_OPT ${SRC_DIR}/src/gtk/3.0/gtk${color}${size}.scss                  ${THEME_DIR}/gtk-3.0/gtk.css
     [[ ${color} != '-dark' ]] && \
     sassc $SASSC_OPT ${SRC_DIR}/src/gtk/3.0/gtk-dark${size}.scss                     ${THEME_DIR}/gtk-3.0/gtk-dark.css
@@ -170,14 +170,14 @@ install() {
   cp -ur ${SRC_DIR}/src/xfwm4/assets${ELSE_LIGHT}                                    ${THEME_DIR}/xfwm4/assets
 
   if [[ "${theme}" == '' ]]; then
-  mkdir -p                                                                           ${THEME_DIR}/cinnamon
-  cp -ur ${SRC_DIR}/src/cinnamon/cinnamon${ELSE_DARK}.css                            ${THEME_DIR}/cinnamon/cinnamon.css
-  cp -ur ${SRC_DIR}/src/cinnamon/assets/common-assets                                ${THEME_DIR}/cinnamon/assets
-  cp -ur ${SRC_DIR}/src/cinnamon/assets/assets${ELSE_DARK}/checkbox/*.svg            ${THEME_DIR}/cinnamon/assets/checkbox
-  cp -ur ${SRC_DIR}/src/cinnamon/assets/assets${ELSE_DARK}/menu/*.svg                ${THEME_DIR}/cinnamon/assets/menu
-  cp -ur ${SRC_DIR}/src/cinnamon/assets/assets${ELSE_DARK}/misc/*.svg                ${THEME_DIR}/cinnamon/assets/misc
-  cp -ur ${SRC_DIR}/src/cinnamon/assets/assets${ELSE_DARK}/switch/*.svg              ${THEME_DIR}/cinnamon/assets/switch
-  cp -ur ${SRC_DIR}/src/cinnamon/thumbnail${ELSE_DARK}.png                           ${THEME_DIR}/cinnamon/thumbnail.png
+    mkdir -p                                                                         ${THEME_DIR}/cinnamon
+    cp -ur ${SRC_DIR}/src/cinnamon/cinnamon${ELSE_DARK}.css                          ${THEME_DIR}/cinnamon/cinnamon.css
+    cp -ur ${SRC_DIR}/src/cinnamon/assets/common-assets                              ${THEME_DIR}/cinnamon/assets
+    cp -ur ${SRC_DIR}/src/cinnamon/assets/assets${ELSE_DARK}/checkbox/*.svg          ${THEME_DIR}/cinnamon/assets/checkbox
+    cp -ur ${SRC_DIR}/src/cinnamon/assets/assets${ELSE_DARK}/menu/*.svg              ${THEME_DIR}/cinnamon/assets/menu
+    cp -ur ${SRC_DIR}/src/cinnamon/assets/assets${ELSE_DARK}/misc/*.svg              ${THEME_DIR}/cinnamon/assets/misc
+    cp -ur ${SRC_DIR}/src/cinnamon/assets/assets${ELSE_DARK}/switch/*.svg            ${THEME_DIR}/cinnamon/assets/switch
+    cp -ur ${SRC_DIR}/src/cinnamon/thumbnail${ELSE_DARK}.png                         ${THEME_DIR}/cinnamon/thumbnail.png
   fi
 
   mkdir -p                                                                           ${THEME_DIR}/plank
@@ -257,30 +257,6 @@ install_theme() {
       done
     done
   done
-}
-
-install_img() {
-  NBG_N="@extend %nautilus_none_img;"
-  NBG_I="@extend %nautilus_bg_img;"
-  HDG_N="@extend %headerbar_none_img;"
-  HDG_I="@extend %headerbar_bg_img;"
-
-  cd ${SRC_DIR}/src/_sass/gtk/apps
-  cp -an _gnome.scss _gnome.scss.bak
-  sed -i "s/$NBG_I/$NBG_N/g" _gnome.scss
-  sed -i "s/$HDG_I/$HDG_N/g" _gnome.scss
-
-  # Install Packages
-  install_package
-
-  echo -e "\nInstalling specify theme with nautilus background image ...\n"
-}
-
-restore_img() {
-  cd ${SRC_DIR}/src/_sass/gtk/apps
-  [[ -d _gnome.scss.bak ]] && rm -rf _gnome.scss
-  mv _gnome.scss.bak _gnome.scss
-  echo -e "Restore scss files ..."
 }
 
 while [[ $# -gt 0 ]]; do
@@ -404,9 +380,12 @@ if [[ "${theme}" != '' ]]; then
   sed -i "/\$color:/s/default/${theme}/" ${SRC_DIR}/src/_sass/_tweaks-temp.scss
 fi
 
-if [[ "${ordinary:-}" != 'true' ]]; then
-  install_theme
+if [[ "${ordinary:-}" == 'true' ]]; then
+  echo "Install with no nautilus bakground image..."
+  sed -i "/\$theme_image:/s/true/false/" ${SRC_DIR}/src/_sass/_tweaks-temp.scss
 fi
+
+install_theme
 
 if [[ "${gdm:-}" == 'true' ]]; then
   install_gdm "${dest:-${DEST_DIR}}" "${name:-${THEME_NAME}}" "${theme}" "${color}" "${size}"
@@ -414,10 +393,6 @@ fi
 
 if [[ "${icon:-}" == 'true' ]]; then
   install_icon "${dest:-${DEST_DIR}}" "${name:-${THEME_NAME}}" "${theme}" "${color}" "${size}"
-fi
-
-if [[ "${ordinary:-}" == 'true' ]]; then
-  install_img && parse_sass && install_theme && restore_img && parse_sass
 fi
 
 echo
