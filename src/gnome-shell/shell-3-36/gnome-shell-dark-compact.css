@@ -40,7 +40,7 @@ stage {
   color: rgba(255, 255, 255, 0.7);
   background-color: transparent;
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -49,7 +49,7 @@ stage {
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.12);
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -58,7 +58,7 @@ stage {
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.3);
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -67,7 +67,7 @@ stage {
   color: rgba(255, 255, 255, 0.3);
   background-color: transparent;
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -76,7 +76,7 @@ stage {
   color: #FFFFFF;
   text-shadow: none;
   icon-shadow: none;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
 }
 
 .modal-dialog-linked-button {
@@ -89,7 +89,7 @@ stage {
   color: rgba(255, 255, 255, 0.7);
   background-color: transparent;
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -98,7 +98,7 @@ stage {
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.12);
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -107,7 +107,7 @@ stage {
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.3);
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -116,7 +116,7 @@ stage {
   color: rgba(255, 255, 255, 0.3);
   background-color: transparent;
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -125,7 +125,7 @@ stage {
   color: #FFFFFF;
   text-shadow: none;
   icon-shadow: none;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
 }
 
 .modal-dialog-linked-button:first-child {
@@ -379,9 +379,10 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .modal-dialog {
   border-radius: 8px;
   color: #FFFFFF;
-  background-color: #4c5351;
+  background-color: #242626;
   border: none;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 3px 3px 6px -3px rgba(0, 0, 0, 0.35);
+  margin: 6px;
 }
 
 .modal-dialog .modal-dialog-content-box {
@@ -1578,7 +1579,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .message {
   min-height: 56px;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.03);
   border: none;
   border-radius: 6px;
   color: rgba(255, 255, 255, 0.7);
@@ -1965,7 +1966,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .grid-search-result:active .overview-icon,
 .grid-search-result:checked .overview-icon {
   background-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   transition-duration: 150ms;
 }
 
@@ -2122,7 +2123,7 @@ StWidget.focused .app-well-app-running-dot {
   color: rgba(255, 255, 255, 0.7);
   background-color: transparent;
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
   padding: 0;
@@ -2135,7 +2136,7 @@ StWidget.focused .app-well-app-running-dot {
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.12);
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -2144,7 +2145,7 @@ StWidget.focused .app-well-app-running-dot {
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.3);
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -2153,7 +2154,7 @@ StWidget.focused .app-well-app-running-dot {
   color: rgba(255, 255, 255, 0.3);
   background-color: transparent;
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -2475,7 +2476,7 @@ StWidget.focused .app-well-app-running-dot {
 
 .candidate-popup-content {
   background-color: #343938;
-  border-radius: 6px;
+  border-radius: 7px;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.18);
   margin: 2px 12px 18px;
   padding: 4px;
@@ -2485,7 +2486,7 @@ StWidget.focused .app-well-app-running-dot {
 .candidate-box {
   padding: 0.3em 0.5em 0.3em 0.5em;
   margin-right: 2px;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 .candidate-box:hover {
@@ -2588,16 +2589,17 @@ StWidget.focused .app-well-app-running-dot {
   color: rgba(255, 255, 255, 0.7);
   background-color: transparent;
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
+  box-shadow: none;
 }
 
 .login-dialog .modal-dialog-button:hover, .login-dialog .modal-dialog-button:focus {
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.12);
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -2606,7 +2608,7 @@ StWidget.focused .app-well-app-running-dot {
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.3);
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -2615,7 +2617,7 @@ StWidget.focused .app-well-app-running-dot {
   color: rgba(255, 255, 255, 0.3);
   background-color: transparent;
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -2651,7 +2653,7 @@ StWidget.focused .app-well-app-running-dot {
   color: rgba(255, 255, 255, 0.5);
   background-color: rgba(255, 255, 255, 0.12);
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -2907,7 +2909,7 @@ StWidget.focused .app-well-app-running-dot {
   color: rgba(255, 255, 255, 0.7);
   background-color: transparent;
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -2916,7 +2918,7 @@ StWidget.focused .app-well-app-running-dot {
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.12);
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -2925,7 +2927,7 @@ StWidget.focused .app-well-app-running-dot {
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.3);
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -2934,7 +2936,7 @@ StWidget.focused .app-well-app-running-dot {
   color: rgba(255, 255, 255, 0.3);
   background-color: transparent;
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -2943,7 +2945,7 @@ StWidget.focused .app-well-app-running-dot {
   color: #FFFFFF;
   text-shadow: none;
   icon-shadow: none;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
 }
 
 .lg-obj-inspector-button:hover {
@@ -3567,7 +3569,7 @@ StWidget.focused #dashtodockContainer .app-well-app-running-dot {
   color: rgba(255, 255, 255, 0.7);
   background-color: transparent;
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -3576,7 +3578,7 @@ StWidget.focused #dashtodockContainer .app-well-app-running-dot {
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.12);
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -3585,14 +3587,14 @@ StWidget.focused #dashtodockContainer .app-well-app-running-dot {
   color: #FFFFFF;
   text-shadow: none;
   icon-shadow: none;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
 }
 
 .openweather-provider:active {
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.3);
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }

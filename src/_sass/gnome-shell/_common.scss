@@ -262,9 +262,11 @@ StScrollBar {
 .modal-dialog {
   border-radius: $windows_radius;
   color: $fg_color;
-  background-color: $lighter_bg_color;
+  background-color: $darker_bg_color;
   border: none;
-  box-shadow: $shadow_2;
+  box-shadow: 3px 3px 6px -3px rgba(black, 0.35);
+  margin: 6px;
+
   .modal-dialog-content-box {
     padding: 24px;
   }
@@ -1359,13 +1361,13 @@ StScrollBar {
 
 .message {
   min-height: $menuitem_size * 2;
-  background-color: transparent;
+  background-color: if($variant == 'light', rgba(black, 0.04), rgba(white, 0.03));
   border: none;
   border-radius: $buttons_radius;
   color: $secondary_fg_color;
   text-shadow: none;
 
-  &:hover,&:focus { background-color: $divider_color; }
+  &:hover, &:focus { background-color: $divider_color; }
   &:active { background-color: $track_color; }
 
   .popup-menu & { box-shadow: none; }
@@ -1634,7 +1636,7 @@ StScrollBar {
   &:active .overview-icon,
   &:checked .overview-icon {
     background-color: $inverse_track_color;
-    box-shadow: $shadow_0;
+    box-shadow: none;
     transition-duration: $longer_duration;
   }
 }
@@ -2044,7 +2046,7 @@ $keyboard_active_bg_color: if($variant == 'light', darken($keyboard_bg_color, 20
 
 .candidate-popup-content {
   background-color: $menu_bg_color;
-  border-radius: $buttons_radius;
+  border-radius: $container_padding + 3px;
   box-shadow: 0 6px 10px rgba(black, 0.18);
   margin: ($container_padding / 2) 12px 18px;
   padding: $container_padding;
@@ -2054,7 +2056,7 @@ $keyboard_active_bg_color: if($variant == 'light', darken($keyboard_bg_color, 20
 .candidate-box {
   padding: 0.3em 0.5em 0.3em 0.5em;
   margin-right: $container_padding / 2;
-  border-radius: $buttons_radius - $container_padding;
+  border-radius: 3px;
   &:hover { background-color: $divider_color; color: $fg_color; }
   &:active { background-color: $track_color; color: $fg_color; }
   &:selected { background-color: $primary_color; color: $inverse_fg_color; }
@@ -2115,6 +2117,7 @@ $keyboard_active_bg_color: if($variant == 'light', darken($keyboard_bg_color, 20
   .modal-dialog-button {
     padding: 0 16px;
     @include button(flat-normal, $tc: $inverse_fg_color);
+    box-shadow: none;
     &:hover,&:focus { @include button(flat-hover, $tc: $inverse_fg_color); }
     &:active { @include button(flat-active, $tc: $inverse_fg_color); }
     &:insensitive { @include button(flat-insensitive, $tc: $inverse_fg_color); }
