@@ -1257,13 +1257,13 @@ actionbar {
   -gtk-outline-radius: 9997px;
 }
 
-.nemo-window toolbar.primary-toolbar .linked.path-bar > button:hover, headerbar .linked:not(.vertical).path-bar > button:hover {
+.nemo-window toolbar.primary-toolbar .linked.path-bar > button:hover, headerbar .linked.path-bar:not(.vertical) > button:hover {
   color: alpha(#FFFFFF, 0.75);
   background-color: #00CE99;
   transition: all 150ms cubic-bezier(0, 0, 0.2, 1);
 }
 
-.nemo-window toolbar.primary-toolbar .linked.path-bar > button:checked, headerbar .linked:not(.vertical).path-bar > button:checked {
+.nemo-window toolbar.primary-toolbar .linked.path-bar > button:checked, headerbar .linked.path-bar:not(.vertical) > button:checked {
   border-image-source: -gtk-scaled(url("assets/button-checked-circle.png"), url("assets/button-checked-circle@2.png"));
   border-image-width: 8px 16px 8px 16px;
   border-image-slice: 8 16 8 16;
@@ -1274,54 +1274,54 @@ actionbar {
   background-color: #272a2a;
 }
 
-.nemo-window toolbar.primary-toolbar .linked.path-bar > button:checked:hover, headerbar .linked:not(.vertical).path-bar > button:checked:hover {
+.nemo-window toolbar.primary-toolbar .linked.path-bar > button:checked:hover, headerbar .linked.path-bar:not(.vertical) > button:checked:hover {
   color: #FFFFFF;
 }
 
-.nemo-window toolbar.primary-toolbar .linked.path-bar > button:checked:disabled, headerbar .linked:not(.vertical).path-bar > button:checked:disabled {
+.nemo-window toolbar.primary-toolbar .linked.path-bar > button:checked:disabled, headerbar .linked.path-bar:not(.vertical) > button:checked:disabled {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.nemo-window toolbar.primary-toolbar .linked.path-bar > button:first-child:checked, headerbar .linked:not(.vertical).path-bar > button:first-child:checked {
+.nemo-window toolbar.primary-toolbar .linked.path-bar > button:first-child:checked, headerbar .linked.path-bar:not(.vertical) > button:first-child:checked {
   animation: none;
   border-image-source: -gtk-scaled(url("assets/firstbutton-checked-circle.png"), url("assets/firstbutton-checked-circle@2.png"));
 }
 
-.nemo-window toolbar.primary-toolbar .linked.path-bar > button:last-child:checked, headerbar .linked:not(.vertical).path-bar > button:last-child:checked {
+.nemo-window toolbar.primary-toolbar .linked.path-bar > button:last-child:checked, headerbar .linked.path-bar:not(.vertical) > button:last-child:checked {
   animation: none;
   border-image-source: -gtk-scaled(url("assets/lastbutton-checked-circle.png"), url("assets/lastbutton-checked-circle@2.png"));
 }
 
-.nemo-window toolbar.primary-toolbar .linked.path-bar > button:disabled, headerbar .linked:not(.vertical).path-bar > button:disabled {
+.nemo-window toolbar.primary-toolbar .linked.path-bar > button:disabled, headerbar .linked.path-bar:not(.vertical) > button:disabled {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.nemo-window toolbar.primary-toolbar .linked.path-bar > button:backdrop, headerbar .linked:not(.vertical).path-bar > button:backdrop {
+.nemo-window toolbar.primary-toolbar .linked.path-bar > button:backdrop, headerbar .linked.path-bar:not(.vertical) > button:backdrop {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.nemo-window toolbar.primary-toolbar .linked.path-bar > button:backdrop:disabled, headerbar .linked:not(.vertical).path-bar > button:backdrop:disabled {
+.nemo-window toolbar.primary-toolbar .linked.path-bar > button:backdrop:disabled, headerbar .linked.path-bar:not(.vertical) > button:backdrop:disabled {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.nemo-window toolbar.primary-toolbar .linked.path-bar > button:backdrop:checked, headerbar .linked:not(.vertical).path-bar > button:backdrop:checked {
+.nemo-window toolbar.primary-toolbar .linked.path-bar > button:backdrop:checked, headerbar .linked.path-bar:not(.vertical) > button:backdrop:checked {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.nemo-window toolbar.primary-toolbar .linked.path-bar > button:backdrop:checked:disabled, headerbar .linked:not(.vertical).path-bar > button:backdrop:checked:disabled {
+.nemo-window toolbar.primary-toolbar .linked.path-bar > button:backdrop:checked:disabled, headerbar .linked.path-bar:not(.vertical) > button:backdrop:checked:disabled {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.nemo-window toolbar.primary-toolbar .linked.path-bar > button:only-child, headerbar .linked:not(.vertical).path-bar > button:only-child {
+.nemo-window toolbar.primary-toolbar .linked.path-bar > button:only-child, headerbar .linked.path-bar:not(.vertical) > button:only-child {
   border-radius: 9999px;
 }
 
-.nemo-window toolbar.primary-toolbar .linked.path-bar > button:first-child, headerbar .linked:not(.vertical).path-bar > button:first-child {
+.nemo-window toolbar.primary-toolbar .linked.path-bar > button:first-child, headerbar .linked.path-bar:not(.vertical) > button:first-child {
   border-radius: 9999px 0 0 9999px;
   padding-left: 8px;
 }
 
-.nemo-window toolbar.primary-toolbar .linked.path-bar > button:last-child, headerbar .linked:not(.vertical).path-bar > button:last-child {
+.nemo-window toolbar.primary-toolbar .linked.path-bar > button:last-child, headerbar .linked.path-bar:not(.vertical) > button:last-child {
   border-radius: 0 9999px 9999px 0;
   padding-right: 8px;
 }
@@ -1442,22 +1442,22 @@ headerbar.selection-mode .selection-menu .arrow {
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
 
-headerbar .linked:not(.vertical).path-bar > button {
+headerbar .linked.path-bar:not(.vertical) > button {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-headerbar .linked:not(.vertical).path-bar > button label {
+headerbar .linked.path-bar:not(.vertical) > button label {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-headerbar .linked:not(.vertical).path-bar > button.text-button.image-button label {
+headerbar .linked.path-bar:not(.vertical) > button.text-button.image-button label {
   padding-left: 0;
   padding-right: 0;
 }
 
-headerbar .linked:not(.vertical).path-bar > button.text-button.image-button image {
+headerbar .linked.path-bar:not(.vertical) > button.text-button.image-button image {
   padding-left: 0;
   padding-right: 0;
 }
@@ -1696,11 +1696,11 @@ treeview.view:drop(active) {
   border-color: #FFAC00;
 }
 
-treeview.view:drop(active).after {
+treeview.view.after:drop(active) {
   border-top-style: none;
 }
 
-treeview.view:drop(active).before {
+treeview.view.before:drop(active) {
   border-bottom-style: none;
 }
 
@@ -2208,7 +2208,7 @@ notebook > header tab:hover {
   color: #FFFFFF;
 }
 
-notebook > header tab:hover.reorderable-page {
+notebook > header tab.reorderable-page:hover {
   border-color: rgba(255, 255, 255, 0.08);
   background-color: #3a3f3e;
 }
@@ -2228,7 +2228,7 @@ notebook > header tab:checked:disabled {
   color: rgba(255, 255, 255, 0.5);
 }
 
-notebook > header tab:checked.reorderable-page {
+notebook > header tab.reorderable-page:checked {
   border-color: rgba(255, 255, 255, 0.08);
   background-color: #3f4544;
 }
@@ -2373,19 +2373,19 @@ scrollbar.overlay-indicator:not(.dragging):not(.hovering) button:disabled {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal slider {
+scrollbar.overlay-indicator.horizontal:not(.dragging):not(.hovering) slider {
   min-width: 24px;
 }
 
-scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal button {
+scrollbar.overlay-indicator.horizontal:not(.dragging):not(.hovering) button {
   min-width: 8px;
 }
 
-scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical slider {
+scrollbar.overlay-indicator.vertical:not(.dragging):not(.hovering) slider {
   min-height: 24px;
 }
 
-scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical button {
+scrollbar.overlay-indicator.vertical:not(.dragging):not(.hovering) button {
   min-height: 8px;
 }
 
@@ -2917,7 +2917,7 @@ scale.horizontal.marks-before:not(.marks-after) slider:active {
   background-position: center calc(100% - 3px);
 }
 
-scale.horizontal.marks-before:not(.marks-after).fine-tune slider {
+scale.horizontal.marks-before.fine-tune:not(.marks-after) slider {
   background-position: center calc(100% - 6px);
 }
 
@@ -2944,7 +2944,7 @@ scale.horizontal.marks-after:not(.marks-before) slider:active {
   background-position: center calc(3px);
 }
 
-scale.horizontal.marks-after:not(.marks-before).fine-tune slider {
+scale.horizontal.marks-after.fine-tune:not(.marks-before) slider {
   background-position: center calc(6px);
 }
 
@@ -2971,7 +2971,7 @@ scale.vertical.marks-before:not(.marks-after) slider:active {
   background-position: calc(3px) center;
 }
 
-scale.vertical.marks-before:not(.marks-after).fine-tune slider {
+scale.vertical.marks-before.fine-tune:not(.marks-after) slider {
   background-position: calc(6px) center;
 }
 
@@ -2998,7 +2998,7 @@ scale.vertical.marks-after:not(.marks-before) slider:active {
   background-position: calc(100% - 3px) center;
 }
 
-scale.vertical.marks-after:not(.marks-before).fine-tune slider {
+scale.vertical.marks-after.fine-tune:not(.marks-before) slider {
   background-position: calc(100% - 6px) center;
 }
 
@@ -3787,11 +3787,11 @@ colorswatch:drop(active) {
   box-shadow: none;
 }
 
-colorswatch:drop(active).light overlay {
+colorswatch.light:drop(active) overlay {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12), 0 0 0 2px #FFAC00;
 }
 
-colorswatch:drop(active).dark overlay {
+colorswatch.dark:drop(active) overlay {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12), 0 0 0 2px #FFAC00;
 }
 
@@ -6125,7 +6125,7 @@ box.vertical > widget > widget:selected {
   border: none;
 }
 
-.xfce4-panel#XfcePanelWindow {
+#XfcePanelWindow.xfce4-panel {
   border: none;
 }
 

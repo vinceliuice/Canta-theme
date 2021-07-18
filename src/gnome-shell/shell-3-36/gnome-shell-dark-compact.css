@@ -655,11 +655,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .popup-menu .popup-menu-content {
   padding: 10px 0;
-  margin: 5px 8px 12px 12px;
+  margin: 4px 10px 18px 12px;
   background-color: transparent;
   background-color: rgba(52, 57, 56, 0.95);
   border-radius: 8px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.19), 0 6px 3px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.18);
 }
 
 .popup-menu .popup-menu-item {
@@ -689,7 +689,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   font-weight: normal;
 }
 
-.popup-menu .popup-menu-item:checked.selected {
+.popup-menu .popup-menu-item.selected:checked {
   background-color: #26d5a8;
   color: #FFFFFF;
 }
@@ -1170,12 +1170,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #calendarArea {
   padding: 0;
-  margin: 12px 0;
+  margin: 4px 0;
 }
 
 .calendar {
   padding: 0;
-  margin: 0 8px;
+  margin: 0 0;
   border: none;
   box-shadow: none;
   background: none;
@@ -1310,8 +1310,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   width: 28px;
   height: 28px;
   padding: 0 0;
-  margin: 2px;
-  border-radius: 1000px;
+  margin: 4px 2px;
+  border-radius: 9999px;
   color: rgba(255, 255, 255, 0.7);
   border: none;
   font-feature-settings: "tnum";
@@ -1591,6 +1591,10 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .message:active {
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+.popup-menu .message {
+  box-shadow: none;
 }
 
 .message-icon-bin {
@@ -2124,7 +2128,7 @@ StWidget.focused .app-well-app-running-dot {
   padding: 0;
   width: 36px;
   height: 36px;
-  border-radius: 18px;
+  border-radius: 9999px;
 }
 
 .app-folder-dialog .folder-name-container .edit-folder-button:hover, .app-folder-dialog .folder-name-container .edit-folder-button:focus {
@@ -2472,8 +2476,8 @@ StWidget.focused .app-well-app-running-dot {
 .candidate-popup-content {
   background-color: #343938;
   border-radius: 6px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.19), 0 6px 3px rgba(0, 0, 0, 0.23);
-  margin: 2px 8px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.18);
+  margin: 2px 12px 18px;
   padding: 4px;
   spacing: 4px;
 }

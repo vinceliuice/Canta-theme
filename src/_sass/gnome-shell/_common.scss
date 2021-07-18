@@ -516,11 +516,11 @@ StScrollBar {
 
   .popup-menu-content {
     padding: 10px 0;
-    margin: 5px 8px 12px 12px;
+    margin: 4px 10px 18px 12px;
     background-color: transparent;
     background-color: rgba($menu_bg_color, 0.95);
     border-radius: $windows_radius;
-    box-shadow: $shadow_3;
+    box-shadow: 0 6px 10px rgba(black, 0.18);
   }
 
   .popup-menu-item {
@@ -1000,12 +1000,12 @@ StScrollBar {
 
 #calendarArea {
   padding: 0;
-  margin: ($container_padding * 3) 0;
+  margin: $container_padding 0;
 }
 
 .calendar {
   padding: 0;
-  margin: 0 8px;
+  margin: 0 0;
   border: none;
   box-shadow: none;
   background: none;
@@ -1106,8 +1106,8 @@ StScrollBar {
   width: $menuitem_size;
   height: $menuitem_size;
   padding: 0 0;
-  margin: 2px;
-  border-radius: 1000px;
+  margin: 4px 2px;
+  border-radius: $circular_radius;
   color: $secondary_fg_color;
   border: none;
   font-feature-settings: "tnum";
@@ -1367,6 +1367,8 @@ StScrollBar {
 
   &:hover,&:focus { background-color: $divider_color; }
   &:active { background-color: $track_color; }
+
+  .popup-menu & { box-shadow: none; }
 }
 
 .message-icon-bin {
@@ -1789,7 +1791,7 @@ StScrollBar {
       padding: 0;
       width: 36px;
       height: 36px;
-      border-radius: 18px;
+      border-radius: $circular_radius;
 
       & > StIcon { icon-size: 16px }
     }
@@ -2043,8 +2045,8 @@ $keyboard_active_bg_color: if($variant == 'light', darken($keyboard_bg_color, 20
 .candidate-popup-content {
   background-color: $menu_bg_color;
   border-radius: $buttons_radius;
-  box-shadow: $shadow_3;
-  margin: ($container_padding / 2) 8px;
+  box-shadow: 0 6px 10px rgba(black, 0.18);
+  margin: ($container_padding / 2) 12px 18px;
   padding: $container_padding;
   spacing: $container_padding;
 }
