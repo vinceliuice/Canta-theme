@@ -1014,12 +1014,18 @@ toolbar {
 
 searchbar,
 .location-bar {
-  padding: $container_padding;
-  border-style: solid;
-  border-width: 0 0 1px;
-  border-color: $border_color;
-  background-color: $bg_color;
-  background-clip: border-box;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+
+  > revealer > box {
+    padding: $container_padding;
+    margin: -$container_padding;
+    background-color: $bg_color;
+    border-bottom: 1px solid $border_color;
+    background-clip: border-box;
+  }
 }
 
 actionbar { // set bottom border radius
@@ -1359,10 +1365,12 @@ headerbar {
   }
 
   &.windowhandle {
-    viewswitcher > box > button:not(.titlebutton):not(.suggested-action):not(.destructive-action) {
+    viewswitcher button:not(.titlebutton):not(.suggested-action):not(.destructive-action) {
       border-radius: 0;
       margin-top: 0;
       margin-bottom: 0;
+      padding: 0;
+      min-width: 120px;
       @extend %flat_button;
       border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
                                     $primary_color 0%,
@@ -1377,6 +1385,9 @@ headerbar {
 
         &, &:disabled { background-color: transparent; }
       }
+
+      image { margin-left: $container_padding * 2; }
+      label { margin-right: $container_padding * 2; }
 
       > stack { background-color: transparent; }
     }
@@ -1808,21 +1819,21 @@ popover.background {
     &.combo {
       @extend %combo_flat;
     }
+  }
 
-    .linked > & {
+  .linked > button {
+    border-radius: $buttons_radius;
+
+    &:first-child {
+      border-radius: $buttons_radius $buttons_radius $buttons_radius $buttons_radius;
+    }
+
+    &:last-child {
+      border-radius: $buttons_radius $buttons_radius $buttons_radius $buttons_radius;
+    }
+
+    &:only-child {
       border-radius: $buttons_radius;
-
-      &:first-child {
-        border-radius: $buttons_radius;
-      }
-
-      &:last-child {
-        border-radius: $buttons_radius;
-      }
-
-      &:only-child {
-        border-radius: $buttons_radius;
-      }
     }
   }
 

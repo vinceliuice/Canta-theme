@@ -133,6 +133,11 @@ window.background.chromium {
 
   // entry uses this as well
   textview { background-color: $menu_bg_color; }
+
+  menu menuitem {
+    border-radius: 0;
+    box-shadow: none;
+  }
 }
 
 tooltip.background.chromium { background-color: rgba($base_color, 1); }
@@ -240,15 +245,6 @@ window.background:not(.csd) {
     &.default-decoration button.titlebutton {
       @extend %title_buttons_solid;
     }
-
-    // &.default-decoration button.titlebutton {
-    //   min-width: 16px;
-    //   min-height: 16px;
-    //   margin: 0 2px;
-    //   padding: 0;
-    //   color: $titlebar_fg_color;
-    //   background-color: transparent;
-    // }
   }
 }
 
@@ -409,6 +405,92 @@ window#GearyMainWindow.background.csd {
           background: none;
           border-bottom-right-radius: $windows_radius;
         }
+      }
+    }
+  }
+}
+
+// >= 40.0
+.geary-main-window {
+  &.background.csd.unified {
+    .geary-main-layout { // >= 40.0 reset
+      > leaflet > leaflet > headerbar { // left and center headerbar
+        box-shadow: inset 0 -1px $border_color;
+      }
+
+      > leaflet > headerbar { // right headerbar
+        box-shadow: inset 0 -1px $border_color;
+      }
+    }
+  }
+
+  .geary-main-layout { // >= 40.0
+    background-color: $bg_color;
+  }
+
+  frame.geary-folder-frame { // left side
+    background-color: transparent;
+
+    > border { border: none; }
+
+    treeview.view.sidebar:not(:hover):not(:selected) { background-color: transparent; }
+  }
+
+  frame.geary-conversation-frame { // center part
+    background-color: $base_color;
+
+    > border { border: none; }
+
+    scrolledwindow {
+      margin-top: -1px;
+    }
+  }
+
+  leaflet > leaflet > box.vertical {
+    > revealer > components-conversation-actions { // center part actionbar
+      button {
+        @extend %flat_button;
+      }
+
+      > .linked > button {
+        border-radius: $buttons_radius;
+        margin: 0 1px;
+      }
+    }
+  }
+
+  geary-conversation-viewer#conversation_viewer { // right side
+    background-color: $base_color;
+
+    list.background.conversation-listbox.content {
+      background-color: $base_color;
+
+      > row.activatable {
+        border: 1px solid $border_color;
+        border-bottom-width: 0;
+
+        &:first-child {
+          border-top-left-radius: 8px;
+          border-top-right-radius: 8px;
+        }
+      }
+
+      .geary-attachment-pane {
+        border-radius: 0 0 8px 8px;
+
+        actionbar.background {
+          background-color: transparent;
+
+          > revealer > box {
+            border-radius: 0 0 7px 7px;
+          }
+        }
+      }
+    }
+
+    searchbar {
+      > revealer > box {
+        background-color: $base_color;
       }
     }
   }
