@@ -1021,7 +1021,7 @@ searchbar,
 
   > revealer > box {
     padding: $container_padding;
-    margin: -$container_padding;
+    margin: -6px;
     background-color: $bg_color;
     border-bottom: 1px solid $border_color;
     background-clip: border-box;
@@ -3626,7 +3626,7 @@ colorchooser .popover.osd {
 decoration {
   transition: $shadow_transition;
   border-radius: $windows_radius;
-  box-shadow: $shadow_4, 0 16px 16px transparent;
+  box-shadow: $shadow_4, 0 0 24px 5px transparent;
 
   // FIXME rationalize shadows
 
@@ -3638,7 +3638,7 @@ decoration {
     // change when we go to backdrop, to prevent jumping windows.
     // The biggest shadow should be in the same order then in the active state
     // or the jumping will happen during the transition.
-    box-shadow: $shadow_2, 0 16px 16px transparent;
+    box-shadow: $shadow_2, 0 0 24px 5px transparent;
   }
 
   .maximized &,

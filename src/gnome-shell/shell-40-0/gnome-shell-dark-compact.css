@@ -381,7 +381,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   color: #FFFFFF;
   background-color: #4c5351;
   border: none;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.1), 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
 }
 
 .modal-dialog .modal-dialog-content-box {
@@ -659,7 +659,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: transparent;
   background-color: rgba(52, 57, 56, 0.95);
   border-radius: 8px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.19), 0 6px 3px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 7px 5px -4px rgba(0, 0, 0, 0.1), 0 12px 10px 2px rgba(0, 0, 0, 0.1), 0 5px 12px 4px rgba(0, 0, 0, 0.05);
 }
 
 .popup-menu .popup-menu-item {
@@ -989,7 +989,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   color: #FFFFFF;
   background-color: #4c5351;
   border: none;
-  box-shadow: 0 14px 14px rgba(0, 0, 0, 0.25), 0 10px 5px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 8px 6px -5px rgba(0, 0, 0, 0.1), 0 16px 15px 2px rgba(0, 0, 0, 0.1), 0 6px 18px 5px rgba(0, 0, 0, 0.05);
   border-radius: 8px;
   padding: 12px;
 }
@@ -2218,7 +2218,7 @@ StWidget.focused .app-well-app-running-dot {
   color: #FFFFFF;
   background-color: #4c5351;
   border: none;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.1), 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
 }
 
 .notification-banner:hover {
@@ -2450,7 +2450,7 @@ StWidget.focused .app-well-app-running-dot {
   -arrow-base: 20px;
   -arrow-rise: 10px;
   -boxpointer-gap: 5px;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.1), 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
 }
 
 .emoji-page .keyboard-key {
@@ -2466,7 +2466,7 @@ StWidget.focused .app-well-app-running-dot {
 .candidate-popup-content {
   background-color: #343938;
   border-radius: 6px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.19), 0 6px 3px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 7px 5px -4px rgba(0, 0, 0, 0.1), 0 12px 10px 2px rgba(0, 0, 0, 0.1), 0 5px 12px 4px rgba(0, 0, 0, 0.05);
   margin: 2px 8px;
   padding: 4px;
   spacing: 4px;
@@ -2614,7 +2614,7 @@ StWidget.focused .app-well-app-running-dot {
   color: rgba(255, 255, 255, 0.8);
   background-color: #FFAC00;
   border-color: transparent;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1), 0 1px 2px -0.6px rgba(0, 0, 0, 0.05);
   text-shadow: none;
   icon-shadow: none;
 }
@@ -2623,7 +2623,7 @@ StWidget.focused .app-well-app-running-dot {
   color: #FFFFFF;
   background-color: #FFAC00;
   border-color: transparent;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.1), 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
   text-shadow: none;
   icon-shadow: none;
 }
@@ -2632,7 +2632,7 @@ StWidget.focused .app-well-app-running-dot {
   color: #FFFFFF;
   background-color: #ffc54d;
   border-color: transparent;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.1), 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
   text-shadow: none;
   icon-shadow: none;
 }
@@ -2814,7 +2814,7 @@ StWidget.focused .app-well-app-running-dot {
   padding: 0;
   border: none;
   border-radius: 8px;
-  box-shadow: 0 14px 14px rgba(0, 0, 0, 0.25), 0 10px 5px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 8px 6px -5px rgba(0, 0, 0, 0.1), 0 16px 15px 2px rgba(0, 0, 0, 0.1), 0 6px 18px 5px rgba(0, 0, 0, 0.05);
 }
 
 #LookingGlassDialog > #Toolbar {
@@ -2969,7 +2969,7 @@ StWidget.focused .app-well-app-running-dot {
   border: none;
   border-radius: 8px;
   padding: 6px;
-  box-shadow: 0 14px 14px rgba(0, 0, 0, 0.25), 0 10px 5px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 8px 6px -5px rgba(0, 0, 0, 0.1), 0 16px 15px 2px rgba(0, 0, 0, 0.1), 0 6px 18px 5px rgba(0, 0, 0, 0.05);
 }
 
 .icon-grid {
@@ -3062,7 +3062,7 @@ StWidget.focused .app-well-app-running-dot {
   padding: 4px 8px;
   color: #FFFFFF;
   background-color: rgba(0, 0, 0, 0.65);
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.1), 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
   text-align: center;
   -x-offset: 4px;
 }

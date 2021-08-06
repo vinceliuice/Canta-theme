@@ -208,7 +208,7 @@ entry {
   border-radius: 6px;
   transition: all 150ms cubic-bezier(0, 0, 0.2, 1), box-shadow 100ms cubic-bezier(0, 0, 0.2, 1);
   border-image: none;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1), 0 1px 2px -0.6px rgba(0, 0, 0, 0.05);
   background-color: #fcfcfc;
   color: rgba(0, 0, 0, 0.75);
 }
@@ -216,12 +216,12 @@ entry {
 spinbutton:focus:not(.vertical),
 entry:focus {
   border-image: none;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.1), 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
 }
 
 spinbutton:disabled:not(.vertical),
 entry:disabled {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1), 0 1px 2px -0.6px rgba(0, 0, 0, 0.05);
   background-color: #FAFAFA;
   color: rgba(0, 0, 0, 0.38);
 }
@@ -309,7 +309,7 @@ spinbutton.error:not(.vertical),
 entry.error {
   transition: all 150ms cubic-bezier(0, 0, 0.2, 1), box-shadow 100ms cubic-bezier(0, 0, 0.2, 1);
   border-image: none;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1), 0 1px 2px -0.6px rgba(0, 0, 0, 0.05);
   background-color: #DD2C00;
   color: #FFFFFF;
 }
@@ -317,12 +317,12 @@ entry.error {
 spinbutton.error:focus:not(.vertical),
 entry.error:focus {
   border-image: none;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.1), 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
 }
 
 spinbutton.error:disabled:not(.vertical),
 entry.error:disabled {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1), 0 1px 2px -0.6px rgba(0, 0, 0, 0.05);
   background-color: #FAFAFA;
   color: rgba(0, 0, 0, 0.38);
 }
@@ -369,7 +369,7 @@ spinbutton.warning:not(.vertical),
 entry.warning {
   transition: all 150ms cubic-bezier(0, 0, 0.2, 1), box-shadow 100ms cubic-bezier(0, 0, 0.2, 1);
   border-image: none;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1), 0 1px 2px -0.6px rgba(0, 0, 0, 0.05);
   background-color: #FF6D00;
   color: #FFFFFF;
 }
@@ -377,12 +377,12 @@ entry.warning {
 spinbutton.warning:focus:not(.vertical),
 entry.warning:focus {
   border-image: none;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.1), 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
 }
 
 spinbutton.warning:disabled:not(.vertical),
 entry.warning:disabled {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1), 0 1px 2px -0.6px rgba(0, 0, 0, 0.05);
   background-color: #FAFAFA;
   color: rgba(0, 0, 0, 0.38);
 }
@@ -457,7 +457,7 @@ treeview entry.flat, treeview entry.flat:focus, treeview entry, treeview entry:f
 }
 
 .entry-tag:hover, .photos-entry-tag:hover, .documents-entry-tag:hover {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1), 0 1px 2px -0.6px rgba(0, 0, 0, 0.05);
 }
 
 :dir(ltr) .entry-tag, :dir(ltr) .photos-entry-tag, :dir(ltr) .documents-entry-tag {
@@ -503,7 +503,7 @@ button {
   border-radius: 6px;
   font-weight: 500;
   transition: all 150ms cubic-bezier(0, 0, 0.2, 1), box-shadow 100ms cubic-bezier(0, 0, 0.2, 1), background-size 300ms cubic-bezier(0, 0, 0.2, 1), background-image 600ms cubic-bezier(0, 0, 0.2, 1);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 0 9999px transparent;
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1), 0 1px 2px -0.6px rgba(0, 0, 0, 0.05), inset 0 0 0 9999px transparent;
   background-color: #fcfcfc;
   background-image: radial-gradient(circle farthest-corner at center, transparent 10%, transparent 0%);
   background-repeat: no-repeat;
@@ -514,7 +514,7 @@ button {
 
 
 button:hover {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15), inset 0 0 0 9999px transparent;
+  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.1), 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05), inset 0 0 0 9999px transparent;
   color: rgba(0, 0, 0, 0.75);
 }
 
@@ -522,7 +522,7 @@ button:hover {
 button:active {
   transition: all 150ms cubic-bezier(0, 0, 0.2, 1), background-size 0, background-image 0;
   animation: ripple_effect 150ms cubic-bezier(0, 0, 0.2, 1) forwards;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15), inset 0 0 0 9999px alpha(currentColor, 0.15);
+  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.1), 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05), inset 0 0 0 9999px alpha(currentColor, 0.15);
   background-image: radial-gradient(circle farthest-corner at center, alpha(currentColor, 0.15) 10%, transparent 0%);
   background-size: 0% 0%;
   color: rgba(0, 0, 0, 0.75);
@@ -1115,12 +1115,12 @@ frame.documents-dropdown, .app-notification, toolbar.osd {
   transition: box-shadow 100ms cubic-bezier(0, 0, 0.2, 1);
   padding: 6px;
   border-radius: 6px;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15), inset 0 1px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.1), 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05), inset 0 1px rgba(255, 255, 255, 0.4);
   background-color: #fcfcfc;
 }
 
 frame.documents-dropdown:backdrop, .app-notification:backdrop, toolbar.osd:backdrop {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1), 0 1px 2px -0.6px rgba(0, 0, 0, 0.05), inset 0 1px rgba(255, 255, 255, 0.4);
 }
 
 frame.left.documents-dropdown, .left.app-notification, frame.right.documents-dropdown, .right.app-notification, frame.top.documents-dropdown, .top.app-notification, frame.bottom.documents-dropdown, .bottom.app-notification, toolbar.osd.left, toolbar.osd.right, toolbar.osd.top, toolbar.osd.bottom {
@@ -1337,7 +1337,7 @@ headerbar {
   transition: background-color 100ms cubic-bezier(0, 0, 0.2, 1), color 150ms cubic-bezier(0, 0, 0.2, 1);
   min-height: 42px;
   padding: 0 6px;
-  box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.12), 0 5px 5px -5px rgba(0, 0, 0, 0.06), inset 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 3px 3px -1px rgba(0, 0, 0, 0.05), 0 6px 6px -2px rgba(0, 0, 0, 0.05), 0 1px 3px 0 rgba(0, 0, 0, 0.05), inset 0 1px rgba(255, 255, 255, 0.1);
   background-color: #47504e;
   color: #FFFFFF;
   border: none;
@@ -1356,7 +1356,7 @@ headerbar:backdrop:disabled :not(button) > label {
 }
 
 .solid-csd headerbar {
-  box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.12), 0 5px 5px -5px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 3px 3px -1px rgba(0, 0, 0, 0.05), 0 6px 6px -2px rgba(0, 0, 0, 0.05), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
 }
 
 headerbar .title {
@@ -1389,7 +1389,7 @@ headerbar button.suggested-action:disabled, headerbar button.destructive-action:
 headerbar.selection-mode {
   transition: background-color 0.00001s 150ms, color 150ms cubic-bezier(0, 0, 0.2, 1);
   animation: header_ripple_effect 150ms cubic-bezier(0, 0, 0.2, 1);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1), 0 1px 2px -0.6px rgba(0, 0, 0, 0.05), inset 0 1px rgba(255, 255, 255, 0.2);
   background-color: #00CE99;
   color: #FFFFFF;
 }
@@ -1495,7 +1495,7 @@ headerbar stackswitcher.linked:not(.vertical) > button:backdrop:checked:disabled
 
 .tiled headerbar, .tiled-top headerbar, .tiled-right headerbar, .tiled-bottom headerbar, .tiled-left headerbar, .maximized headerbar, .fullscreen headerbar {
   border-radius: 0;
-  box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.12), 0 5px 5px -5px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 3px 3px -1px rgba(0, 0, 0, 0.05), 0 6px 6px -2px rgba(0, 0, 0, 0.05), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
 }
 
 headerbar.default-decoration {
@@ -2014,11 +2014,11 @@ popover.background {
 }
 
 popover.background:backdrop {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1), 0 1px 2px -0.6px rgba(0, 0, 0, 0.05);
 }
 
 popover.background, .csd popover.background {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.1), 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
   border-radius: 7px;
 }
 
@@ -2477,13 +2477,13 @@ switch slider {
   margin: 3px;
   border-radius: 999px;
   -gtk-outline-radius: 999px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1), 0 1px 2px -0.6px rgba(0, 0, 0, 0.05);
   background-color: #fcfcfc;
   color: transparent;
 }
 
 switch:hover slider {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.1), 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
 }
 
 switch:checked slider {
@@ -2512,13 +2512,13 @@ switch:checked:disabled slider {
   box-shadow: none;
   background-color: transparent;
   background-image: none;
-  -gtk-icon-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  -gtk-icon-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1), 0 1px 2px -0.6px rgba(0, 0, 0, 0.05);
 }
 
 .view.content-view.check:not(list):hover, .view.content-view.check:not(list):active,
 .content-view .tile check:not(list):hover,
 .content-view .tile check:not(list):active {
-  -gtk-icon-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15);
+  -gtk-icon-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.1), 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
 }
 
 .view.content-view.check:not(list),
@@ -3111,7 +3111,7 @@ levelbar.vertical.discrete block:not(:last-child) {
 levelbar trough {
   padding: 2px;
   border-radius: 6px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1), 0 1px 2px -0.6px rgba(0, 0, 0, 0.05);
   background-color: #fcfcfc;
 }
 
@@ -3805,20 +3805,20 @@ colorswatch:drop(active) {
 }
 
 colorswatch:drop(active).light overlay {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12), 0 0 0 2px #FFAC00;
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1), 0 1px 2px -0.6px rgba(0, 0, 0, 0.05), 0 0 0 2px #FFAC00;
 }
 
 colorswatch:drop(active).dark overlay {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12), 0 0 0 2px #FFAC00;
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1), 0 1px 2px -0.6px rgba(0, 0, 0, 0.05), 0 0 0 2px #FFAC00;
 }
 
 colorswatch overlay {
   transition: box-shadow 100ms cubic-bezier(0, 0, 0.2, 1);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1), 0 1px 2px -0.6px rgba(0, 0, 0, 0.05);
 }
 
 colorswatch overlay:hover {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.1), 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
 }
 
 colorswatch#add-color-button {
@@ -3853,12 +3853,12 @@ colorswatch#editor-color-sample overlay {
 colorchooser .popover.osd {
   transition: box-shadow 100ms cubic-bezier(0, 0, 0.2, 1);
   border-radius: 6px;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15), inset 0 1px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.1), 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05), inset 0 1px rgba(255, 255, 255, 0.4);
   background-color: #fcfcfc;
 }
 
 colorchooser .popover.osd:backdrop {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1), 0 1px 2px -0.6px rgba(0, 0, 0, 0.05), inset 0 1px rgba(255, 255, 255, 0.4);
 }
 
 /********
@@ -3874,12 +3874,12 @@ colorchooser .popover.osd:backdrop {
 decoration {
   transition: box-shadow 100ms cubic-bezier(0, 0, 0.2, 1);
   border-radius: 8px;
-  box-shadow: 0 14px 14px rgba(0, 0, 0, 0.25), 0 10px 5px rgba(0, 0, 0, 0.22), 0 16px 16px transparent;
+  box-shadow: 0 8px 6px -5px rgba(0, 0, 0, 0.1), 0 16px 15px 2px rgba(0, 0, 0, 0.1), 0 6px 18px 5px rgba(0, 0, 0, 0.05), 0 0 24px 5px transparent;
   margin: 8px;
 }
 
 decoration:backdrop {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15), 0 16px 16px transparent;
+  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.1), 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 0 24px 5px transparent;
 }
 
 .maximized decoration, .fullscreen decoration, .tiled decoration, .tiled-top decoration, .tiled-right decoration, .tiled-bottom decoration, .tiled-left decoration {
@@ -3896,12 +3896,12 @@ decoration:backdrop {
 
 .csd.popup decoration {
   border-radius: 8px;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.1), 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
 }
 
 tooltip.csd decoration {
   border-radius: 8px;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.1), 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
 }
 
 messagedialog.csd decoration {
@@ -4158,7 +4158,7 @@ cursor-handle.insertion-cursor:dir(ltr), cursor-handle.insertion-cursor:dir(rtl)
 
 :not(decoration):not(window):drop(active) {
   transition: all 150ms cubic-bezier(0, 0, 0.2, 1);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 0 2px #FFAC00;
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1), 0 1px 2px -0.6px rgba(0, 0, 0, 0.05), inset 0 0 0 2px #FFAC00;
   caret-color: #FFAC00;
 }
 
@@ -4425,7 +4425,7 @@ button.emoji-section:last-child {
 .caja-desktop.caja-canvas-item,
 .nautilus-desktop.nautilus-canvas-item:not(:selected) {
   color: #FFFFFF;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  text-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1), 0 1px 2px -0.6px rgba(0, 0, 0, 0.05);
   border-radius: 3px;
 }
 
@@ -4787,7 +4787,7 @@ paned.titlebar.horizontal headerbar {
 .gedit-side-panel-paned.horizontal > box.vertical > stack > grid.horizontal > scrolledwindow {
   margin: 2px 6px 6px;
   border-radius: 6px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1), 0 1px 2px -0.6px rgba(0, 0, 0, 0.05);
 }
 
 .gedit-side-panel-paned.horizontal > box.vertical > stack > grid.horizontal > scrolledwindow row.activatable {
@@ -5144,7 +5144,7 @@ GdMainIconView.content-view {
 .documents-counter {
   margin: 8px;
   border-radius: 9999px;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.1), 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
   background-color: #FFAC00;
   color: #FFFFFF;
   font-weight: bold;
@@ -5603,11 +5603,11 @@ dialog.background.csd > box.vertical.dialog-vbox > notebook > stack {
 }
 
 window.background.csd.unified headerbar {
-  box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.12), 0 5px 5px -5px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 3px 3px -1px rgba(0, 0, 0, 0.05), 0 6px 6px -2px rgba(0, 0, 0, 0.05), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
 }
 
 window.background.csd.unified headerbar.selection-mode {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1), 0 1px 2px -0.6px rgba(0, 0, 0, 0.05);
 }
 
 window.background.csd.unified > decoration-overlay {
@@ -5664,7 +5664,7 @@ window.background.csd.unified.fullscreen > decoration-overlay {
 .nemo-window toolbar.primary-toolbar {
   transition: background-color 100ms cubic-bezier(0, 0, 0.2, 1), color 150ms cubic-bezier(0, 0, 0.2, 1);
   padding: 0 6px;
-  box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.12), 0 5px 5px -5px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 3px 3px -1px rgba(0, 0, 0, 0.05), 0 6px 6px -2px rgba(0, 0, 0, 0.05), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
   background-color: #47504e;
   color: #FFFFFF;
   border: none;
@@ -5706,7 +5706,7 @@ window.background.csd.unified.fullscreen > decoration-overlay {
  *********/
 overlay > revealer.left > scrolledwindow.frame, overlay > revealer.right > scrolledwindow.frame {
   border-style: none;
-  box-shadow: 0 14px 14px rgba(0, 0, 0, 0.25), 0 10px 5px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 8px 6px -5px rgba(0, 0, 0, 0.1), 0 16px 15px 2px rgba(0, 0, 0, 0.1), 0 6px 18px 5px rgba(0, 0, 0, 0.05);
 }
 
 overlay > revealer.left > scrolledwindow.frame {
@@ -6708,7 +6708,7 @@ na-tray-applet {
 /* mate-screensaver lock dialog */
 .lock-dialog {
   border-radius: 3px;
-  box-shadow: 0 14px 14px rgba(0, 0, 0, 0.25), 0 10px 5px rgba(0, 0, 0, 0.22), inset 0 1px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 6px -5px rgba(0, 0, 0, 0.1), 0 16px 15px 2px rgba(0, 0, 0, 0.1), 0 6px 18px 5px rgba(0, 0, 0, 0.05), inset 0 1px rgba(255, 255, 255, 0.4);
 }
 
 .lock-dialog frame > border {
@@ -6777,7 +6777,7 @@ box.vertical > stack > box.vertical .raven-background > viewport.frame list > ro
 .budgie-popover {
   border-color: rgba(245, 245, 245, 0.95);
   border-radius: 4px;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.1), 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
   background-color: rgba(245, 245, 245, 0.95);
 }
 
@@ -7706,7 +7706,7 @@ box.vertical > stack > box.vertical .raven-background > viewport.frame list > ro
   margin: 5px 9px;
   padding: 3px;
   border-radius: 6px;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15), inset 0 1px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.1), 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05), inset 0 1px rgba(255, 255, 255, 0.4);
   background-color: rgba(245, 245, 245, 0.95);
 }
 
@@ -7925,7 +7925,7 @@ menubar.-vala-panel-appmenu-private > menuitem > window.background.popup > menu 
 #restart_dialog {
   margin: 8px;
   border-radius: 6px;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.15), inset 0 1px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.1), 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05), inset 0 1px rgba(255, 255, 255, 0.4);
   background-color: #F5F5F5;
 }
 
