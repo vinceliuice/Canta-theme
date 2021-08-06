@@ -1171,12 +1171,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #calendarArea {
   padding: 0;
-  margin: 18px 0;
+  margin: 6px 0;
 }
 
 .calendar {
   padding: 0;
-  margin: 0 8px;
+  margin: 0 0;
   border: none;
   box-shadow: none;
   background: none;
@@ -1572,7 +1572,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .message-list-controls {
-  margin: 8px 16px 0;
+  margin: 6px 16px 0;
   padding: 4px;
   spacing: 16px;
 }
