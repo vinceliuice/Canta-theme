@@ -40,7 +40,7 @@ stage {
   color: rgba(255, 255, 255, 0.7);
   background-color: transparent;
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -49,7 +49,7 @@ stage {
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.12);
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -58,7 +58,7 @@ stage {
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.3);
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -67,7 +67,7 @@ stage {
   color: rgba(255, 255, 255, 0.3);
   background-color: transparent;
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -76,7 +76,7 @@ stage {
   color: #FFFFFF;
   text-shadow: none;
   icon-shadow: none;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
 }
 
 .modal-dialog-linked-button {
@@ -84,12 +84,13 @@ stage {
   padding: 0 16px;
   border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
   border-right-width: 0;
+  box-shadow: none !important;
   font-size: 9.75pt;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.7);
   background-color: transparent;
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -98,7 +99,7 @@ stage {
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.12);
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -107,7 +108,7 @@ stage {
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.3);
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -116,7 +117,7 @@ stage {
   color: rgba(255, 255, 255, 0.3);
   background-color: transparent;
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -125,7 +126,7 @@ stage {
   color: #FFFFFF;
   text-shadow: none;
   icon-shadow: none;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
 }
 
 .modal-dialog-linked-button:first-child {
@@ -381,7 +382,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   color: #FFFFFF;
   background-color: #4c5351;
   border: none;
-  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.1), 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.12);
 }
 
 .modal-dialog .modal-dialog-content-box {
@@ -655,11 +656,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .popup-menu .popup-menu-content {
   padding: 10px 0;
-  margin: 5px 8px 12px 12px;
+  margin: 5px 12px 18px 12px;
   background-color: transparent;
   background-color: rgba(52, 57, 56, 0.95);
   border-radius: 8px;
-  box-shadow: 0 7px 5px -4px rgba(0, 0, 0, 0.1), 0 12px 10px 2px rgba(0, 0, 0, 0.1), 0 5px 12px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
 .popup-menu .popup-menu-item {
@@ -989,7 +990,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   color: #FFFFFF;
   background-color: #4c5351;
   border: none;
-  box-shadow: 0 8px 6px -5px rgba(0, 0, 0, 0.1), 0 16px 15px 2px rgba(0, 0, 0, 0.1), 0 6px 18px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   padding: 12px;
 }
@@ -1585,6 +1586,10 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   text-shadow: none;
 }
 
+.popup-menu .message {
+  box-shadow: none !important;
+}
+
 .message:hover, .message:focus {
   background-color: rgba(255, 255, 255, 0.12);
 }
@@ -1961,7 +1966,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .grid-search-result:active .overview-icon,
 .grid-search-result:checked .overview-icon {
   background-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   transition-duration: 150ms;
 }
 
@@ -2118,7 +2123,7 @@ StWidget.focused .app-well-app-running-dot {
   color: rgba(255, 255, 255, 0.7);
   background-color: transparent;
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
   padding: 0;
@@ -2131,7 +2136,7 @@ StWidget.focused .app-well-app-running-dot {
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.12);
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -2140,7 +2145,7 @@ StWidget.focused .app-well-app-running-dot {
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.3);
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -2149,7 +2154,7 @@ StWidget.focused .app-well-app-running-dot {
   color: rgba(255, 255, 255, 0.3);
   background-color: transparent;
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -2218,7 +2223,7 @@ StWidget.focused .app-well-app-running-dot {
   color: #FFFFFF;
   background-color: #4c5351;
   border: none;
-  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.1), 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.12);
 }
 
 .notification-banner:hover {
@@ -2450,7 +2455,7 @@ StWidget.focused .app-well-app-running-dot {
   -arrow-base: 20px;
   -arrow-rise: 10px;
   -boxpointer-gap: 5px;
-  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.1), 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.12);
 }
 
 .emoji-page .keyboard-key {
@@ -2465,9 +2470,9 @@ StWidget.focused .app-well-app-running-dot {
 
 .candidate-popup-content {
   background-color: #343938;
-  border-radius: 6px;
-  box-shadow: 0 7px 5px -4px rgba(0, 0, 0, 0.1), 0 12px 10px 2px rgba(0, 0, 0, 0.1), 0 5px 12px 4px rgba(0, 0, 0, 0.05);
-  margin: 2px 8px;
+  border-radius: 7px;
+  box-shadow: 6px 6px 10px -6px rgba(0, 0, 0, 0.15);
+  margin: 4px 12px 18px 0;
   padding: 4px;
   spacing: 4px;
 }
@@ -2475,7 +2480,7 @@ StWidget.focused .app-well-app-running-dot {
 .candidate-box {
   padding: 0.3em 0.5em 0.3em 0.5em;
   margin-right: 2px;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 .candidate-box:hover {
@@ -2490,7 +2495,7 @@ StWidget.focused .app-well-app-running-dot {
 
 .candidate-box:selected {
   background-color: #00CE99;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
 }
 
 .candidate-box:last-child {
@@ -2578,7 +2583,7 @@ StWidget.focused .app-well-app-running-dot {
   color: rgba(255, 255, 255, 0.7);
   background-color: transparent;
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -2587,7 +2592,7 @@ StWidget.focused .app-well-app-running-dot {
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.12);
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -2596,7 +2601,7 @@ StWidget.focused .app-well-app-running-dot {
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.3);
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -2605,7 +2610,7 @@ StWidget.focused .app-well-app-running-dot {
   color: rgba(255, 255, 255, 0.3);
   background-color: transparent;
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -2614,7 +2619,7 @@ StWidget.focused .app-well-app-running-dot {
   color: rgba(255, 255, 255, 0.8);
   background-color: #FFAC00;
   border-color: transparent;
-  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1), 0 1px 2px -0.6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
   text-shadow: none;
   icon-shadow: none;
 }
@@ -2623,7 +2628,7 @@ StWidget.focused .app-well-app-running-dot {
   color: #FFFFFF;
   background-color: #FFAC00;
   border-color: transparent;
-  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.1), 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.12);
   text-shadow: none;
   icon-shadow: none;
 }
@@ -2632,7 +2637,7 @@ StWidget.focused .app-well-app-running-dot {
   color: #FFFFFF;
   background-color: #ffc54d;
   border-color: transparent;
-  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.1), 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.12);
   text-shadow: none;
   icon-shadow: none;
 }
@@ -2641,7 +2646,7 @@ StWidget.focused .app-well-app-running-dot {
   color: rgba(255, 255, 255, 0.5);
   background-color: rgba(255, 255, 255, 0.12);
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -2814,7 +2819,7 @@ StWidget.focused .app-well-app-running-dot {
   padding: 0;
   border: none;
   border-radius: 8px;
-  box-shadow: 0 8px 6px -5px rgba(0, 0, 0, 0.1), 0 16px 15px 2px rgba(0, 0, 0, 0.1), 0 6px 18px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
 
 #LookingGlassDialog > #Toolbar {
@@ -2897,7 +2902,7 @@ StWidget.focused .app-well-app-running-dot {
   color: rgba(255, 255, 255, 0.7);
   background-color: transparent;
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -2906,7 +2911,7 @@ StWidget.focused .app-well-app-running-dot {
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.12);
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -2915,7 +2920,7 @@ StWidget.focused .app-well-app-running-dot {
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.3);
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -2924,7 +2929,7 @@ StWidget.focused .app-well-app-running-dot {
   color: rgba(255, 255, 255, 0.3);
   background-color: transparent;
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -2933,7 +2938,7 @@ StWidget.focused .app-well-app-running-dot {
   color: #FFFFFF;
   text-shadow: none;
   icon-shadow: none;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
 }
 
 .lg-obj-inspector-button:hover {
@@ -2969,7 +2974,7 @@ StWidget.focused .app-well-app-running-dot {
   border: none;
   border-radius: 8px;
   padding: 6px;
-  box-shadow: 0 8px 6px -5px rgba(0, 0, 0, 0.1), 0 16px 15px 2px rgba(0, 0, 0, 0.1), 0 6px 18px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
 
 .icon-grid {
@@ -3062,7 +3067,7 @@ StWidget.focused .app-well-app-running-dot {
   padding: 4px 8px;
   color: #FFFFFF;
   background-color: rgba(0, 0, 0, 0.65);
-  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.1), 0 2px 3px -1px rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.12);
   text-align: center;
   -x-offset: 4px;
 }
@@ -3282,7 +3287,7 @@ StWidget.focused .app-well-app-running-dot {
   color: rgba(255, 255, 255, 0.7);
   background-color: transparent;
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -3291,7 +3296,7 @@ StWidget.focused .app-well-app-running-dot {
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.12);
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -3300,14 +3305,14 @@ StWidget.focused .app-well-app-running-dot {
   color: #FFFFFF;
   text-shadow: none;
   icon-shadow: none;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
 }
 
 .openweather-provider:active {
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.3);
   border-color: transparent;
-  box-shadow: 0 0 transparent;
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }

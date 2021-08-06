@@ -57,8 +57,10 @@ stage {
   padding: 0 16px;
   border-top: 1px solid $border_color !important;
   border-right-width: 0;
+  box-shadow: none !important;
   @include font(button);
   @include button(flat-normal);
+
   &:hover { @include button(flat-hover); }
   &:active { @include button(flat-active); }
   &:insensitive { @include button(flat-insensitive); }
@@ -264,7 +266,7 @@ StScrollBar {
   color: $fg_color;
   background-color: $lighter_bg_color;
   border: none;
-  box-shadow: $shadow_2;
+  box-shadow: $shell_shadow_2;
   .modal-dialog-content-box {
     padding: 24px;
   }
@@ -516,11 +518,11 @@ StScrollBar {
 
   .popup-menu-content {
     padding: 10px 0;
-    margin: 5px 8px 12px 12px;
+    margin: 5px 12px 18px 12px;
     background-color: transparent;
     background-color: rgba($menu_bg_color, 0.95);
     border-radius: $windows_radius;
-    box-shadow: $shadow_3;
+    box-shadow: $shell_shadow_3;
   }
 
   .popup-menu-item {
@@ -813,7 +815,7 @@ StScrollBar {
   color: $fg_color;
   background-color: $lighter_bg_color;
   border: none;
-  box-shadow: $shadow_4;
+  box-shadow: $shell_shadow_4;
   border-radius: $windows_radius;
   padding: 12px;
 }
@@ -1365,6 +1367,8 @@ StScrollBar {
   color: $secondary_fg_color;
   text-shadow: none;
 
+  .popup-menu & { box-shadow: none !important; }
+
   &:hover,&:focus { background-color: $divider_color; }
   &:active { background-color: $track_color; }
 }
@@ -1632,7 +1636,7 @@ StScrollBar {
   &:active .overview-icon,
   &:checked .overview-icon {
     background-color: $inverse_track_color;
-    box-shadow: $shadow_0;
+    box-shadow: none;
     transition-duration: $longer_duration;
   }
 }
@@ -1862,7 +1866,7 @@ StScrollBar {
   color: $fg_color;
   background-color: $lighter_bg_color;
   border: none;
-  box-shadow: $shadow_2;
+  box-shadow: $shell_shadow_2;
   &:hover { background-color: $lighter_bg_color; }
   &:focus { background-color: $lighter_bg_color; }
 
@@ -2018,7 +2022,7 @@ $keyboard_active_bg_color: if($variant == 'light', darken($keyboard_bg_color, 20
   -arrow-base: 20px;
   -arrow-rise: 10px;
   -boxpointer-gap: 5px;
-  box-shadow: $shadow_2;
+  box-shadow: $shell_shadow_2;
 }
 
 .emoji-page {
@@ -2042,9 +2046,9 @@ $keyboard_active_bg_color: if($variant == 'light', darken($keyboard_bg_color, 20
 
 .candidate-popup-content {
   background-color: $menu_bg_color;
-  border-radius: $buttons_radius;
-  box-shadow: $shadow_3;
-  margin: ($container_padding / 2) 8px;
+  border-radius: 3px + $container_padding;
+  box-shadow: 6px 6px 10px -6px rgba(0, 0, 0, 0.15);
+  margin: $container_padding 12px 18px 0;
   padding: $container_padding;
   spacing: $container_padding;
 }
@@ -2052,10 +2056,10 @@ $keyboard_active_bg_color: if($variant == 'light', darken($keyboard_bg_color, 20
 .candidate-box {
   padding: 0.3em 0.5em 0.3em 0.5em;
   margin-right: $container_padding / 2;
-  border-radius: $buttons_radius - $container_padding;
+  border-radius: 3px;
   &:hover { background-color: $divider_color; color: $fg_color; }
   &:active { background-color: $track_color; color: $fg_color; }
-  &:selected { background-color: $primary_color; color: $inverse_fg_color; }
+  &:selected { background-color: $primary_color; color: $inverse_fg_color !important; }
   &:last-child { margin-right: 0; }
 }
 
@@ -2225,7 +2229,7 @@ $keyboard_active_bg_color: if($variant == 'light', darken($keyboard_bg_color, 20
   padding: 0;
   border: none;
   border-radius: $windows_radius;
-  box-shadow: $shadow_4;
+  box-shadow: $shell_shadow_4;
   & > #Toolbar {
     padding: 0 8px;
     border: none;
@@ -2322,5 +2326,5 @@ $keyboard_active_bg_color: if($variant == 'light', darken($keyboard_bg_color, 20
   border: none;
   border-radius: $windows_radius;
   padding: 6px;
-  box-shadow: $shadow_4;
+  box-shadow: $shell_shadow_4;
 }

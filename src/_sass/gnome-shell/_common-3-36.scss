@@ -39,7 +39,7 @@
   padding: 7px 8px;
   color: $fg_color;
   background-color: $lighter_bg_color;
-  box-shadow: $shadow_2;
+  box-shadow: $shell_shadow_2;
   text-align: center;
   -x-offset: 8px;
 }
@@ -267,12 +267,12 @@
   width: 80px;
   height: 48px;
   -arrow-thickness: 12px;
-  -arrow-shadow: $shadow_1;
+  -arrow-shadow: $shell_shadow_1;
 }
 
 .screen-shield-clock {
   color: white;
-  text-shadow: $shadow_1;
+  text-shadow: $shell_shadow_1;
   font-weight: normal;
   text-align: center;
   padding-bottom: 1.5em;
@@ -280,7 +280,7 @@
 
 .screen-shield-clock-time {
   @include font(display-4);
-  text-shadow: $shadow_1;
+  text-shadow: $shell_shadow_1;
 }
 
 .screen-shield-clock-date { @include font(display-2); }
@@ -322,7 +322,7 @@
 
 .screen-shield-background { //just the shadow, really
   background: black;
-  box-shadow: $shadow_5;
+  box-shadow: $shell_shadow_5;
 }
 
 /* OVERVIEW */

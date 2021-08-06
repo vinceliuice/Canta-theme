@@ -59,8 +59,9 @@ $shadow_transition: box-shadow $shorter_duration $deceleration_curve;
 
 // box-shadow 1px blur doesn't draw correctly, see
 // https://bugzilla.gnome.org/show_bug.cgi?id=738484
-// $shadow_1: 0 1px 1.5px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.24);
-$shadow_0: 0 0 transparent;
+
+// For GTK
+$shadow_0: none;
 $shadow_1: 0 2px 2px -2px rgba(black, 0.1),
            0 1px 2px -1px rgba(black, 0.1),
            0 1px 2px -.6px rgba(black, 0.05);
@@ -79,3 +80,10 @@ $shadow_5: 0 11px 9px -7px rgba(black, 0.1),
 $shadow_6: 0 3px 3px -1px rgba(black, 0.05),
            0 6px 6px -2px rgba(black, 0.05),
            0 1px 3px 0 rgba(black, 0.05);
+
+// For Gnome-Shell
+$shell_shadow_1: 0 1px 2px rgba(0, 0, 0, 0.12);
+$shell_shadow_2: 0 3px 3px rgba(0, 0, 0, 0.12);
+$shell_shadow_3: 0 6px 10px rgba(0, 0, 0, 0.15);
+$shell_shadow_4: 0 6px 14px rgba(0, 0, 0, 0.20);
+$shell_shadow_5: 0 8px 16px rgba(0, 0, 0, 0.25);

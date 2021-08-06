@@ -105,7 +105,7 @@ $dash_border_radius: $dash_padding + $icon_radius;
   padding: $container_padding $container_padding * 2;
   color: $inverse_fg_color;
   background-color: rgba(black, 0.65);
-  box-shadow: $shadow_2;
+  box-shadow: $shell_shadow_2;
   text-align: center;
   -x-offset: $container_padding;
 }
