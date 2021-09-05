@@ -1793,7 +1793,7 @@ StScrollBar {
       padding: 0;
       width: 36px;
       height: 36px;
-      border-radius: 18px;
+      border-radius: $circular_radius;
 
       & > StIcon { icon-size: 16px }
     }

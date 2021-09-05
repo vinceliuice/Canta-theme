@@ -3913,7 +3913,7 @@ stackswitcher {
   background-color: $primary_color;
   border-radius: $circular_radius;
 
-  &.linked:not(.vertical) > button {
+  &.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action) {
     min-height: 24px - 6px;
     padding: ($medium_size - 24px) / 2 12px;
     margin-top: 0;

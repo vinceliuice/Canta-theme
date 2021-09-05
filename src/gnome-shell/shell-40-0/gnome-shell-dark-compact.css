@@ -2129,7 +2129,7 @@ StWidget.focused .app-well-app-running-dot {
   padding: 0;
   width: 36px;
   height: 36px;
-  border-radius: 18px;
+  border-radius: 9999px;
 }
 
 .app-folder-dialog .folder-name-container .edit-folder-button:hover, .app-folder-dialog .folder-name-container .edit-folder-button:focus {

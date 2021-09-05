@@ -4162,7 +4162,7 @@ cursor-handle.insertion-cursor:dir(ltr), cursor-handle.insertion-cursor:dir(rtl)
   caret-color: #FFAC00;
 }
 
-stackswitcher.linked:not(.vertical) > button {
+stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action) {
   background-color: #00CE99;
   color: #FFFFFF;
   box-shadow: none;
@@ -4171,44 +4171,44 @@ stackswitcher.linked:not(.vertical) > button {
   -gtk-outline-radius: 9997px;
 }
 
-stackswitcher.linked:not(.vertical) > button:hover {
+stackswitcher.linked:not(.vertical) > button:hover:not(.suggested-action):not(.destructive-action) {
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.12);
 }
 
-stackswitcher.linked:not(.vertical) > button:active {
+stackswitcher.linked:not(.vertical) > button:active:not(.suggested-action):not(.destructive-action) {
   color: #FFFFFF;
   box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.12);
   background-image: radial-gradient(circle farthest-corner at center, rgba(255, 255, 255, 0.12) 10%, transparent 0%);
 }
 
-stackswitcher.linked:not(.vertical) > button:checked {
+stackswitcher.linked:not(.vertical) > button:checked:not(.suggested-action):not(.destructive-action) {
   color: rgba(0, 0, 0, 0.54);
   background-color: #fcfcfc;
   box-shadow: none;
 }
 
-stackswitcher.linked:not(.vertical) > button:disabled {
+stackswitcher.linked:not(.vertical) > button:disabled:not(.suggested-action):not(.destructive-action) {
   color: rgba(255, 255, 255, 0.5);
 }
 
-stackswitcher.linked:not(.vertical) > button:backdrop {
+stackswitcher.linked:not(.vertical) > button:backdrop:not(.suggested-action):not(.destructive-action) {
   color: rgba(255, 255, 255, 0.7);
 }
 
-stackswitcher.linked:not(.vertical) > button:backdrop:hover {
+stackswitcher.linked:not(.vertical) > button:backdrop:hover:not(.suggested-action):not(.destructive-action) {
   color: #FFFFFF;
 }
 
-stackswitcher.linked:not(.vertical) > button:backdrop:checked {
+stackswitcher.linked:not(.vertical) > button:backdrop:checked:not(.suggested-action):not(.destructive-action) {
   color: rgba(0, 0, 0, 0.38);
 }
 
-stackswitcher.linked:not(.vertical) > button:backdrop:checked:disabled {
+stackswitcher.linked:not(.vertical) > button:backdrop:checked:disabled:not(.suggested-action):not(.destructive-action) {
   color: rgba(0, 0, 0, 0.26);
 }
 
-stackswitcher.linked:not(.vertical) > button:backdrop:disabled {
+stackswitcher.linked:not(.vertical) > button:backdrop:disabled:not(.suggested-action):not(.destructive-action) {
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -4218,7 +4218,7 @@ stackswitcher {
   border-radius: 9999px;
 }
 
-stackswitcher.linked:not(.vertical) > button {
+stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action) {
   min-height: 18px;
   padding: 4px 12px;
   margin-top: 0;
