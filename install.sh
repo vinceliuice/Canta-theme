@@ -81,9 +81,11 @@ install() {
 
   echo "Installing '${THEME_DIR}'..."
 
+  theme_tweaks
+
   mkdir -p                                                                           ${THEME_DIR}
-  cp -ur ${SRC_DIR}/COPYING                                                          ${THEME_DIR}
-  cp -ur ${SRC_DIR}/AUTHORS                                                          ${THEME_DIR}
+  cp -rf ${SRC_DIR}/COPYING                                                          ${THEME_DIR}
+  cp -rf ${SRC_DIR}/AUTHORS                                                          ${THEME_DIR}
 
   echo "[Desktop Entry]" >> ${THEME_DIR}/index.theme
   echo "Type=X-GNOME-Metatheme" >> ${THEME_DIR}/index.theme
@@ -99,12 +101,12 @@ install() {
   echo "ButtonLayout=menu:minimize,maximize,close" >> ${THEME_DIR}/index.theme
 
   mkdir -p                                                                           ${THEME_DIR}/gnome-shell
-  cp -ur ${SRC_DIR}/src/gnome-shell/{*.svg,extensions,noise-texture.png,pad-osd.css} ${THEME_DIR}/gnome-shell
-  cp -ur ${SRC_DIR}/src/gnome-shell/gnome-shell-theme.gresource.xml                  ${THEME_DIR}/gnome-shell
-  cp -ur ${SRC_DIR}/src/gnome-shell/assets${ELSE_DARK}                               ${THEME_DIR}/gnome-shell/assets
-  cp -ur ${SRC_DIR}/src/gnome-shell/common-assets/*.svg                              ${THEME_DIR}/gnome-shell/assets
+  cp -rf ${SRC_DIR}/src/gnome-shell/{*.svg,extensions,noise-texture.png,pad-osd.css} ${THEME_DIR}/gnome-shell
+  cp -rf ${SRC_DIR}/src/gnome-shell/gnome-shell-theme.gresource.xml                  ${THEME_DIR}/gnome-shell
+  cp -rf ${SRC_DIR}/src/gnome-shell/assets${ELSE_DARK}                               ${THEME_DIR}/gnome-shell/assets
+  cp -rf ${SRC_DIR}/src/gnome-shell/common-assets/*.svg                              ${THEME_DIR}/gnome-shell/assets
 
-  if [[ "${theme}" != '' ]]; then
+  if [[ "$tweaks" == 'true' ]]; then
     if [[ "${GS_VERSION:-}" == 'new' ]]; then
       sassc $SASSC_OPT ${SRC_DIR}/src/gnome-shell/shell-40-0/gnome-shell${color}${size}.scss ${THEME_DIR}/gnome-shell/gnome-shell.css
     else
@@ -112,76 +114,76 @@ install() {
     fi
   else
     if [[ "${GS_VERSION:-}" == 'new' ]]; then
-      cp -ur ${SRC_DIR}/src/gnome-shell/shell-40-0/gnome-shell${color}${size}.css    ${THEME_DIR}/gnome-shell/gnome-shell.css
+      cp -rf ${SRC_DIR}/src/gnome-shell/shell-40-0/gnome-shell${color}${size}.css    ${THEME_DIR}/gnome-shell/gnome-shell.css
     else
-      cp -ur ${SRC_DIR}/src/gnome-shell/shell-3-36/gnome-shell${color}${size}.css    ${THEME_DIR}/gnome-shell/gnome-shell.css
+      cp -rf ${SRC_DIR}/src/gnome-shell/shell-3-36/gnome-shell${color}${size}.css    ${THEME_DIR}/gnome-shell/gnome-shell.css
     fi
   fi
 
   mkdir -p                                                                           ${THEME_DIR}/gtk-2.0
-  cp -ur ${SRC_DIR}/src/gtk-2.0/{apps.rc,hacks.rc,panel.rc}                          ${THEME_DIR}/gtk-2.0
-  cp -ur ${SRC_DIR}/src/gtk-2.0/main.rc${theme}                                      ${THEME_DIR}/gtk-2.0/main.rc
-  cp -ur ${SRC_DIR}/src/gtk-2.0/assets${ELSE_DARK}                                   ${THEME_DIR}/gtk-2.0/assets
+  cp -rf ${SRC_DIR}/src/gtk-2.0/{apps.rc,hacks.rc,panel.rc}                          ${THEME_DIR}/gtk-2.0
+  cp -rf ${SRC_DIR}/src/gtk-2.0/main.rc${theme}                                      ${THEME_DIR}/gtk-2.0/main.rc
+  cp -rf ${SRC_DIR}/src/gtk-2.0/assets${ELSE_DARK}                                   ${THEME_DIR}/gtk-2.0/assets
   [[ ${theme} != '' && ${color} == '-dark' ]] && \
-  cp -ur ${SRC_DIR}/src/gtk-2.0/assets-theme-dark/*.png                              ${THEME_DIR}/gtk-2.0/assets
-  cp -ur ${SRC_DIR}/src/gtk-2.0/gtkrc${theme}${color}                                ${THEME_DIR}/gtk-2.0/gtkrc
+  cp -rf ${SRC_DIR}/src/gtk-2.0/assets-theme-dark/*.png                              ${THEME_DIR}/gtk-2.0/assets
+  cp -rf ${SRC_DIR}/src/gtk-2.0/gtkrc${theme}${color}                                ${THEME_DIR}/gtk-2.0/gtkrc
 
   mkdir -p                                                                           ${THEME_DIR}/gtk-3.0
-  cp -ur ${SRC_DIR}/src/gtk/assets                                                   ${THEME_DIR}/gtk-3.0
-  cp -ur ${SRC_DIR}/src/gtk/common-assets                                            ${THEME_DIR}/gtk-3.0
+  cp -rf ${SRC_DIR}/src/gtk/assets                                                   ${THEME_DIR}/gtk-3.0
+  cp -rf ${SRC_DIR}/src/gtk/common-assets                                            ${THEME_DIR}/gtk-3.0
 
-  if [[ "${theme}" != '' || "${ordinary:-}" == 'true' ]]; then
+  if [[ "$tweaks" == 'true' ]]; then
     sassc $SASSC_OPT ${SRC_DIR}/src/gtk/3.0/gtk${color}${size}.scss                  ${THEME_DIR}/gtk-3.0/gtk.css
     [[ ${color} != '-dark' ]] && \
     sassc $SASSC_OPT ${SRC_DIR}/src/gtk/3.0/gtk-dark${size}.scss                     ${THEME_DIR}/gtk-3.0/gtk-dark.css
   else
-    cp -ur ${SRC_DIR}/src/gtk/3.0/gtk${color}${size}.css                             ${THEME_DIR}/gtk-3.0/gtk.css
+    cp -rf ${SRC_DIR}/src/gtk/3.0/gtk${color}${size}.css                             ${THEME_DIR}/gtk-3.0/gtk.css
     [[ ${color} != '-dark' ]] && \
-    cp -ur ${SRC_DIR}/src/gtk/3.0/gtk-dark${size}.css                                ${THEME_DIR}/gtk-3.0/gtk-dark.css
+    cp -rf ${SRC_DIR}/src/gtk/3.0/gtk-dark${size}.css                                ${THEME_DIR}/gtk-3.0/gtk-dark.css
   fi
 
   mkdir -p                                                                           ${THEME_DIR}/gtk-4.0
-  cp -ur ${SRC_DIR}/src/gtk/assets                                                   ${THEME_DIR}/gtk-4.0
-  cp -ur ${SRC_DIR}/src/gtk/common-assets                                            ${THEME_DIR}/gtk-4.0
+  cp -rf ${SRC_DIR}/src/gtk/assets                                                   ${THEME_DIR}/gtk-4.0
+  cp -rf ${SRC_DIR}/src/gtk/common-assets                                            ${THEME_DIR}/gtk-4.0
 
-  if [[ "${theme}" != '' ]]; then
+  if [[ "$tweaks" == 'true' ]]; then
     sassc $SASSC_OPT ${SRC_DIR}/src/gtk/4.0/gtk${color}${size}.scss                  ${THEME_DIR}/gtk-4.0/gtk.css
     [[ ${color} != '-dark' ]] && \
     sassc $SASSC_OPT ${SRC_DIR}/src/gtk/4.0/gtk-dark${size}.scss                     ${THEME_DIR}/gtk-4.0/gtk-dark.css
   else
-    cp -ur ${SRC_DIR}/src/gtk/4.0/gtk${color}${size}.css                             ${THEME_DIR}/gtk-4.0/gtk.css
+    cp -rf ${SRC_DIR}/src/gtk/4.0/gtk${color}${size}.css                             ${THEME_DIR}/gtk-4.0/gtk.css
     [[ ${color} != '-dark' ]] && \
-    cp -ur ${SRC_DIR}/src/gtk/4.0/gtk-dark${size}.css                                ${THEME_DIR}/gtk-4.0/gtk-dark.css
+    cp -rf ${SRC_DIR}/src/gtk/4.0/gtk-dark${size}.css                                ${THEME_DIR}/gtk-4.0/gtk-dark.css
   fi
 
   mkdir -p                                                                           ${THEME_DIR}/metacity-1
-  cp -ur ${SRC_DIR}/src/metacity-1/assets/*.png                                      ${THEME_DIR}/metacity-1
-  cp -ur ${SRC_DIR}/src/metacity-1/metacity-theme-1${color}.xml                      ${THEME_DIR}/metacity-1/metacity-theme-1.xml
+  cp -rf ${SRC_DIR}/src/metacity-1/assets/*.png                                      ${THEME_DIR}/metacity-1
+  cp -rf ${SRC_DIR}/src/metacity-1/metacity-theme-1${color}.xml                      ${THEME_DIR}/metacity-1/metacity-theme-1.xml
   cd ${THEME_DIR}/metacity-1
   ln -s metacity-theme-1.xml metacity-theme-2.xml
   ln -s metacity-theme-1.xml metacity-theme-3.xml
 
   mkdir -p                                                                           ${THEME_DIR}/unity
-  cp -ur ${SRC_DIR}/src/unity/{*.svg,*.png,dash-widgets.json}                        ${THEME_DIR}/unity
-  cp -ur ${SRC_DIR}/src/unity/assets${ELSE_LIGHT}                                    ${THEME_DIR}/unity/assets
+  cp -rf ${SRC_DIR}/src/unity/{*.svg,*.png,dash-widgets.json}                        ${THEME_DIR}/unity
+  cp -rf ${SRC_DIR}/src/unity/assets${ELSE_LIGHT}                                    ${THEME_DIR}/unity/assets
 
   mkdir -p                                                                           ${THEME_DIR}/xfwm4
-  cp -ur ${SRC_DIR}/src/xfwm4/{*.svg,themerc}                                        ${THEME_DIR}/xfwm4
-  cp -ur ${SRC_DIR}/src/xfwm4/assets${ELSE_LIGHT}                                    ${THEME_DIR}/xfwm4/assets
+  cp -rf ${SRC_DIR}/src/xfwm4/{*.svg,themerc}                                        ${THEME_DIR}/xfwm4
+  cp -rf ${SRC_DIR}/src/xfwm4/assets${ELSE_LIGHT}                                    ${THEME_DIR}/xfwm4/assets
 
   if [[ "${theme}" == '' ]]; then
     mkdir -p                                                                         ${THEME_DIR}/cinnamon
-    cp -ur ${SRC_DIR}/src/cinnamon/cinnamon${ELSE_DARK}.css                          ${THEME_DIR}/cinnamon/cinnamon.css
-    cp -ur ${SRC_DIR}/src/cinnamon/assets/common-assets                              ${THEME_DIR}/cinnamon/assets
-    cp -ur ${SRC_DIR}/src/cinnamon/assets/assets${ELSE_DARK}/checkbox/*.svg          ${THEME_DIR}/cinnamon/assets/checkbox
-    cp -ur ${SRC_DIR}/src/cinnamon/assets/assets${ELSE_DARK}/menu/*.svg              ${THEME_DIR}/cinnamon/assets/menu
-    cp -ur ${SRC_DIR}/src/cinnamon/assets/assets${ELSE_DARK}/misc/*.svg              ${THEME_DIR}/cinnamon/assets/misc
-    cp -ur ${SRC_DIR}/src/cinnamon/assets/assets${ELSE_DARK}/switch/*.svg            ${THEME_DIR}/cinnamon/assets/switch
-    cp -ur ${SRC_DIR}/src/cinnamon/thumbnail${ELSE_DARK}.png                         ${THEME_DIR}/cinnamon/thumbnail.png
+    cp -rf ${SRC_DIR}/src/cinnamon/cinnamon${ELSE_DARK}.css                          ${THEME_DIR}/cinnamon/cinnamon.css
+    cp -rf ${SRC_DIR}/src/cinnamon/assets/common-assets                              ${THEME_DIR}/cinnamon/assets
+    cp -rf ${SRC_DIR}/src/cinnamon/assets/assets${ELSE_DARK}/checkbox/*.svg          ${THEME_DIR}/cinnamon/assets/checkbox
+    cp -rf ${SRC_DIR}/src/cinnamon/assets/assets${ELSE_DARK}/menu/*.svg              ${THEME_DIR}/cinnamon/assets/menu
+    cp -rf ${SRC_DIR}/src/cinnamon/assets/assets${ELSE_DARK}/misc/*.svg              ${THEME_DIR}/cinnamon/assets/misc
+    cp -rf ${SRC_DIR}/src/cinnamon/assets/assets${ELSE_DARK}/switch/*.svg            ${THEME_DIR}/cinnamon/assets/switch
+    cp -rf ${SRC_DIR}/src/cinnamon/thumbnail${ELSE_DARK}.png                         ${THEME_DIR}/cinnamon/thumbnail.png
   fi
 
   mkdir -p                                                                           ${THEME_DIR}/plank
-  cp -ur ${SRC_DIR}/src/plank/dock${ELSE_LIGHT}.theme                                ${THEME_DIR}/plank/dock.theme
+  cp -rf ${SRC_DIR}/src/plank/dock${ELSE_LIGHT}.theme                                ${THEME_DIR}/plank/dock.theme
 }
 
 install_gdm() {
@@ -213,7 +215,7 @@ install_icon() {
   echo -e "\nInstalling Canta icon theme..."
 
   # Copying files
-  cp -ur ${SRC_DIR}/icons/Canta ${ICON_DEST_DIR}
+  cp -rf ${SRC_DIR}/icons/Canta ${ICON_DEST_DIR}
 
   # update icon caches
   gtk-update-icon-cache ${ICON_DEST_DIR}/Canta
@@ -226,10 +228,6 @@ install_icon() {
 # check command avalibility
 function has_command() {
   command -v $1 > /dev/null
-}
-
-parse_sass() {
-  cd ${SRC_DIR} && ./parse-sass.sh
 }
 
 install_package() {
@@ -249,18 +247,12 @@ install_package() {
   fi
 }
 
-install_theme() {
-  for theme in "${themes[@]:-${THEME_VARIANTS[0]}}"; do
-    for color in "${colors[@]:-${COLOR_VARIANTS[@]}}"; do
-      for size in "${sizes[@]:-${SIZE_VARIANTS[@]}}"; do
-         install "${dest:-${DEST_DIR}}" "${name:-${THEME_NAME}}" "${theme}" "${color}" "${size}"
-      done
-    done
-  done
-}
+themes=()
+colors=()
+sizes=()
 
-while [[ $# -gt 0 ]]; do
-  case "${1}" in
+while [[ "$#" -gt 0 ]]; do
+  case "${1:-}" in
     -d|--dest)
       dest="${2}"
       if [[ ! -d "${dest}" ]]; then
@@ -286,6 +278,7 @@ while [[ $# -gt 0 ]]; do
       shift 1
       ;;
     -t|--theme)
+      accent='true'
       shift
       for theme in "${@}"; do
         case "${theme}" in
@@ -305,7 +298,7 @@ while [[ $# -gt 0 ]]; do
             break
             ;;
           *)
-            echo "ERROR: Unrecognized color variant '$1'."
+            echo "ERROR: Unrecognized theme variant '$1'."
             echo "Try '$0 --help' for more information."
             exit 1
             ;;
@@ -374,16 +367,65 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-cp -rf ${SRC_DIR}/src/_sass/_tweaks.scss ${SRC_DIR}/src/_sass/_tweaks-temp.scss
-
-if [[ "${theme}" != '' ]]; then
-  sed -i "/\$color:/s/default/${theme}/" ${SRC_DIR}/src/_sass/_tweaks-temp.scss
+if [[ "${#themes[@]}" -eq 0 ]] ; then
+  themes=("${THEME_VARIANTS[0]}")
 fi
 
-if [[ "${ordinary:-}" == 'true' ]]; then
-  echo "Install with no nautilus bakground image..."
-  sed -i "/\$theme_image:/s/true/false/" ${SRC_DIR}/src/_sass/_tweaks-temp.scss
+if [[ "${#colors[@]}" -eq 0 ]] ; then
+  colors=("${COLOR_VARIANTS[@]}")
 fi
+
+if [[ "${#sizes[@]}" -eq 0 ]] ; then
+  sizes=("${SIZE_VARIANTS[@]}")
+fi
+
+install_theme() {
+  for theme in "${themes[@]}"; do
+    for color in "${colors[@]}"; do
+      for size in "${sizes[@]}"; do
+         install "${dest:-${DEST_DIR}}" "${name:-${THEME_NAME}}" "${theme}" "${color}" "${size}"
+      done
+    done
+  done
+}
+
+tweaks_temp() {
+  cp -rf ${SRC_DIR}/src/_sass/_tweaks.scss ${SRC_DIR}/src/_sass/_tweaks-temp.scss
+}
+
+theme_colors() {
+  if [[ "$theme" != '' ]]; then
+    case "$theme" in
+      -blue)
+        theme_color='blue'
+        ;;
+      -indigo)
+        theme_color='indigo'
+        ;;
+    esac
+    sed -i "/\$color:/s/default/${theme_color}/" ${SRC_DIR}/src/_sass/_tweaks-temp.scss
+  fi
+}
+
+bakground_image() {
+    echo "Install with no nautilus bakground image..."
+    sed -i "/\$theme_image:/s/true/false/" ${SRC_DIR}/src/_sass/_tweaks-temp.scss
+}
+
+theme_tweaks() {
+  if [[ "$accent" == 'true' || "${ordinary}" == 'true' ]]; then
+    tweaks='true'
+    install_package; tweaks_temp
+  fi
+
+  if [[ "$accent" == 'true' ]] ; then
+    theme_colors
+  fi
+
+  if [[ "${ordinary}" == 'true' ]] ; then
+    bakground_image
+  fi
+}
 
 install_theme
 

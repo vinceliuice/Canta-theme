@@ -17,6 +17,8 @@ fi
 
 SASSC_OPT="-M -t expanded"
 
+cp -rf src/_sass/_tweaks.scss src/_sass/_tweaks-temp.scss
+
 for color in "${_COLOR_VARIANTS[@]}"; do
     for size in "${_SIZE_VARIANTS[@]}"; do
         echo "==> Generating the 3.0 gtk${color}${size}.css..."
