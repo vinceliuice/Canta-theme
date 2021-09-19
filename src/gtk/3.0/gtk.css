@@ -1538,10 +1538,12 @@ headerbar.windowhandle viewswitcher button:not(.titlebutton):not(.suggested-acti
   margin-bottom: 0;
   padding: 0;
   min-width: 120px;
+  color: rgba(255, 255, 255, 0.7);
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #00CE99 0%, transparent 0%) 0 0 0/0 0 0px;
 }
 
 headerbar.windowhandle viewswitcher button:not(.titlebutton):not(.suggested-action):not(.destructive-action):checked {
+  color: #FFFFFF;
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #00CE99 100%, transparent 0%) 0 0 2/0 0 2px;
 }
 
@@ -1549,16 +1551,24 @@ headerbar.windowhandle viewswitcher button:not(.titlebutton):not(.suggested-acti
   background-color: transparent;
 }
 
-headerbar.windowhandle viewswitcher button:not(.titlebutton):not(.suggested-action):not(.destructive-action) image {
-  margin-left: 12px;
-}
-
-headerbar.windowhandle viewswitcher button:not(.titlebutton):not(.suggested-action):not(.destructive-action) label {
-  margin-right: 12px;
+headerbar.windowhandle viewswitcher button:not(.titlebutton):not(.suggested-action):not(.destructive-action):hover {
+  color: #FFFFFF;
 }
 
 headerbar.windowhandle viewswitcher button:not(.titlebutton):not(.suggested-action):not(.destructive-action) > stack {
   background-color: transparent;
+}
+
+headerbar.windowhandle viewswitcher button:not(.titlebutton):not(.suggested-action):not(.destructive-action) > stack > box {
+  padding: 0 12px;
+}
+
+headerbar.windowhandle viewswitcher button:not(.titlebutton):not(.suggested-action):not(.destructive-action) > stack > box.narrow {
+  font-size: 10px;
+}
+
+headerbar.windowhandle viewswitcher button:not(.titlebutton):not(.suggested-action):not(.destructive-action) > stack > box.narrow image {
+  margin-top: 3px;
 }
 
 headerbar.windowhandle > button.popup label, headerbar.windowhandle > button.popup image {
