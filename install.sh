@@ -221,8 +221,8 @@ install_icon() {
   gtk-update-icon-cache ${ICON_DEST_DIR}/Canta
 
   echo -e "\nInstallation complete!"
-  show_tips "\nIf you want a better experience you should install numix-circle first!"
-  show_tips "Because Canta icon theme use numix-icon-theme-circle icon theme for Inherits!\n"
+  show_tips "\nIf you want a better experience you should install Tela-circle first!"
+  show_tips "Because Canta icon theme use Tela-circle icon theme for Inherits!\n"
 }
 
 # check command avalibility
