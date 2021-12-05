@@ -1,0 +1,31 @@
+<svg width="1920" height="1200" version="1.1" viewBox="0 0 508 317.5" xmlns="http://www.w3.org/2000/svg">
+ <g id="canta-light" transform="matrix(.5625 0 0 .5625 173.08 82.786)" stroke-width="0">
+  <path transform="scale(.26458)" d="m446.5 293.16-666.91 666.91c-168.44 168.44-187.29 428-56.811 616.99h2009.5l-1265.7-1265.7c-6.4643-6.4643-13.378-12.158-20.102-18.182z" fill="#f8dea1" style="paint-order:stroke fill markers"/>
+  <path transform="matrix(.47037 0 0 .47037 -51.927 556.28)" d="m-543.76-1495.5v1200h498.22c-73.394-106.31-62.792-252.31 31.955-347.06l852.94-852.94z" fill="#0dbfa6" style="paint-order:stroke fill markers"/>
+  <path transform="scale(.26458)" d="m-1162.9-556.27v2133.3h1524.5l676.76-676.76c189.83-189.83 189.83-495.48 0-685.31l-771.27-771.27z" fill="#00ff00" opacity=".05" style="paint-order:stroke fill markers"/>
+  <path transform="scale(.26458)" d="m1295.9-556.27-1516.3 1516.3c-168.44 168.44-187.29 428-56.811 616.99h2527.6v-2133.3z" fill="#f8dea1" style="paint-order:stroke fill markers"/>
+  <path transform="scale(.26458)" d="m123.95 168.97c-123.87 0-247.74 47.458-342.65 142.37l-944.24 944.24v321.48h885.73c-130.48-188.99-111.63-448.55 56.811-616.99l666.91-666.91c-92.001-82.427-207.12-124.19-322.55-124.19z" fill="#0bb380" style="mix-blend-mode:normal;paint-order:stroke fill markers"/>
+  <path transform="scale(.26458)" d="m648.9-556.27-182.3 182.3c-183.37 183.37-189.06 474.48-18.182 665.21l847.51-847.51z" fill="#000000" opacity=".25" style="mix-blend-mode:color-burn;paint-order:stroke fill markers"/>
+  <path transform="scale(.26458)" d="m2250.4 592.72-984.34 984.34h984.34z" fill="#ff9955" opacity=".25" style="paint-order:stroke fill markers"/>
+  <path transform="scale(.26458)" d="m-1162.9-556.27v1221.3l1221.3-1221.3z" fill="#0ca497" style="paint-order:stroke fill markers"/>
+  <path transform="scale(.26458)" d="m-1162.9-54.117v1631.2h287.8l329.03-329.03c189.83-189.83 189.83-495.48 0-685.31z" fill="#007a6d" opacity=".65" style="paint-order:stroke fill markers"/>
+  <path transform="scale(.26458)" d="m781.48-41.824-1001.9 1001.9c-168.44 168.44-187.29 428-56.811 616.99h638.77l676.76-676.76c189.83-189.83 189.83-495.48 0-685.31z" fill="#ff9955" opacity=".5" style="paint-order:stroke fill markers"/>
+  <path transform="scale(.26458)" d="m1295.9-556.27-847.51 847.51c6.0241 6.7238 11.717 13.637 18.182 20.102l1265.7 1265.7h518.06v-2133.3z" fill="#ffcc00" opacity=".25" style="paint-order:stroke fill markers"/>
+ </g>
+ <g id="canta-dark" transform="matrix(.5625 0 0 .5625 29.209 -312.91)" stroke-width="0">
+  <g transform="translate(255.77,1380.8)">
+   <path transform="scale(.26458)" d="m446.5 293.16-666.91 666.91c-168.44 168.44-187.29 428-56.811 616.99h2009.5l-1265.7-1265.7c-6.4643-6.4643-13.378-12.158-20.102-18.182z" fill="#f8dea1" style="paint-order:stroke fill markers"/>
+   <path transform="matrix(.47037 0 0 .47037 -51.927 556.28)" d="m-543.76-1495.5v1200h498.22c-73.394-106.31-62.792-252.31 31.955-347.06l852.94-852.94z" fill="#0dbfa6" style="paint-order:stroke fill markers"/>
+   <path transform="scale(.26458)" d="m-1162.9-556.27v2133.3h1524.5l676.76-676.76c189.83-189.83 189.83-495.48 0-685.31l-771.27-771.27z" fill="#00ff00" opacity=".05" style="paint-order:stroke fill markers"/>
+   <path transform="scale(.26458)" d="m1295.9-556.27-1516.3 1516.3c-168.44 168.44-187.29 428-56.811 616.99h2527.6v-2133.3z" fill="#f8dea1" style="paint-order:stroke fill markers"/>
+   <path transform="scale(.26458)" d="m123.95 168.97c-123.87 0-247.74 47.458-342.65 142.37l-944.24 944.24v321.48h885.73c-130.48-188.99-111.63-448.55 56.811-616.99l666.91-666.91c-92.001-82.427-207.12-124.19-322.55-124.19z" fill="#0bb380" style="mix-blend-mode:normal;paint-order:stroke fill markers"/>
+   <path transform="scale(.26458)" d="m648.9-556.27-182.3 182.3c-183.37 183.37-189.06 474.48-18.182 665.21l847.51-847.51z" fill="#000000" opacity=".25" style="mix-blend-mode:color-burn;paint-order:stroke fill markers"/>
+   <path transform="scale(.26458)" d="m2250.4 592.72-984.34 984.34h984.34z" fill="#ff9955" opacity=".25" style="paint-order:stroke fill markers"/>
+   <path transform="scale(.26458)" d="m-1162.9-556.27v1221.3l1221.3-1221.3z" fill="#0ca497" style="paint-order:stroke fill markers"/>
+   <path transform="scale(.26458)" d="m-1162.9-54.117v1631.2h287.8l329.03-329.03c189.83-189.83 189.83-495.48 0-685.31z" fill="#007a6d" opacity=".65" style="paint-order:stroke fill markers"/>
+   <path transform="scale(.26458)" d="m781.48-41.824-1001.9 1001.9c-168.44 168.44-187.29 428-56.811 616.99h638.77l676.76-676.76c189.83-189.83 189.83-495.48 0-685.31z" fill="#ff9955" opacity=".5" style="paint-order:stroke fill markers"/>
+   <path transform="scale(.26458)" d="m1295.9-556.27-847.51 847.51c6.0241 6.7238 11.717 13.637 18.182 20.102l1265.7 1265.7h518.06v-2133.3z" fill="#ffcc00" opacity=".25" style="paint-order:stroke fill markers"/>
+  </g>
+  <rect x="-51.927" y="1233.6" width="903.11" height="564.44" fill="#000000" opacity=".65" style="mix-blend-mode:soft-light;paint-order:stroke fill markers"/>
+ </g>
+</svg>
