@@ -53,11 +53,11 @@ setup() {
 
 Canta() {
 
-# Set Canta Icon Theme
+  # Set Canta Icon Theme
+
   echo "Setting Canta..."
   gsettings set org.gnome.desktop.interface icon-theme Canta
   echo "Done!"
-
 }
 
 install() {
@@ -73,7 +73,7 @@ install() {
     echo -e "\nIf you want to make them available to all users, run this script as root."
   fi
 
-  continue
+  # continue
 
   # INSTALL
 
@@ -95,8 +95,8 @@ install() {
   gtk-update-icon-cache $DEST_DIR/Canta
 
   echo -e "\nInstallation complete!"
-  show_tips "\nIf you want a better experience you should install numix-circle first!"
-  show_tips "Because Canta icon theme use numix-icon-theme-circle icon theme for Inherits!"
+  show_tips "\nIf you want a better experience you should install Tela-circle first!"
+  show_tips "Because Canta icon theme use Tela-circle icon theme for Inherits!"
 
   setup
 

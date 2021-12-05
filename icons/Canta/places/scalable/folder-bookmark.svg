@@ -1,5 +1,6 @@
 <svg width="64" height="64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
+  <style id="current-color-scheme" type="text/css"/>
   <linearGradient id="linearGradient5692" x1="30" x2="30" y1="25" y2="10" gradientTransform="matrix(.99998 0 0 .99998 -.0025538 .0075498)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#d27f04" offset="0"/>
    <stop stop-color="#ff9c0a" offset="1"/>
@@ -11,4 +12,5 @@
  <path d="m55.994 18h-48c-3.3006 0-6.0006 2.7048-6.0005 6.0106l4.949e-4 25.979c5.94e-5 3.3057 2.6999 6.0106 6.0005 6.0106h48c3.2996 0 5.9996-2.7048 5.9995-6.0106l-4.95e-4 -25.979c-5.9e-5 -3.3057-2.6999-6.0106-5.9995-6.0106z" fill="#ffbe28" stroke-width=".99058" style="isolation:isolate"/>
  <path d="m7.9973 18.007c-3.3005 0-6 2.7041-5.9999 6.0097v0.99998c-5.94e-5 -3.3056 2.6994-6.0097 5.9999-6.0097h47.999c3.2995 0 5.9998 2.7041 5.9999 6.0097v-0.99998c-5.9e-5 -3.3056-2.7004-6.0097-5.9999-6.0097z" fill="#ffffff" opacity=".15" stroke-width=".99058" style="isolation:isolate"/>
  <image x="2" y="18" width="60" height="38" image-rendering="optimizeQuality" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAmCAYAAACYsfiPAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAA GXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAYpJREFUaIHtmtFqwzAMAE9ptpXB YPv/j9ygMLqmrfYQa1UcZ2n3Us34QCS0ttEhNwlRBYeqPgIvwBvwms6fgSegBzpAiIUCZ+AIfAGf wA74AN6BnYgcbHD3M2uU3QIPxJP6C8Losk1uQBJW1Q11SC4hyZFOVWsWnaCq0q0Pq4smXDtNuHaa cO004dppwrXThGunCddOE66dJlw7TdihWUTnqnxvqXBE+Ztz6lcWKUUk1nKd5ZsL+4HnQsD4wj7K u+zfci1K94XJCpxSHIGBy9a33lJE4SHFkUv+M+m+MNGLHoBNGnNm2ky7t7S6owkfUnhxX+1ZhU14 YOzEmewpLdQxvdDdS9pvU9vCluOeMfeBqTBQrrBVd5++s4U2zNulEYRLhdpzqfJPhUVEexHR1FDz E62falulZxSO9Ps1/HXHimXbe7HC+UTc+UC5upHwxTLx/MIFOAHXNjWxLouI1TWWbk/2GSKikAk4 aVmIyCw+eJgsFCSyBnmUW9C1aHacyMKKyH/9d0Au6fkGqorfJFHIVFgAAAAASUVORK5CYII= "/>
+ <path d="m50 33.478-2.385 6.1875-6.615 0.34875 5.1412 4.185-1.6988 6.4012 5.5575-3.6 5.5575 3.6-1.6988-6.4012 5.1412-4.185-6.615-0.34875z" fill="#ffffff" opacity=".75"/>
 </svg>
