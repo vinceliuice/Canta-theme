@@ -65,7 +65,7 @@ $dash_placeholder_size: 32px;
 $dash_padding: 10px;
 $dash_spacing: 2px;
 $dash_bottom_margin: 24px;
-$dash_border_radius: $dash_padding + $icon_radius;
+$dash_border_radius: $circular_radius;
 
 #dash {
   margin-top: $container_padding * 2;
@@ -79,6 +79,7 @@ $dash_border_radius: $dash_padding + $icon_radius;
 
   .overview-icon {
     padding: $dash_padding / 2;
+    border-radius: $dash_border_radius;
   }
 }
 

@@ -38,7 +38,7 @@ $square_radius: if($radius == 'circle', $circular_radius, $windows_radius);
 
 switch:focus slider,
 notebook:focus tab,
-*:focus { outline-color: $fill_color; }
+*:focus { outline-color: gtkalpha(currentColor, 0.1); }
 
 
 /***************
@@ -2918,28 +2918,28 @@ scrolledwindow {
     border-style: none;
   }
 
-  // This is used when content is touch-dragged past boundaries.
-  // draws a box on top of the content, the size changes programmatically.
-  @at-root overshoot {
-    &.top { @include overshoot(top); }
-
-    &.bottom { @include overshoot(bottom); }
-
-    &.left { @include overshoot(left); }
-
-    &.right { @include overshoot(right); }
-  }
-
-  // Overflow indication, works similarly to the overshoot, the size if fixed tho.
-  @at-root undershoot {
-    &.top { @include undershoot(top); }
-
-    &.bottom { @include undershoot(bottom); }
-
-    &.left { @include undershoot(left); }
-
-    &.right { @include undershoot(right); }
-  }
+  // // This is used when content is touch-dragged past boundaries.
+  // // draws a box on top of the content, the size changes programmatically.
+  // @at-root overshoot {
+  //   &.top { @include overshoot(top); }
+  //
+  //   &.bottom { @include overshoot(bottom); }
+  //
+  //   &.left { @include overshoot(left); }
+  //
+  //   &.right { @include overshoot(right); }
+  // }
+  //
+  // // Overflow indication, works similarly to the overshoot, the size if fixed tho.
+  // @at-root undershoot {
+  //   &.top { @include undershoot(top); }
+  //
+  //   &.bottom { @include undershoot(bottom); }
+  //
+  //   &.left { @include undershoot(left); }
+  //
+  //   &.right { @include undershoot(right); }
+  // }
 
   @at-root junction { // the small square between two scrollbars
     border-style: solid none none solid;

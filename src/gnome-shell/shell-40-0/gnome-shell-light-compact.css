@@ -3043,13 +3043,14 @@ StWidget.focused .app-well-app-running-dot {
 
 #dash .overview-icon {
   padding: 5px;
+  border-radius: 9999px;
 }
 
 .dash-background {
   background-color: rgba(255, 255, 255, 0.12);
   margin-bottom: 24px;
   padding: 10px;
-  border-radius: 30px;
+  border-radius: 9999px;
 }
 
 .dash-item-container .app-well-app, .show-apps {
